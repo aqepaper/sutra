@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>推我本空｜摘要版</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Noto+Serif+TC:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --font-kai:  'LXGW WenKai TC', serif;
+  --font-body: 'Noto Serif TC', serif;
+  --font-sans: 'Noto Sans TC', sans-serif;
+  --ink:       #1a1a1a;
+  --ink-mid:   #3d3228;
+  --ink-light: #6b5a40;
+  --ink-faint: #9c8870;
+  --zhu:       #9a2a1e;
+  --gold-pale: #c4a24a;
+  --gold-line: rgba(196,162,74,0.3);
+  --xuan:      #fdfaf4;
+  --xuan-warm: #f4ede0;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { background: var(--xuan-warm); }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--xuan-warm);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--xuan);
+  box-shadow: 0 0 32px rgba(0,0,0,0.07);
+}
+
+/* ── Hero ── */
+.article-hero {
+  background: linear-gradient(160deg, var(--xuan-warm) 0%, var(--xuan) 100%);
+  padding: 36px 22px 30px;
+  border-bottom: 1px solid var(--gold-line);
+}
+
+.hero-series {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--gold-pale);
+  opacity: 0.85;
+  letter-spacing: 0.5em;
+  margin-bottom: 14px;
+}
+
+.hero-title {
+  font-family: var(--font-kai);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.hero-tag {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--ink-light);
+  letter-spacing: 0.06em;
+  line-height: 1.8;
+}
+
+/* ── Body ── */
+.article-body {
+  padding: 2rem 1.3rem 5rem;
+}
+
+/* ── 段落標題 ── */
+.sec-title {
+  font-family: var(--font-kai);
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--zhu);
+  letter-spacing: 0.12em;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--gold-line);
+  margin: 2.4rem 0 1.1rem;
+}
+
+/* ── 經文 ── */
+.sutra-block {
+  background: var(--xuan-warm);
+  border-radius: 6px;
+  padding: 1.4rem 1.3rem 1.2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.sutra-block::before {
+  content: '\201C';
+  font-family: var(--font-kai);
+  font-size: 5.5rem;
+  color: var(--gold-pale);
+  opacity: 0.18;
+  position: absolute;
+  top: -0.8rem;
+  left: 0.4rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.sutra-block p {
+  font-family: var(--font-kai);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ink-mid);
+  line-height: 2.15;
+  letter-spacing: 0.07em;
+  position: relative;
+}
+
+.sutra-source {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--ink-faint);
+  letter-spacing: 0.15em;
+  text-align: right;
+  margin-top: 0.8rem;
+}
+
+/* ── 摘要段落 ── */
+.summary-p {
+  font-family: var(--font-body);
+  font-size: 19px;
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 2.05;
+  letter-spacing: 0.04em;
+  text-align: justify;
+  margin-bottom: 1.2rem;
+}
+
+/* ── 要義卡 ── */
+.key-card {
+  background: var(--xuan-warm);
+  border-radius: 6px;
+  padding: 1.2rem 1.3rem;
+  margin-bottom: 1rem;
+  border-left: 3px solid var(--gold-pale);
+}
+
+.key-card p {
+  font-family: var(--font-kai);
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--ink-mid);
+  line-height: 2.0;
+  letter-spacing: 0.04em;
+}
+
+/* ── 四大列表：單欄 ── */
+.four-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
+}
+
+.four-cell {
+  background: var(--xuan-warm);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.four-cell-head {
+  font-family: var(--font-kai);
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--zhu);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.four-cell-divider {
+  width: 1px;
+  background: var(--gold-line);
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+.four-cell-body {
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--ink-light);
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+}
+
+/* ── 二欄對比 ── */
+.compare-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1.2rem;
+}
+
+.cmp-col {
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+}
+
+.cmp-col.ran  { background: rgba(154,42,30,0.07); }
+.cmp-col.jing { background: rgba(196,162,74,0.1); }
+
+.cmp-head {
+  font-family: var(--font-kai);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.cmp-head.ran  { color: var(--zhu); }
+.cmp-head.jing { color: #8a7030; }
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot.ran  { background: var(--zhu); opacity: 0.75; }
+.dot.jing { background: var(--gold-pale); }
+
+.cmp-list {
+  list-style: none;
+  font-family: var(--font-body);
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--ink-light);
+  line-height: 2.0;
+  letter-spacing: 0.02em;
+}
+
+.cmp-list li::before {
+  content: '・';
+  color: var(--gold-pale);
+  margin-right: 2px;
+}
+
+/* ── 次第步驟 ── */
+.chain-label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--gold-pale);
+  letter-spacing: 0.4em;
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.chain-label::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 1px;
+  background: var(--gold-pale);
+}
+
+.chain-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 1.2rem;
+}
+
+.chain-step {
+  background: var(--xuan-warm);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.chain-arrow {
+  text-align: center;
+  font-size: 16px;
+  color: var(--gold-pale);
+  opacity: 0.55;
+  padding: 2px 0;
+}
+
+.step-num-badge {
+  font-family: var(--font-kai);
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  background: linear-gradient(135deg, var(--gold-pale), #8a7030);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.step-name {
+  font-family: var(--font-kai);
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--ink-mid);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.step-sub {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--ink-light);
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+}
+
+/* ── 箴言 ── */
+.motto-box {
+  margin: 2.4rem 0 0;
+  padding: 1.3rem 0;
+  border-top: 1px solid var(--gold-line);
+  border-bottom: 1px solid var(--gold-line);
+}
+
+.motto-label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--zhu);
+  opacity: 0.7;
+  letter-spacing: 0.45em;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 0.8rem;
+}
+
+.motto-label::before {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 1px;
+  background: var(--zhu);
+  opacity: 0.5;
+}
+
+.motto-box p {
+  font-family: var(--font-kai);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--zhu);
+  line-height: 2.1;
+  letter-spacing: 0.15em;
+}
+
+/* ── Footer ── */
+.article-footer {
+  background: var(--xuan-warm);
+  text-align: center;
+  padding: 1.6rem;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--ink-faint);
+  letter-spacing: 0.4em;
+  border-top: 1px solid var(--gold-line);
+}
+
+@media (min-width: 600px) {
+  .article-hero { padding: 44px 36px 36px; }
+  .article-body { padding: 2.5rem 2.2rem 6rem; }
+  .hero-title   { font-size: 30px; }
+}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- Hero -->
+  <header class="article-hero">
+    <div class="hero-series">佛說四十二章經　第二十章　摘要版</div>
+    <h1 class="hero-title">推我本空</h1>
+    <div class="hero-tag">四大假合，都無我者　／　我既都無，其如幻耳</div>
+  </header>
+
+  <main class="article-body">
+
+    <!-- 經文 -->
+    <div class="sutra-block">
+      <p>佛言：當念身中四大，各自有名，都無我者。我既都無，其如幻耳。</p>
+      <span class="sutra-source">《佛說四十二章經》第二十章</span>
+    </div>
+
+    <!-- 本章主旨 -->
+    <div class="sec-title">本章主旨</div>
+    <div class="key-card">
+      <p>「推我本空」——分析身中地、水、火、風四大，各有假名，都無真實自性；了達無我，方能破執離苦，契入空性解脫。</p>
+    </div>
+    <p class="summary-p">凡夫有兩種執著：執著身體為實有（我執），以及執著身體是「我的」（我所執）。修行先破我執、法執，最後連「能破」這念心也要放下，銷歸自性，才能達到能所一如的究竟境界。</p>
+
+    <!-- 身中四大 -->
+    <div class="sec-title">身中四大</div>
+    <p class="summary-p">人身由色、受、想、行、識五蘊組成。色法部分即地、水、火、風四大，各有各的假名，並無實體自性。</p>
+    <div class="four-stack">
+      <div class="four-cell">
+        <div class="four-cell-head">地大</div>
+        <div class="four-cell-divider"></div>
+        <div class="four-cell-body">固態部分——毛髮、指甲、皮膚、肌肉、骨骼等。對應固態物質。</div>
+      </div>
+      <div class="four-cell">
+        <div class="four-cell-head">水大</div>
+        <div class="four-cell-divider"></div>
+        <div class="four-cell-body">液態部分——血液、眼淚、唾液、尿液等。對應液態物質。</div>
+      </div>
+      <div class="four-cell">
+        <div class="four-cell-head">火大</div>
+        <div class="four-cell-divider"></div>
+        <div class="four-cell-body">能量部分——身上的熱量與能量。對應物質的能量態。</div>
+      </div>
+      <div class="four-cell">
+        <div class="four-cell-head">風大</div>
+        <div class="four-cell-divider"></div>
+        <div class="four-cell-body">氣態部分——出入息、呼吸循環。對應氣態物質。</div>
+      </div>
+    </div>
+    <p class="summary-p">四大不調則生病。若能體認色身是四大假合、各有假名、都無實體，便能脫離世間種種苦惱。</p>
+
+    <!-- 迷與悟 -->
+    <div class="sec-title">迷悟之別</div>
+    <div class="compare-stack">
+      <div class="cmp-col ran">
+        <div class="cmp-head ran"><span class="dot ran"></span>迷——執我為實</div>
+        <ul class="cmp-list">
+          <li>執著色身為實有，以為是「我」</li>
+          <li>衍生貪瞋癡慢疑、財色名食睡</li>
+          <li>「心是惡源，形為罪藪」</li>
+          <li>生老病死苦，隨業流轉</li>
+        </ul>
+      </div>
+      <div class="cmp-col jing">
+        <div class="cmp-head jing"><span class="dot jing"></span>悟——了達無我</div>
+        <ul class="cmp-list">
+          <li>明白身心如幻，無有自性</li>
+          <li>藉幻身創造善因、發大願心</li>
+          <li>身體成就功德的方便，非罪藪</li>
+          <li>破我執，超凡入聖，得自在解脫</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 析空觀修法 -->
+    <div class="sec-title">析空觀——思惟無我的修法</div>
+    <div class="chain-label">次第</div>
+    <div class="chain-stack">
+      <div class="chain-step">
+        <div class="step-num-badge">一</div>
+        <div>
+          <span class="step-name">繫念四大</span>
+          <div class="step-sub">靜坐思惟，這念心不想財色名食睡，時時繫念身體是四大因緣和合所生。</div>
+        </div>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-step">
+        <div class="step-num-badge">二</div>
+        <div>
+          <span class="step-name">分門別類，各歸其屬</span>
+          <div class="step-sub">將身體各部逐一追蹤——地歸地、水歸水、火歸火、風歸風——找不到一個「我」。</div>
+        </div>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-step">
+        <div class="step-num-badge">三</div>
+        <div>
+          <span class="step-name">推及五蘊皆空</span>
+          <div class="step-sub">色身是空後，再推受、想、行、識——苦受、樂受亦無自性，「受如水泡，想如陽燄」。</div>
+        </div>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-step">
+        <div class="step-num-badge">四</div>
+        <div>
+          <span class="step-name">能所相應，入空定</span>
+          <div class="step-sub">能念之心與所念之空理相契，當下入空定，斷見思二惑，証我空境界，得自在解脫。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 要義摘錄 -->
+    <div class="sec-title">要義摘錄</div>
+
+    <div class="key-card">
+      <p>「觀法無我」——時時觀想身中四大各有假名，一切法無我；地大歸地，水大歸水，火大歸火，風大歸風。</p>
+    </div>
+
+    <div class="key-card">
+      <p>「我既都無，其如幻耳」——幻非全無，如鏡中影、電視畫面，假有而非真有。了悟無我，契入無為法，得解脫。</p>
+    </div>
+
+    <div class="key-card">
+      <p>「實際理地不受一塵」——色身是罪藪或功德，在於心之迷悟；悟道之人借幻身修善，身即成就功德的方便。</p>
+    </div>
+
+    <!-- 箴言 -->
+    <div class="motto-box">
+      <div class="motto-label">心要</div>
+      <p>四大假合，都無我者。<br>
+      煩惱生時，問：是誰在起煩惱？</p>
+    </div>
+
+  </main>
+
+  <footer class="article-footer">
+    AQE @ 2026 &ensp;·&ensp; 若有所思 &ensp;·&ensp; 摘要版
+  </footer>
+
+</div>
+</body>
+</html>
