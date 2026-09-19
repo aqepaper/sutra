@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>染淨互熏與染熏義</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;500;700&family=Noto+Serif+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f7f0e2;
+    --paper-2:#f1e7d3;
+    --ink:#3a2e22;
+    --ink-soft:#6b5c48;
+    --gold:#b8923f;
+    --gold-soft:#d9c393;
+    --gold-line:#c9a35f;
+    --red:#8b1414;
+
+    --c1:#6b5344; /* 壹 總標 */
+    --c2:#8a6d1f; /* 貳 總釋 */
+    --c3:#7a3b2e; /* 參 別釋染熏 */
+    --c4:#2f5c4c; /* 肆 別釋淨熏 */
+  }
+
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+
+  body{
+    margin:0;
+    background-color:var(--paper);
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    font-family:"Noto Serif TC", serif;
+    font-weight:300;
+    color:var(--ink);
+    line-height:2;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{ max-width:600px; margin:0 auto; padding:0 0 80px; position:relative; }
+
+  /* ===== 封面 ===== */
+  .cover{
+    position:relative;
+    padding:60px 28px 40px;
+    text-align:center;
+    overflow:hidden;
+    border-bottom:1px solid var(--gold-soft);
+  }
+  .cover::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 300'%3E%3Cpath d='M0 260 L60 190 L110 230 L170 140 L230 210 L300 120 L360 200 L430 150 L500 220 L560 170 L600 230 L600 300 L0 300 Z' fill='%23b8923f' opacity='0.08'/%3E%3Cpath d='M0 280 L90 220 L150 250 L220 170 L290 240 L370 160 L440 230 L520 190 L600 250 L600 300 L0 300 Z' fill='%23b8923f' opacity='0.12'/%3E%3C/svg%3E");
+    background-size:cover; background-position:bottom;
+    pointer-events:none;
+  }
+  .cover-eyebrow{ position:relative; font-family:"LXGW WenKai TC", serif; letter-spacing:.25em; font-size:12.5px; color:var(--ink-soft); }
+  .cover-title{ position:relative; font-family:"LXGW WenKai TC", serif; font-weight:700; font-size:26px; line-height:1.6; margin:16px 0 10px; color:var(--ink); }
+  .cover-sub{ position:relative; font-family:"LXGW WenKai TC", serif; font-size:15px; color:var(--red); letter-spacing:.1em; }
+  .cover-divider{ position:relative; width:56px; height:1px; background:var(--gold-line); margin:22px auto; }
+  .cover-tag{ position:relative; font-size:14.5px; color:var(--ink-soft); line-height:2; padding:0 10px; }
+
+  /* ===== 導覽列 ===== */
+  .nav{
+    display:flex; overflow-x:auto; gap:8px; padding:14px 16px;
+    background:var(--paper-2); border-bottom:1px solid var(--gold-soft);
+    position:sticky; top:0; z-index:20; scrollbar-width:none;
+  }
+  .nav::-webkit-scrollbar{display:none;}
+  .nav a{
+    flex:0 0 auto; font-family:"LXGW WenKai TC", serif; font-size:13.5px;
+    color:var(--ink-soft); text-decoration:none; padding:6px 12px;
+    border:1px solid var(--gold-soft); border-radius:20px; white-space:nowrap; background:var(--paper);
+  }
+
+  /* ===== 章節 ===== */
+  section.chapter{ padding:40px 22px 6px; }
+
+  .chap-head{ display:flex; align-items:baseline; gap:12px; margin-bottom:2px; }
+  .chap-glyph{ font-family:"LXGW WenKai TC", serif; font-size:24px; font-weight:700; color:var(--c); }
+  .chap-title{ font-family:"LXGW WenKai TC", serif; font-size:19px; font-weight:700; color:var(--ink); }
+  .chap-title small{ display:block; font-size:13.5px; font-weight:400; color:var(--ink-soft); margin-top:3px; }
+  .chap-bar{ height:3px; width:44px; background:var(--c); border-radius:2px; margin:10px 0 18px; }
+
+  h3.sub{
+    font-family:"LXGW WenKai TC", serif;
+    font-size:16.5px; font-weight:600;
+    color:var(--c);
+    margin:24px 0 10px;
+    padding-left:12px;
+    border-left:3px solid var(--c);
+  }
+
+  p{ font-size:16.5px; margin:0 0 14px; text-align:justify; }
+  p strong{ color:var(--c); font-weight:600; }
+
+  .quote{
+    font-family:"LXGW WenKai TC", serif;
+    font-size:15.5px;
+    color:var(--ink-soft);
+    border-left:3px solid var(--c);
+    padding:2px 0 2px 14px;
+    margin:6px 0 16px;
+    line-height:1.9;
+  }
+
+  ul.dash{ list-style:none; padding-left:0; margin:0 0 16px; }
+  ul.dash > li{ padding-left:1.2em; position:relative; margin-bottom:10px; font-size:16px; }
+  ul.dash > li::before{ content:"—"; position:absolute; left:0; top:0; color:var(--c); }
+  ul.dash > li strong{ color:var(--ink); }
+
+  .gist{
+    border-top:1px solid var(--gold-line);
+    border-bottom:1px solid var(--gold-line);
+    padding:14px 2px;
+    margin:22px 0 8px;
+    font-size:15.5px;
+    line-height:1.9;
+    color:var(--ink-soft);
+  }
+  .gist .gist-tag{ font-family:"LXGW WenKai TC", serif; font-size:12.5px; color:var(--gold); letter-spacing:.1em; margin-bottom:6px; display:block; }
+
+  hr.sep{ border:none; border-top:1px dashed var(--gold-soft); margin:34px 22px; }
+
+  .final{
+    margin:40px 20px 0;
+    padding:26px 22px;
+    background:var(--ink);
+    border-radius:14px;
+    color:#f1e6cf;
+    text-align:center;
+  }
+  .final .ft-eyebrow{ font-family:"LXGW WenKai TC", serif; letter-spacing:.25em; font-size:12.5px; color:var(--gold-soft); }
+  .final h2{ font-family:"LXGW WenKai TC", serif; font-size:19px; margin:10px 0 16px; color:#f7f0e2; }
+  .final p{ font-size:15.5px; line-height:2; color:#e6d8ba; margin:0 0 10px; text-align:center; }
+  .final .couplet{ font-family:"LXGW WenKai TC", serif; font-size:16.5px; color:#f0d98e; margin-top:14px; line-height:2; }
+
+  footer{ text-align:center; font-size:12.5px; color:var(--ink-soft); padding:34px 20px 10px; letter-spacing:.05em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 封面 -->
+  <div class="cover">
+    <div class="cover-eyebrow">大乘起信論・第十七講</div>
+    <div class="cover-title">染淨互熏與染熏義</div>
+    <div class="cover-divider"></div>
+    <div class="cover-tag">從四法熏習到染淨還滅——<br>一念之間，是生死，也是涅槃。</div>
+  </div>
+
+  <!-- 導覽 -->
+  <nav class="nav">
+    <a href="#s1">壹・總標法名</a>
+    <a href="#s2">貳・總釋</a>
+    <a href="#s3">參・別釋染熏</a>
+    <a href="#s4">肆・別釋淨熏</a>
+    <a href="#s5">結語</a>
+  </nav>
+
+  <!-- 壹、舉數總標與列染淨法名 -->
+  <section class="chapter" id="s1" style="--c:var(--c1);">
+    <div class="chap-head">
+      <span class="chap-glyph">壹</span>
+      <span class="chap-title">舉數總標與列染淨法名<small>標舉四法熏習・四種染淨法名：真如、無明、妄心、妄境界</small></span>
+    </div>
+    <div class="chap-bar"></div>
+
+    <p>每個人心裡，其實都在上演一齣戲。這齣戲叫「生死」，也叫「解脫」，端看你怎麼演。而戲裡固定出場的，只有四個角色，它們不是四樣互不相干的東西，而是同一顆心的四種面貌，彼此牽連，誰也離不開誰。論裡先把它們一次標舉出來，就叫「四法熏習」。</p>
+
+    <p>第一位，<strong>真如</strong>。它是你心裡最乾淨的那一塊，從來沒被染過，也沒動搖過。你可以把它想成一盞本來就亮著的燈——不是因為誰去點燃它才亮，而是它本來就亮，只是常常被烏雲遮住，讓人忘了它的存在。</p>
+
+    <p>第二位，<strong>無明</strong>。它不是從外面跑進來的壞東西，而是你「不明白」這件事本身。真如本來清清楚楚，你偏偏看不清楚——這份看不清楚，就叫無明。它是一切煩惱的源頭，卻不是一個具體的東西，比較像是一層自己生出來的霧。</p>
+
+    <p>第三位，<strong>妄心</strong>，此處特別點名的是它最初、最細微的樣子——業識。這是真如與無明兩者攪在一起之後，浮出來的第一絲心念的動盪。就像原本平靜的水面，被風輕輕吹過，起了第一道細紋，你幾乎察覺不到，但水已經不再是原來的水了。</p>
+
+    <p>第四位，<strong>妄境界</strong>，也就是你眼前看到的這個花花世界——六塵。你以為它是客觀存在、外於你而獨立的，其實它是你那顆已經起了波紋的心，投射出來的畫面。它看起來無比真實，卻從來沒有離開過你的心識。</p>
+
+    <div class="gist">
+      <span class="gist-tag">小結</span>
+      四法環環相扣：真如是本有的光，無明是遮住光的雲，妄心是雲影底下的晃動，妄境界則是這晃動投射出去、看起來煞有介事的外在世界。故事，就從這裡開始。
+    </div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳、廣釋熏習：總釋 -->
+  <section class="chapter" id="s2" style="--c:var(--c2);">
+    <div class="chap-head">
+      <span class="chap-glyph">貳</span>
+      <span class="chap-title">廣釋熏習：總釋<small>衣香譬喻：一心本無香，熏習成染淨／真妄互熏：隨流成染相，返流起淨用</small></span>
+    </div>
+    <div class="chap-bar"></div>
+
+    <p>論裡舉了一個再平凡不過的例子：衣服本來沒有香味，但你把它擺在香旁邊，時間久了，它自然而然就染上了香氣——這叫「一心本無香，熏習成染淨」。</p>
+
+    <div class="quote">世間衣服，實無於香，若人以香而熏習故，則有香氣。</div>
+
+    <p>這個比喻很簡單，卻一針見血。「衣服」比喻的是你這顆心，「香」則泛指一切會薰染你的東西——可能是讓你變好的，也可能是讓你變壞的。某樣東西本來沒有某種特質，卻因為長期跟另一樣東西放在一起，慢慢被染上了那個特質，這就是佛法說的「熏習」。說白了，跟我們常講的「近朱者赤，近墨者黑」是同一回事。</p>
+
+    <h3 class="sub">真妄互熏：隨流成染相，返流起淨用</h3>
+    <p>於是就有了兩條路。一條是<strong>隨流成染相</strong>：真如本來沒有一絲雜染，卻因為長期被無明薰染，漸漸顯出「染相」，一路往生死輪迴的方向走去。另一條是<strong>返流起淨用</strong>：無明本來沒有一絲清淨，卻因為被真如從裡面不斷薰陶，漸漸生出「淨用」，一路往解脫的方向走去。差別不在衣服本身，而在你把它放在哪裡薰、薰了多久。</p>
+
+    <p>而這薰染，從來不是一次就定案的事。佛法裡把「熏習」也叫作「串習」——說穿了就是生命的慣性，也就是「業」。它靠的是「相續心」，一次又一次、不厭其煩地重複去做。一個念頭只閃過一次，還成不了習氣；正因為念念相續、反覆再三，習氣才會變得根深柢固。這一點，是接下來不管談染、談淨，都要記住的底色。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參、廣釋熏習：別釋染熏 -->
+  <section class="chapter" id="s3" style="--c:var(--c3);">
+    <div class="chap-head">
+      <span class="chap-glyph">參</span>
+      <span class="chap-title">廣釋熏習：別釋染熏</span>
+    </div>
+    <div class="chap-bar"></div>
+
+    <h3 class="sub">略釋（三重熏習連鎖）</h3>
+    <p>如果有人問：好端端一個人，怎麼會一步步陷入糊塗，痛苦接連不斷？論裡給出了一幅巨觀的圖景，一環扣著一環，共成三重。</p>
+
+    <p><strong>無明熏真如：習熏變起業識妄心。</strong>這是最根本的一步。一念糊塗，讓原本平靜的心產生了極細微的動搖。就像一池清澈的水，本來風平浪靜，一陣風吹過（無明），水面便起了波浪（業識妄心）。你甚至說不清風是什麼時候吹起的，但水已經不再平靜了。</p>
+
+    <p><strong>妄心熏無明：資熏增其不了，現妄境界。</strong>這顆已經動盪起來的心，反而讓自己對真相更加看不清楚，於是在不知不覺間，念頭一個接一個地投射出去，顯現出眼前這個看似真實的世界。就像戴著一副有色眼鏡看世界，戴久了，你會忘記眼鏡的存在，以為世界本身就是那個顏色——你把自己心裡投射出來的影子，當成了真實的外界。</p>
+
+    <p><strong>境界熏妄心：資熏境熏心海，造業受苦。</strong>這個被投射出來的外在世界，像誘餌一樣反過來勾住你的心，讓你生起執著，捨不得放手，於是造下種種業，承受身心種種苦。外境是餌，妄心是上鉤的魚，越掙扎，纏得越緊，最後在生死裡不斷打轉。</p>
+
+    <div class="gist">
+      <span class="gist-tag">小結</span>
+      這三重連鎖，第一重是啟動的鑰匙，後兩重則是讓整個過程持續滾動下去的動力。這就是凡夫之所以生死相續、輪迴不止的整體圖景。
+    </div>
+
+    <h3 class="sub">廣釋（三法微觀差別）</h3>
+    <p>看懂了大圖景還不夠，論裡進一步把這條鎖鏈拆得更細，分別從妄境界、妄心、無明三個層面，一層一層剖開來看。</p>
+
+    <p><strong>妄境界熏習</strong>——外在環境對我們的影響有粗有細，從理性層面的「累積印象與概念」，一路發展到感性層面的「死死抓著不放」。</p>
+    <ul class="dash">
+      <li><strong>增長念熏習：</strong>在心識裡逐漸累積知識、記憶與概念，看起來人畜無害，其實已經在心上一層一層疊印下去。</li>
+      <li><strong>增長取熏習：</strong>強烈的佔有慾與情感上的執著，抓著不放。</li>
+    </ul>
+    <p>修行的提醒就藏在這裡：心念是怎麼從極細微的分別，一步步養成堅固的執著與煩惱的？我們要在念頭剛剛冒出「細」的那一刻就提高警覺，等到它長成「粗」的執著，再想回頭，就難了。</p>
+
+    <p><strong>妄心熏習</strong>——極微細的起心動念，跟表層日常的分別心，招來的苦是不一樣的。</p>
+    <ul class="dash">
+      <li><strong>業識根本熏習（受變易苦）：</strong>最微細的業識去薰染最根本的無明，讓已經修得很深的三乘聖者——阿羅漢、辟支佛、菩薩——仍然要承受極細微的變易苦，那不是粗重的生死，而是極其幽微的遷流變化。</li>
+      <li><strong>增長分別事識熏習（受分段苦）：</strong>前六識也就是我們日常的分別心，去薰染無明，讓見解與貪愛不斷增長，使一般凡夫在六道裡流轉，承受粗重的分段苦。</li>
+    </ul>
+
+    <p><strong>無明熏習</strong>——深層原始的糊塗，跟表層的偏見與貪愛，各自成就了不同層次的心識。</p>
+    <ul class="dash">
+      <li><strong>根本熏習（成就業識）：</strong>根本無明去薰染真如，讓心依著不覺而動盪起來，成就了最深層、最微細的業識。</li>
+      <li><strong>所起見愛熏習（成就分別事識）：</strong>由無明衍生出來的偏見與貪愛，反過來薰染心體，隨著外境分別計較，成就了表層的、專門在分別計較的分別事識。</li>
+    </ul>
+
+    <div class="gist">
+      <span class="gist-tag">小結</span>
+      整段拆解下來，就像一份寫給修行人的痛苦病理分析報告——清清楚楚地告訴你，一個人是怎麼從一念糊塗開始，發展到被外境勾引、死死執著，最後落入輪迴受苦的全部過程。
+    </div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆、廣釋熏習：別釋淨熏 -->
+  <section class="chapter" id="s4" style="--c:var(--c4);">
+    <div class="chap-head">
+      <span class="chap-glyph">肆</span>
+      <span class="chap-title">廣釋熏習：別釋淨熏</span>
+    </div>
+    <div class="chap-bar"></div>
+
+    <h3 class="sub">略釋（淨法相續次第）</h3>
+    <p>說完了怎麼變糊塗，接下來要說的是：人怎麼醒過來、把煩惱洗乾淨？這是跟前面那條路完全相反的方向，同樣可以分成三個層次來看。</p>
+
+    <p><strong>真如熏習成發心：厭生死苦，樂求涅槃。</strong>內心深處的智慧開始覺醒，生出討厭痛苦、渴望平靜的念頭。真如作為內在本有的清淨力量，不斷薰陶著蒙昧的無明，把妄心裡「厭離生死之苦，渴望追求涅槃」的動機喚醒過來。這是逆流的起點，是黑夜裡第一點自己亮起來的星光。</p>
+
+    <p><strong>發心熏習成解行：自信己性，修遠離法。</strong>有了想脫離痛苦的真心後，妄心反過來靠向真如：深信自己本來就具足清淨的本性，明白「是心在亂動，眼前根本沒有一個實在的境界」，於是開始修習不取、不念的隨順修行。光是有了想改變的心還不夠，得一步一步把它落實在日常的行持裡。</p>
+
+    <p><strong>修行熏習證涅槃：因緣俱滅，成自然業。</strong>經過長久不間斷的薰修，把糊塗的根源徹底切斷。無明（因）滅了，妄心不再生起，外境（緣）也跟著消失，因緣俱滅，虛妄的心相全部除盡，就證得了究竟的涅槃，同時自然而然地能夠成就利益眾生的業用。到這裡，逆流的路才算真正走完，生死這件大事，才算真正了結。</p>
+
+    <h3 class="sub">廣釋（淨熏差別）</h3>
+
+    <p><strong>妄心熏習差別</strong>——清淨的修行，依照每個人根機與妄心粗細的不同，開出了兩條路。</p>
+    <ul class="dash">
+      <li><strong>分別事識熏習（漸趣）：</strong>走的人是一般凡夫與二乘人，依靠日常的前六識生起出離心，透過見佛、聞法、持戒、修定慧，一步一步、按部就班地朝向成佛之道前進，慢，卻踏實。</li>
+      <li><strong>意熏習（速趣）：</strong>走的人是已登地的菩薩，已經破除了粗重的表層執著，深刻體會到「境由心現」的細微道理，因此能發起勇猛的菩提心，直接從根本處下手，快速趣向究竟的涅槃，因為看得深，所以走得急。</li>
+    </ul>
+    <p>兩條路雖有遲速，方向卻是一致的。</p>
+
+    <p><strong>真如熏習差別</strong>——支撐這一切修行的力量，也分內外兩種。</p>
+    <ul class="dash">
+      <li><strong>自體相熏習（內熏）：</strong>每個眾生內在原本就具足清淨的佛性，本身就有不可思議的作用，時時刻刻從裡面薰陶著我們，這是修行之所以能夠發動的根本依據——這是你自家本有的寶藏，從來沒有真正丟失過。</li>
+      <li><strong>用熏習（外緣）：</strong>十方諸佛菩薩以慈悲願力，在外頭給予感應與引導，作為助緣，幫助眾生的善根成熟、發起修行的心——這就像明月映在水面上，只要水夠清，月亮自然就會現前。</li>
+    </ul>
+    <p>內因外緣彼此扶持，修行才能真正成就。</p>
+  </section>
+
+  <!-- 結語 -->
+  <div class="final" id="s5">
+    <div class="ft-eyebrow">結 語</div>
+    <h2>一念之間</h2>
+    <p>整個單元說到底，就是在講一件事：生命為什麼會落入生死苦海，又要如何才能逆轉、走向解脫。從最初標舉四法熏習、列出染淨法名，到用衣香譬喻講清楚真妄互熏的道理，再到別釋染熏揭開痛苦相續的略釋與廣釋，最後別釋淨熏說明清淨還滅的略釋與廣釋——整套說明，層層遞進，環環相扣。</p>
+    <p>說到最後，會不會生死流轉、能不能修成佛道，其實都在這一念之間：這一念心，是順著無明與妄境往下墮，還是順著真如的覺性往上走。</p>
+    <div class="couplet">無明熏真如，迷真起妄成生死；<br>真如熏無明，破妄顯真成涅槃。</div>
+  </div>
+
+  <footer>大乘起信論・第十七講｜染淨互熏與染熏義</footer>
+</div>
+</body>
+</html>
