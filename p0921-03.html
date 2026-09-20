@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>明善知識</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;500;700&family=Noto+Serif+TC:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f7f0e2;
+    --ink:#3a2e22;
+    --gold:#b8923f;
+    --c1:#6b5344; /* 壹 */
+    --c2:#8a6d1f; /* 貳 */
+    --c3:#7a3b2e; /* 參 */
+    --c4:#2f5c4c; /* 肆 */
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Noto Serif TC","LXGW WenKai TC",serif;
+    font-weight:300;
+    line-height:2;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{
+    max-width:600px;
+    margin:0 auto;
+    padding:0 22px 60px;
+  }
+
+  /* ---------- 封面 ---------- */
+  .cover{
+    padding:64px 22px 40px;
+    text-align:center;
+  }
+  .cover-eyebrow{
+    font-family:"LXGW WenKai TC",serif;
+    font-size:13px;
+    letter-spacing:.15em;
+    color:var(--gold);
+    margin-bottom:14px;
+  }
+  .cover-title{
+    font-family:"LXGW WenKai TC",serif;
+    font-weight:700;
+    font-size:34px;
+    line-height:1.5;
+    color:var(--ink);
+  }
+  .cover-author{
+    margin-top:18px;
+    font-size:15px;
+    color:var(--ink);
+    opacity:.7;
+  }
+  .cover-rule{
+    width:56px;
+    height:2px;
+    background:var(--gold);
+    margin:26px auto 0;
+  }
+
+  /* ---------- 章節 ---------- */
+  section.chap{padding-top:44px;}
+  .chap-num{
+    font-family:"LXGW WenKai TC",serif;
+    font-size:14px;
+    letter-spacing:.2em;
+  }
+  .chap-title{
+    font-family:"LXGW WenKai TC",serif;
+    font-weight:700;
+    font-size:24px;
+    line-height:1.6;
+    margin:6px 0 10px;
+  }
+  .chap-title small{
+    display:block;
+    font-family:"Noto Serif TC",serif;
+    font-weight:300;
+    font-size:18px;
+    opacity:.75;
+    margin-top:8px;
+    line-height:1.7;
+  }
+  .chap-bar{
+    height:4px;
+    width:46px;
+    border-radius:2px;
+    margin:14px 0 26px;
+  }
+
+  h3.sub{
+    font-family:"LXGW WenKai TC",serif;
+    font-weight:700;
+    font-size:19px;
+    margin:34px 0 14px;
+    padding-left:12px;
+    border-left:4px solid var(--gold);
+  }
+
+  p{
+    font-size:18px;
+    margin:0 0 20px;
+    text-align:justify;
+  }
+
+  strong{font-weight:600;}
+
+  .term{
+    font-family:"LXGW WenKai TC",serif;
+    font-weight:500;
+  }
+
+  ul.dash{
+    list-style:none;
+    margin:0 0 24px;
+    padding:0;
+  }
+  ul.dash li{
+    position:relative;
+    font-size:18px;
+    padding-left:20px;
+    margin-bottom:16px;
+    text-align:justify;
+  }
+  ul.dash li::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color:var(--gold);
+  }
+  ul.dash li strong{
+    font-family:"LXGW WenKai TC",serif;
+  }
+
+  .quote{
+    font-family:"LXGW WenKai TC",serif;
+    font-size:18px;
+    line-height:2;
+    color:var(--ink);
+    border-top:1px solid rgba(184,146,63,.5);
+    border-bottom:1px solid rgba(184,146,63,.5);
+    padding:16px 4px;
+    margin:22px 0;
+  }
+  .quote cite{
+    display:block;
+    font-style:normal;
+    font-family:"Noto Serif TC",serif;
+    font-size:13.5px;
+    color:var(--gold);
+    margin-bottom:8px;
+    letter-spacing:.05em;
+  }
+
+  .gist{
+    border-top:2px solid var(--ink);
+    border-bottom:2px solid var(--ink);
+    padding:18px 2px;
+    margin:30px 0;
+  }
+  .gist-tag{
+    font-family:"LXGW WenKai TC",serif;
+    font-size:13px;
+    letter-spacing:.15em;
+    color:var(--gold);
+    margin-bottom:10px;
+  }
+  .gist p{font-size:18px;margin-bottom:0;}
+
+  hr.sep{
+    border:none;
+    border-top:1px dashed rgba(58,46,34,.4);
+    margin:44px 0 0;
+  }
+
+  /* ---------- 結語 ---------- */
+  .final{
+    margin-top:56px;
+    background:var(--ink);
+    color:var(--paper);
+    padding:52px 26px 60px;
+    text-align:center;
+    border-radius:2px;
+  }
+  .ft-eyebrow{
+    font-family:"LXGW WenKai TC",serif;
+    font-size:13px;
+    letter-spacing:.2em;
+    color:var(--gold);
+    margin-bottom:18px;
+  }
+  .final p{
+    font-size:18px;
+    color:var(--paper);
+    text-align:center;
+    line-height:1.9;
+  }
+  .final .couplet{
+    font-family:"LXGW WenKai TC",serif;
+    font-size:19px;
+    line-height:2.1;
+    margin:22px 0 0;
+  }
+
+  footer{
+    text-align:center;
+    font-size:12.5px;
+    color:var(--ink);
+    opacity:.55;
+    padding:30px 22px 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="cover">
+    <div class="cover-eyebrow">解脫莊嚴寶・大乘菩提道次第論　第三章</div>
+    <div class="cover-title">明善知識</div>
+    <div class="cover-rule"></div>
+  </div>
+
+  <!-- 壹 -->
+  <section class="chap" id="s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      依止善知識之理由
+      <small>雖具圓滿人身，若無善知識教導激勵仍難趣入菩提道；以經文、因明、譬喻三門說明依止之必要</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>「緣者是為善知識」——這是說，就算具足了圓滿的人身寶，如果沒有善知識的教導與激勵，仍然起不了作用。因為我們對許多惡行早已習以為常，這種積習的力量極為巨大，使人難以趨向菩提道，所以一定要依止善知識才行。這可由五門闡述：</p>
+
+    <div class="quote">
+      理由差別及分類，以及各各之性相，<br>
+      依止方便及利益，五門解敘依師法。
+    </div>
+
+    <p>先說依止善知識的理由，可由經文、因明、譬喻三門來解釋。</p>
+
+    <div class="quote"><cite>《聖集頌》云</cite>一個對上師有敬重心的弟子，他定會時常依止一個有智識有修持的上師，而得到各種的進步。</div>
+    <div class="quote"><cite>《般若八千頌》云</cite>若菩薩摩訶薩欲得無上正等正覺，必先於善知識恭敬承事而依止之。</div>
+
+    <p>再依因明立量而解釋：欲證一切智位之有情必須依止善知識，因為他不識如何積聚資糧及消除障礙的緣故——這就像三世一切諸佛都依止善知識而成就，反之辟支佛則不然。要獲得圓滿佛位，必須積聚福德與智慧二種資糧，並消除煩惱、所知二障；而積資除障的方法，又一定要依靠善知識才能知曉。</p>
+
+    <p>善知識，就像渡河的船師、陌生路上的嚮導、或危險地帶的護送者。陌生路上若無嚮導便會遲延或迷途，有了嚮導就能一步不失地安抵目的地。菩提道上也是如此——積聚福智資糧、前往一切智城之時，若無善知識護送，內則被煩惱妄念之賊所乘，外則被妖魔誘入歧途，因而斷送善根。</p>
+
+    <div class="quote">煩惱賊得便，善業為壞奪，善根滅無餘，斷上趣命根。</div>
+
+    <div class="quote"><cite>《不動優婆夷本事品》云</cite>善知識是引導我們到一切智位去的護送者。</div>
+
+    <p>橫越大河之時，河中雖有渡船，若無船師，自己逕自行舟便有沉沒陷溺的危險；有船師則能毫不費力地抵達彼岸。橫越生死大海也是如此——若無善知識引導，雖乘妙法舟筏，仍有沉沒於生死巨流的危險。</p>
+
+    <div class="quote">若無救護歸依處，有舟亦難至彼岸，雖具圓滿諸功德，若無上師難解脫。</div>
+
+    <p>因此，一定要依止如船師般的善知識，才能超越生死大海，抵達涅槃彼岸。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      善知識之種類與界說
+      <small>普通眾生、地上菩薩、化身佛、報身佛四類善知識，各依自身修證階位而依止；兼釋圓滿善知識之八種、四種、二種條件</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>善知識的種類，概說有四：屬於普通眾生一類的善知識、屬於地上菩薩一類的善知識、屬於化身佛的善知識、屬於報身佛的善知識。這四類要依自己的修證情況來審斷——初修業的人很難依止佛陀或地上大菩薩，就必須依止普通眾生類的善知識；業障大部淨除之後，才可依止地上菩薩；證得資糧道以上果位，才能依止化身佛；證得地上果位時，才可依止報身佛。</p>
+
+    <p>在這四種善知識中，恩德最大的其實是普通眾生類的善知識——因為初學佛的人都困在業障與煩惱的暗室之中，根本沒有能力面見佛菩薩，遑論依止。正是遇見了眾生類的善知識，依於他的指示明燈，才知道學佛之道，才能逐漸親近諸佛菩薩。</p>
+
+    <ul class="dash">
+      <li><strong class="term">佛陀善知識</strong>——具足斷、證二種圓滿的勝士：斷，是完全斷除煩惱與所知二障；證，是完全圓滿二種智慧。</li>
+      <li><strong class="term">地上菩薩善知識</strong>——指從初地到十地之間各地不同的斷、證功德，其中第八地以上菩薩具足攝受眾生的十種自在：壽、心、資財、業、生處、所欲、願、神通、智慧、法皆得自在——如意住世、隨入禪定、變現寶珠濟眾、於一音聲同時為一切眾生說法而皆得滿足等等。</li>
+      <li><strong class="term">普通眾生類善知識</strong>——其條件可由八種、四種或二種來說明。</li>
+    </ul>
+
+    <div class="quote"><cite>《菩薩地論》云</cite>菩薩善知識若具八相是為圓滿：多聞大乘經典，持守菩薩戒律，具足修行證悟，悲心濟眾，無有畏懼，忍耐謙和，心離悔戚，善於言辭。</div>
+
+    <div class="quote"><cite>《莊嚴經論》云</cite>多聞離諸疑，能持諸善法，二門說真如，是為菩薩相，為圓滿法師。</div>
+
+    <p>「多聞」是說由多聞廣學的緣故，能廣大地開示法要；因智慧廣大而能除眾生疑惑；因持守善士之作業，故堪受讚揚。「二門說真如」是說能由煩惱染污門與清淨寂滅門，來說明真如實相的道理。</p>
+
+    <div class="quote"><cite>《入菩薩行論》云</cite>真善知識者，深通大乘教，持菩薩勝律，雖逢命難緣，不舍菩薩戒。</div>
+
+    <p>這是說善知識最低的條件，必須深通大乘教義、並持守菩薩戒律。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      依止善知識之方便
+      <small>恭敬與供養、愛敬並承事、修行及努力三門，是依止善知識所應具備的態度與行持</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p>依止善知識的方法有三：恭敬與供養、愛敬並承事、修行及努力。</p>
+
+    <ul class="dash">
+      <li>
+        <strong class="term">恭敬</strong>——對善知識常行禮拜、周匝繞行；他行近時速即起立，近他身旁時躬屈身體；以誠摯之心在適當時候講話，以無厭足之心時常瞻仰其慈顏，就像持寶商人恭敬其師一樣。
+        <div class="quote" style="margin-top:12px"><cite>《華嚴經》云</cite>以無厭足心，頻視善知識。</div>
+        <span style="font-size:18px">這是因為善知識實在是難見、難出、難遇的緣故。</span>
+      </li>
+      <li>
+        <strong class="term">供養</strong>——以與法不相違的食物、衣著、墊褥、醫藥、珍寶等財物，如常啼菩薩一樣不計身命地承事供養善知識。善財童子說：「佛菩提是由供養善知識而獲得的！」
+      </li>
+      <li>
+        <strong class="term">愛敬</strong>——視善知識如佛，凡有所訓皆不違越，對善知識仰慕、敬重、敬信，就像那諾巴大師依止諦洛巴上師一樣。某些時候當善知識以善巧方便行動時，應擯棄自己的邪念，特別努力生起淨信，就像《入法界品》中無厭足王的故事一樣。
+      </li>
+      <li>
+        <strong class="term">修行及努力</strong>——從善知識聽聞、思惟、修持佛法，由聞、思、修三門努力行持，乃能使善知識歡喜。因為要使善知識歡喜，自己才能趣入佛道。
+      </li>
+    </ul>
+
+    <div class="quote"><cite>《莊嚴經論》云</cite>從師修學時，依教奉行之，令彼心歡喜……</div>
+    <div class="quote"><cite>《入法界品》云</cite>若令善知識歡喜則能獲得一切佛菩提。</div>
+
+    <p>向善知識求法，第一步要有適當的準備：首先具足菩提心；第二步要把自己作為病人想，把法作為藥物想，把上師作為醫生想，知道自己若努力修持佛法，便能治療宿疾；最後應設想自己是一個孔口朝下的器皿，或無底的瓦罐，所有毒液都已流光了。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      依止善知識之利益
+      <small>為善知識所攝、所護、所佑，則不墮惡道、不為惡友所誘、於大乘法得不退轉，速疾超離異生位</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <div class="quote"><cite>《入法界品》云</cite>菩薩若為善知識所攝則不墮惡道，若為善知識所護則不為惡友所誘，若為善知識所佑則於大乘法得不退轉，善知識善護念諸菩薩必能速疾超離異生位……</div>
+
+    <div class="quote"><cite>《般若經》云</cite>善知識善護念諸菩薩摩訶薩能速得阿褥多羅三藐三菩提。</div>
+
+    <p>以上便是依五門——理由、差別、性相、依止方便、利益——對「善知識」所作的解說。人身寶雖已具足，仍須依止善知識之教導與激勵，才能真正趣入菩提正道。</p>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第三章　總攝</div>
+    <div class="couplet">
+      若無救護歸依處，有舟亦難至彼岸，<br>
+      雖具圓滿諸功德，若無上師難解脫。
+    </div>
+    <p style="margin-top:24px">善知識是渡河的船師，是陌生路上的嚮導，唯有依止善知識，方能安抵一切智城。</p>
+  </div>
+
+  <footer>解脫莊嚴寶・大乘菩提道次第論　第三章｜明善知識</footer>
+</div>
+
+</body>
+</html>
