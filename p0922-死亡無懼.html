@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>死亡無懼</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F5F3EF;
+    --paper:#FFFFFF;
+    --ink:#2C2C2C;
+    --ink-soft:#6B665F;
+    --line:#E0DACE;
+    --moss:#7D8272;
+    --moss-light:#E9EAE3;
+    --charcoal:#4A4643;
+    --charcoal-dark:#34312E;
+    --gold-text:#704B19;
+    --gold:#A66F28;
+    --gold-light:#F8F0E3;
+    --success:#5A735C;
+    --vermilion:#B5432F;
+    --radius:4px;
+    --radius-sm:4px;
+    --radius-badge:3px;
+    --radius-modal:6px;
+    --shadow:none;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    background-image:
+      radial-gradient(rgba(0,0,0,.012) 1px, transparent 1px),
+      radial-gradient(rgba(0,0,0,.012) 1px, transparent 1px);
+    background-size:3px 3px;
+    background-position:0 0, 1.5px 1.5px;
+    color:var(--ink);
+    font-family:"Noto Sans TC",sans-serif;
+    font-weight:300;
+    line-height:1.95;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{
+    max-width:600px;
+    margin:0 auto;
+    padding:0 18px 60px;
+  }
+
+  /* ---------- 封面 ---------- */
+  .cover{
+    padding:56px 20px 36px;
+    text-align:center;
+  }
+  .cover-eyebrow{
+    font-family:"Noto Sans TC",sans-serif;
+    font-size:13px;
+    letter-spacing:.15em;
+    color:var(--ink-soft);
+    margin-bottom:14px;
+  }
+  .cover-title{
+    font-family:"Noto Serif TC",serif;
+    font-weight:500;
+    font-size:32px;
+    letter-spacing:.06em;
+    line-height:1.5;
+    color:var(--ink);
+  }
+  .cover-author{
+    margin-top:16px;
+    font-size:15px;
+    color:var(--ink-soft);
+  }
+  .cover-rule{
+    width:40px;
+    height:1px;
+    background:var(--line);
+    margin:24px auto 0;
+  }
+
+  /* ---------- 章節（紙頁） ---------- */
+  section.chap{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:26px 24px;
+    margin-bottom:20px;
+  }
+  .chap-num{
+    font-family:"Noto Sans TC",sans-serif;
+    font-size:13px;
+    letter-spacing:.2em;
+    color:var(--moss);
+  }
+  .chap-title{
+    font-family:"Noto Serif TC",serif;
+    font-weight:500;
+    font-size:21px;
+    letter-spacing:.05em;
+    line-height:1.6;
+    color:var(--ink);
+    margin:6px 0 10px;
+  }
+  .chap-title small{
+    display:block;
+    font-family:"Noto Sans TC",sans-serif;
+    font-weight:300;
+    font-size:18px;
+    letter-spacing:0;
+    color:var(--ink-soft);
+    margin-top:8px;
+    line-height:1.7;
+  }
+  .chap-bar{
+    height:2px;
+    width:32px;
+    background:var(--moss);
+    margin:14px 0 24px;
+  }
+
+  p{
+    font-size:18px;
+    margin:0 0 18px;
+    text-align:justify;
+    color:var(--ink);
+  }
+  p:last-child{margin-bottom:0;}
+
+  strong{font-weight:500;}
+
+  .term{
+    font-family:"Noto Serif TC",serif;
+    font-weight:500;
+    color:var(--gold-text);
+  }
+
+  ul.dash{
+    list-style:none;
+    margin:0 0 18px;
+    padding:0;
+  }
+  ul.dash li{
+    position:relative;
+    font-size:18px;
+    padding-left:20px;
+    margin-bottom:14px;
+    text-align:justify;
+  }
+  ul.dash li:last-child{margin-bottom:0;}
+  ul.dash li::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color:var(--moss);
+  }
+
+  .quote{
+    font-family:"Noto Serif TC",serif;
+    font-size:18px;
+    line-height:1.9;
+    color:var(--ink);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:14px 2px;
+    margin:18px 0;
+  }
+  .quote cite{
+    display:block;
+    font-style:normal;
+    font-family:"Noto Sans TC",sans-serif;
+    font-size:13px;
+    color:var(--gold-text);
+    margin-bottom:6px;
+    letter-spacing:.05em;
+  }
+
+  .gist{
+    background:var(--moss-light);
+    border-radius:var(--radius-sm);
+    padding:16px 16px;
+    margin:18px 0;
+  }
+  .gist-tag{
+    font-family:"Noto Sans TC",sans-serif;
+    font-size:13px;
+    letter-spacing:.1em;
+    color:var(--moss);
+    margin-bottom:8px;
+  }
+  .gist p{font-size:18px;margin-bottom:12px;color:var(--ink);}
+  .gist p:last-child{margin-bottom:0;}
+
+  /* ---------- 結語 ---------- */
+  .final{
+    background:var(--charcoal);
+    color:var(--bg);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:40px 26px 44px;
+    text-align:center;
+    margin-bottom:20px;
+  }
+  .ft-eyebrow{
+    font-family:"Noto Sans TC",sans-serif;
+    font-size:13px;
+    letter-spacing:.2em;
+    color:var(--gold-light);
+    margin-bottom:16px;
+  }
+  .final p{
+    font-size:18px;
+    color:var(--bg);
+    text-align:center;
+    line-height:1.85;
+  }
+  .final .couplet{
+    font-family:"Noto Serif TC",serif;
+    font-weight:500;
+    font-size:19px;
+    letter-spacing:.03em;
+    line-height:1.9;
+  }
+
+  footer{
+    text-align:center;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    padding:10px 20px 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="cover">
+    <div class="cover-eyebrow">佛法開示</div>
+    <div class="cover-title">死亡無懼</div>
+    <div class="cover-author">堪布卡塔仁波切　開示</div>
+    <div class="cover-rule"></div>
+  </div>
+
+  <!-- 壹 -->
+  <section class="chap" id="s1">
+    <div class="chap-num">壹</div>
+    <div class="chap-title">
+      死是必然的：認識中陰身的重要
+      <small>凡有生必有死，卻少有人正視這件事；及早瞭解中陰身，是自利利他兼具的大事，絕非等閒淺近之學</small>
+    </div>
+    <div class="chap-bar"></div>
+
+    <p>我們都誕生了，也都將要死去。所有的生命都要面對死亡。在過去長久的歲月中，許許多多的人誕生在這個世界上，卻從來沒有一個人能不死的——生的另一端就是死，這是可以確定的。</p>
+
+    <p>但雖然每個人都會死，一般人卻不會去注意這件事，只知迷戀輪迴中的事物、貪圖世間的享受；又因為沒有接觸過佛法，不知道為什麼生，也不知道什麼能導致快樂、什麼會招來苦難。這種無知有時是個很麻煩的問題——因為不知死後會怎麼樣，有些人生活上遇到困難就自殺了，想藉此結束人生的痛苦，這正是對死後一無所知最好的例子。自殺的人通常要在中陰身中經歷極大的痛苦，並因自殺之行為墮入三惡道；那些所謂無法忍受的世間痛苦，實在比不上中陰身之苦的千萬分之一。</p>
+
+    <p>因此，對死後中陰身的瞭解相當重要，我們要趁早去瞭解它——如果不趁早，當死亡到來時可能就太晚了，因為你沒有足夠的時間去作觀想。好比各種意外、災害一發生，根本來不及作觀想就已經死了。所以我們應把握現在這個機會，好好對中陰身作一番研究瞭解，這不只是為了一些淺近的利益，也是為了未來無量的利益；不只是為了一己之利，也為了一切眾生之福。</p>
+
+    <p>一個人若已證悟自心本性，死就沒什麼好怕的了——這時死只是換個地方罷了，就像從一個花園到另一個花園一樣，不但不可怕，反而很快樂；對一個能了悟自性的人而言，連下三惡道都不覺可怕，就像從這個淨土到那個淨土一樣。</p>
+
+    <div class="quote"><cite>惹瓊巴尊者云</cite>對一個覺者而言，死是個小悟。</div>
+
+    <p>對一個已覺悟自無染本性的人，死亡就如同一次微小的覺悟，而它能充實一個更廣大的覺悟。在一般的觀念中，一個人成長，我們說他長大了；但若從另一個角度看，他其實是一步步走向死亡。就好比射箭一樣，從箭射出去的一瞬間開始，箭就會逐漸落下來——生命也是不斷走向死亡，絕對不要期望長生不老。在講解中陰身之前，大家必須先確定：死是一定會來的！</p>
+  </section>
+
+  <!-- 貳 -->
+  <section class="chap" id="s2">
+    <div class="chap-num">貳</div>
+    <div class="chap-title">
+      死亡的歷程與第一個解脫機會
+      <small>四大依次衰竭而氣息斷絕；呼吸停止後，亡者仍要經歷覺、切、暗三種徵狀，隨後法身淨光顯現——這是第一個解脫的機會</small>
+    </div>
+    <div class="chap-bar"></div>
+
+    <p>中陰身有三個階段：藉著修行的證量和對中陰身的瞭解，亡者若能在臨終時證悟法身實相，便得解脫，這是第一階段；若不能於此階段解脫，也有機會在下一階段認證報身而解脫；若二者皆錯過，第三個機會，便是在投胎之前避免投生惡道，以化身的形式解脫。</p>
+
+    <p>我們的色身由地、水、火、風四大元素合成，生病或年老時，四大能量便會減退而導致死亡。臨終時，體內地大先衰竭，身體變得遲鈍、移動困難；接著水大衰竭，眼口等器官變得乾燥缺水；再接著火大衰竭，體溫由四肢尖端散去，六識也隨之衰退，外界的形色聲音愈來愈遠、愈來愈模糊；最後風大衰竭，臨終者呼吸變短，直到無法再呼吸，氣息便停止了。呼吸停止時，若依靠良好的上師或某些藥物幫助，仍有可能復活；但若未能活過來，而進入中陰身的三個階段，便無法起死回生了。</p>
+
+    <p>瞭解中陰境界，明顯有自利與利他兩種好處。<strong class="term">自利方面</strong>——若明瞭中陰境界並有所修持，清楚知道死時會出現哪些徵兆，臨終時見到徵兆出現，便能清楚知道自己將要死亡；此時若能一心觀想生前熟悉的上師或本尊在頭上，隨其前往佛淨土，不將財富地位家人執著放在心上，便可能解脫輪迴。<strong class="term">利他方面</strong>——若你明瞭死亡徵兆，在臨終親友身邊時，盡量靠近他的上半身，輕觸他的頭頂，提醒他觀想本尊或上師在頭頂上，專心不要想別的事，也可持誦阿彌陀佛心咒、嗡嘛尼貝美吽等咒語使其免於恐懼——能為臨終者解說觀想方法，就像救了一個正被追殺的人一樣，是極大的利益。</p>
+
+    <p>呼吸停止後，雖然外表看來已死，但深層意識中亡者仍未完全死亡，必須經歷三個過程：第一稱「覺」，感覺到忽亮忽不亮的白色，表示與三毒中的嗔分離；第二稱「切」，感覺到幌動的紅色，有如紅旗在風中飄動，表示與貪分離；第三稱「暗」，感覺到一片漆黑，表示與癡分離。這些白、紅、黑並非身體外可見的景象，而是內在精神上的感受。</p>
+
+    <p>徵兆出現後，法身實相的淨光將顯現。若生前曾修持大手印、直觀本性等禪定法門，便能當下認出此淨光，如見到久別的老友般親切熟悉，立刻與淨光合而為一、由此解脫。但若缺乏禪定功夫，即使這原始本然的自性明光人人皆可得見，也仍無法契入——會因害怕或猶豫而錯失這法身中陰的解脫機會。</p>
+
+    <div class="gist">
+      <div class="gist-tag">兼釋・母子相會</div>
+      <p>許多大成就者、仁波切或轉世活佛圓寂時，都以禪定姿勢坐著。雖然醫生宣稱已死亡，但心臟部位仍存有餘溫，有時可持續三、四天甚至七天——這正是已認出實相明光、證入法身的徵相。佛學名相中稱此為「母子相會」：母代表自性光，子代表認出自性光的修行證量。</p>
+    </div>
+  </section>
+
+  <!-- 參 -->
+  <section class="chap" id="s3">
+    <div class="chap-num">參</div>
+    <div class="chap-title">
+      報身中陰：五方佛顯現與死亡無懼的真義
+      <small>五方佛依次放光伴隨煩惱幽光，能認出本尊即得往生淨土；本尊法的熟悉與否，正是「死亡無懼」的關鍵</small>
+    </div>
+    <div class="chap-bar"></div>
+
+    <p>淨光消失後，未即時契入的亡者陷入無意識狀態，待恢復意識，便形成了來生的意識。此時亡者發覺自己確實死去了——能看見舊有的房子、家人、親友，想與他們說話親近，卻怎麼也引不起反應，因而變得沮喪。接著進入中陰身的第二階段，亡者的智慧和煩惱都變得敏銳，能見到報身佛的法相，特別是五方佛。</p>
+
+    <ul class="dash">
+      <li><strong class="term">白色毗盧遮那佛</strong>——放出比千個太陽還亮的白光，伴隨著來自亡者無明煩惱的幽暗蒼白之光。若接受佛光，便往生毗盧遮那佛淨土；若因恐懼排斥而選擇了蒼白幽光，則墮入畜生道。</li>
+      <li><strong class="term">藍色阿閦毗佛</strong>——放出極強藍光，伴隨來自嗔恨煩惱的暗藍幽光。認出者往生其淨土，選擇幽光者墮入地獄道。</li>
+      <li><strong class="term">黃色寶生佛</strong>——放出極亮黃光，伴隨來自貪慾煩惱的淡黃幽光。選擇貪慾之光者，將於餓鬼道受生。</li>
+      <li><strong class="term">紅色阿彌陀佛</strong>——放出極亮紅光，伴隨來自執著的淡紅幽光。捨佛光而就執著之光者，受生於人道。</li>
+      <li><strong class="term">綠色不空成就佛</strong>——放出極亮綠光，伴隨來自嫉妒的淡綠幽光。投入嫉妒之光者，於阿修羅道中受生。</li>
+    </ul>
+
+    <p>每尊佛除放光外，還伴隨巨響如雷的心咒聲。若生前曾持誦某位本尊的心咒、觀想其形像，中陰境界中本尊的光亮與咒音出現時，便能立刻辨認而不生恐懼；若對本尊形像心咒都不熟悉，自然會對極強亮光與巨響心咒感到恐懼排斥，因而「逃離」諸佛加持、「躲進」煩惱無明中。</p>
+
+    <p>若五方佛的光都未能攝入，亡者將因種種幻覺體驗到千百萬倍於日常的強烈恐懼——感覺被波浪牽引（貪執所致）、被拋入熊熊大火（嗔恨所致）、被黑暗通道中的敵人追殺（無明所致），這些皆是虛幻，卻真實地令人恐懼萬分。接著，由五方佛轉化而成的<strong>憤怒本尊</strong>將顯現——這並非本尊故意嚇人，而是由於業障使我們無法再見到諸佛的寂靜化現，把本尊看成了憤怒的形像，就像白牆被紅光照映便顯出紅色一樣。若生前修持過憤怒尊法門、熟悉其形像心咒，仍是一個解脫的機會；若不曾修持，錯過寂靜尊的救度後，於此階段就更難解脫了。</p>
+
+    <p>談到這裡，便更突顯出「死亡無懼」的意義了。世上沒有任何身份地位或仙丹靈藥，可以令我們得到真正無恐懼的死亡——死亡無懼，就是完全解脫中陰身的任何恐怖階段。最理想的方法是修持大手印、證悟自心本性，於法性中陰獲取究竟解脫；次者則透過勤修本尊觀想與心咒持誦，以至誠虔敬心向本尊祈禱，這份功德將使我們在中陰第二階段認證本尊而解脫。若你走入一個險惡陌生的地方，而那兒有一群要保護你的人，知道他們是來保護你的，自然就不會恐懼；但若誤以為是怨敵而逃離，反而更危險——本尊法正是如此，寂靜尊或憤怒尊都是守護者，能皈依認出他們，便得安穩。</p>
+
+    <div class="gist">
+      <div class="gist-tag">兼述・兩個中陰解脫的故事</div>
+      <p>從前有一位牧羊人，常在附近一座大寺廟旁吃中飯，廟牆上畫著一尊憤怒本尊——他不知畫像代表什麼，卻天天將飯分一半給這位本尊，說：「這份是你的，一起吃吧！」而此本尊實際上是中陰百尊之一，有鹿頭人身。牧羊人去世後，本尊顯現時他立刻認出，高興地說：「嗨！朋友！讓我們一起用餐吧！」就這樣解脫了。</p>
+      <p>另有一位老婆婆常經過一座佛堂，聽見喇嘛誦經：「……本尊有著紅啄木鳥的頭，手持弓和箭，放著光芒……」她十分好奇，反覆思索這是什麼形像。後來她死了，在中陰身見到一位人身紅啄木鳥頭、手持弓箭放光的本尊，立刻認出正是自己日夜思索的形像，因此也獲得了解脫。</p>
+    </div>
+
+    <p>修行的目的決不是為世間功名成就，而是在死後中陰身時能認證本尊而解脫自在，並以此利益其他眾生——這便是修持佛法的目標。一個人若真能如此確實修持，死亡便根本無法使他害怕了。</p>
+  </section>
+
+  <!-- 肆 -->
+  <section class="chap" id="s4">
+    <div class="chap-num">肆</div>
+    <div class="chap-title">
+      化身中陰與六道受生：正確清淨的修行之道
+      <small>四生、六道各依煩惱牽引而受生；正確的修行，是安住空性或發菩提心迴向，莫讓善業混雜煩惱之毒</small>
+    </div>
+    <div class="chap-bar"></div>
+
+    <p>能在法身中陰成就的人非常少，須生前已證悟自心本性；報身階段則有較多人能成就，只要熟悉一位本尊的法相心咒並虔誠恭敬，便有很大機會解脫。到了<strong class="term">化身中陰</strong>——也就是第三階段——則將出現許多障礙，這是通往六道輪迴、再次受生的階段。</p>
+
+    <p>受生的方式有四種，稱「四生」：<strong class="term">化生</strong>（不須依賴父母交合，自然化現而生）、<strong class="term">濕生</strong>（依濕暖之境而生）、<strong class="term">胎生</strong>（依父母交合、藉母腹而生）、<strong class="term">卵生</strong>（經母親排出之受精卵而生）。我們之所以投生六道，是因貪、嗔、癡三毒的牽引，或因無明愚癡使我們無法於前兩階段的中陰認證淨光與本尊。</p>
+
+    <ul class="dash">
+      <li><strong class="term">地獄道</strong>——由嗔的力量所致。亡者意識到身體變成黑黑圓圓小小、只有一隻眼，覺得有無數敵人在後追殺，一直逃，最後逃進無底洞中，便墮入地獄，從此受十八種不可思議的痛苦。</li>
+      <li><strong class="term">餓鬼道</strong>——由強烈貪念所致，受生方式與地獄道相似，直接化生。與地獄道共同的特徵是：亡者感覺被凶惡仇敵追趕，見到樹下、柱子下、岩石下等可避護之處而躲入，便墮入其中——一旦墮入，便很難有機會接受上師開示而解脫。</li>
+      <li><strong class="term">畜生道</strong>——依濕暖或父母交合而生（含卵生、胎生）。依濕暖環境受生者，會對此環境感到舒適快樂；依父母交合而生者，貪執父親生為雌性，貪執母親生為雄性。此道業力同樣強大，難有解脫機會。</li>
+      <li><strong class="term">人道</strong>——亡者因業力見到有緣的雙親，對其中一人生起極大貪愛，便進入母親子宮。對熟悉佛法、曾受灌頂之人，此時若能憶起灌頂中「引見灌頂」所介紹的本尊，修習「清淨觀」，便能視雙親為佛父佛母，以化身方式投生——這正是轉世活佛的投生方式，也是一個解脫的機會。</li>
+      <li><strong class="term">阿修羅道</strong>——由善業與嫉妒心混合所致，如修持佛法卻見他人修得更好而生嫉妒，便在善業中混雜了煩惱毒。投生方式與人道相近，亦對父母起執著；因嫉妒心所致，阿修羅世界總是不斷打鬥爭戰，雖比人道為高，卻因殺業而終將墮入三惡道。</li>
+      <li><strong class="term">天道</strong>——由善業與我慢混合所致，如修法佈施卻自以為勝過他人，便是我慢混入善業。天人享受極長久的喜樂，但死前七天會出現衰敗徵兆，且天人有神通能預知來世往往下墮三惡道，因而備受痛苦；天道又無佛法可修，故雖是六道之最高，卻不如有機會修行佛法的人道。</li>
+    </ul>
+
+    <p>知道自己有這麼多不同的煩惱妄識，似乎令人沮喪，但千萬不要灰心，反而更應正確地修行。<strong class="term">如何使善業不滲入煩惱毒呢？</strong>最好的方法是將心安住於空性中；若尚不能安住空性，第二種方法便是不論修法、佈施，皆思惟這一切是為了利益一切眾生而做——這便是菩提心。修行不只是為了解決眾生目前的苦難，而是要究竟解脫、成就佛果。修持或善行完成後，務必迴向功德，對任何功德都不執著，將功德迴向一切眾生，願眾生現前離苦、未來成就無上正等正覺——以此要領修行，便不會在善業中混雜煩惱毒。</p>
+
+    <div class="gist">
+      <div class="gist-tag">兼釋・清淨修行的兩個例子</div>
+      <p>贊助佛寺或法輪中心是累積善業的好方法，但若不懂正確地做，也可能成為積聚惡業的途徑——譬如贊助某中心，見另一中心發展得更好便心生嫉妒：「那個中心可好了！」贊助雖是善行，卻因嫉妒心而混入了惡業，事實上根本不必嫉妒，反而應當歡喜。佈施也是如此：見人有困難而佈施財物，事後卻懊悔給太多，便是浪費了善業。佈施的正確方法，是給出之後什麼都不要想，不執著自己做了什麼好事壞事，不帶一絲期望。</p>
+    </div>
+
+    <p>大家一定要正確、清淨地修行佛法。很多人只為現世的財富、成功、權勢而修行，完全不考慮來生，甚至質疑來生的存在——但既然無法確定，為何又完全只為此生拚命努力呢？這顯然是對自己未來的生命毫不負責。中陰身的痛苦是無法言喻的，比起來現在的痛苦根本不算什麼，因此一定要為長遠作打算。一旦掌握了修行的宗旨、道理與重點，一個法門便足夠累積資糧直到開悟解脫；否則光聽聞許多教法，也許能從上師處得到一點加持，卻可能無法獲得真正的理解。</p>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">死亡無懼　結語</div>
+    <div class="couplet">
+      對一個覺者而言，死是個小悟。
+    </div>
+    <p style="margin-top:20px">修行佛法是為了超越世俗，不因世俗的一切而滿足——若在修行中摻入愚妄的心態，便是良藥裡加進了毒藥。無論任何善業或修持，都應做得正確而乾淨，毫無污損，如此，死亡便根本無法使人害怕了。</p>
+  </div>
+
+  <footer>死亡無懼｜堪布卡塔仁波切　開示</footer>
+</div>
+
+</body>
+</html>
