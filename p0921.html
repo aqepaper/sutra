@@ -1,0 +1,3856 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#f7f0e2">
+<title>解脫莊嚴寶論・通俗講讀</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;500;700&family=Noto+Serif+TC:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f7f0e2;
+    --ink:#3a2e22;
+    --gold:#b8923f;
+    --c1:#6b5344; /* 壹 */
+    --c2:#8a6d1f; /* 貳 */
+    --c3:#7a3b2e; /* 參 */
+    --c4:#2f5c4c; /* 肆 */
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Noto Serif TC","LXGW WenKai TC",serif;
+    font-weight:300;
+    line-height:2;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{
+    max-width:600px;
+    margin:0 auto;
+    padding:0 22px 60px;
+  }
+
+  /* ---------- 封面 ---------- */
+  .cover{
+    padding:64px 22px 40px;
+    text-align:center;
+  }
+  .cover-eyebrow{
+    font-family:"LXGW WenKai TC",serif;
+    font-size:13px;
+    letter-spacing:.15em;
+    color:var(--gold);
+    margin-bottom:14px;
+  }
+  .cover-title{
+    font-family:"LXGW WenKai TC",serif;
+    font-weight:700;
+    font-size:34px;
+    line-height:1.5;
+    color:var(--ink);
+  }
+  .cover-author{
+    margin-top:18px;
+    font-size:15px;
+    color:var(--ink);
+    opacity:.7;
+  }
+  .cover-rule{
+    width:56px;
+    height:2px;
+    background:var(--gold);
+    margin:26px auto 0;
+  }
+
+  /* ---------- 章節 ---------- */
+  section.chap{padding-top:44px;}
+  .chap-num{
+    font-family:"LXGW WenKai TC",serif;
+    font-size:14px;
+    letter-spacing:.2em;
+  }
+  .chap-title{
+    font-family:"LXGW WenKai TC",serif;
+    font-weight:700;
+    font-size:24px;
+    line-height:1.6;
+    margin:6px 0 10px;
+  }
+  .chap-title small{
+    display:block;
+    font-family:"Noto Serif TC",serif;
+    font-weight:300;
+    font-size:18px;
+    opacity:.75;
+    margin-top:8px;
+    line-height:1.7;
+  }
+  .chap-bar{
+    height:4px;
+    width:46px;
+    border-radius:2px;
+    margin:14px 0 26px;
+  }
+
+  h3.sub{
+    font-family:"LXGW WenKai TC",serif;
+    font-weight:700;
+    font-size:19px;
+    margin:34px 0 14px;
+    padding-left:12px;
+    border-left:4px solid var(--gold);
+  }
+
+  p{
+    font-size:18px;
+    margin:0 0 20px;
+    text-align:justify;
+  }
+
+  strong{font-weight:600;}
+
+  .term{
+    font-family:"LXGW WenKai TC",serif;
+    font-weight:500;
+  }
+
+  ul.dash{
+    list-style:none;
+    margin:0 0 24px;
+    padding:0;
+  }
+  ul.dash li{
+    position:relative;
+    font-size:18px;
+    padding-left:20px;
+    margin-bottom:16px;
+    text-align:justify;
+  }
+  ul.dash li::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color:var(--gold);
+  }
+  ul.dash li strong{
+    font-family:"LXGW WenKai TC",serif;
+  }
+  ul.dash li a{
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:1px solid rgba(184,146,63,.55);
+  }
+  ul.dash li a:active{
+    color:var(--gold);
+  }
+  .toc-note{
+    font-size:13.5px;
+    opacity:.65;
+    margin-top:-6px;
+  }
+
+  .quote{
+    font-family:"LXGW WenKai TC",serif;
+    font-size:18px;
+    line-height:2;
+    color:var(--ink);
+    border-top:1px solid rgba(184,146,63,.5);
+    border-bottom:1px solid rgba(184,146,63,.5);
+    padding:16px 4px;
+    margin:22px 0;
+  }
+  .quote cite{
+    display:block;
+    font-style:normal;
+    font-family:"Noto Serif TC",serif;
+    font-size:13.5px;
+    color:var(--gold);
+    margin-bottom:8px;
+    letter-spacing:.05em;
+  }
+
+  .gist{
+    border-top:2px solid var(--ink);
+    border-bottom:2px solid var(--ink);
+    padding:18px 2px;
+    margin:30px 0;
+  }
+  .gist-tag{
+    font-family:"LXGW WenKai TC",serif;
+    font-size:13px;
+    letter-spacing:.15em;
+    color:var(--gold);
+    margin-bottom:10px;
+  }
+  .gist p{font-size:18px;margin-bottom:0;}
+
+  hr.sep{
+    border:none;
+    border-top:1px dashed rgba(58,46,34,.4);
+    margin:44px 0 0;
+  }
+
+  /* ---------- 結語 ---------- */
+  .final{
+    margin-top:56px;
+    background:var(--ink);
+    color:var(--paper);
+    padding:52px 26px 60px;
+    text-align:center;
+    border-radius:2px;
+  }
+  .ft-eyebrow{
+    font-family:"LXGW WenKai TC",serif;
+    font-size:13px;
+    letter-spacing:.2em;
+    color:var(--gold);
+    margin-bottom:18px;
+  }
+  .final p{
+    font-size:18px;
+    color:var(--paper);
+    text-align:center;
+    line-height:1.9;
+  }
+  .final .couplet{
+    font-family:"LXGW WenKai TC",serif;
+    font-size:19px;
+    line-height:2.1;
+    margin:22px 0 0;
+  }
+
+  footer{
+    text-align:center;
+    font-size:12.5px;
+    color:var(--ink);
+    opacity:.55;
+    padding:30px 22px 10px;
+  }
+html{--z:1}
+body{transition:background .2s,color .2s}
+p,ul.dash li,.quote,.gist p,.final p{font-size:calc(18px*var(--z))}
+.final .couplet{font-size:calc(19px*var(--z))}
+.chap-title{font-size:calc(24px*var(--z))}
+.chap-title small{font-size:calc(18px*var(--z))}
+.ch-head .cover-title{font-size:calc(28px*var(--z))}
+.wrap{padding-top:calc(44px + env(safe-area-inset-top,0px))}
+.bookcover{min-height:82vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 22px}
+.bk-title{font-family:"LXGW WenKai TC",serif;font-weight:700;font-size:44px;line-height:1.4;letter-spacing:.08em;margin-top:6px}
+.bk-sub{font-family:"LXGW WenKai TC",serif;font-size:18px;margin-top:10px;opacity:.75}
+.start{margin-top:34px;color:var(--ink);text-decoration:none;border:1px solid var(--gold);padding:8px 26px;border-radius:2px;font-family:"LXGW WenKai TC",serif;letter-spacing:.2em}
+.tocpage{padding-bottom:20px}
+.tocpage ul.dash li a{display:inline-block;padding:2px 0}
+.tocpage a.done::after{content:" ✓";color:var(--gold);font-size:.85em}
+article.ch{padding-top:64px}
+article.ch+article.ch{border-top:1px solid rgba(184,146,63,.4);margin-top:40px}
+.ch-head{text-align:center;padding:16px 0 4px}
+.ch-desc{margin-top:10px;font-size:14px;opacity:.65;line-height:1.8}
+.pn{display:flex;justify-content:space-between;gap:10px;margin:40px 0 0;font-size:14px}
+.pn a{color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(184,146,63,.55);padding:6px 0}
+article.ch [id^="b"]{scroll-margin-top:70px}
+.flash{background:rgba(184,146,63,.28)}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gold);z-index:70}
+#tb{position:fixed;top:0;left:0;right:0;z-index:60;background:var(--paper);border-bottom:1px solid rgba(128,128,128,.25);padding:env(safe-area-inset-top,0px) 6px 0;height:calc(44px + env(safe-area-inset-top,0px));display:flex;align-items:center;justify-content:space-between;transition:transform .25s}
+#tb.hide{transform:translateY(-100%)}
+#tb .g{display:flex;gap:2px}
+.tbtn{background:none;border:0;color:var(--ink);font:500 14px "LXGW WenKai TC",serif;padding:10px 9px;cursor:pointer;letter-spacing:.05em}
+.tbtn:active{color:var(--gold)}
+#mask{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .2s;z-index:80}
+#mask.on{opacity:1;pointer-events:auto}
+#drawer{position:fixed;top:0;bottom:0;left:0;width:min(86vw,360px);background:var(--paper);color:var(--ink);z-index:90;transform:translateX(-104%);transition:transform .25s;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);box-shadow:2px 0 12px rgba(0,0,0,.25)}
+#drawer.on{transform:none}
+.tabs{display:flex;border-bottom:1px solid rgba(128,128,128,.3)}
+.tab{flex:1;background:none;border:0;color:var(--ink);font:500 15px "LXGW WenKai TC",serif;padding:14px 0;opacity:.55;border-bottom:2px solid transparent;cursor:pointer}
+.tab.on{opacity:1;border-bottom-color:var(--gold)}
+.pane{flex:1;overflow-y:auto;padding:0 16px calc(24px + env(safe-area-inset-bottom,0px));-webkit-overflow-scrolling:touch}
+#prog{padding:14px 0 6px;font-size:13px;opacity:.8}
+#pbar{height:4px;background:rgba(128,128,128,.25);border-radius:2px;margin-top:6px}
+#pfill{height:100%;width:0;background:var(--gold);border-radius:2px}
+.dg{font:700 14px "LXGW WenKai TC",serif;margin:18px 0 4px;opacity:.9}
+.dg span{margin-right:8px}
+.row{display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(128,128,128,.15)}
+.row a{flex:1;color:var(--ink);text-decoration:none;font-size:15px;line-height:1.6;padding:9px 0}
+.row.cur a{color:var(--gold);font-weight:600}
+.rd{flex:none;width:22px;height:22px;border-radius:50%;border:1.5px solid rgba(128,128,128,.5);background:none;color:var(--paper);font-size:12px;line-height:1;cursor:pointer;padding:0}
+.row.done .rd{background:var(--gold);border-color:var(--gold)}
+.row.done .rd::after{content:"✓"}
+#addmark{width:100%;margin:14px 0 8px;padding:10px;background:none;border:1px solid var(--gold);color:var(--ink);font:500 14px "LXGW WenKai TC",serif;border-radius:2px;cursor:pointer}
+.mk{display:flex;align-items:center;border-bottom:1px solid rgba(128,128,128,.15)}
+.mk a{flex:1;color:var(--ink);text-decoration:none;font-size:14.5px;line-height:1.7;padding:10px 0}
+.mk small,.hit small{display:block;color:var(--gold);font-size:12px;letter-spacing:.05em}
+.del{flex:none;background:none;border:0;color:var(--ink);opacity:.5;font-size:20px;padding:6px 10px;cursor:pointer}
+.empty,.cnt{font-size:13.5px;opacity:.65;line-height:1.9;padding:16px 0}
+#search{position:fixed;inset:0;background:var(--paper);color:var(--ink);z-index:95;display:none;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+#search.on{display:flex}
+.sh{display:flex;gap:8px;padding:10px 12px;border-bottom:1px solid rgba(128,128,128,.3)}
+#q{flex:1;font:16px "Noto Serif TC",serif;padding:9px 12px;border:1px solid rgba(128,128,128,.45);border-radius:3px;background:transparent;color:var(--ink);min-width:0}
+#res{flex:1;overflow-y:auto;padding:0 16px calc(24px + env(safe-area-inset-bottom,0px))}
+.hit{display:block;color:var(--ink);text-decoration:none;font-size:14.5px;line-height:1.8;padding:11px 0;border-bottom:1px solid rgba(128,128,128,.15)}
+mark{background:rgba(184,146,63,.4);color:inherit;padding:0 1px}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:var(--paper);padding:9px 18px;border-radius:20px;font-size:13.5px;opacity:0;pointer-events:none;transition:all .25s;z-index:120;white-space:nowrap}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+.c0{--hc:rgba(240,200,60,.38);--sc:#f0c83c}
+.c1{--hc:rgba(120,190,120,.38);--sc:#7cc17c}
+.c2{--hc:rgba(230,130,150,.34);--sc:#e78ca0}
+.c3{--hc:rgba(110,170,220,.34);--sc:#6fb0e0}
+.hl{background:var(--hc);border-radius:2px;cursor:pointer;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.hl.hn{border-bottom:2px dotted var(--gold)}
+.sw{width:30px;height:30px;border-radius:50%;background:var(--sc);border:2px solid transparent;padding:0;cursor:pointer;flex:none}
+.sw.on{border-color:var(--ink)}
+#hlbar{position:fixed;z-index:75;display:none;align-items:center;gap:10px;background:var(--ink);color:var(--paper);padding:7px 12px;border-radius:24px;box-shadow:0 3px 12px rgba(0,0,0,.35);-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+#hlbar.on{display:flex}
+#hlbar .cs{display:flex;gap:8px}
+#hlbar .sw{width:26px;height:26px;border-color:rgba(255,255,255,.55)}
+#hlbar .nb{background:none;border:0;border-left:1px solid rgba(128,128,128,.6);color:var(--paper);font:500 14px "LXGW WenKai TC",serif;padding:4px 2px 4px 12px;cursor:pointer}
+#hlbar .hint{display:none;font-size:13px;white-space:nowrap}
+#hlbar.msg .cs,#hlbar.msg .nb{display:none}
+#hlbar.msg .hint{display:block}
+#ed{position:fixed;z-index:100;left:12px;right:12px;top:calc(60px + env(safe-area-inset-top,0px));max-width:520px;margin:0 auto;background:var(--paper);color:var(--ink);border:1px solid rgba(128,128,128,.35);border-radius:6px;padding:14px;display:none;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+#ed.on{display:block}
+#ed-q{font-size:14px;line-height:1.8;opacity:.8;max-height:5.4em;overflow:hidden;border-left:3px solid var(--gold);padding-left:10px;margin-bottom:12px}
+#ed .cr{display:flex;gap:12px;margin-bottom:12px}
+#ed-n{width:100%;box-sizing:border-box;font:16px/1.7 "Noto Serif TC",serif;padding:9px 11px;border:1px solid rgba(128,128,128,.45);border-radius:3px;background:transparent;color:var(--ink);resize:vertical}
+#ed .er{display:flex;justify-content:space-between;margin-top:12px}
+#ed .er button{background:none;border:1px solid rgba(128,128,128,.45);color:var(--ink);padding:8px 18px;border-radius:3px;font:500 14px "LXGW WenKai TC",serif;cursor:pointer}
+#ed-ok{border-color:var(--gold)!important;background:rgba(184,146,63,.22)!important}
+.hlhead{display:flex;justify-content:space-between;align-items:center;padding:14px 0 6px;font-size:13px}
+.hlhead button{background:none;border:1px solid rgba(128,128,128,.45);color:var(--ink);padding:5px 10px;margin-left:6px;border-radius:3px;font:500 13px "LXGW WenKai TC",serif;cursor:pointer}
+.an{display:flex;align-items:center;border-bottom:1px solid rgba(128,128,128,.15)}
+.an a{flex:1;color:var(--ink);text-decoration:none;font-size:14.5px;line-height:1.8;padding:10px 0}
+.an small{display:block;color:var(--gold);font-size:12px;letter-spacing:.05em}
+.an .q{background:var(--hc);border-radius:2px}
+.an .nt{display:block;margin-top:4px;opacity:.75;font-size:13.5px;white-space:pre-wrap}
+@media print{#hlbar,#ed{display:none!important}.hl{background:none}}
+@media (max-width:768px){
+.cover-eyebrow,.cover-author,.chap-num,.gist-tag,.ft-eyebrow,.toc-note,.quote cite,footer,.ch-desc,.pn,.tbtn,.tab,#prog,.dg,.row a,#addmark,.mk a,.mk small,.hit small,.an a,.an small,.an .nt,.empty,.cnt,.hit,#toast,#hlbar .nb,#hlbar .hint,#ed-q,.er button,.hlhead,.hlhead button,.start,.bk-sub{font-size:18px!important}
+#q,#ed-n{font-size:18px!important}
+}
+@media print{#tb,#bar,#drawer,#search,</style></head><body>
+<div id="bar"></div>
+<div id="tb"><div class="g"><button class="tbtn" id="b-toc" aria-label="目錄">☰ 目錄</button></div><div class="g"><button class="tbtn" id="b-search">搜尋</button><button class="tbtn" id="b-marks">書籤</button></div></div>
+<div id="mask"></div>
+<div id="drawer"><div class="tabs"><button class="tab on" data-tab="toc">目錄</button><button class="tab" data-tab="marks">書籤</button><button class="tab" data-tab="hl">標註</button></div>
+<div class="pane" id="pane-toc"><div id="prog"><span id="ptxt"></span><div id="pbar"><div id="pfill"></div></div></div><div class="dg"><span style="color:var(--c1)">壹</span>因、所依、緣</div><div class="row" data-ch="ch01"><a href="#ch01">概論</a><button class="rd" data-ch="ch01" aria-label="切換已讀"></button></div><div class="row" data-ch="ch02"><a href="#ch02">第一章　明成佛之因</a><button class="rd" data-ch="ch02" aria-label="切換已讀"></button></div><div class="row" data-ch="ch03"><a href="#ch03">第二章　明成佛之所依</a><button class="rd" data-ch="ch03" aria-label="切換已讀"></button></div><div class="row" data-ch="ch04"><a href="#ch04">第三章　明善知識</a><button class="rd" data-ch="ch04" aria-label="切換已讀"></button></div><div class="dg"><span style="color:var(--c2)">貳</span>方便（一）：四大口訣與發菩提心</div><div class="row" data-ch="ch05"><a href="#ch05">第四章　成佛之方法／觀無常</a><button class="rd" data-ch="ch05" aria-label="切換已讀"></button></div><div class="row" data-ch="ch06"><a href="#ch06">第五章　輪迴之苦痛</a><button class="rd" data-ch="ch06" aria-label="切換已讀"></button></div><div class="row" data-ch="ch07"><a href="#ch07">第六章　業果之概說</a><button class="rd" data-ch="ch07" aria-label="切換已讀"></button></div><div class="row" data-ch="ch08"><a href="#ch08">第七章　慈心與悲心</a><button class="rd" data-ch="ch08" aria-label="切換已讀"></button></div><div class="row" data-ch="ch09"><a href="#ch09">第八章　皈依與淨戒</a><button class="rd" data-ch="ch09" aria-label="切換已讀"></button></div><div class="row" data-ch="ch10"><a href="#ch10">第九章（上）　論發菩提心・體性差別所緣</a><button class="rd" data-ch="ch10" aria-label="切換已讀"></button></div><div class="row" data-ch="ch11"><a href="#ch11">第九章（中）　論發菩提心・儀軌</a><button class="rd" data-ch="ch11" aria-label="切換已讀"></button></div><div class="row" data-ch="ch12"><a href="#ch12">第九章（下）　論發菩提心・功德過失學處</a><button class="rd" data-ch="ch12" aria-label="切換已讀"></button></div><div class="row" data-ch="ch13"><a href="#ch13">第十章　願菩提心之學處</a><button class="rd" data-ch="ch13" aria-label="切換已讀"></button></div><div class="dg"><span style="color:var(--c3)">參</span>方便（二）：六波羅蜜多</div><div class="row" data-ch="ch14"><a href="#ch14">第十一章　總說六波羅蜜多</a><button class="rd" data-ch="ch14" aria-label="切換已讀"></button></div><div class="row" data-ch="ch15"><a href="#ch15">第十二章　佈施波羅蜜多</a><button class="rd" data-ch="ch15" aria-label="切換已讀"></button></div><div class="row" data-ch="ch16"><a href="#ch16">第十三章　持戒波羅蜜多</a><button class="rd" data-ch="ch16" aria-label="切換已讀"></button></div><div class="row" data-ch="ch17"><a href="#ch17">第十四章　忍辱波羅蜜多</a><button class="rd" data-ch="ch17" aria-label="切換已讀"></button></div><div class="row" data-ch="ch18"><a href="#ch18">第十五章　精進波羅蜜多</a><button class="rd" data-ch="ch18" aria-label="切換已讀"></button></div><div class="row" data-ch="ch19"><a href="#ch19">第十六章　禪定波羅蜜多</a><button class="rd" data-ch="ch19" aria-label="切換已讀"></button></div><div class="row" data-ch="ch20"><a href="#ch20">第十七章（上）　般若波羅蜜多・體性與解義</a><button class="rd" data-ch="ch20" aria-label="切換已讀"></button></div><div class="row" data-ch="ch21"><a href="#ch21">第十七章（下）　般若波羅蜜多・修持證驗果報</a><button class="rd" data-ch="ch21" aria-label="切換已讀"></button></div><div class="dg"><span style="color:var(--c4)">肆</span>果位、事業</div><div class="row" data-ch="ch22"><a href="#ch22">第十八章　說道階次第</a><button class="rd" data-ch="ch22" aria-label="切換已讀"></button></div><div class="row" data-ch="ch23"><a href="#ch23">第十九章　菩薩地道</a><button class="rd" data-ch="ch23" aria-label="切換已讀"></button></div><div class="row" data-ch="ch24"><a href="#ch24">第二十章　圓滿佛果</a><button class="rd" data-ch="ch24" aria-label="切換已讀"></button></div><div class="row" data-ch="ch25"><a href="#ch25">第二十一章　佛事業</a><button class="rd" data-ch="ch25" aria-label="切換已讀"></button></div></div>
+<div class="pane" id="pane-marks" style="display:none"><button id="addmark">＋ 在此處加書籤</button><div id="marklist"></div></div>
+<div class="pane" id="pane-hl" style="display:none"><div class="hlhead"><span id="hlcount"></span><span><button id="hl-copy">複製全部</button><button id="hl-dl">下載</button></span></div><div id="hllist"></div></div></div>
+<div id="search"><div class="sh"><input id="q" type="search" placeholder="搜尋全書關鍵字" autocomplete="off"><button class="tbtn" id="sclose">關閉</button></div><div id="res"></div></div>
+<div id="toast"></div>
+<div id="hlbar"><span class="cs"><button class="sw c0" data-c="0" aria-label="黃色螢光"></button><button class="sw c1" data-c="1" aria-label="綠色螢光"></button><button class="sw c2" data-c="2" aria-label="粉色螢光"></button><button class="sw c3" data-c="3" aria-label="藍色螢光"></button></span><button class="nb" data-act="note">✎ 筆記</button><span class="hint">此處已有標註，請點選原標註修改</span></div>
+<div id="ed"><div id="ed-q"></div><div class="cr"><button class="sw c0" data-ec="0" aria-label="黃色"></button><button class="sw c1" data-ec="1" aria-label="綠色"></button><button class="sw c2" data-ec="2" aria-label="粉色"></button><button class="sw c3" data-ec="3" aria-label="藍色"></button></div><textarea id="ed-n" rows="4" placeholder="寫下心得或提醒…"></textarea><div class="er"><button id="ed-del">刪除標註</button><button id="ed-ok">完成</button></div></div>
+
+<div class="wrap"><section id="top" class="bookcover"><div class="cover-eyebrow">若有所思・通俗講讀系列</div><div class="bk-title">解脫莊嚴寶論</div><div class="bk-sub">大乘菩提道次第論</div><div class="cover-rule"></div><div class="cover-author">岡波巴大師　造論</div><a class="start" href="#toc">開始閱讀</a></section><section id="toc" class="tocpage"><div class="cover"><div class="cover-eyebrow">解脫莊嚴寶・大乘菩提道次第論</div><div class="cover-title">目錄</div><div class="cover-rule"></div></div><section class="chap"><div class="chap-num" style="color:var(--c1)">壹</div><div class="chap-title">因、所依、緣<small>成佛之因如來藏、所依人身寶、助緣善知識——菩提道的三項根本條件</small></div><div class="chap-bar" style="background:var(--c1)"></div><ul class="dash"><li><a href="#ch01">概論</a>——全論導讀：造論緣起、六種菩提事總綱、章節脈絡</li><li><a href="#ch02">第一章　明成佛之因</a>——如來藏與五種種性差別</li><li><a href="#ch03">第二章　明成佛之所依</a>——暇滿人身寶與三種信心</li><li><a href="#ch04">第三章　明善知識</a>——依止善知識之理由、種類、方便與利益</li></ul></section><hr class="sep"><section class="chap"><div class="chap-num" style="color:var(--c2)">貳</div><div class="chap-title">方便（一）：四大口訣與發菩提心<small>觀無常、觀業果輪迴、修慈修悲、皈依淨戒，以及論發菩提心的體性、儀軌、功德與學處</small></div><div class="chap-bar" style="background:var(--c2)"></div><ul class="dash"><li><a href="#ch05">第四章　成佛之方法／觀無常</a>——四種成佛障礙與觀無常三層次</li><li><a href="#ch06">第五章　輪迴之苦痛</a>——三苦總說、六道之苦</li><li><a href="#ch07">第六章　業果之概說</a>——十不善業與業果四原則</li><li><a href="#ch08">第七章　慈心與悲心</a>——念母恩與生緣悲之修法</li><li><a href="#ch09">第八章　皈依與淨戒</a>——發菩提心三條件、皈依九門</li><li><a href="#ch10">第九章（上）　論發菩提心・體性差別所緣</a></li><li><a href="#ch11">第九章（中）　論發菩提心・儀軌</a></li><li><a href="#ch12">第九章（下）　論發菩提心・功德過失學處</a></li><li><a href="#ch13">第十章　願菩提心之學處</a>——五事攝盡與四黑法四白法</li></ul></section><hr class="sep"><section class="chap"><div class="chap-num" style="color:var(--c3)">參</div><div class="chap-title">方便（二）：六波羅蜜多<small>佈施、持戒、忍辱、精進、禪定、般若——菩薩行菩提心學處的六種具體修法</small></div><div class="chap-bar" style="background:var(--c3)"></div><ul class="dash"><li><a href="#ch14">第十一章　總說六波羅蜜多</a></li><li><a href="#ch15">第十二章　佈施波羅蜜多</a></li><li><a href="#ch16">第十三章　持戒波羅蜜多</a></li><li><a href="#ch17">第十四章　忍辱波羅蜜多</a></li><li><a href="#ch18">第十五章　精進波羅蜜多</a></li><li><a href="#ch19">第十六章　禪定波羅蜜多</a></li><li><a href="#ch20">第十七章（上）　般若波羅蜜多・體性與解義</a></li><li><a href="#ch21">第十七章（下）　般若波羅蜜多・修持證驗果報</a></li></ul></section><hr class="sep"><section class="chap"><div class="chap-num" style="color:var(--c4)">肆</div><div class="chap-title">果位、事業<small>五道十三地層層趨入圓滿佛果，佛陀復以無念任運之姿成就利生事業——全論至此圓滿</small></div><div class="chap-bar" style="background:var(--c4)"></div><ul class="dash"><li><a href="#ch22">第十八章　說道階次第</a>——五道：資糧、加行、見道、修道、究竟</li><li><a href="#ch23">第十九章　菩薩地道</a>——十三地與十地各別功德</li><li><a href="#ch24">第二十章　圓滿佛果</a>——斷證二種圓滿、三身體性</li><li><a href="#ch25">第二十一章　佛事業</a>——無念任運利生七喻（全論圓滿）</li></ul></section><p class="toc-note">全書共二十五篇，依原論章次編排，經論引文與偈頌皆逐字保留原貌。</p></section><article class="ch" id="ch01" data-title="概論"><header class="ch-head"><div class="cover-eyebrow">壹・因、所依、緣</div><div class="cover-title">概論</div><div class="ch-desc">全論導讀：造論緣起、六種菩提事總綱、章節脈絡</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch01-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      造論之緣起與撰者
+      <small>岡波巴大師融合噶當派教理與大手印口訣，為密勒日巴之恩德而造此論，是藏傳佛教史上第一部完整的菩提道次第論著</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>《解脫莊嚴寶論》，全名《妙法如意解脫莊嚴寶大乘道次第論》，是藏傳佛教噶舉派祖師岡波巴大師（1079–1153）的代表著作。岡波巴出身噶當派，精研阿底峽尊者所傳的道次第教法，後依止密勒日巴尊者修學大手印，融匯顯密二宗，寫成此論。</p>
+
+    <div class="quote">
+      佛與佛子及正法，以及根本上師尊，<br>
+      依彼密勒恩德故，為作自他之二利，造此如意寶法論。
+    </div>
+
+    <p>論中開頭便說明造論的緣起：仰仗密勒日巴恩師的教導之恩，為了自己與眾生都能得到真實的利益，才寫下這部「如意寶」般的論典。這部論將噶當派的道次第架構，與噶舉派的大手印見地融為一爐，是藏傳佛教史上第一部系統完整的「菩提道次第」（囊卓林）著作，後世的道次第論著，多受其影響。</p>
+
+    <p>論末的跋文記載，此論是應學者班者達打馬甲之請求，由索朗仁青（貴福）醫師撰寫而成，並附有迴向願文，願噶舉教法恆興、聖教常住。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch01-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      全論結構：六種菩提事總綱
+      <small>因、所依、緣、方便、果位、事業——六件事構成全論的骨幹，二十一章的內容，皆從這一頌展開</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>全論的架構，早在第一章就已用一頌總標：</p>
+
+    <div class="quote">
+      成佛之因及所依，成佛助緣及方便，<br>
+      成佛果位及事業，如是六種菩提事，諸有智者應當知。
+    </div>
+
+    <p>這六件事，正是理解全論脈絡的鑰匙：</p>
+
+    <ul class="dash">
+      <li><strong class="term">因</strong>——成佛之因，是眾生本具的如來藏。</li>
+      <li><strong class="term">所依</strong>——成佛之所依，是具有暇滿的人身寶。</li>
+      <li><strong class="term">緣</strong>——成佛之助緣，是修行路上不可或缺的善知識。</li>
+      <li><strong class="term">方便</strong>——成佛之方便，是善知識所傳授的口訣教誡——由觀無常、觀業果輪迴、修慈修悲、發菩提心四道次第構成，份量最大，涵蓋六波羅蜜多的全部修法。</li>
+      <li><strong class="term">果位</strong>——成佛之果位，是具足三身的圓滿佛陀——由道之階次、菩薩地道、佛果體性層層展開。</li>
+      <li><strong class="term">事業</strong>——成佛之事業，是佛陀無念任運、利濟眾生的種種示現。</li>
+    </ul>
+
+    <p>六事環環相扣，缺一不可：無如來藏之因，則修行無所依託；無暇滿人身，則因無所寄；無善知識，則不知方便何在；無方便次第，則因與緣皆虛設；無果位可證，則方便落空；無事業示現，則果位亦失去利他的意義。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch01-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      二十一章脈絡導覽
+      <small>從第一章如來藏，到第二十一章佛事業，二十一章依六種菩提事的次第層層展開，「方便」一項份量最大，含六波羅蜜多全部修法</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <ul class="dash">
+      <li><strong class="term">因</strong>——第一章〈明成佛之因〉：眾生皆具如來藏，依五種種性差別而有成佛遲速之別。</li>
+      <li><strong class="term">所依</strong>——第二章〈明成佛之所依〉：暇滿人身極為難得，須具三種信心方成勝依。</li>
+      <li><strong class="term">緣</strong>——第三章〈明善知識〉：依止善知識的理由、種類、方便與利益。</li>
+      <li>
+        <strong class="term">方便</strong>——第四至十七章，善知識的四大口訣層層展開：<br>
+        第四章觀無常；第五、六章觀業果輪迴過患（輪迴之苦、業果之概說）；第七章修慈修悲；第八章皈依與淨戒（發菩提心之基礎）；第九、十章論發菩提心（體性、儀軌、功德學處）；第十一至十七章總說六波羅蜜多，並逐一詳解佈施、持戒、忍辱、精進、禪定、般若六度。
+      </li>
+      <li><strong class="term">果位</strong>——第十八章〈說道階次第〉（五道）；第十九章〈菩薩地道〉（十三地）；第二十章〈圓滿佛果〉（三身體性）。</li>
+      <li><strong class="term">事業</strong>——第二十一章〈佛事業〉：以帝釋天影像等七喻，說明佛陀無念任運利生的境界。</li>
+    </ul>
+
+    <p>可以看出，「方便」一項份量最重，佔了全論二十一章中的十四章——這正呼應了論中所說：眾生雖具如來藏之因、雖得暇滿人身、雖能遇見善知識，若不明白成佛的方法，仍不能成佛。因此六波羅蜜多的詳細修法，才是全論用力最深之處。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch01-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      如何閱讀本系列
+      <small>本系列共二十四篇通俗講讀 HTML，依原論章次編排，第九、第十七章因份量較大各拆為二至三篇</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p>本系列依《解脫莊嚴寶論》原文逐章改寫，每一章一篇獨立的手機閱讀版 HTML，可單篇閱讀，也可依六種菩提事的次第，從第一章讀到第二十一章，通覽全論。其中份量特別龐大的兩章，各自拆分：</p>
+
+    <ul class="dash">
+      <li><strong class="term">第九章〈論發菩提心〉</strong>——拆為上（體性、差別、所緣）、中（儀軌）、下（功德、過失、學處）三篇。</li>
+      <li><strong class="term">第十七章〈般若波羅蜜多〉</strong>——拆為上（體性與六門解義）、下（修持、證驗與果報）二篇。</li>
+    </ul>
+
+    <p>全部經論引文、偈頌、科判名相，皆逐字保留原貌；敘述部分則改寫為通俗易讀的語體文，以利手機閱讀一次讀完一章。</p>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・概論　結頌</div>
+    <div class="couplet">
+      成佛之因如來藏，成佛所依人身寶，<br>
+      成佛之緣善知識，方便即其口授教，<br>
+      果報三身佛陀位，事業度眾無分別。
+    </div>
+    <p style="margin-top:24px">這一頌，正是全論二十一章的總鑰——從如來藏出發，經由人身、善知識、六度萬行，直至圓滿佛果與無盡的利生事業。</p>
+  </div>
+
+  
+<nav class="pn"><span></span><a href="#toc">目錄</a><a href="#ch02">第一章 →</a></nav></article><article class="ch" id="ch02" data-title="第一章　明成佛之因"><header class="ch-head"><div class="cover-eyebrow">壹・因、所依、緣</div><div class="cover-title">第一章　明成佛之因</div><div class="ch-desc">如來藏與五種種性差別</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch02-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      道總說：輪迴與涅槃
+      <small>標舉迷亂之相與覺悟之相，並列出成佛之因、所依、緣、方便、果位、事業六種菩提之事</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <div class="quote">
+      <cite>敬禮聖文殊師利童子</cite>
+      佛與佛子及正法，以及根本上師尊，<br>
+      依彼密勒恩德故，為作自他之二利，<br>
+      造此如意寶法論。
+    </div>
+
+    <p>這部論一開頭，先禮敬文殊菩薩，再說明造論的緣起——是仰仗恩師密勒日巴的恩德，為了自己與眾生都能得到真實的利益，才寫下這部如意寶般的論典。</p>
+
+    <p>宇宙間的一切萬法，說到底不出輪迴與涅槃這兩大範圍。輪迴，它的自性是空，相狀卻令人迷惑難辨，骨子裡全是苦痛；涅槃，它的自性同樣是空，相狀則是一切迷亂之消失，本質是從一切苦痛中得到解脫。</p>
+
+    <p>那麼，是誰在輪迴裡迷亂？答案是三界中的一切眾生。他們究竟迷在哪裡？迷在對根本體理「空性」的無知與迷茫。迷亂的原因又是什麼？是「大無明」在作祟。迷亂的相狀又是如何？六道眾生一切的行境，就是迷亂本身的寫照——就像人在睡境與夢境之中一樣。這迷亂是什麼時候開始的？從輪迴無始以來就有了，正因為「無始」，所以它也不可能有自己醒悟過來的一天。這迷亂帶來的壞處是什麼？就是痛苦不堪。要到證得無上菩提的那一刻，這迷亂才會轉變成智慧。</p>
+
+    <p>由此可知，輪迴是一種迷亂之相，其中的痛苦極為巨大，長夜漫漫，永無自了之期。因此我們要從今天起，發起爭取無上菩提的努力。</p>
+
+    <p>然而，無上菩提要怎麼爭取呢？岡波巴大師先以一頌總標主題：</p>
+
+    <div class="quote">
+      成佛之因及所依，成佛助緣及方便，<br>
+      成佛果位及事業，如是六種菩提事，諸有智者應當知。
+    </div>
+
+    <p>這一頌所說的六件事，正是全書要逐一展開的主題：</p>
+
+    <ul class="dash">
+      <li><strong class="term">因</strong>——無上菩提之因，是眾生本具的如來藏。</li>
+      <li><strong class="term">所依</strong>——無上菩提之所依，是具有暇滿的人身。</li>
+      <li><strong class="term">緣</strong>——無上菩提之緣，是修行路上所需的助緣，也就是善知識。</li>
+      <li><strong class="term">方便</strong>——無上菩提之方便，是菩提道上所修行的方法，也就是善知識的口授教誡。</li>
+      <li><strong class="term">果位</strong>——無上菩提之果位，是具足三身的佛陀。</li>
+      <li><strong class="term">事業</strong>——無上菩提之事業，是佛陀種種應化度生的事業。</li>
+    </ul>
+
+    <p>這六件事，岡波巴大師又用一頌收攝起來，標出了全書的主題：</p>
+
+    <div class="quote">
+      成佛之因如來藏，成佛所依人身寶，<br>
+      成佛之緣善知識，方便即其口授教，<br>
+      果報三身佛陀位，事業度眾無分別。
+    </div>
+
+    <p>以下便從第一件事——成佛之因如來藏——開始，逐一解釋。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch02-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      成佛之因如來藏
+      <small>以問答立宗，並引《三昧王經》《小涅槃經》《大涅槃經》《莊嚴經論》《寶性論》為證：眾生皆具如來藏</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>有人會這樣問：我們雖然想從生死的迷亂中解脫出來，也想證取無上菩提，但像我們這樣根器下劣的眾生，就算精勤努力，難道真有成佛的希望嗎？</p>
+
+    <p>回答是：如果真正精勤努力，哪有不成佛的道理呢？因為我們一切眾生，本來就具有那成佛之因——如來藏。</p>
+
+    <div class="quote"><cite>《三昧王經》云</cite>一切諸眾生，皆具如來藏。</div>
+    <div class="quote"><cite>《小涅槃經》云</cite>一切有情皆悉具足如來藏。</div>
+    <div class="quote"><cite>《大涅槃經》云</cite>就像黃油（潛存）在乳奶中一樣，如來藏也普遍地（潛存）在一切眾生中。</div>
+    <div class="quote"><cite>《莊嚴經論》云</cite>真如雖然遍一切，無有任何差別相，<br>轉彼使淨即成佛，故說眾生具佛因。</div>
+
+    <p>那麼，眾生為什麼會具有這個「佛的因素」——如來藏呢？這裡有三個緣故：</p>
+
+    <ul class="dash">
+      <li>法身空性遍滿一切眾生故。</li>
+      <li>法性真如無差別相故。</li>
+      <li>一切眾生皆悉具足佛種性故。</li>
+    </ul>
+
+    <div class="quote">
+      <cite>《寶性論》云</cite>
+      圓滿佛身力用故，真如無有差別故，<br>
+      恒具如來種性故，眾生常具如來藏。
+    </div>
+
+    <p>這一頌的首句「圓滿佛身力用故」，是說法身空性遍滿一切有情——佛陀，即是法身；法身，即是空性；空性無所不周，遍滿一切有情，所以說一切眾生悉皆具足佛性，也就是如來藏。</p>
+
+    <p>第二句「真如無有差別故」是說，佛陀的真如與眾生的真如，並沒有好壞、大小、高低的差別，因此說一切眾生皆悉具足如來藏。</p>
+
+    <p>第三句「恒具如來種性故」是說，一切眾生以五種不同的差別相，具足如來種性。這五種差別相是什麼，下一節就逐一分說。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch02-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      眾生種性之差別
+      <small>斷滅種性、不定種性、聲聞種性、緣覺種性、大乘種性——五種差別相中，皆悉具足如來種性</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <div class="quote">
+      斷滅種性不定性，聲聞種性緣覺性，<br>
+      大乘（菩薩）之種性，五者皆是佛種性。
+    </div>
+
+    <ul class="dash">
+      <li>
+        <strong class="term">斷滅種性（闡提性）</strong>——是指無著大師所說的那些無有愧慚、無有羞恥、毫無慈悲等六種性質的人。
+        <div class="quote">雖見輪回諸過患，不生絲毫之哀思，<br>雖聞佛陀諸功德，不生絲毫之信心，<br>無羞無恥無慈悲，造種種罪無憂悔，<br>若人具足此六非，是為斷滅如來種。</div>
+        <div class="quote"><cite>《莊嚴經論》云</cite>或有惟作諸惡行，或惟破壞諸白法，毫毛之善亦不為，與解脫法成絕緣。</div>
+        話雖如此，這些人並非已完全斷滅成佛的可能，只是說他們在輪迴中流轉的時間極為長遠而已，若肯努力，仍然可以成佛。
+        <div class="quote"><cite>《悲華經》云</cite>阿難！若有眾生乏涅槃根性，彼若能緣想如來，以花擲空供養，我說彼是具涅槃果者，近涅槃位者，究竟涅槃者。</div>
+      </li>
+
+      <li>
+        <strong class="term">不定種性</strong>——是指那些隨環境與外緣而轉變的人：若與聲聞乘人相過從或學習，便成聲聞乘類；若與緣覺乘人或大乘人學習，便成緣覺乘者或大乘者。
+      </li>
+
+      <li>
+        <strong class="term">聲聞種性</strong>
+        <div class="quote">極端懼輪回，信樂於涅槃，悲心甚微小，此乃聲聞性。<br>見輪回若起大怖，誠信欣慕涅槃道，于利生業不愛樂，具此征者聲聞種。</div>
+      </li>
+
+      <li>
+        <strong class="term">緣覺種性</strong>——除了聲聞乘的三種徵相之外，還有傲慢心大、秘密師承、寂處獨居等徵相，屬於緣覺種性。
+        <div class="quote">深厭輪回欣涅槃，慈悲心小傲慢大，秘密師承喜獨居，識者知為緣覺性。</div>
+      </li>
+
+      <li>
+        <strong class="term">大乘種性</strong>——可由六門分敘：根別、體性名稱、超勝其他之原因、表相、及其諸徵兆。
+        <div class="quote">根別體性及名稱，超勝其他之原因，表相及其諸徵兆，大乘種性如是知。</div>
+        <p style="margin-top:14px">大乘種性之<strong>根別</strong>可分為二：一是「自性住種」，從無始以來法爾具足此種功能，不假外求；一是「習所成種」，須勤修善根才能成長佛法。二者都算是具有菩提根性的人。</p>
+        <p><strong>名稱</strong>方面，大乘種性一詞可以許多異名表達，或名「種性」，或名「種子」，或名「界」，或名「自性」等等。</p>
+        <p>之所以說大乘種性<strong>超勝</strong>其他種性，是因為聲聞、緣覺二乘人只以淨除煩惱障而淨其性，大乘種性人則須淨除煩惱與所知二重障礙，因此最為殊勝。</p>
+        <p>大乘種性的<strong>表相</strong>有二：一是佛種性已經覺醒之人，對爭取佛果已有徵象與努力；一是佛種性尚未覺醒之人，反是。要依何種因緣才能開發這內具的大乘種性？不外乎「遠離違緣」與「親近順緣」兩項原則；若反其道而行，這種性便很難開顯。所謂違緣，約有四種：生於無暇之處、無學佛之習氣、趨入邪道、障道之罪業。所謂順緣有二：外緣是遇見能開示正法之人為助；內緣是心意能如法地與各種善法善行相應。</p>
+        <p>大乘種性的<strong>徵兆</strong>，也就是菩薩種性之徵兆：</p>
+        <div class="quote"><cite>《十法經》云</cite>菩薩慧種性，有種種徵兆，如見煙知火，觀鷗知水近。</div>
+        <p>具有菩薩種性的人必定有許多徵兆：不必依靠教誨，身業語業自然十分調柔謙和，諂曲心與欺騙心十分微小，對各種眾生自然十分慈悲。</p>
+        <div class="quote"><cite>《十法經》云</cite>無暴戾粗惡，誠直不欺騙，慈愛眾有情，此是菩薩種。</div>
+        <p>其他的徵兆是：在進行任何作業或接觸之前，首先以慈悲心替眾生考慮；對大乘法仰慕喜愛；對難行的菩薩法行，能不計得失地承當堪忍；與波羅密多相應的諸善法，能夠隨時奉行。</p>
+        <div class="quote"><cite>《莊嚴經論》云</cite>作業之前起悲心，仰慕大乘具堪忍，于諸善業能奉行，此為菩薩種性兆。</div>
+      </li>
+    </ul>
+
+    <div class="gist">
+      <div class="gist-tag">兼釋・二乘之果位並非真正涅槃</div>
+      <p>修習聲聞、緣覺二乘的人，雖能各得己乘之果位，卻不是真正的涅槃——因為仍有無明習氣，實際上是以無漏業住持意自性身，住於無漏三摩地，而自以為已入涅槃。難道說，佛陀宣說此二乘之法是錯了嗎？並沒有錯。譬如商隊自南瞻部州出發，前往大海中採寶，途經曠野荒漠，疲累欲絕，心生退悔；商主便以神通力變現一座城市，讓大眾得以暫時休息。意志力較小的眾生，一聽見佛果的廣大智慧便心生畏怯，不敢修習成佛之道；佛陀為了利益這一類人，才宣說聲聞、緣覺之法，讓他們在此二乘果位上得到休息。</p>
+      <div class="quote"><cite>《法華經》云</cite>諸聲聞乘人，自認得涅槃，佛陀有示曰，彼實暫休息，未曾得涅槃。</div>
+      <p>所以聲聞、緣覺的果位，終究只是佛陀權設的一種休息之地，最後還是要化導二乘之人趨向成佛之道。佛陀以身、口、意三門方便勸化之：</p>
+      <div class="quote">如來以心光明觸二乘人之意生身，使從無漏三摩地起，既覺醒已，如來即現金身而度化之，告曰：「比丘！汝今所作未作，所辦未辦，汝之涅槃非真涅槃，汝應親近如來，瞻仰如來，證取如來覺位！」</div>
+      <div class="quote"><cite>《法華經》云</cite>我今正告汝比丘，汝所證者非涅槃，汝應奮勇勤精進，尋求一切智智位。</div>
+      <p>經如來這樣勸導，二乘之人於是重新發菩提心，經無數劫修菩薩行，最後終究證得圓滿佛果。《楞伽經》中亦有同樣的敘述；《法華經》又云：聲聞人實未證得涅槃，但於圓滿菩薩行後，終必證得究竟佛果。</p>
+    </div>
+
+    <p>五種種性中，大乘種性乃成佛之近因；聲聞、緣覺種性雖然最終也能成佛，仍屬遠因；不定種性者，有的是近因，有的是遠因；至於斷滅種性，也只是密意方便說，用來警示這類人成佛之路遙遠艱難，並非說他們絕對不能成佛，所以屬於「極遠因」一類。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch02-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      總攝一如：眾生皆具佛性
+      <small>以銀礦、芥子、乳酪為喻，總攝三種理由，歸結「見人知有佛性在」</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p>以上各點的主旨，是用三種理由來說明：眾生雖然有各種不同的種性表徵，但他們都具有佛種性，也就是如來藏。</p>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第一章　結頌</div>
+    <div class="couplet">
+      見銀礦時知銀在，見芥子時知油在，<br>
+      見乳知有乳油在，見人知有佛性在。
+    </div>
+    <p style="margin-top:24px">由銀礦中，一定能煉得銀子；由芥子中，一定能榨得芥子油；由牛乳中，一定能取得黃油；由眾生的身心中，也一定能夠修成佛果。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch01">← 概論</a><a href="#toc">目錄</a><a href="#ch03">第二章 →</a></nav></article><article class="ch" id="ch03" data-title="第二章　明成佛之所依"><header class="ch-head"><div class="cover-eyebrow">壹・因、所依、緣</div><div class="cover-title">第二章　明成佛之所依</div><div class="ch-desc">暇滿人身寶與三種信心</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch03-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      成佛所依：人身寶總義
+      <small>標舉「成佛所依人身寶」一句之總義，並以問答破斥「一切眾生皆能修佛」之誤解</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>上一章說到，一切眾生皆悉具足如來藏。於是有人便問：既然如此，那麼地獄、餓鬼等五趣中的一切眾生，是不是也都能修習佛道呢？</p>
+
+    <p>答案是：不然。這正是「人身寶」這個詞所要說明的道理。成佛的所依，是指那具有暇、滿兩種條件，再加上三種信心的人身而言——具足這種條件的人身，才是修習佛道的良好所依。</p>
+
+    <div class="quote">
+      有暇及圓滿，好樂與誠信，<br>
+      身二及心三，具五為勝依。
+    </div>
+
+    <p>這一頌把「人身寶」拆成五個條件：身上兩項（有暇、圓滿），心上三項（好樂、誠信，加上對三寶的信心）。以下便依「有暇」「圓滿」「信心」三個層次，逐一展開。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch03-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      八無暇與十圓滿
+      <small>離八種無暇之處、具足自他十種圓滿條件，方名真實「人身寶」</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p><strong class="term">「有暇」</strong>，是說要離開那八種沒有機會學佛的處境。哪八種呢？</p>
+
+    <div class="quote">
+      地獄及餓鬼，畜生與蠻族，<br>
+      邪見及癡呆，生彼長壽天，不值佛降世，是為八無暇。
+    </div>
+
+    <ul class="dash">
+      <li>地獄的眾生常在極苦之中，根本沒有機會學佛。</li>
+      <li>餓鬼道的眾生心常焦灼，也沒有機會學佛。</li>
+      <li>畜生道的眾生非常愚鈍，同樣沒有機會學佛——這三趣眾生都缺乏羞恥心，心識中沒有慚愧的本能，便不能分別善惡，也就無法修學佛法。</li>
+      <li>生於長壽天者，或指投生色界無想天、沒有任何心識活動的天人，或泛指欲界天人——他們壽命雖長，卻耽溺於現世欲樂，同樣失去勤修善法的機會。</li>
+      <li>生於蠻族之地，難遇良師；生於邪見之地，見不到通往解脫與善趣之道；不值佛陀降世，便無人解說何者應為、何者不應為；生而癡呆，則不能分別善惡之法。</li>
+    </ul>
+
+    <p>由此可見，人生若干痛苦其實極有益處。正因親身經歷過苦，才能對輪迴生起悲戚之心，對眾生生起慈悲，也才能減除我慢、對罪惡感到羞愧，進而對善業生起嚮往與好樂。</p>
+
+    <div class="quote"><cite>《入菩薩行論》云</cite>苦痛有益具功德，能生悲感除驕慢，于輪回眾起慈悲，于惡羞愧樂向善。</div>
+
+    <p>能夠脫離以上八種難處，才稱得上是完全的「有暇」之身。</p>
+
+    <p><strong class="term">「十圓滿」</strong>，是自圓滿五項與他圓滿五項的合稱。</p>
+
+    <div class="quote">
+      <cite>自圓滿・經云</cite>
+      （與眾相共）之人身，諸根圓具生中國，<br>
+      未行極惡具信心，（是謂自身五圓滿）。
+    </div>
+
+    <ul class="dash">
+      <li><strong>與眾相共之人身</strong>——或為男相或為女相，具足與大眾相同的人身。</li>
+      <li><strong>生於中國</strong>——生在能依止善良佛法導師的國土。</li>
+      <li><strong>諸根圓具</strong>——非生而癡呆暗啞，具足修習佛法的最低條件。</li>
+      <li><strong>具信心</strong>——對佛陀所說一切善法的根本，也就是戒律，具有信心。</li>
+      <li><strong>未行極惡</strong>——此生未曾造下五無間等重大惡業。</li>
+    </ul>
+
+    <p><strong class="term">「他圓滿」</strong>則是：佛陀降世、宣說法要、佛法住世、隨順法教、於他生悲。也就是——生於佛陀降世之時；佛陀慈悲為眾生宣說法要；正逢佛法住世；依止住持佛法之人；能對其他眾生生起慈悲之心。</p>
+
+    <p>具足這十項自、他二種圓滿條件，又同時具足「有暇」的人，才叫做「人身寶」。這樣的人身之所以稱為「寶」，是因為它像如意寶一般極為難得、極具重大利益。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch03-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      難得之喻與三種士夫
+      <small>以盲龜浮木、洪水漂孔為喻，說明人身寶極為稀有；並依志願分判上中下三士夫</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <div class="quote"><cite>《菩薩藏論》云</cite>得人身者極為難，具足人壽極為難。</div>
+    <div class="quote"><cite>《悲華經》云</cite>投生為人極為難得，逢佛降世極為難得，于善法心生好樂，發起善願亦極為難得也。</div>
+    <div class="quote"><cite>《寶樹莊嚴經》云</cite>能夠排除八種無暇是極為困難的：投生為人，具足暇滿，逢佛降世，具足諸根，得聞佛法，遇善知識，得聞開示，從善士學，依教奉行——值遇正法在世，又能作與佛法相應的努力，實在是甚難稀有啊！</div>
+
+    <p>這個「難」，究竟難在哪裡？岡波巴大師引了一個著名的譬喻：</p>
+
+    <div class="quote">
+      <cite>《入菩薩行論》喻云</cite>
+      是故薄伽梵，作喻如此說；<br>
+      譬彼大海中，一龜任浮沉，<br>
+      有木隨浪飄，木中有一孔，<br>
+      （龜木縱相遇），龜頸難入孔，<br>
+      人身甚難得，如彼龜入孔。
+    </div>
+
+    <div class="quote"><cite>《正法經》云</cite>如果此大地世界全部皆為洪水所淹沒，有人把一段含有獨孔的樹幹拋向水中，任其隨風在海中四方飄蕩，同時此大海中有一個獨眼的烏龜在水中浮沉……這樣經過千年以上的時間，此烏龜和樹幹也很難遭遇，更不用說那龜頭套入樹孔中的可能了。人身之難得，也是如此。</div>
+
+    <p>具體地說，難獲人身者是三惡道的眾生——因為暇滿人身是由積聚善因而得，三惡道眾生卻幾乎只有造惡的餘地；他們要想獲取人身，必須自身惡業微小，再仰仗宿世的善緣才能達成。</p>
+
+    <p>人身寶之所以能成辦大利益，是因為人（梵文 Purusa）這個字，字源上本就含有「能力」「力量」的意思——暇滿人身能往生善趣、能成就解脫，具有這樣的堪能力，所以稱之為「人」。而人的能力又有上中下三種之別：</p>
+
+    <ul class="dash">
+      <li><strong class="term">下士人</strong>——能不墮惡道、獲得人天身者。<span style="opacity:.85">「彼能依方便，為得自利故，獲輪回諸樂，是名下士人。」</span></li>
+      <li><strong class="term">中士人</strong>——能自己解脫輪迴、獲得寂滅之樂者。<span style="opacity:.85">「捨棄輪回樂，斷離諸罪業，尋求自解脫，是名中士人。」</span></li>
+      <li><strong class="term">上士人</strong>——為了眾生義利而爭取佛果的人。<span style="opacity:.85">「自曆諸苦痛，深憫眾生苦，發奮除眾苦，是為上士人。」</span></li>
+    </ul>
+
+    <div class="quote">
+      <cite>月居士云</cite>
+      彼獲人身者，能越生死海，植菩提善種，貴勝如意寶，<br>
+      誰人不珍惜，忍使空過之！<br>
+      人心具大力，非天所堪能，龍蛇阿修羅，非人諸鬼眾，誰能與人比？
+    </div>
+
+    <p>正因暇滿人身能成就各種善業、超越生死大海、成就圓滿佛法，所以遠勝天龍鬼神各類眾生，價值實勝過如意寶珠。然而這樣稀有的寶，又極易壞滅——人人都想延年益壽，死亡的因緣卻無處不在；生命剎那變滅，頃刻之間便可能歸於虛無。</p>
+
+    <div class="quote"><cite>《入菩薩行論》云</cite>若人作是想，今日不會死，應享諸快樂，斯人甚癡呆，為愚念所欺，應念我此身，終有壞滅日，光陰勿空過。</div>
+
+    <div class="gist">
+      <div class="gist-tag">兼喻・舟筏、乘馬、僕役</div>
+      <p>正因此身難得、易壞、又具大利益，所以應把它當做一隻舟筏，乘之越過生死大海——「依人身舟筏，能脫大苦海，此身甚難得，愚人莫癡睡。」也可以把它視為一匹乘馬，御之脫離生死之險地——「人身如淨駒，乘離生死苦。」更可以把它當做自己的僕役，支使它去做各種善行——「應驅吾人身，使之作善業。」</p>
+    </div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch03-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      信心三種與四種違緣
+      <small>善用人身仍須先具信心；深切、嚮往、清淨三種信心，能不為欲樂、兇惡、恐懼、愚迷四種違緣所動</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p>要驅使這個人身去修善行，必須先具備信心，因為若無信心，善法便無由增長。</p>
+
+    <div class="quote"><cite>《聖十法經》云</cite>人若不具信，白法不成就，如種被火燒，不能生苗牙。</div>
+    <div class="quote"><cite>《華嚴經》云</cite>信心微小諸眾生，難知菩提（微妙法）。</div>
+    <div class="quote"><cite>《大莊嚴經》云</cite>阿難！應生信心！此乃如來之祈請！</div>
+
+    <p>信心，略說有三種：</p>
+
+    <ul class="dash">
+      <li><strong class="term">深切的信心</strong>——由觀察世間現象，對業果不壞的道理心生深切信服，因而對苦聖諦、集聖諦生起確信：造善或惡業，自然會招感欲界中的種種樂苦果報；造不動業（禪定），則可得色界、無色界之樂報；又深信煩惱業力的活動必會引生苦果，為有漏五蘊身所縛。</li>
+      <li><strong class="term">嚮往的信心</strong>——見到無上佛果超特殊勝，心生嚮往，因而以至誠恭敬之心學習成佛之道。</li>
+      <li><strong class="term">清淨的信心</strong>——依佛、法、僧三寶而生起：佛寶是開示正道的佛陀，法寶是道法本身，僧寶是修道時的導師或伴侶，對三者有誠摯的信心。</li>
+    </ul>
+
+    <div class="quote"><cite>《俱舍論》云</cite>信心是指於業果、真諦及三寶生起真誠的、嚮往的和清淨的實信。</div>
+    <div class="quote"><cite>《寶鬘論》云</cite>欲樂兇惡不能動，恐懼愚迷難撼搖，我說此是真信士，決定良好之法器。</div>
+
+    <p>真正的信士，不會被以下四種違緣所動搖：</p>
+
+    <ul class="dash">
+      <li><strong class="term">欲樂不能動</strong>——縱使以妙食、珍寶、美女、王位等可欲之事物相誘，要求捨棄佛法換取，真信士也不會動搖。</li>
+      <li><strong class="term">兇惡不能動</strong>——縱使以「不放棄佛法就叫惡人加倍傷害你」相威脅，也不能使信士動搖。</li>
+      <li><strong class="term">恐懼不能動</strong>——縱使以酷刑相恫嚇，也不能撼動真信士的信心。</li>
+      <li><strong class="term">愚迷不能動</strong>——縱使有人說「業果之說靠不住，三寶也不真實，學佛何用」，企圖以無知動搖信心，真信士也不會放棄佛法。</li>
+    </ul>
+
+    <p>能夠不為這四種違緣所動的人，才是真信士、善法器。具有如此信心的人，必能得無量利益：發起最殊勝的大人之心，脫離八種無暇，獲得明利諸根，持守戒律，降伏煩惱，遠離魔境，得解脫道，積大善業，得見諸佛，蒙佛加持。</p>
+
+    <div class="quote"><cite>《他拉寶真言經》云</cite>信佛及佛法，信佛子諸行，信無上菩提，能生大人心。</div>
+    <div class="quote"><cite>《菩薩藏論》云</cite>若菩薩能具如斯信心，則諸佛世尊知是法器，當至其前為彼開示解脫菩薩道法。</div>
+
+    <p>以上便解釋了具有「暇」「滿」二種條件的人身寶、以及三種信心的意義。具足這樣條件的人，才是堪能修持無上菩提的法器。</p>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第二章　總攝</div>
+    <div class="couplet">
+      得此暇滿身，甚難極稀有，<br>
+      依人身舟筏，能脫大苦海。
+    </div>
+    <p style="margin-top:24px">此身難得、易壞、又具大利益，故應善加驅使，使之成為修習無上菩提的良好所依，光陰切莫空過。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch02">← 第一章</a><a href="#toc">目錄</a><a href="#ch04">第三章 →</a></nav></article><article class="ch" id="ch04" data-title="第三章　明善知識"><header class="ch-head"><div class="cover-eyebrow">壹・因、所依、緣</div><div class="cover-title">第三章　明善知識</div><div class="ch-desc">依止善知識之理由、種類、方便與利益</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch04-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      依止善知識之理由
+      <small>雖具圓滿人身，若無善知識教導激勵仍難趣入菩提道；以經文、因明、譬喻三門說明依止之必要</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>「緣者是為善知識」——這是說，就算具足了圓滿的人身寶，如果沒有善知識的教導與激勵，仍然起不了作用。因為我們對許多惡行早已習以為常，這種積習的力量極為巨大，使人難以趨向菩提道，所以一定要依止善知識才行。這可由五門闡述：</p>
+
+    <div class="quote">
+      理由差別及分類，以及各各之性相，<br>
+      依止方便及利益，五門解敘依師法。
+    </div>
+
+    <p>先說依止善知識的理由，可由經文、因明、譬喻三門來解釋。</p>
+
+    <div class="quote"><cite>《聖集頌》云</cite>一個對上師有敬重心的弟子，他定會時常依止一個有智識有修持的上師，而得到各種的進步。</div>
+    <div class="quote"><cite>《般若八千頌》云</cite>若菩薩摩訶薩欲得無上正等正覺，必先於善知識恭敬承事而依止之。</div>
+
+    <p>再依因明立量而解釋：欲證一切智位之有情必須依止善知識，因為他不識如何積聚資糧及消除障礙的緣故——這就像三世一切諸佛都依止善知識而成就，反之辟支佛則不然。要獲得圓滿佛位，必須積聚福德與智慧二種資糧，並消除煩惱、所知二障；而積資除障的方法，又一定要依靠善知識才能知曉。</p>
+
+    <p>善知識，就像渡河的船師、陌生路上的嚮導、或危險地帶的護送者。陌生路上若無嚮導便會遲延或迷途，有了嚮導就能一步不失地安抵目的地。菩提道上也是如此——積聚福智資糧、前往一切智城之時，若無善知識護送，內則被煩惱妄念之賊所乘，外則被妖魔誘入歧途，因而斷送善根。</p>
+
+    <div class="quote">煩惱賊得便，善業為壞奪，善根滅無餘，斷上趣命根。</div>
+
+    <div class="quote"><cite>《不動優婆夷本事品》云</cite>善知識是引導我們到一切智位去的護送者。</div>
+
+    <p>橫越大河之時，河中雖有渡船，若無船師，自己逕自行舟便有沉沒陷溺的危險；有船師則能毫不費力地抵達彼岸。橫越生死大海也是如此——若無善知識引導，雖乘妙法舟筏，仍有沉沒於生死巨流的危險。</p>
+
+    <div class="quote">若無救護歸依處，有舟亦難至彼岸，雖具圓滿諸功德，若無上師難解脫。</div>
+
+    <p>因此，一定要依止如船師般的善知識，才能超越生死大海，抵達涅槃彼岸。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch04-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      善知識之種類與界說
+      <small>普通眾生、地上菩薩、化身佛、報身佛四類善知識，各依自身修證階位而依止；兼釋圓滿善知識之八種、四種、二種條件</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>善知識的種類，概說有四：屬於普通眾生一類的善知識、屬於地上菩薩一類的善知識、屬於化身佛的善知識、屬於報身佛的善知識。這四類要依自己的修證情況來審斷——初修業的人很難依止佛陀或地上大菩薩，就必須依止普通眾生類的善知識；業障大部淨除之後，才可依止地上菩薩；證得資糧道以上果位，才能依止化身佛；證得地上果位時，才可依止報身佛。</p>
+
+    <p>在這四種善知識中，恩德最大的其實是普通眾生類的善知識——因為初學佛的人都困在業障與煩惱的暗室之中，根本沒有能力面見佛菩薩，遑論依止。正是遇見了眾生類的善知識，依於他的指示明燈，才知道學佛之道，才能逐漸親近諸佛菩薩。</p>
+
+    <ul class="dash">
+      <li><strong class="term">佛陀善知識</strong>——具足斷、證二種圓滿的勝士：斷，是完全斷除煩惱與所知二障；證，是完全圓滿二種智慧。</li>
+      <li><strong class="term">地上菩薩善知識</strong>——指從初地到十地之間各地不同的斷、證功德，其中第八地以上菩薩具足攝受眾生的十種自在：壽、心、資財、業、生處、所欲、願、神通、智慧、法皆得自在——如意住世、隨入禪定、變現寶珠濟眾、於一音聲同時為一切眾生說法而皆得滿足等等。</li>
+      <li><strong class="term">普通眾生類善知識</strong>——其條件可由八種、四種或二種來說明。</li>
+    </ul>
+
+    <div class="quote"><cite>《菩薩地論》云</cite>菩薩善知識若具八相是為圓滿：多聞大乘經典，持守菩薩戒律，具足修行證悟，悲心濟眾，無有畏懼，忍耐謙和，心離悔戚，善於言辭。</div>
+
+    <div class="quote"><cite>《莊嚴經論》云</cite>多聞離諸疑，能持諸善法，二門說真如，是為菩薩相，為圓滿法師。</div>
+
+    <p>「多聞」是說由多聞廣學的緣故，能廣大地開示法要；因智慧廣大而能除眾生疑惑；因持守善士之作業，故堪受讚揚。「二門說真如」是說能由煩惱染污門與清淨寂滅門，來說明真如實相的道理。</p>
+
+    <div class="quote"><cite>《入菩薩行論》云</cite>真善知識者，深通大乘教，持菩薩勝律，雖逢命難緣，不舍菩薩戒。</div>
+
+    <p>這是說善知識最低的條件，必須深通大乘教義、並持守菩薩戒律。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch04-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      依止善知識之方便
+      <small>恭敬與供養、愛敬並承事、修行及努力三門，是依止善知識所應具備的態度與行持</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p>依止善知識的方法有三：恭敬與供養、愛敬並承事、修行及努力。</p>
+
+    <ul class="dash">
+      <li>
+        <strong class="term">恭敬</strong>——對善知識常行禮拜、周匝繞行；他行近時速即起立，近他身旁時躬屈身體；以誠摯之心在適當時候講話，以無厭足之心時常瞻仰其慈顏，就像持寶商人恭敬其師一樣。
+        <div class="quote" style="margin-top:12px"><cite>《華嚴經》云</cite>以無厭足心，頻視善知識。</div>
+        <span style="font-size:18px">這是因為善知識實在是難見、難出、難遇的緣故。</span>
+      </li>
+      <li>
+        <strong class="term">供養</strong>——以與法不相違的食物、衣著、墊褥、醫藥、珍寶等財物，如常啼菩薩一樣不計身命地承事供養善知識。善財童子說：「佛菩提是由供養善知識而獲得的！」
+      </li>
+      <li>
+        <strong class="term">愛敬</strong>——視善知識如佛，凡有所訓皆不違越，對善知識仰慕、敬重、敬信，就像那諾巴大師依止諦洛巴上師一樣。某些時候當善知識以善巧方便行動時，應擯棄自己的邪念，特別努力生起淨信，就像《入法界品》中無厭足王的故事一樣。
+      </li>
+      <li>
+        <strong class="term">修行及努力</strong>——從善知識聽聞、思惟、修持佛法，由聞、思、修三門努力行持，乃能使善知識歡喜。因為要使善知識歡喜，自己才能趣入佛道。
+      </li>
+    </ul>
+
+    <div class="quote"><cite>《莊嚴經論》云</cite>從師修學時，依教奉行之，令彼心歡喜……</div>
+    <div class="quote"><cite>《入法界品》云</cite>若令善知識歡喜則能獲得一切佛菩提。</div>
+
+    <p>向善知識求法，第一步要有適當的準備：首先具足菩提心；第二步要把自己作為病人想，把法作為藥物想，把上師作為醫生想，知道自己若努力修持佛法，便能治療宿疾；最後應設想自己是一個孔口朝下的器皿，或無底的瓦罐，所有毒液都已流光了。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch04-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      依止善知識之利益
+      <small>為善知識所攝、所護、所佑，則不墮惡道、不為惡友所誘、於大乘法得不退轉，速疾超離異生位</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <div class="quote"><cite>《入法界品》云</cite>菩薩若為善知識所攝則不墮惡道，若為善知識所護則不為惡友所誘，若為善知識所佑則於大乘法得不退轉，善知識善護念諸菩薩必能速疾超離異生位……</div>
+
+    <div class="quote"><cite>《般若經》云</cite>善知識善護念諸菩薩摩訶薩能速得阿褥多羅三藐三菩提。</div>
+
+    <p>以上便是依五門——理由、差別、性相、依止方便、利益——對「善知識」所作的解說。人身寶雖已具足，仍須依止善知識之教導與激勵，才能真正趣入菩提正道。</p>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第三章　總攝</div>
+    <div class="couplet">
+      若無救護歸依處，有舟亦難至彼岸，<br>
+      雖具圓滿諸功德，若無上師難解脫。
+    </div>
+    <p style="margin-top:24px">善知識是渡河的船師，是陌生路上的嚮導，唯有依止善知識，方能安抵一切智城。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch03">← 第二章</a><a href="#toc">目錄</a><a href="#ch05">第四章 →</a></nav></article><article class="ch" id="ch05" data-title="第四章　成佛之方法／觀無常"><header class="ch-head"><div class="cover-eyebrow">貳・方便（一）：四大口訣與發菩提心</div><div class="cover-title">第四章　成佛之方法／觀無常</div><div class="ch-desc">四種成佛障礙與觀無常三層次</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch05-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      總標：善知識言教四綱領
+      <small>克服四種成佛障礙，需仰仗觀無常、觀業果輪迴、修慈悲、發菩提心四種口訣</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>這一章要討論「方便即其口授」一句的意義。有人問：如果我們都具有佛種性，從無始以來也曾多次獲得人身寶，也屢次遇見善知識，為什麼始終沒有成佛呢？答案是：因為我們未能克服四種成佛的障礙——第一是貪著目前的這個世界，第二是貪著諸有或各種生命之欲樂，第三是貪著寂滅之妙樂，第四是不明了成佛之方法。</p>
+
+    <p>若能得到善知識的言教而依之修持，便能除遣這些障礙。善知識的言教內容如何呢？</p>
+
+    <div class="quote">
+      觀諸法無常，及輪回過患，<br>
+      業果不壞故，修慈及修悲，<br>
+      發勝菩提心，善知識言教，此四為綱領。
+    </div>
+
+    <p>這正是四種口訣：觀無常，對治對現世的貪著；觀業果不壞及輪迴過患，對治對輪迴諸有欲樂的貪著；觀慈心與悲心，對治對寂滅妙樂的貪著；發起菩提心，對治對成佛方便的茫然無知——這一項含攝了從皈依起，一直到觀二種無我的種種方便，五道十地以下的修持法要，都可攝歸其中，將在後續各章依所依、所緣、儀軌、學處、功德、果報六門逐一展開。這一切教法，皆須從善知識處才能得到。</p>
+
+    <div class="quote"><cite>《華嚴經》云</cite>善知識者，一切善法之出生處也。一切智位者亦由善知識而能獲得者也。</div>
+
+    <p>以下先解釋如何由觀察諸法無常，斷除對此世一切的貪著。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch05-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      無常之差別：外境與有情
+      <small>外境器世界有粗相、細相之無常，有情自身則有自無常、他無常之別，由此展開無常觀</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>佛陀曾說：「比丘們！一切有為法都是無常的喲！」積聚的結局是消失，興建的結局是傾頹，相逢的結局是別離，生命的結局是死亡。</p>
+
+    <div class="quote"><cite>《法集要頌經》云</cite>積累終消散，興建終傾頹，相逢終別離，生者終必死。</div>
+
+    <div class="quote">
+      差別與觀法，及修觀利益，<br>
+      由此三項法，略說無常觀。
+    </div>
+
+    <p>無常的差別，是指外境器世界的無常和內境有情的無常。外境之無常又有粗相與細相之分；有情之無常則有自無常與他無常之分。</p>
+
+    <ul class="dash">
+      <li>
+        <strong class="term">外境粗相無常</strong>——從下界風輪一直到上面的四靜慮天，其中沒有任何一物堅固不壞：初禪天以下有時被大火焚盡，二禪天以下被洪水淹沒，三禪天以下被大風摧毀；四禪天雖不受水火風三災，其中的有情卻仍會自己死亡遷識他去。
+        <div class="quote" style="margin-top:12px"><cite>《俱舍論》云</cite>七火後一水，七水後七火，最後大風起，摧毀此世間。</div>
+        目前我們所住的這個世界，終究也要被火劫所毀。
+        <div class="quote"><cite>《施德請問經》云</cite>滿一劫之時，此世必毀滅，諸山被火焚，（不見剩一塵，）彼性本如空，此時真空現。</div>
+      </li>
+      <li>
+        <strong class="term">外境細相無常</strong>——觀察四季更替：春天大地轉柔、草木抽芽；夏天萬物茂盛、一片深綠；秋天大地堅實、草木枯黃結實；冬天大地凍結、花木乾裂枯萎——這一切都在訴說無常。再觀日月東升西落，晝夜明暗交替，乃至諸法剎那生滅——我們所見的「存留」，只是一種類似瀑布錯覺的相似相而已，前一剎那的世界，在後一剎那已不復存在。
+      </li>
+      <li>
+        <strong class="term">有情無常</strong>——三界一切眾生皆是無常的。返觀自身，此身也一定走向死亡，無法停留。可由觀死、觀死相、觀壽命逐減、觀別離四處入手：想「我終將改換生命，走向未知的來世」是觀死；想「壽命已盡、呼吸停止、心識即將飄往他處」是觀死相；想「從去年到今年、從昨日到今日，壽命都已一分一分減損」是觀壽命逐減；想「我所珍愛的親朋、財物、生命終將與我分離」是觀別離。
+      </li>
+    </ul>
+
+    <div class="quote"><cite>《方廣大莊嚴經》云</cite>三界皆無常，如秋日浮雲。</div>
+    <div class="quote"><cite>《入菩薩行論》云</cite>壽命隨時減，晝夜不停留，壽命不能增，我必死無疑。</div>
+    <div class="quote"><cite>《入菩薩行論》云</cite>此世之一切，終必全捨棄，獨自他方去，智者應深思。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch05-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      決定死亡：必至、無定、無助
+      <small>以射箭、瀑布、赴刑場為喻，說明死亡必至；財物、親友、自身三者皆無法抵擋死亡</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p>仔細默想「死法」，可分三層：我一定會死；何時會死自己不知道；死時什麼也帶不走，也無人陪伴。</p>
+
+    <p><strong class="term">我一定會死</strong>——從來沒聽說過不死的人；此身是有為法，有生就必有死；人壽剎那減滅，結局必是死亡。就連具足五通、能於十方遨遊的大仙，聖辟支佛、大阿羅漢，乃至具足金剛自性、相好莊嚴的化身佛陀，最後也都要捨此色身，何況我們凡夫呢？</p>
+
+    <div class="quote">大仙具五通，隨意空中行，雖能遊十方，難至無死地。</div>
+    <div class="quote"><cite>撥烏大師云</cite>彼化身佛者，具相好莊嚴，其身似金剛，亦難逃無常，此命如蘆葦，脆弱不堅實，況彼凡夫身，豈能免一死？</div>
+
+    <p>壽命剎那變滅，也就時時刻刻接近死亡，這個道理不容易覺察，但可借三個譬喻來說明：</p>
+
+    <ul class="dash">
+      <li>如勇士射箭——箭一離弦便疾奔目標，剎那不停留，人命奔向死亡也是如此。</li>
+      <li>如懸崖瀑布——一瀉而下，剎那不停留，人命瞬息消逝也是如此。</li>
+      <li>如牽赴刑場的囚犯——每走一步就更接近死亡一步，人壽的消逝也是如此。</li>
+    </ul>
+
+    <div class="quote"><cite>《聖寶陀羅尼經》云</cite>人命速變滅，如疾流瀑布，愚人不知此，瘋狂耽欲樂。</div>
+    <div class="quote"><cite>《集寶頂經》云</cite>如赴刑囚犯，步步近死亡……</div>
+
+    <p><strong class="term">死無定時</strong>——人壽本身難以確定，身體並非堅實之物，招致死亡的因素又極多，所以何時會死，極難預測。南瞻部州的壽命本就不定，從十歲到無量壽都有可能。</p>
+
+    <div class="quote"><cite>《俱舍論》云</cite>此界之人壽不定，可從十歲至無量壽。</div>
+
+    <p><strong class="term">死時無助</strong>，可由三項事實說明：</p>
+
+    <ul class="dash">
+      <li><strong>財物不能抵擋死亡</strong>——辛苦積聚的財物，死亡一至便百般成空，如強賊突至猛奪洗劫，只剩赤身空手獨自上路；財物對今生、來世大都利少害多，反而因守護、爭鬥財物而造下惡業。</li>
+      <li><strong>親友不能回遮死亡</strong>——死亡降臨時，子孫、父母、親友無人能為助；反而因時常為親友的病、死、挫敗擔憂而造下各種罪業。</li>
+      <li><strong>自身也無法對抗死亡</strong>——無論身體如何健壯，力用如何強大，都不能克服死亡；此身終將成為鳥犬之食，或朽於水中，或焚於烈火，如太陽落入山後，誰也留不住。</li>
+    </ul>
+
+    <div class="quote"><cite>《入菩薩行論》云</cite>辛苦所積財，雖長時享用，一旦死亡至，百般總成空，如強賊突至，猛奪洗劫盡，唯赤身空手，孤身獨自行。</div>
+    <div class="quote"><cite>《入菩薩行論》云</cite>死亡降臨時，子孫難為助，父母及親友，無人能助汝。</div>
+    <div class="quote"><cite>《入菩薩行論》云</cite>由眾多苦難，掙得之衣食，用以資此身，一旦無常至，此身不隨汝，終成鳥犬食，或為水腐朽，或為猛火焚，或藏地穴中。</div>
+
+    <div class="gist">
+      <div class="gist-tag">兼觀・他人之死</div>
+      <p>親眼見過的別人之死，也應細細觀想：某位親戚朋友，本來身體健壯、生活快樂，「死」的念頭從未浮現，卻突患不治之症，體力容色漸漸消失，醫藥祈禱都無濟於事，最後留下一口氣、一句話、看親友最後一眼，便悄悄離去。我的結局也將如此——這個「家」連多留一天都不可能，屍首一旦出門，就再也不會回來了。</p>
+    </div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch05-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      結語：修無常觀之利益
+      <small>深知一切有為法無常，方能不貪現世、精進求道，成就諸法平等性之助緣</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p>修無常觀的利益很多：因為深知一切有為法無常，便不再貪著現世；也因此能誠心祈禱、奮起精進，速離貪愛與瞋恚，為證取諸法平等性作極大的助緣。</p>
+
+    <div class="quote"><cite>經云</cite>明日與來世，何者為要乎？明日不可知，莫為彼勞心，應策力精進，為來世努力。</div>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第四章　結頌</div>
+    <div class="couplet">
+      如彼死囚人，被押赴刑場，<br>
+      舉足下足間，步步近死亡。
+    </div>
+    <p style="margin-top:24px">人命疾速消亡，正如赴刑之囚犯——莫為明日空自籌算，唯當策力精進，為究竟解脫而努力。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch04">← 第三章</a><a href="#toc">目錄</a><a href="#ch06">第五章 →</a></nav></article><article class="ch" id="ch06" data-title="第五章　輪迴之苦痛"><header class="ch-head"><div class="cover-eyebrow">貳・方便（一）：四大口訣與發菩提心</div><div class="cover-title">第五章　輪迴之苦痛</div><div class="ch-desc">三苦總說、六道之苦</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch06-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      三苦總說
+      <small>破斥「投生人天亦可愜意」之想，以行苦、壞苦、苦苦三苦總攝輪迴一切過患</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>有人會這樣想：上面所講的無常與死亡，和我有什麼關係呢？死了以後不是又會投生嗎？投生人天二道，享受圓滿欲樂，豈不很愜意？這樣生生死死延續下去，對我實在很合適！——這正是所謂「迷戀輪迴之欲樂者」的想法。為了對治這種錯誤的想法，現在來觀察輪迴的過失與苦痛。</p>
+
+    <div class="quote">
+      行苦及壞苦，以及諸苦苦，<br>
+      輪回諸過患，三苦可攝之。
+    </div>
+
+    <p>用譬喻來說：行苦就像已經成熟的果實；壞苦就像摻了毒藥的粥羹；苦苦就像吞吃腐爛的水果。從自性上說，行苦屬舍受，壞苦屬樂受，苦苦屬苦受。任何有情一旦取得五蘊身，行苦便如影隨形，只是大多數眾生感覺不到——就像身患重疫的人，感覺不到耳朵等處的輕微病痛；只有見道以上的聖者，才能敏銳地感受到行苦，就像重病痊癒後，才能感覺身上其他輕微的病痛；又如毫毛放在手掌中不覺不適，放進眼睛裡便立即劇痛。</p>
+
+    <div class="quote"><cite>《阿毗達摩俱舍論》云</cite>掌中所置毛，若置於眼中，能生大劇痛；眾生難覺察，行苦之存在。聖者覺行苦，如毛置眼中，正亦複如是。</div>
+
+    <p>「壞苦」是說輪迴中的一切快樂，最後必定轉變成痛苦。縱然獲得轉輪聖王之位，仍是輪迴的奴隸；縱然獲得帝釋天王之身，享受天趣欲樂，最後也難逃業力所縛而墮落；即使獲得大梵天王之位，遠離貪欲、享受禪定妙樂，最終仍會墮入地獄，長時歷盡無間之苦。</p>
+
+    <div class="quote"><cite>《悲華經》云</cite>天趣中的天子雖然快樂，但那卻正是痛苦之因；人趣中的王族雖然豪貴，亦是痛苦之因，縱然獲得了轉輪王之位，最後的結局還是苦痛。</div>
+    <div class="quote"><cite>《誡王頌》云</cite>縱獲轉輪聖王位，仍是輪回之奴隸！</div>
+
+    <p>「苦苦」是說取得自性即苦的五蘊身後，自己現前親身感受到的巨大痛苦，可分惡趣之苦與善趣之苦兩大類。以下先說三惡道——地獄、餓鬼、畜生——的苦痛。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch06-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      三惡道之苦：地獄、餓鬼、畜生
+      <small>十八重地獄之焚燒鋸擠、三種餓鬼之飢渴難食、畜生三苦——被奴役、被殺戮、彼此殘食</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p><strong class="term">地獄</strong>共有十八重——灼熱地獄八、寒冷地獄八，再加間歇與鄰近二地獄。灼熱地獄位於南瞻部州地層之下，最下層是無間地獄，依次而上為極熱、熱、大號、哭泣、眾合、黑繩、等活地獄。</p>
+
+    <div class="quote"><cite>《俱舍論》云</cite>下此二萬里，為無間地獄，其上次第有，七種之地獄。</div>
+
+    <p>等活地獄中，有情彼此捆縛刺殺，喪命後一陣冷風吹來又復活，周而復始，直到壽盡；黑繩地獄以黑繩測量身體，依之斬鋸焚燒；眾合地獄中，兩座如羊頭般的大山從左右壓來，將眾生擠成粉碎，冷風吹來又復活，如是反覆；極熱、大號等地獄則是被熾火焚燒、銅液灌口、利刃穿刺，痛苦懼喊之聲不絕；無間地獄則置身廣袤二萬由旬的鐵屋之中，被大銅鍋盛裝、銅液鐵液四面煎煮，痛苦無時暫歇，故名「無間」。</p>
+
+    <div class="quote">或被鋸成塊，或被利刃截……或被銅液燒，或被利刃刺……或有置於大銅鍋，頭腦倒置如煮粥。</div>
+
+    <p>這些地獄眾生，是否真是有情，論師之間有不同看法；瑜伽行派瑪爾巴、密勒日巴父子則認為，那些劍林猛火，其實都是罪惡業力所感、噁心所顯現出來的境象。</p>
+
+    <div class="quote"><cite>《入菩薩行論》云</cite>地獄之眾生，所見之劍林，是誰所制耶？為何而作耶？其他熱灼鐵，熾然之猛火，從何而至耶？佛陀曾訓示，此乃罪業力，噁心所顯現……</div>
+
+    <p><strong class="term">餓鬼</strong>分外障、內障、食障三種：外障者，見食物即成膿血，或見人阻擋不得靠近；內障者，雖無人阻攔卻仍無法吞食；食障者，食物本身入口便化為火焰，甚至只能吃土、飲尿或割食自身之肉。</p>
+
+    <div class="quote">其喉細狹如針孔，其腹碩大似山巒，穢物小撮亦難咽，恒為饑火所逼燒。</div>
+
+    <p><strong class="term">畜生</strong>的痛苦有三：被人役使、鞭笞拳踢的<strong>奴役之苦</strong>；為取珍珠、皮毛、血肉而遭<strong>殺戮之苦</strong>；以及大海生物彼此吞食的<strong>殘食之苦</strong>。</p>
+
+    <div class="quote">凡眼前有物，即張口食之。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch06-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      人道八苦
+      <small>生、老、病、死、愛別離、怨憎會、求不得、維護所有甚為艱難——人世八苦，以胎生之苦最為詳明</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <div class="quote"><cite>《入胎經》云</cite>生是苦，老是苦，病是苦，死是苦，愛別離是苦，怨憎會是苦，求不得是苦，維護所有甚為艱難是苦，此人世之八苦也。</div>
+
+    <p><strong class="term">生苦</strong>——中陰眾生投胎前，因業力所感，會生起狂風、驟雨、黑暗、喧雜四種幻覺，心生怖畏，依各自業力生起十種心理幻境，遠遠看見父母交媾之境而趨近，福德不同者分別趣入宮殿、茅舍或情慾洞穴，由貪瞋二煩惱與父母不淨物和合而入胎。此後三十八週住於母胎，最初如置身銅鍋，被水煮油炸；漸次身形凝結，四大顯現，長出四肢九竅；母親飲食冷熱失調、睡臥過多、行動過劇，胎兒都隨之感受如置冰上、如遭擠壓、如被刺棍抽擊般的痛苦；臨盆之時，胎兒被氣力所逼倒轉下降，如被放上鐵輪一般痛苦，出生時更如從狹窄孔隙中被活活拉出。</p>
+
+    <div class="quote"><cite>《入胎經》云</cite>昔為昧昧波，次生肉水波，再變打打兒，其體漸堅固，堅體再轉變，生頭及四肢，骨骼漸長大，而成人體型，此一切轉變，皆由業力成。</div>
+
+    <p><strong class="term">老苦</strong>可分十類：身體彎曲躬駝、鬚髮斑白稀疏、皮膚皺紋滿布、容顏灰暗凋朽、氣力衰退、容彩不再受人尊重、福德衰減、百病齊至、心力健忘、乃至時光將盡、氣息喘促。</p>
+
+    <div class="quote"><cite>《方廣大莊嚴經》云</cite>老來體力衰，美色無複存，老故容顏減，色力漸朽殘，老至興趣失，眾苦各增長，容彩盡奪去，死期日日近。</div>
+
+    <p><strong class="term">病苦</strong>可分七類：疾病本身之劇痛、診治所引發之痛苦、服用峻藥之苦、飲食受限之苦、聽從醫囑之苦、財產因病耗盡之苦、畏懼死亡將至之苦。</p>
+
+    <div class="quote"><cite>《方廣大莊嚴經》云</cite>人趣多百病，煎熬世上人，眾疾所纏者，其苦等餓鬼。</div>
+
+    <p><strong class="term">死苦</strong>，是臨終之時任何財物也帶不走，沒有依仗，沒有救護，唯獨在病痛中煎熬。</p>
+
+    <div class="quote"><cite>《誡王經》云</cite>大王！閻魔死王就這樣用死亡之叉，刺入臨死之人的身體中。那個時候，他任何財物也帶不走，沒有依仗，沒有救護，也沒有任何親戚或朋友能夠幫助他，他在病痛中煎熬。</div>
+
+    <p><strong class="term">愛別離苦</strong>，是與所愛的父母子女終須別離，錐心刺骨；<strong class="term">怨憎會苦</strong>，是與自己所嫌惡的人、事、境相處，難免爭論、吵鬧、打鬥。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch06-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      阿修羅、天道之苦與總結
+      <small>阿修羅有妒忌爭鬥之苦，欲界天有五衰之相，色無色界天仍難逃墮落——輪迴如熊熊燃燒的大宅</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p><strong class="term">阿修羅</strong>的痛苦，是在天人之苦以外，再加上我慢、妒忌與爭鬥——見到天人的福樂，自然生起瞋妒，內心煩惱，備受劇苦。</p>
+
+    <div class="quote">諸阿修羅眾，見天人福樂，自然生瞋妒，惱心受劇苦！</div>
+
+    <p><strong class="term">欲界天</strong>的天人，欲求不能滿足時會痛苦，與阿修羅征戰時也有身心的痛苦；將死之時更會顯現五種衰相：衣衫沾汙、花鬘凋殘、腋下流汗、身出臭味、不樂本座。</p>
+
+    <p><strong class="term">色界、無色界天</strong>雖無上述痛苦，卻仍會死亡，於投生之處也無自在，福業一旦消盡，同樣墮入惡趣。總之，這個輪迴，實在是一個眾苦深淵，其體性就像一座正被大火燃燒的房子。</p>
+
+    <div class="quote"><cite>《入胎經》云</cite>噫！這個輪回實在象一個燃燒著的大海喲！這一片大火熊熊燃，酷熱猛厲，極端猛烈！哪一個眾生不是在這一片大火中被焚燒煎熬呢！使這片大火燃燒不息的燃料，是貪、是瞋、是癡，是生、老、病、死，是憂、悲、苦惱，是迷惑無知——就是這些因素，使大火繼續不停地燒下去……誰也脫逃不了啊！</div>
+
+    <p>若能知道並常念上述種種輪迴之苦，便不會再貪著諸有的快樂了。</p>
+
+    <div class="quote"><cite>《父子謁見經》云</cite>由見輪回諸過患，此心淒然生悲戚，畏懼三界牢獄故，心生勇猛棄諸貪！</div>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第五章　結頌</div>
+    <div class="couplet">
+      天人與地獄，餓鬼畜生道，<br>
+      輪回諸眾生，其生也可哀。
+    </div>
+    <p style="margin-top:24px">生已受諸害，為眾苦所逼——龍樹菩薩早已明示：「生」正是一切痛苦之因，唯有看清輪迴的體性，才能真正生起出離之心。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch05">← 第四章</a><a href="#toc">目錄</a><a href="#ch07">第六章 →</a></nav></article><article class="ch" id="ch07" data-title="第六章　業果之概說"><header class="ch-head"><div class="cover-eyebrow">貳・方便（一）：四大口訣與發菩提心</div><div class="cover-title">第六章　業果之概說</div><div class="ch-desc">十不善業與業果四原則</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch07-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      業之總義
+      <small>世間萬象、眾生差別，皆由業力所生；業分心業與行動業，果報則有非福業、福業、不動業三類</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>上面所說的種種痛苦，究竟是怎樣造成的呢？那是由有漏業，也就是煩惱所造的業，所形成的。</p>
+
+    <div class="quote"><cite>《百業經》云</cite>由種種業故，生種種眾生。</div>
+    <div class="quote"><cite>《悲華經》云</cite>世界乃由業力所造，業力所成；眾生亦為業力所造，人由業力所生，以業力而有種種差別。</div>
+    <div class="quote"><cite>《俱舍論》云</cite>種種諸世間，皆由業力生。</div>
+
+    <p>所謂「業」，是指心意的業和行動的業兩種：心業即是心意（意志）的活動，行動之業則是身、口所造的業與行為——而身、口二處的行業，又必然都是由心所生的。</p>
+
+    <div class="quote">差別及性相，自作及受報，小業得大果，業果必不壞，假此六項事，解說業報理。</div>
+
+    <p>業果的差別有三：非福業、福業、不動業。非福業，簡言之即十不善業——身之殺、盜、邪淫三業，語之妄語等四業，意之貪、瞋、邪見三業；福業則是捨棄十惡、遵行十善之業報；不動業則是依禪定之力，生於色界、無色界諸天。以下先詳解非福業。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch07-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      十不善業與三重果報
+      <small>殺、盜、邪淫、妄語、惡口、綺語、貪、瞋、邪見——每業各有三種差別，及異熟、等流、增上三重果報</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <ul class="dash">
+      <li>
+        <strong class="term">殺生</strong>——或由貪心（為肉皮財富等）、或由瞋心（因競爭挾怨）、或由癡心（如祭祀愚行）而造。異熟果墮地獄；等流果縱生為人也夭壽多病；增上果生於貧困不祥之地。若所殺是父親又證阿羅漢者，罪最重大。
+      </li>
+      <li>
+        <strong class="term">不與取（盜）</strong>——或用暴力強奪、或暗中偷竊、或欺騙詐取。異熟果墮餓鬼趣；等流果縱生為人也終生貧窮；增上果生於霜雹頻仍之地。盜取上師、三寶之財，罪最重大。
+      </li>
+      <li>
+        <strong class="term">邪淫</strong>——或與血親亂倫、或與有夫之婦行淫、或雖對自己配偶卻犯了非器、非境、非時、非量、非理五種規律。異熟果墮餓鬼趣；等流果縱生為人也娶得脾氣暴戾的妻子；增上果生於沙塵污穢之地。與已證阿羅漢的母親行淫，罪最重大。
+      </li>
+      <li>
+        <strong class="term">妄語</strong>——或詐稱已證上人法、或為損益他人而說、或不構成損益而說。異熟果墮畜生道；等流果縱生為人也常遭譭謗；增上果口氣常臭。譭謗如來、詆毀上師，罪最重大。
+      </li>
+      <li>
+        <strong class="term">惡口</strong>——或當面粗語相向、或旁敲側擊譏諷、或在其親友前詆毀。異熟果墮地獄；等流果縱生為人也常聞不悅之語；增上果生於貧瘠乾旱、罪人聚集之地。惡語向父母、聖者，罪最重大。
+      </li>
+      <li>
+        <strong class="term">綺語</strong>——或顛倒戲說外道言辭、或世間戲謔玩笑、或對非器之人妄說佛法。異熟果墮畜生道；等流果縱生為人也言語不受尊重；增上果生於冬夏顛倒之地。以驕慢心對求法者開玩笑，罪最重大。
+      </li>
+      <li>
+        <strong class="term">貪心</strong>——或貪執自己所有、或貪羨他人所有、或貪求無主之物。異熟果墮餓鬼趣；等流果縱生為人也貪心熾盛；增上果生於農作貧瘠之地。心想奪取出家修行者的所有，罪最重大。
+      </li>
+      <li>
+        <strong class="term">瞋心</strong>——或因戰鬥仇恨而生殺害心、或因遊戲爭勝而生損惱心、或因忿怒而加倍損傷敵方。異熟果墮地獄；等流果縱生為人也瞋恨熾盛；增上果生於土地貧瘠之地。時時處心積慮害人，罪最重大。
+      </li>
+      <li>
+        <strong class="term">邪見</strong>——或不信因果、或不信道諦能證滅諦、或誹謗三寶為不真實。異熟果墮畜生道；等流果縱生為人也愚昧無知；增上果生於不結果實之地。執持某種邪見哲學，罪最重大。
+      </li>
+    </ul>
+
+    <p>若再細分：以瞋心造惡多墮地獄，以貪心造惡多墮餓鬼，以邪見造惡多墮畜生；就數量而言，惡業無數者墮地獄，惡業眾多者墮餓鬼，惡業較少者墮畜生；就對象而言，於殊勝境作惡墮地獄，於中等境作惡墮餓鬼，於下等境作惡墮畜生。</p>
+
+    <div class="quote"><cite>《寶鬘論》云</cite>由貪瞋癡等，而作不善業，因此墮惡趣，及感諸果報。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch07-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      不動業與生禪定
+      <small>依四色界定、四無色定之力，能往生色界十七天及無色界四天，此即不動業之果</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p>不動業，是依修習禪定之力而得果報。修前行初禪、離諸障礙，證入圓滿初禪，具尋、伺、喜、樂等支，便能往生梵眾天，若修特殊靜慮則生大梵天；修前行二禪，離尋伺、具喜樂，能生少光等二禪諸天；修前行三禪，離喜得樂，能生少淨等三禪諸天；證圓滿四禪，離一切尋伺喜樂，能生無雲等色界諸天。</p>
+
+    <p>對色界四禪生起厭離，進而修空無邊處定，可往生空無邊處天；再厭離而修識無邊處定，生識無邊處天；再修無所有處定，生無所有處天；再修非想非非想處定，生非想非非想處天。此中的「厭離」，是因貪欲漸減，於下界生厭；而「空無邊」「識無邊」「無所有」之名，是在前行等至位所修的觀境，一旦證入正式禪定，意識便不再如此運作；「非想非非想」則是指此定中的識極為遲鈍，既非明顯之識，也非全無知覺。這八種禪定都具有「善心而又專注」的特點。</p>
+
+    <div class="quote"><cite>《寶鬘論》云</cite>依色界禪定，及無色定力，故能得享受，梵天等快樂。</div>
+
+    <p>以上便說明了輪迴之產生，乃由善、惡、不動三種有漏業力所致。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch07-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      業果四原則與結語
+      <small>自作自受、同類相應、小業能生大果、業果永不壞失——四項原則，總攝業報之理</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <ul class="dash">
+      <li>
+        <strong class="term">自作自受</strong>——執持五蘊身造業的當事人，才會承受自己的業報，與他人不相干。
+        <div class="quote" style="margin-top:12px"><cite>《阿毗達摩集論》云</cite>提婆達多的罪，不會在地、水等物上結成果實，它只會在提婆達多的本人身上結成異熟果報，別人是不會受此罪之報應的。</div>
+      </li>
+      <li>
+        <strong class="term">同類相應</strong>——善惡業因，必得如其量、如其分的苦樂果報，絕無錯亂。
+        <div class="quote" style="margin-top:12px"><cite>《請問經》云</cite>由辛辣種子，得辛辣果實，由甘甜種子，得甘甜果實，准此則能知，作罪得苦果，作善得樂果，智者應知悉。</div>
+      </li>
+      <li>
+        <strong class="term">小業能生大果</strong>——惡業勢力極強，一念噁心即可墮地獄歷時多劫；小的善業，同樣能結成廣大果報。
+        <div class="quote" style="margin-top:12px"><cite>《入菩薩行論》云</cite>如是佛子及施主，若以噁心譭謗之，則墮地獄曆多劫，其劫數量等噁心，釋迦能仁如是說。</div>
+      </li>
+      <li>
+        <strong class="term">業果不壞</strong>——除非以特定方法對治，業果縱經無數劫也不會自行壞滅，一旦因緣成熟，業果必然如其量如其分地結成。
+        <div class="quote" style="margin-top:12px"><cite>《百業經》云</cite>尊者所作業，百劫亦不壞，時至遇緣時，業果即成熟。</div>
+      </li>
+    </ul>
+
+    <p>有了以上的觀察，我們應對輪迴的痛苦生起懼畏之情，對業果生起決定的認識與信心。</p>
+
+    <div class="quote">拋棄諸有之快樂，擯絕罪業之行為，一心尋求寂滅果，此人堪稱中等士。</div>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第六章　結頌</div>
+    <div class="couplet">
+      火焰可能變冷卻，飄風可被繩索拴，<br>
+      日月可能墮於地，業果成熟無可壞。
+    </div>
+    <p style="margin-top:24px">世間萬事或有轉圜，唯有業果的法則，恒常不壞——深信此理，正是對治輪迴貪著的根本。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch06">← 第五章</a><a href="#toc">目錄</a><a href="#ch08">第七章 →</a></nav></article><article class="ch" id="ch08" data-title="第七章　慈心與悲心"><header class="ch-head"><div class="cover-eyebrow">貳・方便（一）：四大口訣與發菩提心</div><div class="cover-title">第七章　慈心與悲心</div><div class="ch-desc">念母恩與生緣悲之修法</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch08-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      總說：慈悲對治貪滅
+      <small>貪求一己涅槃、缺乏利他之心，是小乘之作風；唯有生起慈心與悲心，才能真正愛眷眾生</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>現在討論修習慈觀與悲觀，也就是對治貪求寂滅之樂的方法。所謂貪求寂滅之樂，是指只想自己一個人獲得涅槃；因為對眾生缺少悲心，便不立志去做利他之事，這正是小乘的作風。</p>
+
+    <div class="quote">由貪自利故，舍諸利他事，利己首要故，自私為第一。</div>
+
+    <p>但若心中生起了慈心與悲心，就會愛眷眾生，不會只求一己之解脫了。上師文殊德稱說：「大乘行人是連一剎那都不會離開慈悲心的啊！」利他之事，唯有在慈悲心的攝護之下才能成功，絕非仇恨所能成就。以下先討論修慈心觀的方法：</p>
+
+    <div class="quote">
+      差別所緣及相狀，修法功德成熟相，<br>
+      由此六門而述說，無量慈心之法門。
+    </div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch08-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      修慈觀：三種慈心與念母之恩
+      <small>生緣慈、法緣慈、無緣慈三種慈心，以憶念母親授體、難行、予命、教導四恩為根本修法</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>慈心的差別有三：緣想眾生而生的<strong class="term">生緣慈</strong>，多為初發心菩薩所具足；緣想法理而生的<strong class="term">法緣慈</strong>，多為已入菩薩行者所具足；離一切緣想的<strong class="term">無緣慈</strong>，則是已證無生法忍的菩薩所具足。</p>
+
+    <p>生緣慈的對象是一切眾生，內含則是願眾生都能得樂。修習的方法，是時常憶念眾生對自己的恩德——這根本上建立在「憶念恩德」之上。今生對我們恩德最大的，莫過於母親：授體之恩、難行之恩、予命之恩、教導之恩。</p>
+
+    <div class="quote"><cite>《聖八千頌》云</cite>何以故，母生我故，為我苦行苦，予我以命故，示我世間諸相故。</div>
+
+    <p>母親生育我身的恩德——我這個身體並非本來完備，而是從母胎中的小肉球，靠母親的血肉與食物精華，忍受種種病痛與羞慚，一路養護長成的。母親所經歷的艱難——我初來這世界時空空如也，母親怕我餓、怕我渴、怕我冷，寧可自己捨不得吃穿，也要犧牲今生來世的利樂養護我；甚至為了養育子女，不惜造下捕魚屠宰等罪業，終日辛勞於田地與市集，以星辰為氈帽、以雙腿為乘馬，用慈愛的眼光凝視、柔美的聲音呼喚，把我這個素不相識的小兒，看得比任何人都重。予命之恩——我初生時如小蟲般無助，母親沒有拋棄我，反而怕我被火燒、被水淹、被傷害、生病、死亡，用種種方法佑護，用盡辦法養我成人。教導之恩——我最初只會啼哭喊叫，是母親教我吃、教我穿、教我走路說話，才使我能與眾人看齊。</p>
+
+    <p>更應牢記的是：不只今生的母親對我恩重如山，無始輪迴以來，生生世世無量無邊的母親，都曾對我恩重如山。</p>
+
+    <div class="quote"><cite>《無始輪回經》云</cite>如果有一個人把大地的石頭和泥土，以及一切草木和樹林都轉變成同體積的億萬個棗核，另外一個人再把這些棗核一個一個地數下去，等到他全部數完時，所得的數字，還遠不及任何一個眾生曾為我母之次數來得多！</div>
+
+    <p>母親既然恩重如山，心中自然生起悲感，一心想念如何使她離苦得樂；進一步想，一切眾生都曾作過我的母親，恩德等同今生的母親；再進一步想，眾生數量有多大呢？虛空無邊，眾生便無邊。</p>
+
+    <div class="quote"><cite>《普賢行願品》云</cite>虛空無邊難可量，眾生無盡亦如是。</div>
+
+    <p>因此，我們要發心利益等虛空之無量眾生，使他們都能得到安樂——這樣的發心，就是慈心。</p>
+
+    <div class="quote"><cite>《莊嚴經論》云</cite>菩薩視眾生，如其親生子，深心懷大慈，常令得安樂。</div>
+
+    <p>慈心湧生時，自然會流淚、汗毛直豎；當此大慈心能平等普及一切眾生，就是慈無量心。慈心成熟的象徵，是完全沒有為自己求安樂的心意，時時一心一意只為眾生求安樂。</p>
+
+    <div class="gist">
+      <div class="gist-tag">兼釋・修慈之功德與利益</div>
+      <p>修習慈心的功德難可計量：「於億萬剎土，廣興無量供，供養最勝士，比慈心功德，萬分難及一。」片刻修慈的福德，也勝過每日以妙食供養三百尊長百千倍。修習慈心的人，在未證菩提之前，能得天人護佑、毒藥武器不能加害、諸事無須勤苦而成、能生梵天世界等八種利益，如大施婆羅門與慈力大王的故事所示。</p>
+    </div>
+
+    <p>修習慈心若得熟練，修習悲心便不再有任何困難。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch08-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      修悲觀：生緣悲之修法
+      <small>生緣悲、法緣悲、無緣悲三種悲心中，先修生緣悲——緣念如母眾生在六道中所受之種種痛苦</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <div class="quote">
+      分別緣境及相狀，修法證量及功德，<br>
+      依此六事今宣說，悲無量心之義理。
+    </div>
+
+    <p>悲心的分別有三：緣想惡道眾生苦痛而起的<strong class="term">生緣悲</strong>；緣想眾生迷執顛倒而起的<strong class="term">法緣悲</strong>；於入定證空性時，對執法實有的眾生自然生起的<strong class="term">無緣悲</strong>。</p>
+
+    <div class="quote">菩薩入正定，修行串習力，（慧觀）得圓滿，此時悲心起，哀憫諸群生，為（癡）魔所縛，執法實有者。</div>
+
+    <p>此處先談生緣悲。其緣境是一切眾生，相狀是歷受痛苦、掙扎欲出離。修法是配合觀母恩而修：想我的生母正在地獄中被砍殺焚煮，或在極寒中皮膚龜裂——地獄眾生都曾是我的母親，怎能不生悲心？餓鬼道眾生時時受劇烈飢渴之苦，同樣都是我的母親，我一定要使他們脫離苦難；畜生道眾生經常在痛苦中煎熬，也決定是我的母親。</p>
+
+    <p>再想，這世界上無數如母眾生，正受著飢渴、疾病、恐懼、衰老、奴役、毆打，甚至無辜被殺的痛苦，怎會不生悲心？又想，我的母親正站在懸崖邊，渾然不覺危險，越走越近——天、人、阿修羅道的眾生也同樣有墮入三惡道的危險，卻不知制止惡業、又無善知識引領，我應當領導他們脫離此險，抵達安全之處。</p>
+
+    <p>悲心熟練的象徵，是珍愛自己、以自我為本位的欲執之繩已被切斷——不只是口說，而是心中確確實實生起要使一切眾生脫離諸苦的悲心。</p>
+
+    <div class="quote"><cite>《說觀世音證境經》云</cite>若具此法，則一切佛法皆如置掌中。何者此法，大悲心是也。</div>
+    <div class="quote"><cite>《如來秘密經》云</cite>秘密主！一切智智乃由悲心之根而出生者也。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch08-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      結語：慈悲乃對治寂滅之良方
+      <small>慈心令眾生得樂，悲心令眾生離苦——為利益眾生而非為己求寂滅，即是最上士之發心</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p>綜上所述：令一切眾生得樂的是慈心，令一切眾生離苦的是悲心。不為自己的寂滅安樂，而是為了利益眾生才嚮往、爭取佛位——此心此志，正是對治貪執寂滅之樂的唯一良方。若能生起這樣的慈悲，便能愛他勝於愛己。</p>
+
+    <div class="quote">確如諸苦故，能推己及人，發志除眾苦。是為最上士。</div>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第七章　結頌</div>
+    <div class="couplet">
+      菩薩視眾生，如其親生子，<br>
+      深心懷大慈，常令得安樂。
+    </div>
+    <p style="margin-top:24px">慈悲心生起之時，自然汗毛直豎、涕淚俱下——這正是大乘行人一剎那也不曾離開的根本心。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch07">← 第六章</a><a href="#toc">目錄</a><a href="#ch09">第八章 →</a></nav></article><article class="ch" id="ch09" data-title="第八章　皈依與淨戒"><header class="ch-head"><div class="cover-eyebrow">貳・方便（一）：四大口訣與發菩提心</div><div class="cover-title">第八章　皈依與淨戒</div><div class="ch-desc">發菩提心三條件、皈依九門</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch09-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      發菩提心之基礎：三條件總標
+      <small>具足大乘種性、皈依三寶、受七眾別解脫戒任一種——三者依次為基礎，缺一則發心不得生效</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>現在討論對治「不知成佛之方法」的辦法，也就是發菩提心之道。</p>
+
+    <div class="quote">
+      基礎體性及差別，所緣因地及受法，<br>
+      儀軌功德及過失，喪失對治及學處，<br>
+      如是由此十二門，闡述發菩提心義。
+    </div>
+
+    <p>第一項是發菩提心之基礎——要說明什麼樣的人才能發菩提心。這需要三個條件：具足大乘種性、皈依三寶、受七眾中任何一種別解脫戒。</p>
+
+    <p>任何一法都必須以其他法作基礎：願菩提心是行菩提心的基礎，皈依（受別解脫戒）又是願菩提心的基礎——沒有前者，後者便失去所依，不能生效。《瑜伽師地論・菩薩地》說得很清楚，願菩提心必在行菩提心之前，皈依又必在願菩提心之前；行菩提心必先有持別解脫戒之基礎，持別解脫戒又必以皈依為先基。</p>
+
+    <p>一個人若沒有大乘種性，縱然形式上發了菩提心，實際上也等於沒有發——大乘種性不但需要性相具足，更必須予以顯發才能起作用（詳見第一章）。以下便進一步解說皈依三寶的道理。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch09-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      皈依三寶：唯佛究竟，方便權立三種
+      <small>世間神祇、父母親友皆非真實皈依處；唯有已離一切怖畏的佛法僧三寶，且究竟而言唯佛陀是真正皈依處</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>把自己的身心性命完全交付仰仗的對象，就是所謂的皈依處。這不應是具世間威力的大梵天、韋紐天等，也不是山、崖、湖、樹中的神祇、天龍精怪——因為這些都不能真正救護我們。</p>
+
+    <div class="quote">世間諸事物，山石樹木等，神鬼諸祭祠，不能作皈依。</div>
+    <div class="quote"><cite>《文殊遊戲經》云</cite>父母難作皈依處，妻女親屬亦不能，彼等終將舍汝去，隨彼意樂他方行。</div>
+
+    <p>為什麼這些都不能作皈依處？因為他們自身都尚未脫離痛苦與怖畏——要為別人作歸作救，必須自己先徹底解脫痛苦怖畏才行。徹底解脫了一切痛苦的，只有佛陀、佛法，以及已成就的法友聖僧，因此向這三者皈依，才是正道。</p>
+
+    <div class="quote">于怖畏時除怖畏，于無救時作救歸，佛陀正法與聖僧，我今至誠作皈依。</div>
+    <div class="quote"><cite>《大涅槃經》云</cite>若人皈依於三寶，必能解脫諸怖畏。</div>
+
+    <p>皈依的境有普通與特殊之分：普通皈依境中，佛寶是斷、智、力三者皆圓滿的佛陀；法寶分宣說的教法（十二部經）與證入的教法（道諦、滅諦）；僧寶分異生類僧團與已證聖果的聖者僧團。特殊皈依境則是：從對象看，佛寶是具色身的如來，法寶是大乘經，僧寶是菩薩僧團；從證境看，佛寶是具三身者，法寶是寂滅正法，僧寶是登地以上的菩薩眾。</p>
+
+    <p>然而，究竟來說，只有佛寶才是真正究竟的皈依處。</p>
+
+    <div class="quote"><cite>《大乘寶性論》云</cite>若論究竟了義教，究竟皈依惟佛陀。<br>佛寶具足法身故，眾生蒙恩究竟故。</div>
+
+    <p>因為佛陀具足法身之德相，不生不滅而能顯現諸相、斷滅煩惱。至於法寶與僧寶，何以不是究竟皈依處呢？義法終須如舟筏般被捨棄；道諦屬有為法，是被學習之法，非皈依處；滅諦如熄滅的燈，空無斷滅，也非究竟；僧伽自身仍怖畏輪迴，要向佛陀求皈求救，自然也不能為究竟皈依處。</p>
+
+    <div class="quote"><cite>無著大師云</cite>恒常，無盡，堅固和勝妙的皈依處，只有一個，那就是如來薄伽梵圓滿佛陀。</div>
+
+    <p>那麼，前面說皈依三寶，豈非自相矛盾？其實不然——三皈依只是接近眾生的一種善巧方便。</p>
+
+    <div class="quote"><cite>《大解脫經》云</cite>簡言之，皈依處只有一個，但為了方便而權說為三種。</div>
+
+    <p>依眾生根性不同，喜愛菩薩乘者教以皈依佛寶，喜愛辟支佛乘者教以皈依法寶，喜愛聲聞乘者教以皈依僧寶——這是佛陀以世俗方便，為各類眾生所立的次第法門。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch09-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      皈依之時、意樂與儀軌
+      <small>皈依有一般性與特殊性之別；儀軌分一般與特殊，特殊儀軌又有前行、正行、結尾三部分</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <ul class="dash">
+      <li><strong class="term">皈依的時間</strong>——一般性是從現在起直到命終；特殊性是從現在起直到證得菩提。</li>
+      <li><strong class="term">皈依的意樂</strong>——一般性是為使自己脫離難忍之苦而皈依；特殊性是為使別人脫離難忍之苦而皈依。</li>
+    </ul>
+
+    <p><strong class="term">一般性皈依儀軌</strong>：弟子先向上師祈請傳授皈依，上師於三寶前作供養（或緣想三寶住於虛空而觀想供養禮拜），然後唱念皈依文，弟子隨誦：</p>
+
+    <div class="quote">十方一切佛陀及菩薩，請您們護念我啊！上師請您也護念我啊！弟子某某從現在起一直到未證菩提之前，以身心性命來皈依二足尊之佛陀，皈依遠離貪欲的正法，和皈依殊勝團眾之僧伽。十方一切佛陀及菩薩，請您們于一切時護念我，為我作歸作救，作皈依處。</div>
+
+    <p>如是至誠念誦三次。</p>
+
+    <p><strong class="term">特殊皈依儀軌</strong>分前行、正行、結尾三部分：前行是在合格上師前供養曼陀羅，祈請傳授皈依；上師若認為弟子堪為法器，便於初夜備三寶造像、供品，宣講皈依之利益與不皈依之過失，中夜開始正行——先於三寶造像起真實感而禮拜供養，隨上師念誦皈依禱文三次；再觀想迎請三寶現前相對，作禮拜供養，觀三輪體空而行皈依，心想「一切法本來無我，佛、法、僧三寶亦複如是，這才是無盡之皈依處」；後夜結尾時，再行供養以酬謝三寶之恩佑。</p>
+
+    <div class="quote"><cite>《莊嚴經論》云</cite>於一切苦難，惡道絕望處，以及諸怖畏，小乘外道法，能作皈作救，是為勝皈依。</div>
+
+    <p>皈依後應當時常尊奉的學處：於一切時努力供養三寶，即使遭逢性命危險也決不背棄；除佛陀外不再皈依其他神祇；皈依法寶後永離損害眾生之心；皈依僧寶後不再依止外道；對佛像、經卷、法師及其用具，都應時時恭敬。</p>
+
+    <div class="quote"><cite>《大涅槃經》云</cite>我今皈依佛，最勝善知識，從此不皈依，其他各神祇。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch09-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      皈依之利益與受持淨戒
+      <small>皈依可得八種利益；發菩提心之第三條件，是受七眾別解脫戒中任何一種，作為清淨身心的依處</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p>皈依的利益，略說有八：</p>
+
+    <ul class="dash">
+      <li>常遇佛法，趨入內道</li>
+      <li>能作法師，為眾所依</li>
+      <li>昔作惡業，皆悉清淨</li>
+      <li>不為人與非人等障礙所損</li>
+      <li>一切所作，皆得成辦</li>
+      <li>常具廣大福德之因</li>
+      <li>不墮惡趣</li>
+      <li>速證菩提</li>
+    </ul>
+
+    <p>發菩提心的第三個條件，是受持別解脫戒——除極短期的八關齋戒外，比丘、比丘尼、式叉摩那、沙彌、沙彌尼、優婆塞、優婆夷七眾別解脫戒中任何一種，皆可作為基礎。</p>
+
+    <p>為什麼發菩提心一定要受持別解脫戒呢？譬如要迎請轉輪聖王，不能請到污穢的地方，必須先打掃莊嚴才合宜——發菩提心王之大志，也不能生於充滿身口意罪業的心中，必須要身口意三業清淨、持戒莊嚴的身心，才能真正起作用。八關齋戒只受持一日，是暫時的小戒；七眾別解脫戒需終身受持，是大戒，因此發菩提心之依處，需要後者。</p>
+
+    <div class="quote"><cite>《菩提道燈論》云</cite>七種別解脫，常戒不與共，為菩提心戒，能作彼依處，非他戒所能。</div>
+
+    <p>有人問：黃門閹人與某些天人不能受別解脫戒，難道他們就沒有發菩提心的機會了嗎？答案是：經中明言，即使這些人也可以受持菩提心戒。又問：別解脫戒命終即捨，菩提心戒卻永不捨去，豈非菩提心戒失去依處？答案是：受別解脫戒的意趣有三——為求三界快樂而受戒是業果性質之戒；為求自己出離三界而受戒是聲聞出離性質之戒；為證大菩提而受戒，才是菩提心之淨戒。前二者在黃門閹人與諸天身上生不起來，命終戒相亦消滅；唯有菩提心之別解脫戒，人人皆可受持，命終不捨，破戒後亦能懺悔復原，因此既能作生起菩提心之依處，也能作相續菩提心之住處。</p>
+
+    <p>綜上所述，發菩提心的合格之人，需要具足大乘種性、已皈依三寶、並具足七眾中任一種別解脫戒——三者缺一不可。</p>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第八章　結頌</div>
+    <div class="couplet">
+      于怖畏時除怖畏，于無救時作救歸，<br>
+      佛陀正法與聖僧，我今至誠作皈依。
+    </div>
+    <p style="margin-top:24px">唯有已徹底解脫痛苦怖畏者，才能真正為他人作歸作救——這正是皈依三寶的根本道理。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch08">← 第七章</a><a href="#toc">目錄</a><a href="#ch10">第九章（上） →</a></nav></article><article class="ch" id="ch10" data-title="第九章（上）　論發菩提心・體性差別所緣"><header class="ch-head"><div class="cover-eyebrow">貳・方便（一）：四大口訣與發菩提心</div><div class="cover-title">第九章（上）　論發菩提心・體性差別所緣</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch10-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      菩提心之體性與譬喻
+      <small>菩提心是「為利益眾生而志取圓滿菩提」，無著菩薩以二十二種譬喻，貫穿從凡夫到成佛的五道歷程</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>菩提心的體性是：為了利益眾生而志取圓滿菩提。</p>
+
+    <div class="quote"><cite>《現觀莊嚴論》云</cite>發心為利他，志取大菩提。</div>
+
+    <p>以下由譬喻、地道、性相三方面來講述菩提心。聖無著菩薩於《現觀莊嚴論》中，曾用譬喻解說從凡夫位一直到成佛之間的各種菩提心：</p>
+
+    <div class="quote">
+      地金月與火，庫海及寶藏，<br>
+      金剛山藥師，日歌如意寶，<br>
+      王庫與大道，車乘及噴泉，<br>
+      谷響江河云，喻凡二十二，（闡說菩提心）。
+    </div>
+
+    <p>這二十二個譬喻，分別配合從最初發心志求菩提，一直到證取法身之間所經歷的五道歷程，層層遞進地說明菩提心在修道各階段的不同面貌與力用。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch10-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      菩提心之差別
+      <small>由地道分四種深淺次第；由內容分勝義與世俗；世俗菩提心又依文殊龍樹派、彌勒無著派，分願、行二種</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>從地道的觀點，發菩提心的差別有四：由信樂啟發而發心，指資糧道、加行道的初機發心；由具足殊勝證悟而發心，指初地到十地的發心；由趨入成熟覺地而發心，指八、九、十地的發心；由淨除一切障礙而發心，指佛地的菩提心。</p>
+
+    <div class="quote"><cite>《莊嚴經論》云</cite>信樂或殊勝，成熟並利他，淨除諸障礙，（由深淺次第），發心有多種。</div>
+
+    <p>從內容看，菩提心分勝義菩提心與世俗菩提心。勝義菩提心是空性與悲心的結晶，空朗、不動、離一切邊際戲論；世俗菩提心則是由慈悲心激發，立誓度盡一切眾生、出離輪迴。勝義菩提心唯有初地以上的菩薩才具有。</p>
+
+    <div class="quote"><cite>《解深密經》云</cite>勝義菩提心是超越世間之一切的，是離戲論邊際的，是非常明朗的，是屬於究竟義的範圍，無垢、不動，像一個無風的明燈，極為光明燦爛的。</div>
+
+    <p>世俗菩提心又有願菩提心與行菩提心之分。</p>
+
+    <div class="quote"><cite>《入菩薩行論》云</cite>簡說菩提心，應知有二種，一願菩提心，二行菩提心。</div>
+
+    <ul class="dash">
+      <li>
+        <strong class="term">文殊―龍樹―寂天派</strong>——願菩提心像是「意欲去行路」，對圓滿佛位生起「意欲獲得」的願求；行菩提心則像「真正在路上行走」，是成佛行為的實地踐行。
+      </li>
+      <li>
+        <strong class="term">彌勒―無著―金州派</strong>——願菩提心是立下誓願：「為利益一切眾生故，自己必定要獲取圓滿佛果」；行菩提心則是誓願學習實踐成佛之因——六波羅蜜多。
+      </li>
+    </ul>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch10-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      菩提心之所緣與生起之因
+      <small>目標是志取菩提、救度眾生；世俗菩提心由友力、因力、根力、聞力、善業串習力五力而生，勝義菩提心則由三因而起</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p>發菩提心的目標，是志取菩提與救度眾生——只要有虛空之處就有眾生，有眾生就有煩惱，有煩惱就有痛苦，為了解除這些痛苦，所以發菩提心。</p>
+
+    <div class="quote"><cite>《普賢行願品》云</cite>虛空邊際（無）盡故，所有眾生亦無盡，一切眾生無盡故，業與煩惱亦無盡，（業與煩惱無盡故），我此行願亦無盡。</div>
+
+    <p>發菩提心的原因，《十法經》說有四：見發菩提心的功德而發心、對如來生誠摯信心而發心、見眾生痛苦而發心、因善知識導化而發心。</p>
+
+    <p>世俗菩提心可由五力而生：</p>
+
+    <ul class="dash">
+      <li><strong class="term">友力</strong>——因與善知識為伴，受其感化而發心。</li>
+      <li><strong class="term">因力</strong>——內具種性之佛因力量成熟而發心。</li>
+      <li><strong class="term">根力</strong>——因緣時至，內具佛種性自然開發而發心。</li>
+      <li><strong class="term">聞力</strong>——因聽聞佛法義理而發心。</li>
+      <li><strong class="term">善業串習力</strong>——一生常聽聞受持佛法而發心。</li>
+    </ul>
+
+    <p>依友力等外緣而發的菩提心並不真正堅固；唯有從佛種性等內因成熟而激發的菩提心，才是堅固的。勝義菩提心則由三種因緣而生起：聽聞佛典、修習定慧、現量證悟。</p>
+
+    <div class="quote">能使諸佛心歡喜，廣積福慧二資糧，于法得無分別智，殊勝發心應如是。</div>
+
+    <p>發菩提心的儀式，有師承與無師承兩種。若能尋得合格上師，只要生命與戒行沒有毀滅的危險，就應前往受戒；上師的資格是：熟稔戒儀軌、自身未曾毀犯戒律、通達身語行儀、不過分拘泥小節、對弟子具悲心愛護。</p>
+
+    <div class="quote"><cite>《菩提道燈論》云</cite>應于善師前，受納菩提戒，彼師須合格，具足諸性相，深諳戒儀軌，自持清淨戒，甚傳具悲心，此是善上師。</div>
+
+    <p>若無合格上師可依，也可在如來佛像前，至誠念誦發心文三次，同樣可得願菩提心或行菩提心戒；若連佛像也沒有，觀想虛空中諸佛菩薩現前，一樣可以受持。下一篇將詳述這兩大傳承的發菩提心儀軌。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch10-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      結語：由體性到儀軌
+      <small>菩提心的體性、譬喻、差別、所緣與因，皆是為了引出下一步——如何如法受持菩提心戒</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p>以上由譬喻、地道、內容三個角度，說明了菩提心的體性與差別，也說明了菩提心生起的目標與因緣。這一切理解，都是為了讓修行者能夠如法地趨入下一步——正式受持菩提心戒的儀軌。這將在下一篇詳細展開。</p>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第九章（上）　結頌</div>
+    <div class="couplet">
+      地金月與火，庫海及寶藏，<br>
+      金剛山藥師，日歌如意寶。
+    </div>
+    <p style="margin-top:24px">菩提心一如大地承載萬物、如純金不變其質——從最初發心到究竟成佛，這念心始終如一，唯其展現的力用，隨修道階位而層層深化。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch09">← 第八章</a><a href="#toc">目錄</a><a href="#ch11">第九章（中） →</a></nav></article><article class="ch" id="ch11" data-title="第九章（中）　論發菩提心・儀軌"><header class="ch-head"><div class="cover-eyebrow">貳・方便（一）：四大口訣與發菩提心</div><div class="cover-title">第九章（中）　論發菩提心・儀軌</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch11-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      文殊龍樹派：前行六支（一）供養與懺悔
+      <small>發菩提心之儀軌有二大傳承；文殊―龍樹―寂天一系的前行分六支，先說廣修供養與懺除罪業之四力</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>關於發菩提心之儀軌，各家傳授雖有出入，攝言之可分二大派：一是聖文殊―龍樹一派，傳至寂天論師之系統；一是聖彌勒―無著一派，傳至金州尊者之系統。文殊―龍樹系的儀軌，分前行、正行、結尾三部分，前行又含六支：廣修供養、懺除罪業、隨喜功德、請轉法輪、請佛住世、回向功德。</p>
+
+    <p><strong class="term">一、廣修供養</strong>——供養的對象是現前或未現前的佛法僧三寶，功德無別。供養的行為，有以實物、誦贊、觀想施身等「事物性供養」，也有修觀佛身大手印定等「修行性供養」，更有修菩提心觀的「有相供養」，以及修無我空觀的「無相供養」——後者才是最殊勝的供養。</p>
+
+    <div class="quote"><cite>《獅子吼經》云</cite>若人心中無念無相是為供養如來。若能心離取捨，入不二門，是為供養如來。諸善友！如來身者，以無相為性，若以有相心供養如來，終不可得也。</div>
+
+    <p><strong class="term">二、懺除罪業</strong>——一切善惡皆由心意決定，心如王，身語如臣民。因貪瞋煩惱而造下五無間業、十不善業等，果報唯有苦痛。因此必須懺悔。懺悔真能淨罪嗎？</p>
+
+    <div class="quote"><cite>《大涅槃經》云</cite>一個人若是作了惡業，只要以後衷心懺悔，改過向善，就像是一盆濁水，以明寶沉入，就會變成澄淨；這就象淨月從烏云中出現，晶瑩明澈，光輝朗照一般。</div>
+
+    <p>懺悔須依「四力之門」：</p>
+
+    <ul class="dash">
+      <li><strong class="term">深悔所作</strong>——對以往罪業生起猛厲後悔，至善知識前發露懺悔。可由三處著力：觀察造罪本身毫無意義（仇敵、親友、身體、財物死時皆帶不走，唯業力相伴）；畏懼罪行招致的果報（臨終肢節分解之苦、閻君使者拘捕之怖）；速速脫離罪業之心（罪業未淨可能即刻死去，不容拖延）。</li>
+      <li><strong class="term">廣修善行</strong>——以善行之力對治惡業，善業本身便有轉化惡業的力量，如修觀空性、讀誦經典、供養佛塔、造佛像等，皆能淨罪。「行一善能消百千罪業……金剛雖小，能摧巨山；火燭雖小，能焚茂林；是故善業雖微，亦能淨除極重之罪業也。」</li>
+      <li><strong class="term">誓不作惡</strong>——因畏懼來生異熟果報，發誓永不復作。這樣的堅誓本身便有滅除過去罪業的力量，如喜樂童子誓不復犯淫行，終究證得阿羅漢果。</li>
+      <li><strong class="term">依善業力</strong>——依皈依三寶與發菩提心之力淨除罪障。「猶如大地，菩提心能消融一切不善法，如劫終之火，菩提心能焚毀一切罪業。」</li>
+    </ul>
+
+    <div class="quote"><cite>《入菩薩行論》云</cite>若人曾造極重惡，誠意皈依勝佛陀，其人一切諸怖畏，片刻之間皆消除。</div>
+
+    <p>四力任修一種皆能淨罪，何況四力並施？業障清淨時，會有夢兆顯現，如夢見日月行空、比丘僧眾、樹上乳出等瑞相。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch11-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      文殊龍樹派：前行六支（二）隨喜、請法、回向
+      <small>隨喜一切諸佛菩薩與凡夫善行、殷勤祈請轉法輪與住世、回向自身善根予一切眾生</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p><strong class="term">三、隨喜功德</strong>——衷心隨喜過去、現在、未來一切諸佛菩薩、聲聞緣覺，乃至一切凡夫眾生所作的種種善行與功德。</p>
+
+    <div class="quote">能作吾人皈依處，一切如來及佛子，所作種種諸善行，我皆衷心而隨喜。</div>
+
+    <p><strong class="term">四、請轉法輪</strong>——觀想十方諸佛為尊重法故暫示沉默，於佛前殷重勸請轉妙法輪。</p>
+
+    <div class="quote">十方一切諸佛前，我今合掌敬祈請，為除眾生黑暗苦，請燃法炬放光明。</div>
+
+    <p><strong class="term">五、請佛住世</strong>——觀想十方諸佛示現將入涅槃，殷重祈請諸佛留世利益眾生。</p>
+
+    <div class="quote">或有諸佛欲涅槃，我今合掌敬祈請，悲憫眾生盲暗苦，請佛住世無量劫。</div>
+
+    <p><strong class="term">六、回向功德</strong>——把自己所作一切善根，回向一切眾生，令其解除痛苦、成熟安樂。</p>
+
+    <div class="quote">願以我所作，種種諸善根，回向諸眾生，解脫諸苦難。</div>
+
+    <p>以上便是發菩提心前行儀軌的六支。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch11-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      文殊龍樹派：正行與結尾
+      <small>正行的核心是三次唱誦發菩提心誓語，結尾則生起「我已成辦大事」的歡喜與雀躍</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p>正行儀式的核心，是自己唱言發菩提心之誓語三次：</p>
+
+    <div class="quote"><cite>《集學處》云</cite>輪回無始終，其間時無量，以此無量時，行善利眾生，此行難限量，今於佛前誓，發勝菩提心。</div>
+
+    <p>或依《入菩薩行論》發心攝頌：</p>
+
+    <div class="quote">如過去諸佛，初發菩提心，入菩薩學處，次第善安住，如是利群生，發大菩提心，我亦隨驥尾，入菩薩學處，次第而修學。</div>
+
+    <p>若不想同時發菩提心與受菩薩戒，隨自己意願念其中一項即可。儀軌結尾，應向三寶謝恩供養，自念「我做了一件大事」，生起廣大歡喜雀躍心。</p>
+
+    <div class="quote">如是具慧者，受菩提心已，應發廣大意，歡喜並雀躍，讚揚其功德。</div>
+
+    <p>以上是寂天論師派所傳的發菩提心儀軌——前行、正行、結尾。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch11-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      彌勒無著派：願行二心之儀軌
+      <small>金州尊者一系的儀軌分願菩提心與行菩提心兩部分，各有前行、正行、結尾之次第</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p><strong class="term">發起願菩提心之前行</strong>有三：祈禱（弟子向善知識頂禮祈求，於輪迴生厭離、於眾生發慈悲、於佛陀發欣樂、於三寶發信心）；積資糧（依自身財力供養法師三寶，富者興廣大供養，貧者以一草燈或三次頂禮即可合格）；皈依（如前章所述）。</p>
+
+    <div class="quote">如來功德鬘，最初發心時，於濟旦佛前，恭敬而合掌，頂禮凡三次，而發菩提心。</div>
+
+    <p><strong class="term">正行</strong>——上師先開示：一切受苦眾生皆曾是我父母，於我恩重，若他們能脫苦得樂該有多好；然而唯有自己成就圓滿佛位，才能真正利濟眾生。弟子隨誦發願文三次：</p>
+
+    <div class="quote">十方一切諸佛菩薩，請護念我啊！……未獲救的眾生我皆令其獲救，未解脫的眾生我皆令其解脫，未蘇息者我皆令其蘇息，未獲涅槃者我皆令其獲證涅槃，為了這些緣故，我今鄭重發大菩提心。</div>
+
+    <p>其中「未獲救」指沉溺三惡道的眾生；「未解脫」指雖有快樂卻仍被煩惱鎖鏈束縛的天、人二道；「未蘇息」指本無大乘氣息的聲聞緣覺；「未得究竟涅槃」指尚未證得無住涅槃的小乘行人。</p>
+
+    <p><strong class="term">結尾</strong>——思惟「我已經做了一樁重大的事」，生起慶幸歡喜之心，接著宣講菩薩之學處。發了菩提心的人，便稱為菩提薩埵——時時刻刻想著菩提與眾生、為成佛度生而精進不退的勇士。</p>
+
+    <p><strong class="term">行菩提心之前行</strong>共十項：祈請傳授、質詢一般障礙、發露懺悔過失、思惟犯戒害處、思惟持戒利益、積聚二種資糧、策勵勸益、質詢不共障礙、發起殊勝增上心、摘要講說菩薩學處。</p>
+
+    <p><strong class="term">正行</strong>——傳戒上師詢問弟子三次：「你願意像過去現在未來十方一切大菩薩一樣，修行一切菩薩學處，受持清淨戒、攝善法戒、饒益有情戒麼？」弟子答：「我願如是。」</p>
+
+    <p><strong class="term">結尾</strong>——祈請三寶護念，曉諭勝智功德，慎言菩薩戒法，攝要講說學處，感恩供養，回向功德。</p>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第九章（中）　結頌</div>
+    <div class="couplet">
+      如過去諸佛，初發菩提心，<br>
+      入菩薩學處，次第善安住。
+    </div>
+    <p style="margin-top:24px">無論依文殊龍樹一系或彌勒無著一系，發菩提心的核心，都是效法過去諸佛的足跡，在三寶前立下真實不虛的誓願。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch10">← 第九章（上）</a><a href="#toc">目錄</a><a href="#ch12">第九章（下） →</a></nav></article><article class="ch" id="ch12" data-title="第九章（下）　論發菩提心・功德過失學處"><header class="ch-head"><div class="cover-eyebrow">貳・方便（一）：四大口訣與發菩提心</div><div class="cover-title">第九章（下）　論發菩提心・功德過失學處</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch12-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      發菩提心之功德
+      <small>願菩提心有八種功德，行菩提心再加二種共十種；菩提心的功德超越數量，直至成佛不曾間斷</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p><strong class="term">願菩提心</strong>的功德有八：</p>
+
+    <ul class="dash">
+      <li><strong>趨入大乘</strong>——不發菩提心，縱有圓滿行持也不算趨入大乘；一發菩提心，便立即成為大乘行人之一員。</li>
+      <li><strong>成就菩薩學處之法器</strong>——若無成佛願望，受持三種戒律與菩薩學處便毫無意義；有了願菩提心，一切才堪為大乘法器。</li>
+      <li><strong>徹斷罪業之根</strong>——菩提心是對治一切惡法的良藥，如劫火剎那燒盡世界，菩提心也能速疾毀滅一切惡業。</li>
+      <li><strong>種植無上菩提之根</strong>——眾生心如土地，慈悲如雨水滋潤，菩提心則如樹根，能開敷三十七菩提分花葉，結成無上佛果。</li>
+      <li><strong>獲取無量功德</strong>——「菩提心功德，若具色相者，遍十方虛空，亦難容受之。」</li>
+      <li><strong>令一切諸佛歡喜</strong>——以珠寶供養恆河沙數諸佛，不及發菩提心合掌供養的功德。</li>
+      <li><strong>一切眾生咸皆蒙益</strong>——菩提心能成就一切世間利益，為諸殊勝業之根本依止。</li>
+      <li><strong>速成佛道</strong>——發菩提心後不再墮入二邊，因此能速疾成就佛道。</li>
+    </ul>
+
+    <p><strong class="term">行菩提心</strong>的功德，除上述八種外，再加成就不斷之自利與利他相續，共十種。發起行菩提心後，即使睡眠、昏迷、放逸之時，福德也不斷增長。</p>
+
+    <div class="quote"><cite>《入菩薩行論》云</cite>發菩提心已，睡眠放逸時，功德亦不斷，其量等虛空。</div>
+
+    <p>菩提心的功德超越數量——從發心起直至成佛，其間產生的功德無量無邊，超越一切界限。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch12-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      捨棄菩提心之過失與喪失之因
+      <small>捨棄菩提心有三種過失；願、行二菩提心各有喪失之因，依犯戒輕重分上中下三品，各有相應的複戒之法</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>捨棄菩提心的過失，略說有三：因罪業故墮惡趣；因罪業故破壞利他事業；因罪業故長遠耽誤成佛大業。已發菩提心的誓願卻不能實行，等於欺騙眾生。</p>
+
+    <div class="quote"><cite>《入菩薩行論》云</cite>若發誓願心，不能實行之，則為欺眾生，云何度有情？</div>
+
+    <p>願菩提心的淪喪，是指此心捨棄了眾生，又與四種黑業為伴；行菩提心的喪失，則依四種毀戒之法而分上中下三品——上品全部喪失，中品為粗罪，下品為過犯。若違犯行菩提心，願菩提心也必定同時違犯；反之，只要願菩提心戒能恢復，行菩提心也會自然恢復。上品犯戒須重新受戒；中品在三人前懺悔；下品在一人前懺悔即可複戒。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch12-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      願菩提心之學處：五事攝盡
+      <small>不捨眾生、常思功德、精勤積資、時修菩提心觀、善知八法取捨——五事之中，尤以「不捨眾生」最為根本</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <div class="quote">此心終不舍眾生，常思菩提心功德，精勤集聚二資糧，時時修觀菩提心，善惡八法知取捨，此五事中攝盡之。</div>
+
+    <p><strong class="term">第一、此心若不捨離眾生，就不會喪失菩提心。</strong></p>
+
+    <div class="quote"><cite>《無暖長者請問經》云</cite>菩薩若具足一法，則能受持一切殊勝佛法。一法為何？（在任何情況下）此心決不舍離眾生是也。</div>
+
+    <p>若有人做了對不起自己的事，便疏遠他、不再關切，甚至心想「即使日後能幫他，我也不管了」——這就是「心捨眾生」。有人問：犯菩提心戒，豈非要捨棄一切眾生才算？答案是：捨棄一切眾生的心念，連二乘人、豺狼猛獸都不會生起。只要此心捨棄一個眾生，一座時間內不生懊悔、不加對治，便已犯了菩提心戒。這就像殺害自己的獨子，卻還蓄聚其財產一樣荒謬。對有恩於己的眾生，通常不易喪失菩提心；但對損害自己的眾生，卻極有可能——因此菩薩尤應對仇害自己的人發起大悲，以恩慈相報。</p>
+
+    <div class="quote">若恩將仇報，更予彼起悲，彼仇我損我，以大悲報之，閻浮最勝士，以恩慈答仇。</div>
+
+    <p><strong class="term">第二、時常思惟發菩提心之功德，就不會退失菩提心。</strong>經中曾說菩提心的功德有二百三十種之多，簡言之可攝為四種——趨入大乘、成就學處法器、徹斷罪根、令諸佛歡喜等，皆如前篇所述。</p>
+
+    <p><strong class="term">第三、精勤積聚福慧二種資糧</strong>，才能發揮菩提心的大力大用；<strong class="term">第四、時時修觀菩提心</strong>，使其日漸增長；<strong class="term">第五、善知善惡八法之取捨</strong>，則菩提心不會忘失。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch12-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      行菩提心之學處：四黑法與四白法
+      <small>誑騙尊長、於他善生悔惱、怨謗菩薩、欺誑眾生——四種黑法各有相應的白法對治：誠實、隨喜、如佛想、不貪己利</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p>四種黑法與其對治的四種白法：</p>
+
+    <ul class="dash">
+      <li>
+        <strong class="term">第一黑法</strong>——以欺詐心對上師、阿闍黎等應供之人說妄語欺騙。若一座時間內心不對治，即違犯菩提心戒。<strong>對治白法</strong>：誠實——縱然失掉性命，也決不說誑語。
+      </li>
+      <li>
+        <strong class="term">第二黑法</strong>——見他人行善成功，心生悔惱。<strong>對治白法</strong>：使一切眾生趨向善法，尤其大乘善法——這是對他人向善與成功衷心隨喜的訓練。
+      </li>
+      <li>
+        <strong class="term">第三黑法</strong>——對已發菩提心者生怨恨，宣揚其過失短處，無論當面背地、真假柔粗。<strong>對治白法</strong>：對已發菩提心的菩薩作如佛想，並將其功德宣揚於十方。
+      </li>
+      <li>
+        <strong class="term">第四黑法</strong>——以欺騙心對眾生行騙偽詐，無論對方是否知曉、得逞與否。<strong>對治白法</strong>：於有情常生增上善樂之心，不貪己利，恒樂利他之行。
+      </li>
+    </ul>
+
+    <div class="quote"><cite>經云</cite>迦葉！若菩薩有四法，世世不失菩提之心，乃至（成佛）道場自然現前。何謂為四？失命因緣，不以妄語，何況戲笑？常以直心與人從事，離諸諂曲。于諸菩薩生世尊想，能于四方稱揚其名。自不愛樂諸小乘法，所化眾生，皆悉令住無上菩提。</div>
+
+    <p>攝略言之：菩薩縱然失去性命，也不說誑語；使一切眾生趨向大乘善法；於已發菩提心的菩薩作如佛想，讚揚其名遍於十方；不以欺騙虛偽對待一切眾生。能常住如是殊勝之行，菩提心便能世世不失，直至道場自然現前。</p>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第九章（下）　結頌</div>
+    <div class="couplet">
+      此心終不舍眾生，常思菩提心功德，<br>
+      精勤集聚二資糧，時時修觀菩提心。
+    </div>
+    <p style="margin-top:24px">菩提心一旦發起，便須以五事守護、以四白法對治四黑法——如此世世不失，直至圓滿佛果現前。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch11">← 第九章（中）</a><a href="#toc">目錄</a><a href="#ch13">第十章 →</a></nav></article><article class="ch" id="ch13" data-title="第十章　願菩提心之學處"><header class="ch-head"><div class="cover-eyebrow">貳・方便（一）：四大口訣與發菩提心</div><div class="cover-title">第十章　願菩提心之學處</div><div class="ch-desc">五事攝盡與四黑法四白法</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch13-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      總標：願菩提心學處五事頌
+      <small>發了菩提心以後便須趨入菩薩學處；願菩提心之學處，可由不捨眾生、常思功德、積聚資糧、常修觀心、知取捨八法五事攝盡</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>發了菩提心以後，就應該趨入菩薩學處，這又可分願菩提心學處與行菩提心學處二者。</p>
+
+    <div class="quote">
+      此心終不舍眾生，常思菩提心功德，<br>
+      精勤集聚二資糧，時時修觀菩提心，<br>
+      善惡八法知取捨，此五事中攝盡之。
+    </div>
+
+    <p>這就是說：此心若不捨離眾生，就決定不會喪失菩提心；若時常思惟菩提心之功德，就不會於菩提心退失；若能勤聚福德智慧二種資糧，就能發揮菩提心之大力大用；時時修觀菩提心，則能使菩提心日漸增長；能知善惡八法之取捨，則菩提心不會忘失。以下依次展開這五事。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch13-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      不捨眾生與常思功德
+      <small>此心一旦捨棄任何一個眾生而不對治，即犯菩提心戒；時常思惟菩提心如矛破敵、如意寶滿願等利益，方能持守不退</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p><strong class="term">第一、此心若不捨離眾生，就不會喪失菩提心。</strong></p>
+
+    <div class="quote"><cite>《無暖長者請問經》云</cite>菩薩若具足一法，則能受持一切殊勝佛法。一法為何？（在任何情況下）此心決不舍離眾生是也。</div>
+
+    <p>若有人對自己做了不應該做的事，便對他疏遠、不再關切，心想「即使日後能幫他，我也不管了」——這就是「心捨眾生」。捨棄一切眾生的心念，連二乘人、豺狼猛獸都不會生起；因此只要此心捨棄一個眾生，一座時間內不生懊悔、不加對治，便已犯了菩提心戒，就像殺害自己的獨子卻還蓄聚其財產一樣荒謬。對有恩於己的眾生，通常不易喪失菩提心，但對損害自己的眾生卻極有可能——因此菩薩應對仇害自己的人特別發起大悲心而利濟之。</p>
+
+    <div class="quote">若恩將仇報，更予彼起悲，彼仇我損我，以大悲報之，閻浮最勝士，以恩慈答仇。</div>
+
+    <p><strong class="term">第二、時常思惟發菩提心之功德，就不會退失菩提心。</strong></p>
+
+    <div class="quote"><cite>《菩提道燈論》云</cite>菩提心功德，應觀華嚴經，如彌勒菩薩，廣為宣說者。</div>
+
+    <p>發菩提心的功德，經中說有二百三十種之多，攝為自利與利他兩類：菩提心是一切佛法的種子，能除遣一切貧困，是自利之功德；能為一切眾生作皈作救作依，是利他之功德。經中又以種種譬喻形容——菩提心如矛，能破煩惱賊；如斧，能斬斷苦逆邪惡之樹根；如善妙寶瓶、如意寶珠，能成滿一切心願。時常思惟這些利益，自然會對菩提心生起珍重愛護之情，持守不退——至少每座修法時，應思惟一次。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch13-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      積聚資糧與常修菩提心觀
+      <small>福慧二資糧是圓滿佛位之因；因、願、行三種菩提心，各有相應的修觀之法，晝夜精勤，令菩提心日漸增長</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p><strong class="term">第三、積聚福德和智慧資糧，是生起菩提心之方便。</strong></p>
+
+    <div class="quote"><cite>《菩提道燈論》云</cite>福德智慧二資糧，圓滿佛位之因也。</div>
+
+    <p>福德資糧指十法行、四攝法等修行方便；智慧資糧指行此等法行時，體驗三輪體空（無作者、受者、行法）的智慧真諦。福慧兩方面若能同時努力，便能增長菩提心之力能——最低限度，念一句真言或佛號，也算積聚了二種資糧，每座應至少修持一次：</p>
+
+    <div class="quote">今日我所積福德，以及智慧二資糧，回向利益諸群生，菩薩如是常修觀。</div>
+
+    <p><strong class="term">第四、時常練習菩提心，是使其增長的方便。</strong>這裡應知有三種差別：<strong class="term">因菩提心</strong>——時常對眾生起慈悲心，至少每座修觀一次；<strong class="term">願菩提心</strong>——心中思念「為了利益眾生的緣故誓取佛位」，須晝夜各修三次，最簡單的誦文如阿底峽尊者所撰：</p>
+
+    <div class="quote">佛陀正法與聖僧，直至菩提我皈依，我之善行及功德，回向眾生願成佛。</div>
+
+    <p><strong class="term">行菩提心</strong>的修觀，一面練習利他之心——觀想把自身所作善業功德、資財受用回向利益眾生；一面練習清淨自己之心——使身心淨化，回向持戒清淨，令罪業煩惱逐漸減少。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch13-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      斷捨四種黑法，依止四項白法
+      <small>欺誑師長、令他疑悔、怨謗菩薩、諂曲待人——四黑法失菩提心；誠實、隨喜、如佛想、直心不諂——四白法令菩提心世世不失</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p><strong class="term">第五、斷捨四種黑法，依止四項白法，是不忘失菩提心之方便。</strong></p>
+
+    <div class="quote"><cite>《寶積經・大迦葉品》云</cite>迦葉！菩薩有四法失菩提心，何者為四？欺誑師長，已受經法而不尊教；無疑悔處，令他疑悔；救大乘者，訶罵誹謗，廣其惡名；以諂曲心與人從事。迦葉！是為菩薩四法失菩提心。</div>
+
+    <p>攝言之，即是欺騙上師與堪受供養之人；使本無疑悔者生起疑悔；以瞋心惡語誹謗已發菩提心的菩薩；以及欺騙眾生的行為。四種白法則是其對治：</p>
+
+    <div class="quote"><cite>同經云</cite>迦葉！若菩薩有四法，世世不失菩提之心，乃至（成佛）道場自然現前。何謂為四？失命因緣，不以妄語，何況戲笑？常以直心與人從事，離諸諂曲。于諸菩薩生世尊想，能于四方稱揚其名。自不愛樂諸小乘法，所化眾生，皆悉令住無上菩提。</div>
+
+    <ul class="dash">
+      <li><strong class="term">第一黑法</strong>——以欺詐心對上師、阿闍黎等應供之人說妄語，一座時間內不加對治即犯戒。<strong>對治</strong>：誠實——縱然失掉性命，也決不說誑語。</li>
+      <li><strong class="term">第二黑法</strong>——見他人成就善事，心生悔惱。<strong>對治</strong>：使一切眾生趨向善法，特別是大乘善法——這是對他人向善與成功衷心隨喜的訓練。</li>
+      <li><strong class="term">第三黑法</strong>——對發菩提心者生怨恨，宣揚其過失，無論當面背地、真假柔粗。<strong>對治</strong>：對任何已發菩提心的菩薩作如佛想，宣揚其功德於十方。</li>
+      <li><strong class="term">第四黑法</strong>——以欺騙心對眾生行騙偽詐，無論對方知曉、得逞與否。<strong>對治</strong>：於有情常生增上善樂之心，不貪己利，恒樂利他之行。</li>
+    </ul>
+
+    <p>攝略言之：菩薩縱然失去性命，也不說誑語；使一切眾生趨向大乘善法；於已發菩提心的菩薩作如佛想，讚揚其名遍於十方；不以欺騙虛偽對待一切眾生。能常住如是殊勝之行，菩提心便能世世不失，直至成佛道場自然現前。</p>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第十章　結頌</div>
+    <div class="couplet">
+      此心終不舍眾生，常思菩提心功德，<br>
+      精勤集聚二資糧，時時修觀菩提心。
+    </div>
+    <p style="margin-top:24px">五事攝盡願菩提心之學處——不捨眾生為根本，常思功德為滋養，積資修觀為增長，知取捨八法為守護，如是菩提心方能世世不失。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch12">← 第九章（下）</a><a href="#toc">目錄</a><a href="#ch14">第十一章 →</a></nav></article><article class="ch" id="ch14" data-title="第十一章　總說六波羅蜜多"><header class="ch-head"><div class="cover-eyebrow">參・方便（二）：六波羅蜜多</div><div class="cover-title">第十一章　總說六波羅蜜多</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch14-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      六度總攝三學
+      <small>行菩提心學處有增上戒、增上心、增上慧三學；佈施持戒忍辱屬戒學，禪定屬心學，般若屬慧學，精進則通貫三學</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>行菩提心學處有三：增上戒學、增上心學（禪定學）、增上慧學。</p>
+
+    <div class="quote"><cite>《菩提道燈論》云</cite>行菩提心者，其要有三種，戒定慧三學，應勤學修習。</div>
+
+    <p>增上戒學指佈施、持戒、忍辱三種行持；增上心學指靜慮（禪定）之學；增上慧學指般若（智慧）之學；精進則可通貫於任何一度之中。</p>
+
+    <div class="quote"><cite>《莊嚴經論》云</cite>能仁以六度，說戒定慧三學，前三度屬戒，後二為定慧，精進通三者。</div>
+
+    <div class="quote"><cite>《妙手請問經》云</cite>妙手！菩薩摩訶薩為速疾證得圓滿菩提，故應恒常圓滿修習六種波羅蜜多。何者為六？佈施波羅密多，持戒波羅蜜多，忍辱波羅蜜多，精進波羅蜜多，靜慮波羅蜜多，般若波羅蜜多。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch14-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      六度決定之數與次第
+      <small>六度不多不少，正因著眼於「生上趣」與「得決定善」二種功用；其次第由粗入細、由生起到證入層層遞進</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>六波羅蜜多的數目是決定的——只有六度，不多不少。這是因為著眼於「生上趣」（前三度）與「得決定善」（後三度）二種功用：</p>
+
+    <ul class="dash">
+      <li>為得受用而行佈施</li>
+      <li>為得健美之身而行持戒</li>
+      <li>為得善妙眷屬而行忍辱</li>
+      <li>為增長功德而行精進</li>
+      <li>為止息妄心而修靜慮</li>
+      <li>為證得勝觀而行般若</li>
+    </ul>
+
+    <p>六度的次第，也必須如此安排：從生起過程來說，因慷慨佈施而能於受用之物心無貪戀，惟其如此才能持戒；能持戒才能堅毅忍辱；能忍辱才能精進；因精進而能生起三昧；入於等持，才能如量證得實相。從深淺粗細來說，六度的安立，是先開示較粗淺輕易者，再循序進入較深細艱難的行法。</p>
+
+    <div class="quote"><cite>《莊嚴經論》云</cite>以先而立後，以劣而立優，以粗而立細，以如是次第，建立六度法。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch14-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      六度之四重意義與體相
+      <small>每一度皆能除違緣、生無分別智、圓滿所欲、成熟眾生；六度各依其力用而得名</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p>菩薩所修的六波羅蜜多，每一度皆具四重意義：能減少或消除逆緣、能幫助生起無分別智、能成滿一切所欲、能成熟一切眾生。</p>
+
+    <div class="quote"><cite>《莊嚴經論》云</cite>施等能除諸違緣，獲證無分別智慧，圓滿一切諸所欲，成熟一切諸眾生。</div>
+
+    <p>六波羅蜜多的體相：能消除貧窮，故名佈施；能獲得清涼，故名持戒；能忍受瞋恚，故名忍辱；能作諸勝行，故名精進；能持心於內，故名靜慮；能知勝義實相，故名般若。由此六度得以超越輪迴，抵達涅槃彼岸，因此稱為「波羅蜜多」。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch14-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      六度互攝三十六與二種資糧
+      <small>每一度皆能含攝其餘五度，成六六三十六之數；就資糧而言，佈施持戒屬福德，般若屬智慧，其餘二者兼攝二資糧</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p>細分而言，每一波羅蜜多皆可含攝所有六種波羅蜜多——如佈施之佈施、佈施之持戒、佈施之忍辱……如是共成六六三十六個波羅蜜多。</p>
+
+    <div class="quote"><cite>《現觀莊嚴論》云</cite>施等六度法，各各能攝集，其他波羅蜜，如披甲胄然，成六六之數，如是而宣說。</div>
+
+    <p>就二種資糧而言，佈施與持戒屬福德資糧，般若屬智慧資糧，忍辱、精進、禪定則可兼屬二者之一。</p>
+
+    <div class="quote"><cite>《莊嚴經論》云</cite>佈施及持戒，屬福德資糧，般若屬智慧，忍辱及精進，禪定波羅蜜，屬福亦屬智。</div>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第十一章　結頌</div>
+    <div class="couplet">
+      佈施持戒及忍辱，精進禪定及智慧，<br>
+      如斯六種波羅蜜，行菩提心學處也。
+    </div>
+    <p style="margin-top:24px">六度總攝了行菩提心的全部學處——以下各章，將逐一展開每一度的詳細修法。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch13">← 第十章</a><a href="#toc">目錄</a><a href="#ch15">第十二章 →</a></nav></article><article class="ch" id="ch15" data-title="第十二章　佈施波羅蜜多"><header class="ch-head"><div class="cover-eyebrow">參・方便（二）：六波羅蜜多</div><div class="cover-title">第十二章　佈施波羅蜜多</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch15-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      佈施之功過與體性差別
+      <small>不施則貧困墮惡趣，行施則享用不盡、堪能成佛；佈施以無貪著心施捨，可分財施、無畏施、法施三種</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <div class="quote">
+      思其過失及功德，及其體性與差別，<br>
+      開釋各各之性相，增長及清淨方便，<br>
+      所得果報等七事，（攝說佈施波羅蜜。）
+    </div>
+
+    <p>應當思念：若無佈施之功德，便時常遭貧窮困乏之苦，慳吝之人多墮餓鬼道，縱得為人也貧賤苦惱。</p>
+
+    <div class="quote"><cite>《聖攝論》云</cite>吝嗇之人墮餓鬼，縱得為人亦貧困。</div>
+
+    <p>不行佈施，便無法成辦利他之業，也就決定不能成佛。反之，若能行佈施，則生生世世享用不盡，能斷煩惱，終能成佛。</p>
+
+    <div class="quote"><cite>《入中論》云</cite>眾生皆願得欲樂，若乏資財樂甚難，資財由佈施而來，故佛先說佈施德。</div>
+
+    <p>《善路居士請問經》有一段膾炙人口的警句，比較佈施與吝藏之得失：施捨出去的東西才真正屬於你，貯藏在家的反而不是你的；捨掉之物恆久，留藏之物短暫；施出的東西不必防護，藏起的東西卻要時時看守，招致恐懼不安；施出去的東西開示菩提之道，藏起來的東西招來魔障；財物施捨不會窮盡，財物窖藏終將耗竭。</p>
+
+    <p>佈施的體性，是以無貪著之心，將財物或所有廣為施捨。</p>
+
+    <div class="quote"><cite>《菩薩地論》云</cite>佈施的體性是什麼呢？是以無貪著的心和與生俱來的悲心、施心，同時俱起地把己之所有施捨出去。</div>
+
+    <p>佈施的種類有三：<strong class="term">財施</strong>，使受者身得依仗；<strong class="term">無畏施</strong>，使受者命得安全；<strong class="term">法施</strong>，使受者心得安穩。財施、無畏施重在現世安樂，法施則利益受者未來一切世。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch15-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      財施：應捨的不淨施與應修的清淨施
+      <small>心不清淨、施不淨之物、施予不淨之受者、態度不清淨——四種不淨施應捨；清淨施則由施物、受者、方式三面說明</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>財施分不清淨與清淨兩種，前者應捨，後者應修。不清淨財施有四：</p>
+
+    <ul class="dash">
+      <li><strong class="term">心不清淨施</strong>——因邪心（為損害他人、沽名釣譽、與人競爭）或下劣心（為求來世不貧、求人天福報）而施，皆菩薩應避免。</li>
+      <li><strong class="term">施不淨之物</strong>——毒藥、熾火、武器等傷害之物不應施；父母不可作施物或抵押品；子女妻妾若不願意也不可施予他人；自身富有卻只施捨些微，亦非所宜。</li>
+      <li><strong class="term">施予不淨之受者</strong>——邪魔眷屬為害天道而索身，或魔所加持者、瘋狂失神者，菩薩不應施身，因於彼等無益，徒增胡言。</li>
+      <li><strong class="term">態度不清淨</strong>——心不歡喜、瞋怒、失念錯亂時不宜行施；對受者不應輕侮嘲笑或恐嚇威脅。</li>
+    </ul>
+
+    <p>清淨之施，可從施物、受者、方式三方面說明。施物分內、外：內施物指自身，初修業菩薩最多只能施捨整個身體，不宜割截肢體佈施。</p>
+
+    <div class="quote"><cite>《入菩薩行論》云</cite>心要之義未淨前，不可輕易施此身，自利利他此人身，應善維護作大事。</div>
+
+    <p>外施物指合法取得的飲食、衣著、車乘等資財；在家菩薩身財皆可施，出家菩薩則除三衣不可施捨外，一切皆可施。清淨受者有四種：功德殊勝者（上師三寶）、蒙恩深重者（父母）、正受痛苦者（病人孤苦）、於我有損者（仇敵）。清淨的施捨態度，須具足信心、恭敬、應時、不損他而親手施予，並於施前施中施後皆心生歡喜，不生一毫後悔。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch15-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      無畏施與法施
+      <small>無畏施佑護眾生脫離怖畏；法施須具備對象、意樂、內容、方便四門，說法者更須清淨身心、慎守儀軌</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p><strong class="term">無畏施</strong>，是佑護眾生使其從獅、虎、鱷魚、君王、盜賊、洪水等畏懼中得到解脫。</p>
+
+    <p><strong class="term">法施</strong>可由四門說明：法施的對象，須是尊重佛法、對說法者恭敬、求法熱誠之人；法施的意樂，是說法者須斷除為名聞利養說法的不淨動機，發起大悲心而說。</p>
+
+    <div class="quote"><cite>《迦葉請問經》云</cite>不求利養心清淨，施法與人世尊說。</div>
+
+    <p>法施的內容，須依經典無錯謬地說法，隨根器施教；法施的方便，是不可對來求法者立即廣說，應先善觀根機，若確屬法器，即使不請也應為說。</p>
+
+    <div class="quote"><cite>《妙法蓮華經》云</cite>應擇清淨地，適意之處所，置廣大座墊，升座而說法。</div>
+
+    <p>說法之前，應先沐浴淨身、著上好衣、慎守威儀，待聽眾齊聚坐定後方升法座；為除遣魔障，應先誦《慧海請問經》所載的除障真言，誦畢即可開始宣講，應機闡釋經義。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch15-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      增長與清淨佈施之功德及果報
+      <small>以智力知三輪如幻、以慧力不著相不求報、以回向力導向無上菩提——三力能令小施成就無量功德</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p>縱使所施甚少，若知善巧方便，也能令功德增長擴大若干倍：</p>
+
+    <div class="quote"><cite>《菩薩藏論》云</cite>舍利子！菩薩若知善巧方便，縱施捨少物，亦獲廣大功德，以智力而增長佈施功德故，以慧力而廣大佈施功德故，以回向力而倍增無量佈施功德故。</div>
+
+    <ul class="dash">
+      <li><strong class="term">智力</strong>——具足三輪清淨之見：知佈施人如幻化，知佈施物如幻化，知受施者如幻化。</li>
+      <li><strong class="term">慧力</strong>——施前思惟這是為使一切有情成佛而施，施時對物無貪著，施畢不期望來世果報。</li>
+      <li><strong class="term">回向力</strong>——了知佈施是為使一切眾生獲無上菩提，如是回向，功德便成無盡，如一滴水落入大海，直至劫終也不會耗盡。</li>
+    </ul>
+
+    <p>使佈施清淨之法，是以「空、悲」配合而行：知佈施性空，則不成輪迴之因；以悲心而施，則不墮小乘之因。行施時，可配合四種空性印契——觀內境自身空、觀外境財物空、觀此心識空、觀佛法菩提亦空。</p>
+
+    <p>佈施的果報，有究竟與眼前兩種。究竟果報是證得圓滿無上菩提；眼前果報則是：施財者資財自來，施食者得大力之身，施衣者容彩煥發，施車乘者獲堅固快樂，施燈燭者得眼瑩徹；行無畏施者不為魔難所擾；行法施者能速見諸佛，常侍佛側，眾願滿足。</p>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第十二章　結頌</div>
+    <div class="couplet">
+      施時於物不著相，施畢亦不期果報，<br>
+      智者如是行佈施，小施亦獲無量德。
+    </div>
+    <p style="margin-top:24px">佈施之要，不在物之多寡，而在心之清淨——三輪體空、悲智雙運，方是波羅蜜多之真義。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch14">← 第十一章</a><a href="#toc">目錄</a><a href="#ch16">第十三章 →</a></nav></article><article class="ch" id="ch16" data-title="第十三章　持戒波羅蜜多"><header class="ch-head"><div class="cover-eyebrow">參・方便（二）：六波羅蜜多</div><div class="cover-title">第十三章　持戒波羅蜜多</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch16-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      持戒之過失與功德
+      <small>不持戒則難獲清淨人天身、難遇正法、難得解脫；持戒則如肥沃田地，能生一切功德、成辦一切願求</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <div class="quote">
+      戒相過失及功德，持戒體性及支別，<br>
+      各各分別之性相，增長功德及清淨，<br>
+      持戒果報等七義，解說屍羅波羅蜜。
+    </div>
+
+    <p>只有佈施而無持戒，不能獲得清淨的人天身。</p>
+
+    <div class="quote"><cite>《入中論》云</cite>若人折斷戒律足，縱能佈施享受用，終亦墮落惡趣中。</div>
+
+    <p>不持戒則難與正法相遇，難以解脫三界輪迴，於佛道也不能圓滿。</p>
+
+    <div class="quote"><cite>《持戒經》云</cite>人若無足，何能行路？人若無戒，何能解脫？</div>
+
+    <p>反之，若能持戒，便能獲得圓滿人天身，永離惡趣與八無暇。持戒如同肥沃田地，能生長一切功德，令三昧生起、願求成辦，也更容易成就菩提。</p>
+
+    <div class="quote"><cite>《入中論》云</cite>淨戒沃田中，能生諸功德，享用眾果實，相繼無斷時。</div>
+    <div class="quote"><cite>《持戒經》云</cite>持戒能值佛出世，持戒是最勝莊嚴，持戒為眾樂之本，持戒得世間讚揚。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch16-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      戒之體性與三聚淨戒
+      <small>菩薩戒由清淨戒（別解脫戒）、攝善法戒、饒益有情戒三者組成，各自對治自身、增益己德、利濟眾生</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>戒律的體性具有四種功德之相：如法從他受戒、心意清淨、違犯後速懺複戒、常以至誠思惟戒相而持守。菩薩戒由三種戒組合而成：<strong class="term">清淨戒</strong>（別解脫戒），目的在調伏身心；<strong class="term">攝善法戒</strong>，促使自身向善進步；<strong class="term">饒益有情戒</strong>，利濟成熟眾生。</p>
+
+    <p>別解脫戒的體性是自利的，菩薩戒則是利他的。</p>
+
+    <div class="quote"><cite>《無熱子請問經》云</cite>不是為了生王族家而持戒，不是為了生人天趣而持戒……菩薩是為了樹立佛陀之行範而持戒，是為了利益有情而持戒，為了帶給有情幸福和快樂而持戒的。</div>
+
+    <p>從不共的角度看，違犯菩薩戒有十八種根本墮（如王之根本墮五種、如臣之根本墮五種，再加初修業者八種）與十四種支分墮，菩薩皆應嚴加防範，例如：奪取三寶財物、捨棄正法、奪比丘袈裟並加毆打監禁、造五無間業、堅持邪見令眾人恐懼等，皆屬根本墮，是墮大地獄之因。</p>
+
+    <div class="quote">奪取三寶物，其罪等他勝，捨棄正佛法，二者能仁說。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch16-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      攝善法戒與饒益有情戒之實踐
+      <small>攝善法戒重在勤修聞思修、恭敬上師、常行佈施；饒益有情戒有十一項，並須清淨身口意三業之行儀</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p><strong class="term">攝善法戒</strong>，是受菩薩戒後為成就菩提所作的身口善行：精進聞思修，恭敬承事上師，勤作佛事，侍奉病人湯藥，常行施捨，讚揚他人功德、隨喜他人福德，忍受譏謗，回向功德，勵行精進，常護諸根，飲食有節，親近善知識，善觀自身謬誤而除遣之。</p>
+
+    <p><strong class="term">饒益有情戒</strong>攝為十一項：解除眾生痛苦、指示不知所措者、以參與感受承諾利益眾生、護眾生脫離怖畏、消除眾生憂苦、令貧乏者富饒、攝集佛法眷屬、隨順眾生心意、以功德令眾生歡喜、以善德斬除惡業之刺、以神通方便攝引成熟眾生。</p>
+
+    <p>菩薩為使他人起信，應斷除不清淨的身口意行為，篤行清淨三業：</p>
+
+    <ul class="dash">
+      <li><strong class="term">身業</strong>——避免不必要的狂野動作，身儀閑緩柔和、常帶笑容；「眼觀有情時，應如是思惟，此乃成佛因，應慈眼視之」；坐時不伸腳、不搓手；吃時不出聲、不狼吞虎嚥；開關門動作輕緩；睡眠時如佛涅槃之相，依善方安臥。</li>
+      <li><strong class="term">語業</strong>——不多言、不尖銳。多言易使心不調柔、遠離定慧；宣說他人（尤其菩薩）的過失，會使自己遠離菩提，若出於妒忌則更甚。言辭應具利義、意思分明，令聞者適意，離貪瞋而柔和道之。</li>
+      <li><strong class="term">意業</strong>——不貪著利養恭敬，不耽於睡眠昏沉。利養恭敬如同誘人的娼妓，能激發貪瞋癡、增長散亂、斬斷善根，且永難滿足，如夢中見水終不解渴；貪睡昏沉則令智慧日減、精神損耗，也易使鬼魔乘隙作障。清淨的意業，即是安住於信心等德行。</li>
+    </ul>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch16-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      持戒之增長清淨與果報
+      <small>持戒的功德同樣依智慧、回向而增長，依空性、悲心而清淨；究竟果報是無上菩提，眼前果報則是人天恭敬威攝</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p>持戒功德的增長方便，與前述佈施功德一樣，須依智力、慧力、回向力三種方法擴展；持戒清淨的方法，也同樣須依靠空性與悲心去達成。</p>
+
+    <p>持戒的果報有二：究竟果報是成就無上菩提。</p>
+
+    <div class="quote"><cite>《菩薩地論》云</cite>菩薩若能圓滿持戒波羅蜜，則能圓滿成就無上正等正覺。</div>
+
+    <p>眼前果報，是縱非本意，也自然獲得輪迴中的福樂果報——菩薩若具足淨戒，不墮轉輪聖王或帝釋天之類，一心樂求無上菩提；人與非人皆恭敬承事、讚歎供養。</p>
+
+    <div class="quote"><cite>經云</cite>菩薩若住于淨戒，諸天皆常禮拜，眾龍鬼神常予讚歎，諸聞香眾常作供養，諸婆羅門王族乃至商賈庶人等，皆時加讚美祈禱，常為一切諸佛之所護念，天人世間無不威攝。</div>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第十三章　結頌</div>
+    <div class="couplet">
+      持戒能值佛出世，持戒是最勝莊嚴，<br>
+      持戒為眾樂之本，持戒得世間讚揚。
+    </div>
+    <p style="margin-top:24px">持戒如同肥沃良田——調伏自身、增益善法、饒益有情，三聚淨戒具足，方能承載菩提道上一切功德的成長。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch15">← 第十二章</a><a href="#toc">目錄</a><a href="#ch17">第十四章 →</a></nav></article><article class="ch" id="ch17" data-title="第十四章　忍辱波羅蜜多"><header class="ch-head"><div class="cover-eyebrow">參・方便（二）：六波羅蜜多</div><div class="cover-title">第十四章　忍辱波羅蜜多</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch17-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      不忍之過失與能忍之功德
+      <small>一念瞋心能摧毀千劫所積善根；瞋怒如毒箭蝕心，令人失去寧靜安樂，唯有忍辱方能成就佛道</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <div class="quote">
+      過失與功德，體性與分別，<br>
+      示各各性相，增長及清淨，<br>
+      及所得果報，以此七種義，略說忍辱度。
+    </div>
+
+    <p>一個人若已具足佈施與持戒，卻不能忍耐，仍會發怒——而一旦發怒，過去由佈施持戒所積聚的一切善根，剎那間便破壞無餘。</p>
+
+    <div class="quote"><cite>《入菩薩行論》云</cite>千劫所積聚，佈施供養德，及種種善行，一念瞋心起，皆摧毀無餘。</div>
+
+    <p>不能忍耐的人，瞋怒常蘊聚心中，就像毒箭射入心間，苦痛難當，連睡覺也不得安寧；瞋火常在心中燃燒，形之於外便是不斷的憤怒與怨懟，時常傷害親近的朋友眷屬，縱然花費許多錢財也難以招攝人心。不具忍耐，就不能圓滿六波羅蜜多，不能證得無上菩提。</p>
+
+    <div class="quote">罪大莫過於憤怒，難能莫過於忍辱，故應努力習忍辱，種種方便作觀修。</div>
+
+    <p>反之，若能忍耐，便能獲得世俗的種種順緣與安樂，也是成佛的必要條件。</p>
+
+    <div class="quote"><cite>《父子請問經》云</cite>瞋怒不能成佛果，故應常習慈心觀。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch17-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      忍耐之體性與耐怨害忍
+      <small>忍辱的體性是心無記掛地坦然接受一切逆境；對他人的侵害，可由不能自主、業緣、身相、心念錯誤、人皆有過等角度化解瞋心</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>忍耐的體性，是在任何情況下，以純真慈悲心，心無記掛地坦然接受一切逆境。仔細分別，忍耐有三種：對他人侵害心無記掛地接受（耐怨害忍）；對苦痛折磨予以堪忍（安受苦忍）；以智慧觀察諸法無顛倒性而行堪忍（諦察法忍）。前二者屬世俗諦修觀，第三者屬勝義諦修觀。</p>
+
+    <p><strong class="term">第一種：耐怨害忍</strong>——對我憤怒、譭謗、辱罵，或揭發我的過失、阻我所欲之事，我皆逆來順受，此心不激動、不憤怒、不傷害任何人，也不執著。寂天論師教導我們，當別人傷害自己時，可以這樣思惟：</p>
+
+    <ul class="dash">
+      <li><strong class="term">思其不能自主</strong>——傷害我的人是因煩惱不能自主而行害，就像藥叉鬼魅因瞋心所迫而害人，並非出於自願，因此不應心存報復。「一切受他限制故，不能自主無自在，如此諸法如幻化，於一切事不起瞋！」</li>
+      <li><strong class="term">思惟業緣</strong>——我今所受的傷害，是因往昔曾同樣傷害過對方，這是自己惡業的果報，不應存報復之念。</li>
+      <li><strong class="term">思惟有此身故</strong>——若自己沒有這個身體，對方的武器便無從傷害；因為有此身才構成傷害，不應心存報復。「武器及我身，共為苦痛因，若不執我身，何來瞋恨心？」</li>
+      <li><strong class="term">觀察心念之錯誤</strong>——因自己的錯覺與執著，誤以此身為美好；其實此身如瘡皰，本是苦痛之自性，何必為它心存報復？</li>
+      <li><strong class="term">觀察人皆有過</strong>——世上何人無過失？這樣想便能原諒對方。</li>
+      <li><strong class="term">思惟忍辱之功德</strong>——因有傷害者，我才能修忍辱；修忍辱，罪障才能清淨；罪障清淨，才能圓滿二資糧而成就佛道——這傷害對我極具意義與利益。</li>
+      <li><strong class="term">思惟對方之恩德</strong>——若無傷害我的人，就無從修忍辱波羅蜜多，因此傷害我者，實是「法之助伴」，於我有恩。「應於仇怨生歡喜，能作佛道助伴故：依彼成就諸功德，故應如是習忍辱。」</li>
+    </ul>
+
+    <p>《菩薩地論》另有五種心想觀法：念傷害者過去世皆曾為我父母師長，恩德難量；以佛法觀其體性本無眾生相壽者相；以無常觀之，最厲害的敵人終究會死，何必多此一舉去傷他性命；以苦諦觀之，眾生皆為三苦所煎熬，我應減除其苦而非增加；以廣攝眾生之悲心觀之，既已發願利濟一切眾生，便不應對傷害者存絲毫報復。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch17-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      安受苦忍與諦察法忍
+      <small>對修行途中的種種辛勞病痛坦然承受，如同忍受剜肉割瘡以治重症；並潛心思惟三寶功德與空性真理而生歡喜</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p><strong class="term">第二種：安受苦忍</strong>——對修行無上菩提道時所遭受的種種折磨，心無怯喪、歡喜坦然地承受：為衣食生活所需的辛勞，承事供養三寶上師的辛苦，聽法說法誦法修法的辛苦，初夜後夜不眠精勤修習禪定的疲累，為利益眾生所引發的種種痛苦——寒熱饑渴、心亂失神，皆應坦然接受，就像為治癒重病而忍受剜肉割瘡之苦一樣。</p>
+
+    <div class="quote"><cite>《入菩薩行論》云</cite>我修佛道之苦痛，善自觀察思量之。為解重症極苦故，剜肉割瘡理應然。</div>
+
+    <p>修法上所遭受的痛苦，正是消滅生死敵軍、摧毀煩惱敵人所不可少的——與敵人打鬥不過像鞭屍一樣，唯有能滅苦、降瞋煩惱的人，才是真正的勇士。</p>
+
+    <div class="quote">能滅一切苦，降瞋及煩惱，如是之丈夫，是為真勇士，其他「勇士」者，殺屍者而已。</div>
+
+    <p><strong class="term">第三種：諦察法忍</strong>——潛心思惟三寶與佛法的種種功德，以及唯一真理與二種無我的空性道理，由此生起欣樂而行忍辱。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch17-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      忍辱之增長、清淨與果報
+      <small>忍辱的功德同樣依智慧回向而增長，依悲心空性而清淨；究竟果報是無上菩提，世俗果報則是容顏姝麗、壽命長遠</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p>增益忍辱功德的方便，也是依智力、慧力、回向力三者；使忍辱清淨的方便，同樣是依持守悲心與觀省空性而來。</p>
+
+    <p>忍辱的果報有二：究竟果報是成就無上菩提。</p>
+
+    <div class="quote"><cite>《菩薩地論》云</cite>菩薩若行廣大無量忍辱之行；則能出生大菩提果，究竟成就無上正等正覺。</div>
+
+    <p>世俗果報，則是縱非本意也自然而至：容顏姝麗、無諸疾病、聲譽遠揚、壽命長遠，乃至獲轉輪王位。</p>
+
+    <div class="quote"><cite>《入菩薩行論》云</cite>若于輪回中，常修忍辱行，必獲美容顏，身無諸疾病，佳譽時遠揚，壽命極長遠，得轉輪王位。</div>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第十四章　結頌</div>
+    <div class="couplet">
+      罪大莫過於憤怒，難能莫過於忍辱，<br>
+      故應努力習忍辱，種種方便作觀修。
+    </div>
+    <p style="margin-top:24px">忍辱不是壓抑，而是看清傷害的緣起本空——唯有如此，仇怨才能轉為成就佛道的助伴。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch16">← 第十三章</a><a href="#toc">目錄</a><a href="#ch18">第十五章 →</a></nav></article><article class="ch" id="ch18" data-title="第十五章　精進波羅蜜多"><header class="ch-head"><div class="cover-eyebrow">參・方便（二）：六波羅蜜多</div><div class="cover-title">第十五章　精進波羅蜜多</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch18-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      精進之功德
+      <small>懈怠之人不能成辦善事、利益眾生、成就菩提；有精進的地方，就一定有菩提</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <div class="quote">
+      功德與過失，體性及差別，<br>
+      分別種種相，增益及清淨，<br>
+      及其所得果，以此七義說，精進波羅蜜。
+    </div>
+
+    <p>若能行佈施持戒等波羅蜜，卻不能精進，便是懈怠之人——懈怠者不能成辦善事、利益眾生、成就菩提。</p>
+
+    <div class="quote"><cite>《智海請問經》云</cite>懈怠的人是不能成就佈施乃至般若的。懈怠者是不能利益眾生的，對他們來說菩提是極為遙遠的。</div>
+
+    <p>反之，具足精進，則一切白法功德皆能開顯增長，能超越充滿恐懼的叢山，速證大菩提。</p>
+
+    <div class="quote"><cite>《莊嚴經論》云</cite>依精進力故，解脫諸怖畏，依精進力故，速證大菩提。</div>
+    <div class="quote"><cite>《智海請問經》云</cite>一個人如果具有精進，成就無上菩提就不困難了，何以故呢？智海！有精進的地方，就一定有菩提的！</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch18-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      精進之體性與三種懈怠
+      <small>精進是對善法的真切嚮往，是懈怠的良藥；懈怠有昏睡、畏縮、下劣三種，各有相應的對治之法</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>精進的體性，是對善法不斷的嚮往和努力。</p>
+
+    <div class="quote"><cite>《集論》云</cite>什麼是精進呢？精進是對善法之真切嚮往，是懈怠之良藥。</div>
+
+    <p>懈怠可分三種：</p>
+
+    <ul class="dash">
+      <li>
+        <strong class="term">昏睡之懈怠</strong>——喜愛臥倒睡眠、貪溺身心閒逸。生命短促無暇，死亡難以預測，不論行善與否、有病無病，人壽都難以恃靠——斷捨此懈怠，需要如頭髮著火急著撲滅、如膝上爬著毒蛇急著躲避一般的心情。
+        <div class="quote" style="margin-top:12px"><cite>《入菩薩行論》云</cite>如蛇爬膝上，急立忙躲閃。昏沉將至時，速奮力止之。</div>
+      </li>
+      <li>
+        <strong class="term">畏縮之懈怠</strong>——心想「像我這樣不成材的人，縱然精進也難成佛」，因而心生怯弱退志。對治之道：連黃蜂蒼蠅蛆蟲，若具大精進也能成佛道，何況已得人身、知善惡取捨的我，若能恆常精進、不捨菩提行，成佛又有何難？
+      </li>
+      <li>
+        <strong class="term">下劣之懈怠</strong>——喜歡降伏敵人、積聚資財等多行不善業，這些都是苦痛之因，必須遮止。
+      </li>
+    </ul>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch18-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      精進三種：披甲、攝善、饒益眾生
+      <small>披甲精進立不可思議之志願；攝善精進分斷煩惱、勤修善法（五式）、饒益眾生三支</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p><strong class="term">披甲精進</strong>——意樂圓滿，立誓「從現在起直到一切眾生尚未證得菩提之間，我決不放棄或鬆懈對各種善業的精勤努力」。</p>
+
+    <div class="quote"><cite>《說披甲精進經》云</cite>為度一切眾生故，菩薩披甲而精進。眾生無有邊際故，菩薩精進亦無邊。</div>
+
+    <div class="quote"><cite>《菩薩地論》云</cite>為了解救某一眾生之痛苦，我寧願在地獄中受苦千劫，無論時間多長，痛苦多深，我都甘心忍受，這樣的心願，才是菩薩的披甲精進。</div>
+
+    <p><strong class="term">攝善法精進</strong>分三：</p>
+
+    <ul class="dash">
+      <li><strong class="term">斷捨煩惱精進</strong>——貪等煩惱是一切苦痛之根本，應時常與煩惱奮鬥，如獅王視狐狸般不使煩惱得逞；持戒之心，須如手持滿缽油、頭懸利刃般戰戰兢兢。</li>
+      <li>
+        <strong class="term">勤修善法精進</strong>——不顧生命地勤修六波羅蜜多，以五式行之：<strong>常行精進</strong>（無有間斷）、<strong>殷重精進</strong>（歡喜雀躍地趕快努力，如烈日群象奔趨淡湖）、<strong>不動搖精進</strong>（不為妄念煩惱苦痛所動搖）、<strong>無退轉精進</strong>（見世間野蠻殘酷而心無退轉）、<strong>無我慢精進</strong>（精進而不以此自傲）。
+      </li>
+      <li><strong class="term">饒益眾生精進</strong>——即無有助伴時予以助伴等十一項利行事業之精進。</li>
+    </ul>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch18-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      無厭足精進與增長、清淨、果報
+      <small>直至未證菩提之間，對勤行善業心無厭足；究竟果報是無上菩提，世俗果報則能獲得世間的最後快樂</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p><strong class="term">無厭足精進</strong>——直到未證菩提之間，對勤行各種善業心無厭足，如食刃上蜜，貪愛無厭足，欣求寂滅之樂，何有厭足之時。</p>
+
+    <div class="quote">如食刃上蜜，貪愛無厭足，欣彼寂滅樂，何有厭足時。</div>
+
+    <p>增長精進的方法，同樣是以智、慧、回向三力；淨化精進的方法，也是依空性與悲心而達成。</p>
+
+    <p>精進的果報有二：究竟果報是證得無上菩提。</p>
+
+    <div class="quote"><cite>《菩薩地論》云</cite>菩薩圓滿精進波羅蜜多已，則能獲取阿耨多羅三藐三菩提，畢竟證得圓滿佛位。</div>
+
+    <p>世俗果報，是即使仍在生死輪迴之中，若能行精進波羅蜜多，也能獲得世間的最後快樂。</p>
+
+    <div class="quote"><cite>《莊嚴經論》云</cite>若能行精進，必獲世間樂。</div>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第十五章　結頌</div>
+    <div class="couplet">
+      如彼炎熱日中時，群象奔趨淡湖然，<br>
+      速速成辦諸善事，菩薩精進亦如是。
+    </div>
+    <p style="margin-top:24px">精進不是勉強苦撐，而是對善法真切的嚮往——如群象奔向清涼湖水般歡喜，這才是精進波羅蜜多的真義。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch17">← 第十四章</a><a href="#toc">目錄</a><a href="#ch19">第十六章 →</a></nav></article><article class="ch" id="ch19" data-title="第十六章　禪定波羅蜜多"><header class="ch-head"><div class="cover-eyebrow">參・方便（二）：六波羅蜜多</div><div class="cover-title">第十六章　禪定波羅蜜多</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch19-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      缺禪定之過失與功德總標
+      <small>無禪定則心易散亂放逸、不生神通、不生智慧；具禪定則能棄捨下劣貪戀、降伏煩惱，並引導眾生趨入菩提</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <div class="quote">
+      功德過失與思惟，體性差別及性相，<br>
+      增長及清淨方便，以及果報（之利益），七事說禪波羅蜜。
+    </div>
+
+    <p>只具佈施等波羅蜜而缺乏禪定，便難以制伏此心的散亂放逸，心一散亂，煩惱便會乘隙傷害自己。</p>
+
+    <div class="quote"><cite>《入菩薩行論》云</cite>若人之心意，時常散亂者，必為煩惱縛，不能得自在。</div>
+
+    <p>不具禪定，就不會生起神通，無神通便難以利益眾生；不具禪定，也難以生起智慧，難以成就菩提。</p>
+
+    <div class="quote"><cite>《誡王頌》云</cite>若不具禪定，智慧亦難得。</div>
+
+    <p>反之，具足禪定，便能棄捨對下劣事物的貪戀，神通與三摩地皆能生起，智慧生起後更能催伏一切煩惱，現證實相之時，也自然對眾生生起大慈悲心，進而引導一切弟子趨入菩提。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch19-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      禪定之體性：身離塵囂的寂靜
+      <small>禪定即專住善法之安心境界，首重「寂靜」——遠離對妻兒財物名聞的貪著，獨住蘭若則能生起出離、斷八法、速得三昧五種利益</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>禪定的體性，是依靜止之自性，於內安住於某種善法。禪定的首要條件是克服散亂，這種無散亂的境界稱為「寂靜」，又分「身離塵囂之寂靜」與「心離妄念之寂靜」兩種。</p>
+
+    <p>塵欲，是指對妻兒眷屬、財寶名聞的貪愛而引生的放逸。其過患，一般有二十種，如身語意無約束、煩惱熾盛、世間譏嫌、魔怨得便等；特別的過患，是因貪欲而不能證得菩提。</p>
+
+    <div class="quote"><cite>《入菩薩行論》云</cite>於有情生貪，則遮障真性。</div>
+
+    <p>與塵囂相反的便是寂靜——寂靜的體性即是捨離一切塵囂，其因則是獨自住於蘭若（屍場、樹林、岩洞等適合習禪的靜處，距城市至少一俱盧舍，約五百弓量）。常住蘭若有五種利益：</p>
+
+    <ul class="dash">
+      <li><strong>對諸佛之最上供養及承事</strong>——一念為成佛利生而住蘭若修行，勝過以飲食鮮花供養諸佛。</li>
+      <li><strong>能發起出離心</strong></li>
+      <li><strong>能斷捨世間八法</strong></li>
+      <li><strong>煩惱不會增長</strong></li>
+      <li><strong>能夠生起三昧禪定</strong>——「心於城鎮生厭離，長住岩林寂靜處，如彼犀牛常獨行，不久當獲勝三昧。」</li>
+    </ul>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch19-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      心離妄念：自省身口意與鍛煉自心
+      <small>住蘭若者常自省身口意三業是否中矩；並依煩惱之偏盛而修對治——貪修不淨觀，瞋修慈心觀，癡修緣起觀，嫉修自他平等觀，慢修自他共珍觀，妄念熾盛修數息觀</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p>住於蘭若者，應時常自省：「我現在若犯殺盜等身業之罪，便與野獸盜賊無異；若犯綺語兩舌等語業之罪，便與麻雀鸚鵡無異；若心被貪瞋癡嫉所使，便與野鹿猿猴無異——難道我應該如此嗎？」如此思惟，身心便能趨入寂靜。</p>
+
+    <p>鍛煉自心的方法，是觀察自己何種煩惱偏盛，便於該處痛加對治：</p>
+
+    <ul class="dash">
+      <li><strong class="term">貪煩惱偏盛</strong>——修<strong>不淨觀</strong>：觀想身體充滿三十六種不淨之物，死後腫脹發黑、終至白骨鴿灰，自身的下場也不外如此。</li>
+      <li><strong class="term">瞋煩惱偏盛</strong>——修<strong>慈心觀</strong>：先以自己所歡喜之人為對象修慈，漸次推及共住者、親眷、一般人，乃至十方一切眾生。</li>
+      <li>
+        <strong class="term">癡煩惱偏盛</strong>——修<strong>緣起觀</strong>：了知十二緣起之理，即能知法、知佛。
+        <div class="quote" style="margin-top:12px"><cite>《稻杆經》云</cite>若比丘能了知此稻杆，則彼亦能了知緣起之理。若知緣起之理，則能知法。若能知法則亦能知佛矣。</div>
+        十二支——無明、行、識、名色、六入、觸、受、愛、取、有、生、老死——環環相扣，因無明而有行，因行而有識，乃至因生而有老死；其中無明、愛、取屬煩惱支，行、有屬業支，其餘七支屬苦支。若能悟入諸法空寂之理，則無明斷滅，行乃至老死等亦隨之斷滅，此即逆行之涅槃緣起。
+      </li>
+      <li>
+        <strong class="term">嫉妒偏盛</strong>——修<strong>自他平等觀</strong>：「我常希望得到快樂，別人也同樣想得到快樂；我不希望遭遇痛苦，其他眾生也同樣不希望——因此應修愛人如己之平等觀。」
+      </li>
+      <li>
+        <strong class="term">我慢偏盛</strong>——修<strong>自他共珍觀</strong>：愚蒙眾生只知珍愛自己、為自利行事，因而在輪迴中受苦；諸佛如來則以珍愛別人為主，專行利他而成就佛果。
+        <div class="quote" style="margin-top:12px">愛己生諸過，利他德如海，故應斷我執，勤修利他行。</div>
+      </li>
+      <li><strong class="term">諸煩惱大約相等而妄念熾盛</strong>——修數息、隨息等六種息法。</li>
+    </ul>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch19-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      禪定之三種、止觀與果報
+      <small>適樂安住之禪定、成辦功德之禪定、利濟眾生之禪定；止是安住其心，觀是抉擇何者為法——增長清淨之法與前述諸度相同</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p>禪定的體性可分三種：<strong class="term">於所觀法適樂安住之禪定</strong>（遠離妄念、身心清淨、異常安寂、貪心不起、不覺諸味、遠離諸相，涵蓋初禪具尋伺、二禪具喜受、三禪具樂受、四禪具舍受）；<strong class="term">成辦功德之禪定</strong>（分不共小乘的如來十力三昧，與聲聞相共的解脫定等）；<strong class="term">利濟眾生之禪定</strong>（依禪定變現無量化身，饒益眾生）。</p>
+
+    <p>止與觀的分別：止是將心正確安住於三昧；觀則是在得止之後，抉擇何者是法、何者非法。</p>
+
+    <div class="quote"><cite>《菩薩經論》云</cite>依於正住中，將心安住心，抉擇（所觀）法，是名為止觀。</div>
+
+    <p>換言之，止即禪定本身，觀即本來智慧。增長禪定的方法，同樣依智、慧、回向三力；清淨禪定的方法，也同樣依空性與悲心而達成。</p>
+
+    <p>禪定的果報有二：究竟果報是圓滿證入無上正等正覺。</p>
+
+    <div class="quote"><cite>《菩薩地論》云</cite>菩薩圓滿禪定波羅蜜多已，即能圓滿證入無上正等正覺，現證佛位，現證大覺之位。</div>
+
+    <p>暫時果報，則是獲得離貪之天身，如梵天般的廣大光明果報。</p>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第十六章　結頌</div>
+    <div class="couplet">
+      心於城鎮生厭離，長住岩林寂靜處，<br>
+      如彼犀牛常獨行，不久當獲勝三昧。
+    </div>
+    <p style="margin-top:24px">禪定始於遠離塵囂的寂靜，終於對治煩惱的智慧——身心俱寂，妄念不生，方是波羅蜜多的真實安住。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch18">← 第十五章</a><a href="#toc">目錄</a><a href="#ch20">第十七章（上） →</a></nav></article><article class="ch" id="ch20" data-title="第十七章（上）　般若波羅蜜多・體性與解義"><header class="ch-head"><div class="cover-eyebrow">參・方便（二）：六波羅蜜多</div><div class="cover-title">第十七章（上）　般若波羅蜜多・體性與解義</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch20-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      般若之功德：方便與智慧不可偏廢
+      <small>缺乏般若，縱具五度也如群盲無導、不能證菩提；方便無般若、般若無方便，皆為受縛之因</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <div class="quote">
+      功德過失及思惟，體性類別及區分，<br>
+      以及各各之性相，了知及修行方便，如是以七種義理，詮釋般若波羅蜜。
+    </div>
+
+    <p>大乘菩薩縱然具足佈施乃至禪定的修持，若無般若波羅蜜多，仍不能成就一切智位——就像一群盲人若無嚮導領路，絕難抵達目的地。</p>
+
+    <div class="quote"><cite>《聖集頌》云</cite>萬千諸盲人，無眼難識路，不能抵目的，若人無般若，亦如無眼然，僅具佈施等，其他之五度，不具般若故，則無眼無見，不能證菩提。</div>
+
+    <p>反之，具足般若，就像群盲遇見了嚮導，能安全抵達目的地，佈施等一切善業也都能有助於佛道。然而，是否只需般若、不需佈施等其他方便呢？答案是不可以——方便若無般若、般若若無方便，皆是受局縛之因。</p>
+
+    <div class="quote"><cite>《菩提道燈論》云</cite>方便無般若，般若無方便，皆為局縛因。般若與方便，二俱不應舍。</div>
+
+    <p>只修方便而缺般若，會耽溺於偏空涅槃，不能成就無住大涅槃；只修般若而無方便，則始終為輪迴所縛。就像要走到心中嚮往的城市，必須同時具足能認路的眼睛與能行走的雙腳——趣入無住涅槃城，也必須同時具足智慧眼與行持之足。而智慧並非憑空而生，正如要燒得旺、燒得久，需要先積聚大量乾柴——唯有依佈施持戒等積聚廣大福德，才能生起足以燒盡一切障礙的大智慧。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch20-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      般若之體性與三種智慧
+      <small>智慧是對諸法的徹底抉擇；分世間智慧、出世低級智慧、出世高級智慧三種，唯後者通曉一切法無生自性空寂</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>智慧（般若）的體性，是對諸法予以徹底抉擇。智慧可分三種：</p>
+
+    <ul class="dash">
+      <li><strong class="term">世間智慧</strong>——對農業、因明理則、文學詩歌、手工技藝的了解，皆屬此類。</li>
+      <li><strong class="term">出世低級智慧</strong>——聲聞緣覺乘人依聞思修所生的智慧，如了達諸蘊是苦、不淨、無常、無我。</li>
+      <li><strong class="term">出世高級智慧</strong>——依大乘聞思修所生，通曉一切法無生、無根、無實、自性空寂的智慧。</li>
+    </ul>
+
+    <div class="quote"><cite>《菩提道燈論》云</cite>了達蘊界處，皆本來無生，知自性空寂，是名為般若。</div>
+
+    <p>這出世高級智慧，正是最緊要、最殊勝的大般若智。以下由六個標題來解釋：破執諸法為實有、破執諸法為實無、執空之過患、執有無二相之過患、解脫之道、解脫之自性即是涅槃。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch20-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      破執人我與法我為實有
+      <small>「人我」是誤將身心蘊聚的相續活動執為常一獨立之自我；「法我」是內執此心、外執諸境為實——二者皆經觀察而不可得</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p>一切法與法執，不外乎「人我」與「法我」二種我，而這二種我，本來就是空無的。</p>
+
+    <p><strong class="term">人我</strong>，是指把那具有明覺能力、相續不斷活動的身心蘊聚，執以為常恒獨一的自我，由此我執而生煩惱，由煩惱造業，由業生苦——一切罪業痛苦之根，正是這個「我」。若仔細推求，此「我」究竟由自生、由他生、還是自他共生？由過去、現在、未來何者所生？層層推求，皆了不可得。若問「我」究竟住於身、住於心、還是住於名？身是地水火風四大和合，其中並無「我」；心空空如也，自他皆不可得；名字只是假立，也扯不上「我」。由此可知人我本空，唯是妄執而已。</p>
+
+    <div class="quote"><cite>《寶鬘論》云</cite>或由自由他，或從三時生，皆不可得故，（眾生見萬有），不過我執耳！</div>
+
+    <p><strong class="term">法我</strong>，是內執此心、外執諸境為實有。外境是否真實存在呢？有部主張外境由不可分的微塵積聚而成；然而細加推求，微塵若有東南西北上下六方，便非「不可分」；若無方分，則一切物體皆應成為單一體性，與現量所見相違——因此外境並無自性可得，我們所見的世界，實是心因無始習氣而顯現的迷亂之相，如夢如幻。</p>
+
+    <div class="quote"><cite>《華嚴經》云</cite>佛子汝應知，三界惟心造！</div>
+
+    <p>那麼，能執取外境的這顆「心」，是否真實存在呢？若仔細觀尋此心究竟住於身內、身外，或身體何處，卻無論如何也找不到心的形狀、顏色、體相。</p>
+
+    <div class="quote"><cite>《大迦葉請問經》云</cite>迦葉！心不住內，亦不住外，亦不住二者之中。迦葉！此心無可觀，無可示，無可依，無所顯現，無所知覺，無所住處。迦葉！心者一切諸佛不見、未見、亦不得見也。</div>
+
+    <p>外境既不可得，能執外境的心識也就同樣不可得。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch20-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      破執實無、執空之過患，及解脫之道
+      <small>本無自體則不落有無二邊；執空之過患甚於執有；離有無二邊之中道，即是解脫之道，其自性即是涅槃</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p>既然人我、法我本來空無，是否可以說「有一個無實體的心存在」呢？答案是：本來就不存在，根本超乎「有實體」與「無實體」的兩邊。薩惹哈尊者說：</p>
+
+    <div class="quote"><cite>薩惹哈云</cite>執實有者笨似豬，執實無者笨於豬。</div>
+
+    <p>執諸法實有固然是輪迴之根，但若因此而執取「一切皆無」，過患其實更甚於執有——這就像治病，若只除去病因，卻未將藥物本身排出體外，病人仍難痊癒，甚至可能因藥致死。</p>
+
+    <div class="quote"><cite>《寶鬘論》云</cite>執有之人生善道，執無之人墮惡道。</div>
+
+    <p>若同時執有又執無，仍是墮入常見、斷見二邊，同樣是愚蒙、難以解脫。那麼，究竟如何才能解脫？答案是：依不墮有無二邊的中道而得解脫。</p>
+
+    <div class="quote"><cite>《寶積經》云</cite>迦葉！常是一邊，無常是一邊，此二邊之中間者無可觀，無可示，無可顯，無可見，此即中道能知諸法各各實相……輪回為一邊，涅槃為一邊，此二邊之中，無可觀，無可示，無可顯，無可見，此即中道能知諸法各各實相。</div>
+
+    <p>連這「中道之知」本身也應超脫，安住於超離心意的境界。那麼，涅槃究竟是實有還是實無呢？若說涅槃實有，涅槃便成有為法，終有壞滅之日；若說涅槃實無，也不應理。究竟而言，能消盡一切執有執無之心念，那離心意、超言說的境界，便是涅槃。</p>
+
+    <div class="quote"><cite>《寶鬘論》云</cite>消盡執有執無心，既是解脫大涅槃。</div>
+    <div class="quote"><cite>《中觀頌》云</cite>不取亦不舍，不斷亦不常，不生亦不滅，涅槃者如是。</div>
+
+    <p>涅槃遠離一切生滅取捨之相，無所作、無所造、無所轉——這正是妄念斷絕時，自心真相自然顯露的境界，非語言思議所能及。</p>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第十七章（上）　結頌</div>
+    <div class="couplet">
+      不可言思般若波羅蜜，不生不滅如虛空自性，<br>
+      各各自明智慧之行境，敬禮三世般若佛母前。
+    </div>
+    <p style="margin-top:24px">了解般若的義理，只是第一步——下一篇將進一步說明如何實際修持這離言絕思的智慧。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch19">← 第十六章</a><a href="#toc">目錄</a><a href="#ch21">第十七章（下） →</a></nav></article><article class="ch" id="ch21" data-title="第十七章（下）　般若波羅蜜多・修持證驗果報"><header class="ch-head"><div class="cover-eyebrow">參・方便（二）：六波羅蜜多</div><div class="cover-title">第十七章（下）　般若波羅蜜多・修持證驗果報</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch21-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      般若修持法（一）：前行與根本位
+      <small>如礦中之銀仍須熔煉，了解空性義理後仍須修持；前行使心平靜安適，根本位則心不住有、不住無、無整無修而自然安住</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>一切法雖然本來自性空寂，但眾生的境界中卻顯現萬千事物，因而受種種痛苦——就像銀雖在礦中已具銀之自性，卻仍須經過熔煉才能取得銀子。因此，對般若，除了了解，仍須修持。般若的修法，可由四個課題來討論：前行、禪定根本位、諸行後得位、修持之證悟境界。</p>
+
+    <p><strong class="term">前行</strong>——先使心達到平靜安適，依寂靜處而住，結跏趺坐，如修大手印加行一般。</p>
+
+    <p><strong class="term">禪定根本位</strong>——心不住有、不住無、不住取捨，無任何作意、無任何努力，適然而住。</p>
+
+    <div class="quote"><cite>諦洛巴祖師云</cite>不思不想不識取，不修不觀住本然。</div>
+    <div class="quote"><cite>龍樹菩薩云</cite>如彼大象獸，春情激發後，心情恬恬然，不去亦不來，安然閒散住，我能知此意，夫複何所求？</div>
+    <div class="quote"><cite>阿底峽尊者云</cite>甚深離戲此真如，光明無作亦無為，不生不滅本來淨，自性即是般涅槃。</div>
+
+    <p>這樣的安住，才是無錯謬的般若波羅蜜多修觀方便。</p>
+
+    <div class="quote"><cite>《般若七百頌》云</cite>於任何法不取、不持、不舍，才是般若波羅蜜多之修觀方法。於任何法皆不住，才是般若波羅蜜之修觀方法，於任何法皆無想無緣，才是般若波羅蜜多之修觀方法！</div>
+    <div class="quote"><cite>《般若八千頌》云</cite>般若波羅蜜多之修觀者，無任何法可修也。般若波羅蜜多之觀法，即是觀虛空也。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch21-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      根本位（續）：見空性即是一無所見
+      <small>洞見空性者，實是一無所見；日常後得位中，觀一切法如幻化而行善積資，能使定中動中打成一片</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>若問：怎樣才能洞見空性呢？</p>
+
+    <div class="quote"><cite>《集真實法經》云</cite>見空性者一無所見也！薄伽梵不見一切法，乃是真見也。……若不見一法，是名見真如。</div>
+
+    <p>在日常種種行止的<strong class="term">後得位</strong>中，應觀一切如幻化，安住如幻觀而行佈施等善行以積聚資糧。</p>
+
+    <div class="quote"><cite>《聖集頌》云</cite>若知此身心，實皆如幻化，幻化與身心，無絲毫差異，超離諸識見，行止皆寂靜，此即般若教，最勝之行法。</div>
+
+    <p>如此修觀，便能使禪定與日用打成一片、合而無間，貪心癡慢自然斷除。若能在勝義空性般若波羅蜜中安住片刻，其功德遠勝過長劫聞誦正法、廣行佈施等善根無量倍數。</p>
+
+    <div class="quote"><cite>《開顯真實性經》云</cite>舍利弗！若有眾生以一劫之時，聽聞佛法，或有眾生以彈指頃修觀真實義三昧，後者福德遠勝前者。</div>
+    <div class="quote"><cite>《起信經》云</cite>三界眾生，盡其形壽，以所有資具而行善事積勝資糧，不如一瑜伽士，以一座時修觀空性，其福勝前。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch21-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      萬法皆攝於般若
+      <small>六波羅蜜多、禮拜、供養、懺悔、持戒——一切修行法門，若能安住空性見，皆攝歸於般若波羅蜜多之中</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p>若契悟空性，則一切佛法皆攝歸其中——空性即是三皈依，發菩提心也即是般若波羅蜜多。乃至六波羅蜜多，也都可攝於般若的一念之中：</p>
+
+    <div class="quote"><cite>《梵王勝心請問經》云</cite>不加思想即佈施，不依名言即持戒，不予細究即忍辱，不取不舍即精進，不貪不著即禪定，無有分別即般若。</div>
+
+    <p>禮拜也攝於般若之中：</p>
+
+    <div class="quote"><cite>《虛空寶經》云</cite>譬如將水灌入水，或以酥油注酥油，自見自明智之時，此見即是真禮拜。</div>
+
+    <p>供養、懺悔、持戒亦復如是：</p>
+
+    <div class="quote"><cite>《甘露秘重續》云</cite>香花等供養，非真正上供，若能調自心，是為最上供。</div>
+    <div class="quote"><cite>《清淨業經》云</cite>若欲行懺悔，應以正直心，觀察實相義，善觀真如理，是最勝懺悔。</div>
+
+    <p>有人問：若只需觀心性便能攝盡一切佛法，那佛陀為何還要宣說種種方便次第法呢？答案是：那是為了權巧接引那些迷於實相的下根眾生。</p>
+
+    <div class="quote"><cite>《虛空寶經》云</cite>在未能趨入法界大海之前，言地、道，次第等法；尚說得過去，一旦抵達了法界大海之後，地、道等法就一點蹤跡都沒有了。那裡還有可行的地道次第呢？</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch21-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      修般若之證驗與果報
+      <small>修般若的五種相應之相：善業增進、煩惱減輕、勵力求證、捨諸散亂、於世不貪；果報有究竟證得菩提、暫時獲一切福樂二種</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p>修習般若的相應之相，有以下幾種：</p>
+
+    <ul class="dash">
+      <li>自然會對善業較前精進</li>
+      <li>煩惱自然會減輕</li>
+      <li>對定慧之成就會努力去爭取</li>
+      <li>捨棄一切散亂諸作業</li>
+      <li>對此世之一切不貪不著</li>
+    </ul>
+
+    <div class="quote"><cite>《寶鬘經》云</cite>由修空性故，自然勤善業……</div>
+
+    <p>修般若的果報有二：究竟果報是速疾證得無上正等正覺。</p>
+
+    <div class="quote"><cite>《般若七百頌》云</cite>文殊！若修習般若波羅蜜多，菩薩摩訶薩當速疾證得阿耨多羅三藐三菩提。</div>
+
+    <p>暫時果報，則是能產生一切善樂之適意福果——諸佛佛子、聲聞緣覺、天人王侯，乃至一切眾生所享受的種種快樂與福報，皆是由這殊勝的般若波羅蜜多而生。</p>
+
+    <div class="quote"><cite>《聖集頌》云</cite>佛陀及佛子，聲聞並緣覺，天及王人等，並一切眾生，所享諸快樂，及一切福報，皆由勝般若，波羅蜜多生！</div>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第十七章（下）　結頌</div>
+    <div class="couplet">
+      佛陀及佛子，聲聞並緣覺，<br>
+      天及王人等，並一切眾生，所享諸快樂，皆由勝般若，波羅蜜多生！
+    </div>
+    <p style="margin-top:24px">至此，六波羅蜜多——佈施、持戒、忍辱、精進、禪定、般若——已全部說畢；般若如眼目，其餘五度如雙足，唯有悲智雙運，方能真正抵達無住涅槃之城。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch20">← 第十七章（上）</a><a href="#toc">目錄</a><a href="#ch22">第十八章 →</a></nav></article><article class="ch" id="ch22" data-title="第十八章　說道階次第"><header class="ch-head"><div class="cover-eyebrow">肆・果位、事業</div><div class="cover-title">第十八章　說道階次第</div><div class="ch-desc">五道：資糧、加行、見道、修道、究竟</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch22-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      五道總標
+      <small>最初發菩提心，精勤菩薩學處，便能一步步趨入資糧、加行、見道、修道、究竟五道次第</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>如前所述，最初發菩提心，然後精勤菩薩學處，就能一步一步地趨入菩薩之地道次第了。菩提道之階次，攝言之可如下頌：</p>
+
+    <div class="quote">資糧加行道，見道及修道，圓滿究竟道，五道至圓成。</div>
+
+    <p>下、中二類根器的人，最初學佛時，先示以佛法之基礎，然後啟發願、行二種菩提心，教以精勤集聚福慧二種資糧，這是資糧道的教法；努力漸次契證諸法空性，便進入加行道之「暖」位；然後證入初地歡喜地等見道、修道及究竟道等階次。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch22-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      資糧道與加行道
+      <small>資糧道以四念住、四正斷、四神足十二法要為修持核心；加行道則有暖、頂、忍、世第一法四位，漸次契近見道</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p><strong class="term">資糧道</strong>——具大乘種性之人最初發菩提心後，向上師求得福慧二行之口授，乃至未得智慧暖相之前，這一階段的善行努力，統稱資糧道。此階段的宗教體驗有四個重點：欣樂佛法、增上意樂、實際體悟、心有所得。因是使行人成為堪能產生證悟暖相的法器而修福慧資糧，故名資糧道。</p>
+
+    <p>資糧道中，菩薩致力於十二種法要：</p>
+
+    <ul class="dash">
+      <li><strong class="term">四念住</strong>（小資糧道所重）——身念住（以正念觀身）、受念住（以正念觀受）、心念住（以正念觀心）、法念住（以正念觀法）。</li>
+      <li><strong class="term">四正斷</strong>（中資糧道所重）——令已生惡法速疾斷除、令未生惡法不再生起、令未生善業得以生起、令已生善法輾轉增長。</li>
+      <li><strong class="term">四神足</strong>（大資糧道所重）——欲三摩地、勤三摩地、心三摩地、觀三摩地。</li>
+    </ul>
+
+    <p><strong class="term">加行道</strong>——資糧道究竟之後的進一步階段，此時能證悟四聖諦及其隨順抉擇之四支分，共有暖、頂、忍、世第一法四位。因這一階段的行人能契合真諦之證悟（或鄰近正見道位），故名加行道。暖位、頂位時具足信、精進、正念、三昧、智慧五根；忍位、世第一法位時，則轉為信力、精進力、正念力、三昧力、智慧力五力。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch22-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      見道與修道
+      <small>見道是昔所未見的聖諦如今已見，具七覺支；修道分世間道與出世間道，具足八聖道分</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p><strong class="term">見道</strong>——在世第一法位之後，以止中修觀四聖諦，生起同等勝觀：每一聖諦皆有忍、法智、類智、類忍四種觀察，四諦相乘共為十六種心剎那之覺智與順忍。因昔所未見的聖諦如今已親見，故名見道。此位具足七覺支：正念、擇法、精進、喜樂、輕安（清淨）、三昧、平等七種覺支。</p>
+
+    <p><strong class="term">修道</strong>——見道位以後進而獲取的階位，分世間修道與出世間修道。世間修道，是修習與世間共通的色界四禪與無色界四定，作用有三：降伏修道位所斷之煩惱、成就四無量心等殊勝功德、為出世道作基礎依止。出世間修道，是依二種智慧隨順修習止觀——見道時十六位中，八位屬忍法、八位屬智法，皆為修道位所攝，依此而修四禪、四無量心等止觀；為契悟法性而修者屬法智，為證入智慧而修者屬悟智。因於見道時的真如悟境反覆修習使之增上廣大，故名修道。此階段具足八聖道分：正見、正思惟、正語、正業、正命、正精進、正念、正定。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch22-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      究竟道
+      <small>究竟道即金剛喻定——無障礙、堅實、穩固、一味、遍滿，喻似金剛；學處究竟，已至涅槃城，故名究竟道</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p><strong class="term">究竟道</strong>，即是金剛喻定確知以後，不再投生輪迴、或知無生自性的階段。金剛喻定是超越修道位的最後階段，為相合道與無障礙道之總集——無有障礙，世間違緣不能動搖；堅實，一切諸有不能破壞；穩固，妄念不能動搖；一味，其相一味；遍滿，緣觀一切所知法之總相真如——因喻似金剛，故名金剛三昧。</p>
+
+    <p>得此三昧後，以證悟四諦之勝智抉知，從此不再投生輪迴，因煩惱集諦之因已斷盡故；也因苦果已盡而知無生。何以名為究竟道？因學處究竟、已至涅槃城，故名究竟道。此究竟位具足無學位十法：無學正見、正思惟、正語、正業、正命、正精進、正念、正定，加上無學解脫、無學正智，共為十種無學法，分屬戒、定、慧、解脫、見五種無漏蘊所攝。</p>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第十八章　結頌</div>
+    <div class="couplet">
+      資糧加行道，見道及修道，<br>
+      圓滿究竟道，五道至圓成。
+    </div>
+    <p style="margin-top:24px">五道次第，是從最初發心到究竟成佛的完整地圖——下一章將進一步展開菩薩十地的殊勝功德。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch21">← 第十七章（下）</a><a href="#toc">目錄</a><a href="#ch23">第十九章 →</a></nav></article><article class="ch" id="ch23" data-title="第十九章　菩薩地道"><header class="ch-head"><div class="cover-eyebrow">肆・果位、事業</div><div class="cover-title">第十九章　菩薩地道</div><div class="ch-desc">十三地與十地各別功德</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch23-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      十三地總標
+      <small>五道亦可開演為十三地：初修學地、誠信篤行地、菩薩十地，加上究竟佛地，總共十三地</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>前章所言的五道，也可以演釋為十三地。</p>
+
+    <div class="quote">初修學地誠信地，菩提薩埵之十地，以及究竟之佛地，總共說為十三地。</div>
+
+    <p><strong class="term">初修學地</strong>，指資糧道位中，自己身心尚未臻於成熟之階段；<strong class="term">誠信篤行地</strong>，指加行道時於空性體理具足異常誠信，凡與波羅蜜多不相應之法皆能降伏令不現行；<strong class="term">菩薩十地</strong>，指初歡喜地至法雲地等十地諸階位——初地是第一次見道時證空性之階段，二地至十地則屬修道階段，是把初地所證的真如空性反覆串習、使之成熟圓滿。</p>
+
+    <p>每一地皆具九門特徵：定名、名義、習成、修行、清淨、證悟、所斷、投生、威力。以下依此略述十地之名義、所偏重修習的波羅蜜多，以及投生與威力的殊勝之相。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch23-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      初地至五地
+      <small>歡喜地、離垢地、發光地、焰慧地、難勝地——各地皆總修十度，卻各自偏重佈施、持戒、忍辱、精進、禪定其中一度</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <ul class="dash">
+      <li>
+        <strong class="term">初地・歡喜地</strong>——因趨近菩提、能成利生事業而心生大歡喜，故名歡喜地；此地菩薩總修十度，特重<strong>佈施</strong>波羅蜜；證初地時，資生匱乏、名聞不彰、死亡、墮惡道、處眾不安五種怖畏悉皆脫離；多投生南瞻部州為轉輪聖王；一剎那間能獲百種三昧、見百佛、動搖百世界。
+      </li>
+      <li>
+        <strong class="term">二地・離垢地</strong>——因不為破戒之障污染，故名離垢地；此地菩薩圓滿持戒，特重<strong>持戒</strong>波羅蜜；多投生四大部州為自在轉輪聖王，能令眾生奉行十善；一剎那能證入千種三昧。
+      </li>
+      <li>
+        <strong class="term">三地・發光地</strong>——因能開顯法門及諸三昧，使眾生得廣大法見，故名發光地；此地菩薩特重<strong>忍辱</strong>波羅蜜，聞法無有厭足，為聞一句佛法不惜投身大火聚；多投生為帝釋天王，善巧降伏眾生貪欲；一剎那能證入十方三摩地。
+      </li>
+      <li>
+        <strong class="term">四地・焰慧地</strong>——因智慧光焰能焚燒煩惱、所知二障，故名焰慧地；此地菩薩特重<strong>精進</strong>波羅蜜，常住山林、少欲知足；多投生為夜摩天王，能摧伏眾生的壞滅見；一剎那能獲百萬三昧。
+      </li>
+      <li>
+        <strong class="term">五地・難勝地</strong>——能成利生之事，又能護持自心不受眾生逆行所擾，二事俱難而菩薩能之，故名難勝地；此地菩薩特重<strong>禪定</strong>波羅蜜，遠離家庭親友之貪戀愛慕；多投生為兜率天王，能摧伏一切外道見；一剎那能證千百萬三昧。
+      </li>
+    </ul>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch23-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      六地至十地
+      <small>現前地、遠行地、不動地、善慧地、法雲地——依次偏重般若、方便、願、力、智波羅蜜，菩薩威力也逐地倍增</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <ul class="dash">
+      <li>
+        <strong class="term">六地・現前地</strong>——依般若波羅蜜多故，不住生死亦不住涅槃，生死涅槃二者俱現前，故名現前地；此地菩薩特重<strong>般若</strong>波羅蜜，具足六度圓滿及聲緣六種出離法；多投生為化樂天王，能摧伏眾生現前我慢；一剎那能證億萬三昧。
+      </li>
+      <li>
+        <strong class="term">七地・遠行地</strong>——所行是唯一無二之道，其行甚深甚遠，已至道之極端，故名遠行地；此地菩薩特重<strong>方便</strong>波羅蜜，能清淨我執等二十種謬見；多投生為自在天王，於聲聞緣覺現觀極為善巧；一剎那能證萬萬億三昧。
+      </li>
+      <li>
+        <strong class="term">八地・不動地</strong>——於有相、無相二種意念皆不可動搖，故名不動地；此地菩薩特重<strong>願</strong>波羅蜜，能如實知一切眾生心意；獲無生法忍，於四種自在（無分別自在、淨佛刹自在、智慧自在、業自在）中證得前二；多投生為大梵天王；一剎那能證百萬億塵沙數三昧。
+      </li>
+      <li>
+        <strong class="term">九地・善慧地</strong>——具各各妙明善智，故名善慧地；此地菩薩特重<strong>力</strong>波羅蜜，於四種自在中證得智慧自在，獲四種各各正明智（法、義、決定句、學處）；多投生為二千世界梵天王，善能答辯一切問難；一剎那能入千萬億無量佛刹微塵數三昧。
+      </li>
+      <li>
+        <strong class="term">十地・法雲地</strong>——能降法雨如大雲聚，能伏眾生微塵煩惱，又證諸三昧陀羅尼門法遍滿虛空如大雲聚，故名法雲地；此地即一切智智之灌頂地，為十方諸佛光明灌頂；此地菩薩特重<strong>智慧</strong>波羅蜜，於四種自在中圓證業力自在，能隨眾生所需示現種種變化；多投生為大自在天王；一剎那能入不可說萬億那由他佛刹微塵數三昧，於一毛孔中示現無量諸佛菩薩眷屬。
+      </li>
+    </ul>
+
+    <div class="quote"><cite>《入中論》云</cite>刹那刹那間，能於一毛孔，示現諸佛陀，及無量菩薩，並諸眷屬等，天人阿修羅，大眾所圍繞，無邊顯示現……</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch23-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      三大阿僧祇劫與究竟佛地
+      <small>十地之修證需歷三大阿僧祇劫；佛位究竟道即金剛喻定，煩惱障與所知障一時頓斷無餘</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p>菩薩十地的修證，需要三大阿僧祇劫才能圓滿：</p>
+
+    <div class="quote"><cite>《菩薩地論》云</cite>第一大阿僧祗劫時，菩薩超越資糧及加行二道得歡喜地，此亦必須恒常精進而後能得，若不精進則不能得。第二大阿僧祗劫時，菩薩由初地進至七地，再超越之而得八地，此一階段為決定性，因諸地菩薩皆決定精進也。第三大阿僧祗劫時，菩薩由八地、九地而進至第十法雲地。或有菩薩具大精進則能超越若干中劫、大劫者；能超越阿僧祗劫者，則未之有也。</div>
+
+    <p><strong class="term">佛位究竟道</strong>，即是金剛喻定——此時修道所斷的煩惱障與所知障，一時頓斷無餘，圓滿證入無上正等正覺。</p>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第十九章　結頌</div>
+    <div class="couplet">
+      初修學地誠信地，菩提薩埵之十地，<br>
+      以及究竟之佛地，總共說為十三地。
+    </div>
+    <p style="margin-top:24px">從初發心到究竟成佛，十三地層層遞進——每一地皆總修十度，卻各有側重，如金匠層層鍛煉純金，愈趨精純廣大。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch22">← 第十八章</a><a href="#toc">目錄</a><a href="#ch24">第二十章 →</a></nav></article><article class="ch" id="ch24" data-title="第二十章　圓滿佛果"><header class="ch-head"><div class="cover-eyebrow">肆・果位、事業</div><div class="cover-title">第二十章　圓滿佛果</div><div class="ch-desc">斷證二種圓滿、三身體性</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch24-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      佛果之自性：斷、證二種圓滿
+      <small>圓滿佛果的自性有二：一切煩惱所知障之瑕疵徹底斷除的斷除圓成，以及如所有智、盡所有智具足的智慧圓成</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>本書卷首有句「果者圓滿佛陀身」，現在解釋這句話的含義。菩薩歷經各種地階後，最後現證三身圓滿的佛果。</p>
+
+    <div class="quote">自性名義及類別，定義數量及性相，不共特徵等七義，詮釋圓滿佛果義。</div>
+
+    <p>佛果的自性，可由兩方面說明：<strong class="term">斷除之圓成</strong>——一切應斷之瑕疵，如煩惱障、所知障，在最後證入金剛喻定時，皆能完全斷除清淨；<strong class="term">智慧之圓成</strong>——佛智可分二種：</p>
+
+    <ul class="dash">
+      <li><strong class="term">如所有智</strong>——曉悟勝義真理的智慧，即金剛喻定之究竟智，圓觀真如、斷捨一切戲論，法性離戲與智慧離戲合成一味，如水注入水、油灌入油。「如水注入水，如油灌油中，此離戲法性，智慧同一味，此即一切佛，自性法身是。」</li>
+      <li><strong class="term">盡所有智</strong>——能知世俗諦中一切事物的智慧，依金剛喻定摧毀一切蓋障種子而成就，過去現在未來一切萬法皆清晰能見能知，如見掌中青菜。「宇宙無一法，佛智所不見，一切所知法，一切智皆見，此即佛智慧，不思議威力。」此見並非見萬法實有，而是如幻化般的照見。</li>
+    </ul>
+
+    <p>佛的體性，即是斷除與智慧二種圓滿。</p>
+
+    <div class="quote"><cite>《寶性論》云</cite>佛果本來無分別，以清淨法顯特性，如彼皓日麗中天，斷證圓滿為體性。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch24-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      佛陀名義與三身總說
+      <small>「佛陀」藏文意為除遣無明大夢、智慧廣大圓具；由類別而言，佛即法身、報身、化身三身和合</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p>「佛陀」一詞，藏文譯作「桑結」（除遣、廣大）——除遣無明大夢名為「桑」，深廣二種智慧極為廣大名為「結」。因此佛陀就是無明夢醒、二智圓具的人。除遣無明大夢，即是前述「斷捨之圓滿」；於所知法智慧廣大，即是「智慧之圓滿」。</p>
+
+    <p>由類別而言，佛陀即是法身、報身、化身三身和合。</p>
+
+    <div class="quote"><cite>《金光明經》云</cite>一切如來具足法報化三身。</div>
+
+    <p>法身是佛之體，「不可以色身見如來，如來者法身也」；報身、化身則是法身加持所流出，為濟度眾生及往昔願力而示現。報化二色身，需要法性加持力、本願力、善業力三力和合方能成就——單憑法性加持、單憑眾生業顯、或單憑願力，皆不能成就佛身。從利益的角度看，自利屬法身，利他屬報化二身：只要對法身生起誠信仰慕，即便只見到法身的少分，也能隨份獲得或多或少的功德。</p>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch24-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      法身與報身之八種德相
+      <small>法身具平等、甚深、常恒、惟一、正妙、清淨、光明、受用圓滿八德；報身具眷屬、報土、身相、相好、說法、事業、自成圓滿及無自性八德</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p><strong class="term">法身</strong>——現證法界空性後，一切缺失自然淨盡，一切迷亂自然消除；「法身」不過是語言所加的名相而已。其性可由八個形容詞描述：</p>
+
+    <ul class="dash">
+      <li><strong>平等</strong>——一切諸佛法身無任何差別。</li>
+      <li><strong>甚深</strong>——離一切戲論，難以證入。</li>
+      <li><strong>常恒</strong>——屬無為法，不生不滅。</li>
+      <li><strong>惟一</strong>——法性與智慧無二差別。</li>
+      <li><strong>正妙</strong>——遠離增損二邊，無有錯謬。</li>
+      <li><strong>清淨</strong>——於三種障礙皆得解脫。</li>
+      <li><strong>光明</strong>——無妄無分別，直觀無分別即是光明。</li>
+      <li><strong>受用圓滿</strong>——為一切廣大功德之自性泉源，是圓滿報身的所依。</li>
+    </ul>
+
+    <div class="quote"><cite>《寶性論》云</cite>無始無終無差別，非二非三離意念，無障法性之自體，修士定中能親見。</div>
+
+    <p><strong class="term">報身</strong>亦具八種圓滿德性：</p>
+
+    <ul class="dash">
+      <li><strong>眷屬圓滿</strong>——共住眷屬皆為十地菩薩。</li>
+      <li><strong>報土圓滿</strong>——所住國土必是清淨淨土。</li>
+      <li><strong>身相圓滿</strong>——皆為圓滿受用之報身，如毗盧遮那佛。</li>
+      <li><strong>相好圓滿</strong>——具足三十二相、八十種好。</li>
+      <li><strong>說法圓滿</strong>——所說之法皆為大乘法。</li>
+      <li><strong>事業圓滿</strong>——為諸佛子授記等。</li>
+      <li><strong>自成圓滿</strong>——一切事業無需勤勞，自然成功，如如意寶王。</li>
+      <li><strong>無有自性</strong>——雖現妙莊嚴身相好，皆如玻璃所出光色，本無自性。</li>
+    </ul>
+
+    <div class="quote"><cite>《現觀莊嚴論》云</cite>具三十二相，八十隨形好，受用大乘法，圓滿報身佛。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch24-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      化身之八種德相與佛果不共特徵
+      <small>化身佛以所依、因、國土、時、自性、默化、成熟、解脫八德利濟眾生；佛果又有平等、常恒、顯現三種不共特徵</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p><strong class="term">化身</strong>佛具八種德相：所依身德相（其體如法身，不可動搖）、因德相（由利濟眾生之大悲心所生）、國土德相（無論淨土穢土皆能示現）、時德相（世界存在一日，應化不絕）、自性德相（能以殊勝化身示現降生、成佛、涅槃等相）、默化德相（以善巧方便令眾生欣樂涅槃）、成熟德相（使趨入佛道者資糧成熟）、解脫德相（令修善成熟者解脫三有束縛）。</p>
+
+    <div class="quote"><cite>《寶性論》云</cite>以種種變化，示現生人世，初由兜率降，入胎複降生，善能諸技藝，妻妃及侍女，環繞享欲樂，出家習苦行，行往菩提場，降魔成正覺，轉勝妙法輪，示現般涅槃。</div>
+
+    <p>佛果又有三種不共特徵：</p>
+
+    <ul class="dash">
+      <li><strong class="term">平等特徵</strong>——一切諸佛法身所依之法性無任何差別；報身意樂相同；化身皆能成熟各種事業。</li>
+      <li><strong class="term">常恒特徵</strong>——法身離生滅相；報身恆常享受法樂無間；化身雖有時不現，仍隱後復現，利生事業從不斷絕。</li>
+      <li><strong class="term">顯現特徵</strong>——所知障消融淨盡，故有法身顯現；煩惱障消融淨盡，故有報身顯現；一切業障消融淨盡，故有化身顯現。</li>
+    </ul>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第二十章　結頌</div>
+    <div class="couplet">
+      乃至諸有未空時，勤作種種利生業，<br>
+      平等普遍利有情，化佛示現無斷絕。
+    </div>
+    <p style="margin-top:24px">法報化三身和合，即是圓滿佛果——斷證二種圓滿，是這條菩提道最終的果實。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch23">← 第十九章</a><a href="#toc">目錄</a><a href="#ch25">第二十一章 →</a></nav></article><article class="ch" id="ch25" data-title="第二十一章　佛事業"><header class="ch-head"><div class="cover-eyebrow">肆・果位、事業</div><div class="cover-title">第二十一章　佛事業</div><div class="ch-desc">無念任運利生七喻（全論圓滿）</div><div class="cover-rule"></div></header>
+
+  
+
+  <!-- 壹 -->
+  <section class="chap" id="ch25-s1">
+    <div class="chap-num" style="color:var(--c1)">壹</div>
+    <div class="chap-title">
+      總標：無念成熟利生事
+      <small>發心、修道、成佛，一切努力唯一的目的，是使眾生離苦得樂；佛陀雖心無意念、身無勤勇，卻能任運成辦利生事業</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c1)"></div>
+
+    <p>現在解釋「無念成熟利生事」一句的意義。依前面所講的菩提道次第：最初發菩提心，然後修持菩薩道，最後成就佛果——這一切努力唯一的目的，是要使眾生離苦得樂，成就利生的大事業。若成佛以後心中不再生起任何意念，又怎能利益眾生呢？答案是：佛陀雖心中不起任何意念，身體也無任何努力精勤，卻能任運成辦利生之事業，永無休止。</p>
+
+    <div class="quote">佛身無念起，能作利生事，佛語及佛念，無念成利他，如是身口意，成就佛事業。</div>
+
+    <p>《寶性論》以七種譬喻，說明如來事業如何在無念無勤中自然成辦：</p>
+
+    <div class="quote"><cite>《寶性論》云</cite>如彼帝釋天，天鼓及云聚，如梵天日輪，彼如意寶珠，如彼空穀響，如地如虛空，以此諸譬喻，說如來事業。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 貳 -->
+  <section class="chap" id="ch25-s2">
+    <div class="chap-num" style="color:var(--c2)">貳</div>
+    <div class="chap-title">
+      帝釋天影像喻與天鼓喻
+      <small>如帝釋天王的影像映於琉璃宮外令人見而發願，如天鼓自然發音說法——佛之身業、語業皆是如此無念利生</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c2)"></div>
+
+    <p><strong class="term">帝釋天影像之喻</strong>——帝釋天王心中並無任何意念，卻能成就利生之事業。他與天女們住在晶瑩明亮的琉璃王宮中，天王的影像映現於宮外，地上眾生見了，都發願行善、以求早生天國——帝釋的影像不因任何意念而生，也不會動搖。與此相似，眾生因福德因緣得見佛陀身相莊嚴、行住坐臥種種威儀，因而心生誠信仰慕，發願成佛——這正是佛身無任何意念亦無動搖，卻能任運利生的寫照。</p>
+
+    <div class="quote">清淨琉璃天宮中，映出帝釋天王身，能使眾生種福田，能仁妙身亦如是，（見者鹹能入菩提）。</div>
+
+    <p><strong class="term">天鼓之喻</strong>——帝釋天上懸有天鼓，因諸天往昔善業之力，此鼓能自己發音說法，唱言：「一切有為法都是無常的啊！一切法都是無我的啊！凡是有煩惱的法都是痛苦的啊！涅槃是一切法中最寂靜的啊！」鼓本身並無任何心念，卻仍能發生作用。與此相同，佛陀不用任何氣力、也無任何心念分別，就能為有善根的眾生開示所需的法要——這正是佛陀的語業，在心無意念之時仍能自然利濟眾生。</p>
+
+    <div class="quote">無作無勤勇，佛普遍一切，為諸有緣眾，宣說正法要。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 參 -->
+  <section class="chap" id="ch25-s3">
+    <div class="chap-num" style="color:var(--c3)">參</div>
+    <div class="chap-title">
+      雲聚喻、梵天喻與日輪喻
+      <small>如夏雲無心降雨滋長禾稼，如梵天不動本處而現身諸天，如日輪無念放光開綻蓮花——皆喻佛陀無念利生的自然任運</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c3)"></div>
+
+    <p><strong class="term">雲聚之喻</strong>——夏日天空毫不費力地聚起雲堆，雲堆沒有任何意念，卻能降雨滋潤稼禾果實成長。與此相似，佛陀心中無任何意念，卻能遍降法雨，使弟子的善業果實生長成熟。</p>
+
+    <div class="quote">佛陀大悲云，能降妙法雨，成熟利生果，無念自然成。</div>
+
+    <p><strong class="term">梵天之喻</strong>——大梵天王能安住梵宮本處不動，同時卻能現身於一切天界。與此相似，佛陀不動於法身，卻能作十二種示現利濟眾生。</p>
+
+    <div class="quote">如彼大梵王，不動於本處，能現身諸天，無念無勤勇，能仁於法身，不離不動搖，能示現化身，于一切諸界，利濟有緣眾，任運亦如是。</div>
+
+    <p><strong class="term">日輪之喻</strong>——天上的日輪毫無作意地放出萬丈光芒，普照大地，使白蓮千花一齊開放。佛陀的妙法光芒也是如此，自然而然使無量眾生心地的蓮花朝向和善開綻。</p>
+
+    <div class="quote">如彼大日輪，無念無勤勇，於一刹那間，出萬丈光芒，開綻諸蓮花，成熟諸花卉，如是佛如來，放大日法光，成熟諸弟子，開綻其心蓮，無念無勤勇，任運成他利。</div>
+
+    <p>日輪的影子能同時映現於一切清淨的容器中；佛陀的光芒，也能同時顯現於一切意樂清淨的眾生心中。</p>
+
+    <div class="quote">譬彼清淨器皿中，能映日輪之光影，如來慧日大光芒，恩照無量眾有情。</div>
+  </section>
+
+  <hr class="sep">
+
+  <!-- 肆 -->
+  <section class="chap" id="ch25-s4">
+    <div class="chap-num" style="color:var(--c4)">肆</div>
+    <div class="chap-title">
+      如意寶珠喻與結語
+      <small>如意寶珠無心而能滿眾生願，佛陀亦復如是——全論至此圓滿，願噶舉教法恆興盛，一切有情福慧具足</small>
+    </div>
+    <div class="chap-bar" style="background:var(--c4)"></div>
+
+    <p><strong class="term">如意寶珠之喻</strong>——如意寶珠自身無任何意念，只要有人祈請，就能任運滿願。與此相同，佛弟子只要祈請，佛陀也能成滿各種心願。</p>
+
+    <div class="quote">如彼如意珠，無念無作意，能于刹那間，成滿祈者願，佛陀如意寶，心中雖無念，能開顯法要，令眾生滿足。</div>
+
+    <p>除上述譬喻外，尚有如影像、如虛空、如大地等其他譬喻，皆能說明佛陀在無勤勇、無意念之中，仍能任運成就利濟眾生的事業。</p>
+
+    <p>此《妙法如意解脫莊嚴寶大乘道次第論》，因學者班者達打馬甲之請求，索朗仁青（貴福）醫師撰寫圓滿。</p>
+
+    <div class="quote">
+      <cite>願文</cite>
+      我等今至輪回未空前，聖教所有一切法要等，<br>
+      播撒無盡塵剎諸世界，唯願噶舉教法恒興盛。<br><br>
+      願：發心助印此經、讀誦此經、流通此經的人，<br>
+      福慧具足，佛性增長，永斷輪回惡趣之因，<br>
+      祝願世界和平，法輪常轉。
+    </div>
+  </section>
+
+  <div class="final">
+    <div class="ft-eyebrow">解脫莊嚴寶論・第二十一章　全論圓滿</div>
+    <div class="couplet">
+      佛身無念起，能作利生事，<br>
+      佛語及佛念，無念成利他，如是身口意，成就佛事業。
+    </div>
+    <p style="margin-top:24px">從第一章「明成佛之因」到本章「佛事業」，全論二十一章至此圓滿——願一切見聞此論者，皆能成就無上菩提。</p>
+  </div>
+
+  
+<nav class="pn"><a href="#ch24">← 第二十章</a><a href="#toc">目錄</a><span></span></nav></article>
+<footer>解脫莊嚴寶・大乘菩提道次第論｜通俗講讀系列</footer></div>
+<script>(function(){
+var K='jtzy_reader_v1';
+var S={z:1,theme:'paper',read:{},marks:[],pos:null};
+try{var r=localStorage.getItem(K);if(r){var o=JSON.parse(r);for(var k in o)S[k]=o[k];}}catch(e){}
+function save(){try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}}
+function $(s,r){return (r||document).querySelector(s)}
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+var root=document.documentElement;
+var blocks=$$('article.ch p, article.ch li, article.ch .quote, article.ch .couplet, article.ch .chap-title');
+var texts=blocks.map(function(b,i){b.id='b'+i;return b.textContent.replace(/\s+/g,' ').trim()});
+blocks.forEach(function(b,i){b.setAttribute('data-b',i)});
+var arts=$$('article.ch');
+function chOf(i){return blocks[i].closest('article')}
+function chTitle(a){return a.getAttribute('data-title')}
+var tb=$('#tb'),bar=$('#bar'),mask=$('#mask'),dr=$('#drawer'),se=$('#search'),ed=$('#ed'),hlbar=$('#hlbar');
+var ready=false,lastY=0,ticking=false,saveT=null,toastT=null;
+
+function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('on')},2200)}
+function inBook(){return arts[0].getBoundingClientRect().top<200}
+function topIdx(){var lo=0,hi=blocks.length-1;while(lo<hi){var mid=(lo+hi)>>1;if(blocks[mid].getBoundingClientRect().bottom>60)hi=mid;else lo=mid+1}return lo}
+function resolve(b,t){if(texts[b]&&texts[b].indexOf(t)===0)return b;for(var i=0;i<texts.length;i++){if(texts[i].indexOf(t)===0)return i}return -1}
+
+
+function panelOpen(){return dr.classList.contains('on')||se.classList.contains('on')||ed.classList.contains('on')}
+function closeAll(){[dr,se,ed].forEach(function(p){p.classList.remove('on')});mask.classList.remove('on')}
+function openP(p){closeAll();p.classList.add('on');if(p!==se)mask.classList.add('on')}
+mask.onclick=closeAll;
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAll()});
+function tab(n){
+  $$('#drawer .tab').forEach(function(t){t.classList.toggle('on',t.getAttribute('data-tab')===n)});
+  $$('#drawer .pane').forEach(function(p){p.style.display=p.id==='pane-'+n?'':'none'});
+  if(n==='marks')renderMarks();else if(n==='hl')renderHl();else{markCur();var c=$('#drawer .row.cur');if(c)c.scrollIntoView({block:'center'})}
+}
+$$('#drawer .tab').forEach(function(t){t.onclick=function(){tab(t.getAttribute('data-tab'))}});
+$('#b-toc').onclick=function(){openP(dr);tab('toc')};
+$('#b-marks').onclick=function(){openP(dr);tab('marks')};
+$('#b-search').onclick=function(){openP(se);$('#q').focus();doSearch()};
+$('#sclose').onclick=closeAll;
+$('#drawer').addEventListener('click',function(e){var a=e.target.closest('.row a');if(a)closeAll()});
+
+function go(i){closeAll();var el=blocks[i];if(!el)return;el.scrollIntoView({block:'start'});lastY=window.pageYOffset;tb.classList.remove('hide');el.classList.add('flash');setTimeout(function(){el.classList.remove('flash')},2400)}
+
+function refreshRead(){
+  var n=0;
+  $$('#drawer .row').forEach(function(r){var d=!!S.read[r.getAttribute('data-ch')];if(d)n++;r.classList.toggle('done',d)});
+  $$('.tocpage a').forEach(function(a){a.classList.toggle('done',!!S.read[a.getAttribute('href').slice(1)])});
+  var tot=arts.length;
+  $('#ptxt').textContent='已讀 '+n+' / '+tot+' 篇（'+Math.round(n/tot*100)+'%）';
+  $('#pfill').style.width=(n/tot*100)+'%';
+}
+$$('#drawer .rd').forEach(function(b){b.onclick=function(e){e.stopPropagation();var id=b.getAttribute('data-ch');if(S.read[id])delete S.read[id];else S.read[id]=1;save();refreshRead()}});
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting&&ready){var id=e.target.closest('article').id;if(!S.read[id]){S.read[id]=1;save();refreshRead()}}
+  })},{threshold:.6});
+  $$('article.ch .pn').forEach(function(p){io.observe(p)});
+}
+function markCur(){
+  var c=inBook()?chOf(topIdx()).id:null;
+  $$('#drawer .row').forEach(function(r){r.classList.toggle('cur',r.getAttribute('data-ch')===c)});
+}
+
+function savePos(){if(!inBook())return;var i=topIdx();S.pos={b:i,t:texts[i].slice(0,20)};save()}
+function onScroll(){
+  var y=window.pageYOffset,h=root.scrollHeight-root.clientHeight;
+  bar.style.width=(h>0?y/h*100:0)+'%';
+  if(!panelOpen()){if(y>lastY+6&&y>160)tb.classList.add('hide');else if(y<lastY-6)tb.classList.remove('hide')}
+  lastY=y;
+  if(hlbar.classList.contains('on'))onSel();
+  if(ready){clearTimeout(saveT);saveT=setTimeout(savePos,500)}
+  ticking=false;
+}
+addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(onScroll)}},{passive:true});
+
+function renderMarks(){
+  var box=$('#marklist');
+  if(!S.marks.length){box.innerHTML='<div class="empty">尚無書籤。閱讀時點上方「＋ 在此處加書籤」，會記下目前畫面最上方的段落。</div>';return}
+  box.innerHTML=S.marks.map(function(m,i){return '<div class="mk"><a href="#b'+m.b+'" data-i="'+i+'"><small>'+esc(m.c)+'</small>'+esc(m.t)+'…</a><button class="del" data-i="'+i+'" aria-label="刪除書籤">×</button></div>'}).join('');
+}
+$('#marklist').addEventListener('click',function(e){
+  var d=e.target.closest('.del');
+  if(d){S.marks.splice(+d.getAttribute('data-i'),1);save();renderMarks();return}
+  var a=e.target.closest('a[data-i]');
+  if(a){e.preventDefault();var m=S.marks[+a.getAttribute('data-i')];var i=resolve(m.b,m.t);if(i>=0)go(i);else toast('找不到這個書籤的位置')}
+});
+$('#addmark').onclick=function(){
+  if(!inBook()){toast('請先進入正文再加書籤');return}
+  var i=topIdx();
+  if(S.marks.some(function(m){return m.b===i})){toast('這一段已有書籤');return}
+  S.marks.unshift({b:i,c:chTitle(chOf(i)),t:texts[i].slice(0,26)});
+  if(S.marks.length>100)S.marks.pop();
+  save();renderMarks();toast('已加入書籤');
+};
+
+/* ===== 螢光標註與筆記 ===== */
+if(!S.hl)S.hl=[];
+var pending=null,selT=null,edG=null,noteT=null;
+function members(g){return S.hl.filter(function(a){return a.g===g}).sort(function(x,y){return x.b-y.b||x.s-y.s})}
+function groups(){
+  var m={},order=[];
+  S.hl.forEach(function(a){if(!m[a.g]){m[a.g]=[];order.push(m[a.g])}m[a.g].push(a)});
+  order.forEach(function(g){g.sort(function(x,y){return x.b-y.b||x.s-y.s})});
+  order.sort(function(x,y){return x[0].b-y[0].b||x[0].s-y[0].s});
+  return order;
+}
+function anchor(a){
+  var el=blocks[a.b];if(!el)return false;
+  var tc=el.textContent;
+  if(tc.slice(a.s,a.e)===a.t)return true;
+  var i=tc.indexOf(a.t);if(i>=0){a.s=i;a.e=i+a.t.length;return true}
+  for(var k=0;k<blocks.length;k++){var x=blocks[k].textContent.indexOf(a.t);if(x>=0){a.b=k;a.s=x;a.e=x+a.t.length;return true}}
+  return false;
+}
+function wrap(a){
+  var el=blocks[a.b];if(!el)return;
+  var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),nodes=[],n;
+  while((n=w.nextNode()))nodes.push(n);
+  var pos=0,hn=false;
+  var first=members(a.g)[0];hn=!!(first&&first.n);
+  nodes.forEach(function(tn){
+    var len=tn.nodeValue.length,ns=pos,ne=pos+len;pos=ne;
+    var s=Math.max(a.s,ns),e=Math.min(a.e,ne);
+    if(s>=e)return;
+    var node=tn;
+    if(e<ne)node.splitText(e-ns);
+    if(s>ns)node=node.splitText(s-ns);
+    var sp=document.createElement('span');
+    sp.className='hl c'+a.c+(hn?' hn':'');
+    sp.setAttribute('data-a',a.id);sp.setAttribute('data-g',a.g);
+    node.parentNode.insertBefore(sp,node);sp.appendChild(node);
+  });
+}
+function unwrap(id){
+  $$('.hl[data-a="'+id+'"]').forEach(function(sp){
+    var p=sp.parentNode;while(sp.firstChild)p.insertBefore(sp.firstChild,sp);
+    p.removeChild(sp);p.normalize();
+  });
+}
+function styleGroup(g){
+  var m=members(g);if(!m.length)return;
+  $$('.hl[data-g="'+g+'"]').forEach(function(sp){
+    sp.className='hl c'+m[0].c+(m[0].n?' hn':'');
+  });
+}
+function initHl(){
+  var dirty=false;
+  S.hl.forEach(function(a){
+    var ob=a.b,os=a.s;
+    if(anchor(a)){if(a.b!==ob||a.s!==os)dirty=true;wrap(a)}
+  });
+  if(dirty)save();
+}
+
+/* 由選取範圍取得各段落的片段 */
+function segsFromRange(rg){
+  var segs=[];
+  for(var i=0;i<blocks.length;i++){
+    var b=blocks[i];
+    if(!rg.intersectsNode(b))continue;
+    var tc=b.textContent,s=0,e=tc.length,pr=document.createRange();
+    if(b.contains(rg.startContainer)){pr.selectNodeContents(b);pr.setEnd(rg.startContainer,rg.startOffset);s=pr.toString().length}
+    if(b.contains(rg.endContainer)){pr.selectNodeContents(b);pr.setEnd(rg.endContainer,rg.endOffset);e=pr.toString().length}
+    var t=tc.slice(s,e);
+    s+=t.length-t.replace(/^\s+/,'').length;
+    e-=t.length-t.replace(/\s+$/,'').length;
+    if(e<=s)continue;
+    segs.push({b:i,s:s,e:e,t:tc.slice(s,e)});
+    if(segs.length>12)return null;
+  }
+  return segs;
+}
+function overlaps(segs){
+  return segs.some(function(sg){return S.hl.some(function(a){return a.b===sg.b&&sg.s<a.e&&sg.e>a.s})});
+}
+function hideTools(){hlbar.classList.remove('on');pending=null}
+function onSel(){
+  var sel=window.getSelection();
+  if(!sel||sel.rangeCount===0||sel.isCollapsed){hideTools();return}
+  var rg=sel.getRangeAt(0),el=rg.commonAncestorContainer;
+  el=el.nodeType===1?el:el.parentElement;
+  if(!el||el.closest('#drawer,#search,#ed,#tb,#hlbar,#toast,.tocpage')){hideTools();return}
+  var segs=segsFromRange(rg);
+  if(segs===null){hideTools();toast('一次選取的範圍太大');return}
+  if(!segs.length){hideTools();return}
+  var conflict=overlaps(segs);
+  pending=conflict?null:segs;
+  hlbar.classList.add('on');hlbar.classList.toggle('msg',conflict);
+  var rects=rg.getClientRects(),r=rects.length?rects[rects.length-1]:rg.getBoundingClientRect();
+  var w=hlbar.offsetWidth,h=hlbar.offsetHeight;
+  var left=Math.max(8,Math.min(innerWidth-w-8,r.left));
+  var top=r.bottom+12;
+  if(top+h>innerHeight-8)top=Math.max(56,r.top-h-12);
+  hlbar.style.left=left+'px';hlbar.style.top=top+'px';
+}
+document.addEventListener('selectionchange',function(){clearTimeout(selT);selT=setTimeout(onSel,220)});
+hlbar.addEventListener('pointerdown',function(e){
+  var b=e.target.closest('button');if(!b)return;
+  e.preventDefault();
+  if(b.hasAttribute('data-c'))createHl(+b.getAttribute('data-c'),false);
+  else if(b.getAttribute('data-act')==='note')createHl(0,true);
+});
+function createHl(color,openNote){
+  if(!pending)return;
+  var segs=pending,g='g'+Date.now().toString(36)+Math.random().toString(36).slice(2,5);
+  var sel=window.getSelection();if(sel)sel.removeAllRanges();
+  hideTools();
+  segs.forEach(function(sg,k){
+    var a={id:g+'_'+k,g:g,b:sg.b,s:sg.s,e:sg.e,t:sg.t,c:color,n:''};
+    S.hl.push(a);wrap(a);
+  });
+  save();renderHl();
+  if(openNote)openEdit(g,true);else toast('已標註');
+}
+
+/* 編輯面板 */
+function openEdit(g,focus){
+  var m=members(g);if(!m.length)return;
+  edG=g;
+  var q=m.map(function(a){return a.t}).join(' … ');if(q.length>120)q=q.slice(0,120)+'…';
+  $('#ed-q').textContent=q;
+  $('#ed-n').value=m[0].n||'';
+  $$('#ed .sw').forEach(function(b){b.classList.toggle('on',+b.getAttribute('data-ec')===m[0].c)});
+  openP(ed);
+  if(focus)setTimeout(function(){$('#ed-n').focus()},80);
+}
+$('#ed-n').addEventListener('input',function(){
+  var m=members(edG);if(!m.length)return;
+  m[0].n=this.value;
+  styleGroup(edG);
+  clearTimeout(noteT);noteT=setTimeout(function(){save();renderHl()},300);
+});
+$$('#ed .sw').forEach(function(b){b.onclick=function(){
+  var m=members(edG);if(!m.length)return;
+  var c=+b.getAttribute('data-ec');
+  m.forEach(function(a){a.c=c});styleGroup(edG);
+  $$('#ed .sw').forEach(function(x){x.classList.toggle('on',x===b)});
+  save();renderHl();
+}});
+$('#ed-ok').onclick=function(){save();renderHl();closeAll()};
+function removeGroup(g){
+  members(g).forEach(function(a){unwrap(a.id)});
+  S.hl=S.hl.filter(function(a){return a.g!==g});
+  save();renderHl();
+}
+$('#ed-del').onclick=function(){
+  var m=members(edG);
+  if(m.length&&m[0].n&&!confirm('這則標註含有筆記，確定刪除？'))return;
+  removeGroup(edG);closeAll();toast('已刪除標註');
+};
+document.addEventListener('click',function(e){
+  var sp=e.target.closest&&e.target.closest('.hl');if(!sp)return;
+  var sel=window.getSelection();if(sel&&!sel.isCollapsed)return;
+  openEdit(sp.getAttribute('data-g'),false);
+});
+
+/* 標註清單與匯出 */
+function renderHl(){
+  var box=$('#hllist'),gs=groups();
+  $('#hlcount').textContent=gs.length?('共 '+gs.length+' 則標註'):'';
+  if(!gs.length){box.innerHTML='<div class="empty">選取正文任一段文字，即可畫螢光或寫筆記。點選已標註的文字可修改或刪除。</div>';return}
+  box.innerHTML=gs.map(function(g){
+    var q=g.map(function(a){return a.t}).join(' … ');if(q.length>90)q=q.slice(0,90)+'…';
+    var ct=blocks[g[0].b]?chTitle(chOf(g[0].b)):'（位置遺失）';
+    return '<div class="an"><a href="#" data-g="'+g[0].g+'"><small>'+esc(ct)+'</small><span class="q c'+g[0].c+'">'+esc(q)+'</span>'+(g[0].n?'<span class="nt">✎ '+esc(g[0].n)+'</span>':'')+'</a><button class="del" data-g="'+g[0].g+'" aria-label="刪除標註">×</button></div>';
+  }).join('');
+}
+$('#hllist').addEventListener('click',function(e){
+  var d=e.target.closest('.del');
+  if(d){var g=d.getAttribute('data-g'),m=members(g);if(m.length&&m[0].n&&!confirm('這則標註含有筆記，確定刪除？'))return;removeGroup(g);return}
+  var a=e.target.closest('a[data-g]');
+  if(a){e.preventDefault();var mm=members(a.getAttribute('data-g'));if(mm.length&&blocks[mm[0].b])go(mm[0].b);else toast('找不到這則標註的位置')}
+});
+function exportText(){
+  var gs=groups().filter(function(g){return blocks[g[0].b]});
+  if(!gs.length)return '';
+  var L=['《解脫莊嚴寶論》標註與筆記','共 '+gs.length+' 則',''],cur=null;
+  gs.forEach(function(g){
+    var ct=chTitle(chOf(g[0].b));
+    if(ct!==cur){cur=ct;L.push('【'+ct+'】')}
+    L.push('▍'+g.map(function(a){return a.t}).join(' … '));
+    if(g[0].n)L.push('　✎ '+g[0].n.replace(/\n/g,'\n　　'));
+    L.push('');
+  });
+  return L.join('\n');
+}
+function copyText(t){
+  if(navigator.clipboard&&window.isSecureContext)return navigator.clipboard.writeText(t);
+  return new Promise(function(res,rej){
+    var ta=document.createElement('textarea');ta.value=t;ta.style.cssText='position:fixed;opacity:0;top:0';
+    document.body.appendChild(ta);ta.select();
+    var ok=false;try{ok=document.execCommand('copy')}catch(e){}
+    document.body.removeChild(ta);ok?res():rej();
+  });
+}
+$('#hl-copy').onclick=function(){
+  var t=exportText();if(!t){toast('目前沒有標註可匯出');return}
+  copyText(t).then(function(){toast('已複製全部標註')},function(){toast('複製失敗，請改用下載')});
+};
+$('#hl-dl').onclick=function(){
+  var t=exportText();if(!t){toast('目前沒有標註可匯出');return}
+  var url=URL.createObjectURL(new Blob(['\ufeff'+t],{type:'text/plain;charset=utf-8'}));
+  var a=document.createElement('a');a.href=url;a.download='解脫莊嚴寶論-標註筆記.txt';
+  document.body.appendChild(a);a.click();document.body.removeChild(a);
+  setTimeout(function(){URL.revokeObjectURL(url)},1500);
+};
+
+var qi=$('#q'),res=$('#res'),sT=null;
+qi.addEventListener('input',function(){clearTimeout(sT);sT=setTimeout(doSearch,180)});
+function doSearch(){
+  var raw=qi.value.trim(),q=raw.toLowerCase();
+  if(!q){res.innerHTML='<div class="empty">輸入關鍵字搜尋全書，例如「如來藏」、「暇滿」、「菩提心」。</div>';return}
+  var out=[],n=0;
+  for(var i=0;i<texts.length;i++){
+    var t=texts[i],p=t.toLowerCase().indexOf(q);
+    if(p<0)continue;n++;
+    if(out.length<80){
+      var s=Math.max(0,p-16),e=Math.min(t.length,p+q.length+44);
+      out.push('<a class="hit" href="#b'+i+'" data-b="'+i+'"><small>'+esc(chTitle(chOf(i)))+'</small>'+(s>0?'…':'')+esc(t.slice(s,p))+'<mark>'+esc(t.slice(p,p+q.length))+'</mark>'+esc(t.slice(p+q.length,e))+(e<t.length?'…':'')+'</a>');
+    }
+  }
+  res.innerHTML=n?'<div class="cnt">共 '+n+' 段符合'+(n>80?'（顯示前 80 段）':'')+'</div>'+out.join(''):'<div class="empty">找不到「'+esc(raw)+'」</div>';
+}
+res.addEventListener('click',function(e){var a=e.target.closest('a[data-b]');if(a){e.preventDefault();go(+a.getAttribute('data-b'))}});
+
+refreshRead();
+initHl();
+function restore(){
+  if(!location.hash&&S.pos){var i=resolve(S.pos.b,S.pos.t);if(i>=0){blocks[i].scrollIntoView({block:'start'});lastY=window.pageYOffset;toast('已回到上次閱讀位置')}}
+  ready=true;onScroll();
+}
+var fired=false;function once(){if(fired)return;fired=true;requestAnimationFrame(restore)}
+if(document.fonts&&document.fonts.ready){document.fonts.ready.then(once);setTimeout(once,1800)}else once();
+})();
+</script></body></html>
