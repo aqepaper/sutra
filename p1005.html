@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>講義18-19｜染淨互熏——淨熏　完整筆記</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F5F3EF;
+    --paper:#FFFFFF;
+    --ink:#2C2C2C;
+    --ink-soft:#6B665F;
+    --line:#E0DACE;
+    --moss:#7D8272;
+    --moss-light:#E9EAE3;
+    --gold-text:#704B19;
+    --gold-light:#F8F0E3;
+    --shu:#B5432F;
+    --radius:4px;
+  }
+
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+
+  body{
+    margin:0;
+    background-color:var(--bg);
+    background-image:
+      radial-gradient(rgba(0,0,0,.012) 1px, transparent 1px),
+      radial-gradient(rgba(0,0,0,.012) 1px, transparent 1px);
+    background-size:3px 3px;
+    background-position:0 0, 1.5px 1.5px;
+    font-family:"Noto Sans TC", sans-serif;
+    font-weight:400;
+    font-size:18px;
+    line-height:1.95;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{ max-width:600px; margin:0 auto; padding:0 24px 80px; }
+
+  /* ===== 開頭 ===== */
+  .head{ padding:56px 0 26px; border-bottom:1px solid var(--line); }
+  .head .eyebrow{
+    font-family:"Noto Serif TC", serif; font-weight:500;
+    font-size:14px; letter-spacing:.2em; color:var(--ink-soft);
+  }
+  .head .eyebrow::before{
+    content:""; display:inline-block; width:6px; height:6px; border-radius:50%;
+    background:var(--shu); margin-right:10px; vertical-align:middle; position:relative; top:-1px;
+  }
+  .head h1{
+    font-family:"Noto Serif TC", serif; font-weight:500;
+    font-size:28px; letter-spacing:.06em; line-height:1.55; margin:18px 0 6px;
+  }
+  .head .sub{ color:var(--ink-soft); margin:0; }
+
+  .toc{ padding:22px 0; border-bottom:1px solid var(--line); }
+  .toc ul{ margin:0; }
+  .toc a{ color:var(--ink); text-decoration:none; border-bottom:1px solid var(--line); }
+
+  /* ===== 大段 ===== */
+  section.part{ padding:36px 0 10px; border-bottom:1px solid var(--line); }
+  section.part:last-of-type{ border-bottom:none; }
+
+  .meta{
+    font-size:18px; color:var(--ink-soft); margin:2px 0 0; line-height:1.8;
+  }
+
+  /* ===== 科判標題 ===== */
+  .kp{ margin:28px 0 8px; }
+  .kp .t{
+    font-family:"Noto Serif TC", serif; font-weight:500;
+    letter-spacing:.05em; line-height:1.6; color:var(--ink);
+  }
+  .kp .d{
+    display:block; font-size:18px; color:var(--ink-soft);
+    font-weight:300; line-height:1.8; margin-top:2px;
+  }
+  .kp.l1 .t{ font-size:22px; }
+  .kp.l1{ margin-top:8px; }
+  .kp.l2 .t{ font-size:20px; }
+  .kp.l2{ padding-left:12px; border-left:2px solid var(--moss); }
+  .kp.l3 .t{ font-size:19px; color:var(--gold-text); }
+  .kp.l3{ padding-left:12px; border-left:2px solid var(--line); }
+  .kp.l4 .t{ font-size:18px; color:var(--gold-text); }
+  .kp.l5 .t{ font-size:18px; }
+  .kp.l5{ margin-top:22px; }
+  .kp.i1{ margin-left:0; }
+  .kp.i2{ margin-left:8px; }
+  .kp.i3{ margin-left:16px; }
+  .kp.i4{ margin-left:24px; }
+
+  /* ===== 經文 ===== */
+  .sutra-label{
+    font-family:"Noto Serif TC", serif; font-weight:500;
+    font-size:18px; letter-spacing:.05em; color:var(--moss);
+    margin:18px 0 6px;
+  }
+  .sutra{
+    font-family:"Noto Serif TC", serif; font-weight:400;
+    font-size:19px; line-height:2.05; letter-spacing:.02em;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-left:2px solid var(--moss);
+    border-radius:var(--radius);
+    padding:14px 16px;
+    margin:0 0 16px;
+  }
+
+  /* ===== 解說與學習重點 ===== */
+  .blk-label{
+    font-family:"Noto Serif TC", serif; font-weight:500;
+    font-size:18px; letter-spacing:.05em; color:var(--ink);
+    margin:18px 0 6px;
+  }
+  .blk-label span{ font-family:"Noto Sans TC", sans-serif; font-weight:300; color:var(--ink-soft); letter-spacing:0; }
+  .blk-label.study{ color:var(--gold-text); }
+
+  p{ margin:0 0 12px; }
+  strong{ font-weight:500; color:var(--gold-text); }
+
+  .quote{
+    font-family:"Noto Serif TC", serif;
+    background:var(--gold-light);
+    border-radius:var(--radius);
+    padding:10px 14px; margin:0 0 12px;
+  }
+
+  ul{ list-style:none; padding:0; margin:0 0 12px; }
+  ul > li{ position:relative; padding-left:1.2em; margin-bottom:8px; }
+  ul > li::before{ content:"—"; position:absolute; left:0; top:0; color:var(--moss); }
+  ul ul{ margin:6px 0 4px; }
+
+  ol{ list-style:none; padding:0; margin:0 0 12px; counter-reset:n; }
+  ol > li{ counter-increment:n; position:relative; padding-left:2em; margin-bottom:10px; }
+  ol > li::before{
+    content:counter(n); position:absolute; left:0; top:0; width:1.2em; text-align:center;
+    font-family:"Noto Serif TC", serif; font-weight:500; color:var(--moss);
+    border-bottom:1px solid var(--moss); line-height:1.5;
+  }
+
+  hr.thin{ border:none; border-top:1px dashed var(--line); margin:30px 0 4px; }
+
+  .recap{ margin-top:6px; }
+
+  footer{
+    text-align:center; font-size:14px; letter-spacing:.06em;
+    color:var(--ink-soft); padding:34px 0 0;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <div class="eyebrow">大乘起信論</div>
+    <h1>講義18-19<br>染淨互熏——淨熏</h1>
+    <p class="sub">完整筆記（P141–P154）</p>
+  </div>
+
+  <div class="toc">
+    <ul>
+      <li><a href="#p1">第一大段　總標：淨熏之總綱</a></li>
+      <li><a href="#p2">第二大段　廣釋：能熏之心與所熏之緣</a></li>
+      <li><a href="#p3">第三大段　結顯：染淨盡不盡義</a></li>
+      <li><a href="#p4">全篇三段總回顧</a></li>
+    </ul>
+  </div>
+
+  <!-- ================= 第一大段 ================= -->
+  <section class="part" id="p1">
+    <div class="kp l1">
+      <div class="t">第一大段　總標：淨熏之總綱</div>
+      <span class="d">對應科判：寅一、略釋<br>對應頁數：P141–P143<br>包含經文：第1段～第3段</span>
+    </div>
+
+    <div class="kp l2">
+      <div class="t">寅一、略釋</div>
+      <span class="d">概要性地解釋「淨熏」的總體相貌與核心綱要，先點出大綱，不細分。</span>
+    </div>
+
+    <div class="sutra-label">第1段經文（P141）</div>
+    <div class="sutra">云何熏習起淨法不斷？</div>
+
+    <div class="blk-label">文義解說</div>
+    <p>本論在此提出一個核心問題：眾生本具的清淨法（佛性、真如），是透過什麼樣的「熏習」作用，才能夠相續不斷，最終成就佛果？</p>
+
+    <div class="blk-label study">學習重點 <span>（何謂淨熏？）</span></div>
+    <p>引用明・憨山大師《起信論直解・卷下》的解釋，清淨法的熏習有兩個層面：</p>
+    <ol>
+      <li><strong>本熏：</strong>眾生本具的「真如」（本覺）在內部發揮作用，去熏習「無明」。因為這股內在力量的推動，眾生開始發心修行，讓身口意轉變為清淨的業行，最終成就清淨的業果。這是清淨法最根本的來源，稱為「本熏」。</li>
+      <li><strong>新熏：</strong>眾生發心修行後，這股清淨的「因」反過來熏習真如，讓真如的勢力增強。這是後天修行累積的力量，稱為「新熏」。</li>
+    </ol>
+
+    <hr class="thin">
+
+    <div class="sutra-label">第2段經文（P142）</div>
+    <div class="sutra">所謂以有真如法故，能熏習無明。以熏習因緣力故，則令妄心厭生死苦，樂求涅槃。以此妄心有厭求因緣故，即熏習真如。</div>
+
+    <div class="blk-label">文義解說</div>
+    <p>這段經文將「本熏」與「新熏」的因果關係說得非常清楚：</p>
+    <ul>
+      <li><strong>真如法有二：</strong>一是「真如自體為因」（眾生本具的內在佛性），二是「真如所流教法為緣」（佛菩薩所說的經典教法）。因為有這內因外緣的熏習力，眾生才會產生「厭離生死苦、欣求涅槃樂」的心。</li>
+      <li><strong>本熏（真如熏無明）：</strong>眾生因為厭苦求樂，開始發心修行，捨棄染污、趨向清淨，最終成就清淨的業力。這一切都是真如內熏的力量，所以叫「本熏」。</li>
+      <li><strong>新熏（妄心熏真如）：</strong>眾生這顆「厭求」的妄心，本身成了清淨的「因」；所起的清淨行為，成了清淨的「緣」。這股清淨的因緣反過來熏習真如，讓真如的勢力增強，這叫「新熏」。</li>
+    </ul>
+
+    <div class="blk-label study">學習重點 <span>（真如熏無明為本熏／妄心熏真如為新熏）</span></div>
+    <ul>
+      <li>圓瑛法師《講義》云：</li>
+    </ul>
+    <div class="quote">「真如法有二：一、真如自體為因，二、真如所流教法為緣。以此熏習因緣力故，則令眾生厭苦求樂，發心修行，捨染趣淨，得成淨業。此本熏也。」</div>
+    <ul>
+      <li>又云：</li>
+    </ul>
+    <div class="quote">「妄心受熏，能起厭求。即此厭求之心為淨因，所起淨行為淨緣，反熏真如，增其勢力。此新熏也。」</div>
+
+    <div class="blk-label study">補充開示 <span>（熏習淨法，相續不斷）</span></div>
+    <p>惟覺安公老和尚開示，聽到這個法門後，必須<strong>不斷地薰修</strong>。所謂「從聞思修入三摩地」，聽一遍不夠，要聽兩遍、三遍、十遍、百遍、千遍、萬遍。透過這樣反覆的薰修，慢慢就能道業成就。</p>
+    <p>當我們聽到《大乘起信論》這個法門，知道這念心的道理，了解佛性本具，人人都有覺性、人人都能成佛。此時，就要以「始覺」之智（開始覺悟的智慧），去觀照「本覺」之理（本具的真理）。現在有了始覺，就是開始覺悟了。</p>
+    <p>佛法有方便法門、有究竟法門。過去我們接觸的可能只是方便法門，現在了解了「人人皆有佛性」的道理，就要慢慢地薰習。薰習久了以後，信心自然而然就會增長，最終就能成就道業。</p>
+
+    <hr class="thin">
+
+    <div class="sutra-label">第3段經文（P142–P143）</div>
+    <div class="sutra">自信己性，知心妄動，無前境界，修遠離法。以如實知無前境界故，種種方便，起隨順行，不取不念，乃至久遠熏習力故，無明則滅。以無明滅故，心無有起；以無起故，境界隨滅。以因緣俱滅故，心相皆盡，名得涅槃，成自然業。</div>
+
+    <div class="blk-label">文義解說</div>
+    <p>這段經文清晰勾勒出淨熏從「因地」到「果地」的階級次第：</p>
+    <ol>
+      <li><strong>十信位（自信己性）：</strong>修行者發起大乘正信，相信自己有真如自性（佛性），這是修行的起點。</li>
+      <li><strong>十解位（知心妄動，無前境界）：</strong>了知一切外在境界，都是由一念心妄動而產生，其本體是空的、無的。</li>
+      <li><strong>行向位（修遠離法）：</strong>依解起行，修習唯識尋思等比觀，開始遠離對外在境界的執著。</li>
+      <li><strong>初地以上（以如實知無前境界故⋯⋯）：</strong>如實證知沒有真實的境界可得，證得「現量智」。此時生起種種方便，隨順真如之理而行。所謂「不取」（所取的外相沒有了）、「不念」（能念的心也不生了）。</li>
+      <li><strong>久遠熏修與果地：</strong>經過三大阿僧祇劫的長久熏修，無明終於消滅。無明滅了，妄心就不起作用（心無有起）；妄心不起，外在境界就跟著消滅（境界隨滅）。當因（無明）和緣（境界）都徹底滅盡，心相全部窮盡，這就叫「涅槃」。此時會生起不可思議的業用，這叫「自然業」。</li>
+    </ol>
+
+    <div class="blk-label study">學習重點 <span>（因地久熏，次第進修）</span></div>
+    <p>此明淨熏功能，從因至果，階級次第也。</p>
+    <ul>
+      <li>自信己性者，即發起大乘正信，信有真如自性，此當<strong>十信位</strong>。</li>
+      <li>知心妄動二句，了知一切境界，皆由一心妄動而有，其體本無，此當<strong>十解位</strong>。</li>
+      <li>修遠離法者，是依解起行，修唯識尋思等比觀，此當<strong>行向位</strong>。</li>
+      <li>以如實知下，當初地以上，稱真如實理而知，無有境界可得，證現量智，異前比觀也。種種方便，起隨順行，即十地位中，稱理所起之圓行。</li>
+      <li>不取者，所取無相；不念者，能念不生。久遠即三祇熏修也。（上屬因地）</li>
+    </ul>
+
+    <div class="blk-label study">學習重點 <span>（果地惑盡，證真起用）</span></div>
+    <p>（下屬果地）</p>
+    <ul>
+      <li>無明滅，則根本無明盡也。心無有起者，以無明既滅，妄心亦盡也。境界隨滅者，以妄心既盡，妄境亦空也，即翻前三種染熏。</li>
+      <li>因謂無明，緣謂境界，心相謂六染，俱滅皆盡，即前云：「因滅故，不相應心滅；緣滅故，相應心滅。」復本心源，名得涅槃；起不思議業用，名自然業。</li>
+    </ul>
+
+    <div class="blk-label study">祖師補充 <span>（明・憨山大師《起信論直解・卷下》）</span></div>
+    <p>至此真如出煩惱礙、智礙也。（P144）</p>
+  </section>
+
+  <!-- ================= 第二大段 ================= -->
+  <section class="part" id="p2">
+    <div class="kp l1">
+      <div class="t">第二大段　廣釋：能熏之心與所熏之緣</div>
+      <span class="d">對應科判：寅二、廣釋<br>對應頁數：P144–P153<br>包含經文：第4段～第17段</span>
+    </div>
+
+    <div class="kp l2">
+      <div class="t">寅二、廣釋</div>
+      <span class="d">廣泛且詳細地展開說明「淨熏」的具體內容，分為能熏的「心」與所熏的「緣」來探討。</span>
+    </div>
+
+    <!-- 卯一 -->
+    <div class="kp l2">
+      <div class="t">卯一、妄心熏習</div>
+      <span class="d">眾生受真如內熏後，產生厭苦求樂的「妄心」，這顆妄心反過來熏習真如。分為凡夫二乘的「事識」與菩薩的「意」兩種層次。</span>
+    </div>
+
+    <div class="sutra-label">第4段經文（P144）</div>
+    <div class="sutra">妄心熏習義有二種，云何為二？一者分別事識熏習，依諸凡夫、二乘人等，厭生死苦，隨力所能，以漸趣向無上道故。二者意熏習，謂諸菩薩發心勇猛，速趣涅槃故。</div>
+
+    <div class="blk-label">文義解說</div>
+    <p>「妄心」是眾生受真如內熏後，產生「厭離生死、欣求涅槃」的那一念心。這顆妄心反過來熏習真如，又分為兩種層次：</p>
+    <ol>
+      <li><strong>分別事識熏習（漸修）：</strong>對象是凡夫、二乘人。他們依賴「意識」（分別事識）來修行，雖然也厭離生死苦，但心中仍有「法執」，認為心外真的有境界，不了解「萬法唯心」的道理。只能隨著自己有限的智力作意修習，進步非常緩慢（漸），距離大菩提既疏遠又漫長。</li>
+      <li><strong>意熏習（速成）：</strong>對象是諸菩薩。這裡的「意」指業識或前五意。菩薩知道一切法唯是識量，捨棄對事識外境的執著，直接觀照真如法性之理。因為通達了根本（達本），發心勇猛，趣向大涅槃既親近又快速（速）。</li>
+    </ol>
+
+    <div class="blk-label study">學習重點 <span>（受熏妄心，返流淨行）</span></div>
+    <ul>
+      <li>眾生受真如內熏，產生了厭苦求樂的心（本熏）。這顆厭求的心反過來成為清淨的因，所起的清淨行為成為淨緣，反熏真如（新熏）。</li>
+      <li>圓瑛法師云：</li>
+    </ul>
+    <div class="quote">「以此已受熏之意識資持力故，發心修行。此依凡夫二乘，尚有分別法執，執心外實有境界，故雖厭生死苦，不了唯心道理，但隨自智力所能，作意修習。以不達本故，趣大菩提，疏而且遠，故曰漸。」</div>
+    <div class="quote">「知一切法，唯是識量，發心勇猛，捨彼事識外計分別，直觀真如法性之理。法法皆真，法法皆如。以達本故，向大涅槃，親而且近，故曰速也。」</div>
+
+    <!-- 卯二 -->
+    <hr class="thin">
+    <div class="kp l2">
+      <div class="t">卯二、真如熏習</div>
+      <span class="d">眾生本具的「真如」佛性，從內部熏習無明，分為「自體相」（內因）和「用」（外緣）兩種熏習。</span>
+    </div>
+
+    <div class="kp l3">
+      <div class="t">辰一、標數列名</div>
+      <span class="d">標舉出真如熏習的種類數目，列出「自體相熏習」和「用熏習」這兩個名稱。</span>
+    </div>
+
+    <div class="sutra-label">第5段經文（P145）</div>
+    <div class="sutra">真如熏習義有二種，云何為二？一者自體相熏習，二者用熏習。</div>
+
+    <div class="blk-label">文義解說</div>
+    <p>真如的熏習分為兩種：一是「自體相熏習」（內在因），二是「用熏習」（外在緣）。</p>
+
+    <div class="blk-label study">學習重點 <span>（體相內熏為因，用熏外助為緣）</span></div>
+    <ul>
+      <li><strong>體：</strong>眾生本具的無漏法身理體，即「正因佛性」。</li>
+      <li><strong>相：</strong>自性本具的無漏功德之相，即「稱性功德」。</li>
+      <li>此二者皆屬真如，能為眾生作內熏之因。</li>
+      <li><strong>用：</strong>諸佛菩薩的法身業用，能為眾生作外熏助緣。用從體起，體即真如，生佛同具。在諸佛為法身，在眾生為本覺。</li>
+    </ul>
+
+    <div class="kp l3">
+      <div class="t">辰二、別釋</div>
+      <span class="d">分別詳細解釋「自體相熏習」和「用熏習」的具體內涵。</span>
+    </div>
+
+    <!-- 巳一 -->
+    <div class="kp l4">
+      <div class="t">巳一、自體相熏習</div>
+      <span class="d">解釋眾生本具的真如體性（正因佛性）與功德之相，如何作為內在的因，冥冥中熏習眾生，促使其發心修行。</span>
+    </div>
+
+    <div class="kp l5 i1">
+      <div class="t">午一、正顯</div>
+      <span class="d">正面直接顯示自體相熏習的作用，即眾生本具無漏法，能令眾生厭生死苦、樂求涅槃。</span>
+    </div>
+
+    <div class="sutra-label">第6段經文（P146）</div>
+    <div class="sutra">自體相熏習者，從無始世來，具無漏法，備有不思議業，作境界之性。依此二義，恆常熏習。以有力故，能令眾生厭生死苦、樂求涅槃，自信己身有真如法，發心修行。</div>
+
+    <div class="blk-label">文義解說</div>
+    <p>這段經文是解釋「真如熏習」中的第一種——<strong>自體相熏習</strong>，也就是眾生內在的「正因佛性」是如何發揮作用的：</p>
+    <ul>
+      <li><strong>「從無始世來，具無漏法」：</strong>眾生從無始劫以來，雖然在六道輪迴，但本具的「真如」從未失去。這個真如包含了「體」和「相」兩種無漏的功德法。</li>
+      <li><strong>「備有不思議業，作境界之性」：</strong>這個本具的真如，具備了不可思議的業用（冥冥中發揮作用，不是凡夫的心意識所能思議的）。而且，它能作為眾生修行時所觀照的「境界之性」（即真如理體本身，或是能觀之智所緣的境界）。</li>
+      <li><strong>「依此二義，恆常熏習」：</strong>依著「體」（無漏法身理體）與「相」（無漏功德之相）這兩種意義，真如恆常不斷地在眾生內心深處發揮熏習的作用。</li>
+      <li><strong>「以有力故，能令眾生厭生死苦、樂求涅槃，自信己身有真如法，發心修行」：</strong>因為這股內在熏習的力量非常強大，所以能促使眾生（在潛移默化中）生起「厭離生死苦、欣求涅槃樂」的心。眾生會開始相信自己身中確實有真如法，相信自己能成佛，進而發起修行。</li>
+    </ul>
+
+    <div class="blk-label study">學習重點 <span>（真如體相內熏，令眾生發心修行）</span></div>
+    <ul>
+      <li>真如的內熏是一種「冥熏」（不知不覺中發揮作用），凡夫的心意識無法測度，故稱「不思議業」。</li>
+      <li>真如不僅能熏習眾生的「妄心」讓它生起厭求（成能觀智），真如本身也是「所觀境」，這就是「境智一如」。</li>
+      <li>因為有這種內熏的力量，眾生才能建立大乘正信（十信位），相信「是心是佛，是心作佛」，從而發心修行。這是眾生修行成佛的<strong>最根本依據</strong>。</li>
+    </ul>
+
+    <div class="kp l5 i1">
+      <div class="t">午二、釋疑</div>
+      <span class="d">解釋疑難。有人問：眾生皆有真如，為何信解有差別？答案是：無明厚薄不同所致。</span>
+    </div>
+
+    <div class="kp l5 i2">
+      <div class="t">未一、問</div>
+      <span class="d">提出疑問：眾生皆具真如，應同時成佛，為何有信不信、先後差別？</span>
+    </div>
+
+    <div class="sutra-label">第7段經文（P146）</div>
+    <div class="sutra">問曰：若如是義者，一切眾生悉有真如，等皆熏習，云何有信、無信，無量前後差別？皆應一時自知有真如法，勤修方便，等入涅槃。</div>
+
+    <div class="blk-label">文義解說</div>
+    <p>提問：既然眾生都有真如，也都平等地受到真如熏習，為什麼會有信、不信，以及先後、利鈍的無量差別？應該一瞬間大家都同時開悟、同時入涅槃才對啊？</p>
+
+    <div class="kp l5 i2">
+      <div class="t">未二、答</div>
+      <span class="d">回答：真如本一，但無明厚薄不同，故有信證差別。又分為約無明厚薄和約因緣具闕兩部分來回答。</span>
+    </div>
+
+    <div class="kp l5 i3">
+      <div class="t">申一、約無明厚薄</div>
+      <span class="d">約無明的厚薄來說明，無明厚者煩惱障重，信證則慢；無明薄者煩惱障輕，信證則快。</span>
+    </div>
+
+    <div class="sutra-label">第8段經文（P147）</div>
+    <div class="sutra">答曰：真如本一，而有無量無邊無明，從本已來，自性差別，厚薄不同故。過恆沙等上煩惱，依無明起差別；我見愛染煩惱，依無明起差別。如是一切煩惱，依於無明所起，前後無量差別，唯如來能知故。</div>
+
+    <div class="blk-label">文義解說</div>
+    <p>回答：真如本體雖然是平等一味的，但眾生從無始以來，伴隨真如的「無明」卻有無量無邊，厚薄深淺各不相同。微細的「所知障」（恆沙上煩惱，細而難斷，故取證遲）和粗重的「煩惱障」（我見愛染煩惱，麤而易斷，故取證速），都是依無明而生起，差別無量。這唯有如來才能完全了知。</p>
+    <p>結論：信與不信、利鈍遲速的差別，是「無明惑染」的過失，<strong>不是真如本身有差別</strong>。</p>
+
+    <div class="blk-label study">學習重點 <span>（無明厚薄不同，故有信證差別）</span></div>
+    <p>此答意有兩種差別不等：一是眾生雖同稟真如一性，但根本無明內熏厚薄不等，故機有利鈍、邪正、信不信之差別。二是雖同為無明內熏，所熏成之煩惱麤細不等，故修證有遲速之差別。</p>
+
+    <div class="kp l5 i3">
+      <div class="t">申二、約因緣具闕</div>
+      <span class="d">約因緣的具足與缺失來說明。僅有內因（真如）或僅有外緣（善知識）都不能成就，必須因緣具足。</span>
+    </div>
+
+    <div class="kp l5 i3">
+      <div class="t">酉一、法喻</div>
+      <span class="d">用佛法道理和「鑽木取火」的比喻，說明只有火性（正因）而不假方便（緣因），火不能自燒。</span>
+    </div>
+
+    <div class="sutra-label">第9段經文（P148）</div>
+    <div class="sutra">又諸佛法，有因有緣，因緣具足，乃得成辦。如木中火性，是火正因，若無知人，不假方便，能自燒木，無有是處。</div>
+
+    <div class="blk-label">文義解說</div>
+    <p>這一段用「鑽木取火」作比喻，說明修行必須「內因」與「外緣」兼具：</p>
+    <ul>
+      <li><strong>法說：</strong>佛法有三性：「本具真如」為正因佛性；「經教善知識」為緣因佛性；「因緣具足」方得開悟，為了因佛性。</li>
+      <li><strong>比喻：</strong>木頭裡有火性（正因），但如果沒有人知道，不用鑽木取火的方法（緣因），火不會自己燒起來。</li>
+    </ul>
+
+    <div class="kp l5 i3">
+      <div class="t">酉二、合</div>
+      <span class="d">將比喻與眾生修行相合。說明眾生雖有正因，若無外緣，則不能斷煩惱入涅槃。</span>
+    </div>
+
+    <div class="kp l5 i4">
+      <div class="t">戌一、明因緣互闕之失</div>
+      <span class="d">說明缺少內因或外緣的過失：有因無緣不能證果，有緣無因不能真正厭苦求樂。</span>
+    </div>
+
+    <div class="sutra-label">第10段經文（P148）</div>
+    <div class="sutra">眾生亦爾，雖有正因熏習之力，若不值遇諸佛菩薩善知識等，以之為緣，能自斷煩惱入涅槃者，則無是處。若雖有外緣之力，而內淨法未有熏習力者，亦不能究竟厭生死苦，樂求涅槃。</div>
+
+    <div class="blk-label">文義解說</div>
+    <ul>
+      <li>如果只有內在的正因熏習力，卻沒有遇到諸佛菩薩善知識作為外緣，想要自己斷煩惱入涅槃，是不可能的。</li>
+      <li>如果只有外緣之力，而內心沒有真如的熏習力（或者說障太厚，熏力敵不過，稱為「障厚，熏力不能敵」），也無法真正厭離生死、欣求涅槃。</li>
+    </ul>
+
+    <div class="kp l5 i4">
+      <div class="t">戌二、明性用相應之得</div>
+      <span class="d">說明因緣具足後的殊勝利益：內仗真如熏習，外蒙諸佛護念，能起厭苦之心，修習善根，最終趣向涅槃。</span>
+    </div>
+
+    <div class="sutra-label">第11段經文（P149）</div>
+    <div class="sutra">若因緣具足者，所謂自有熏習之力，又為諸佛菩薩等慈悲願護故，能起厭苦之心，信有涅槃，修習善根。以修善根成熟故，則值諸佛菩薩示教利喜，乃能進趣，向涅槃道。</div>
+
+    <div class="blk-label">文義解說</div>
+    <p><strong>只有因緣具足：</strong>自己有內熏之力，又得諸佛菩薩慈悲願護，才能生起厭苦之心，修習善根，進而感得諸佛菩薩示教利喜，最終趣向涅槃。</p>
+
+    <div class="blk-label study">學習重點 <span>（因緣具足，方能成辦道果）</span></div>
+    <p>眾生本具佛性為正因，佛菩薩善知識所說教法為外緣。得此內外交熏，斷惑證真則易；若一有所缺，則不能厭生死苦，樂求涅槃。修行者內仗真如勝因熏習之力，外有諸佛菩薩勝緣助發之力，故令速趣涅槃。</p>
+
+    <!-- 巳二 -->
+    <hr class="thin">
+    <div class="kp l4">
+      <div class="t">巳二、用熏習</div>
+      <span class="d">解釋真如的「用」，即佛菩薩的法身業用，作為眾生修行的外在助緣。</span>
+    </div>
+
+    <div class="kp l5 i1">
+      <div class="t">午一、指事總標</div>
+      <span class="d">指出外緣之力，總標有兩種：差別緣、平等緣。</span>
+    </div>
+
+    <div class="sutra-label">第12段經文（P149）</div>
+    <div class="sutra">用熏習者，即是眾生外緣之力。如是外緣有無量義，略說二種，云何為二？一者差別緣，二者平等緣。</div>
+
+    <div class="blk-label">文義解說</div>
+    <p>前面講的「自體相熏習」是內因，這裡的「用熏習」則是<strong>外緣</strong>。真如的「用」，體現在佛菩薩如何從法身起用，去幫助眾生。這外緣有無量無邊，但濃縮為兩種：差別緣與平等緣。</p>
+
+    <div class="blk-label study">學習重點 <span>（稱體起用，隨感而應）</span></div>
+    <p>佛菩薩的「用」是從「體」（真如）生起的。在諸佛稱為「法身」，在眾生稱為「本覺」。眾生因為有本覺的內熏而發心，這份發心就感召了諸佛法身外緣的成就。外緣之所以無量，是因為能感的眾生根機無量；所以，或從事識發心，就見隨類化身（差別緣）；或從業識發心，就見受用報身（平等緣）。</p>
+
+    <div class="kp l5 i1">
+      <div class="t">午二、約緣別顯</div>
+      <span class="d">約化緣的不同，分別顯示差別緣和平等緣。</span>
+    </div>
+
+    <div class="kp l5 i2">
+      <div class="t">申一、差別緣</div>
+      <span class="d">佛菩薩隨類化身，示現為父母、冤家等，以四攝法大悲熏習，令眾生增長善根。</span>
+    </div>
+
+    <div class="kp l5 i3">
+      <div class="t">酉一、總釋</div>
+      <span class="d">總體解釋差別緣，即佛菩薩從初發心到成佛，示現種種身份度化眾生。</span>
+    </div>
+
+    <div class="sutra-label">第13段經文（P150）</div>
+    <div class="sutra">差別緣者，此人依於諸佛菩薩等，從初發意始求道時，乃至得佛，於中若見若念，或為眷屬父母諸親、或為給使、或為知友、或為怨家，或起四攝，乃至一切所作無量行緣，以起大悲熏習之力，能令眾生增長善根，若見若聞得利益故。</div>
+
+    <div class="blk-label">文義解說</div>
+    <p>什麼是差別緣？就是佛菩薩會<strong>「隨類化身」</strong>。從眾生最初發心求道，一直到成佛，佛菩薩都在其中示現：</p>
+    <ul>
+      <li>示現為父母、眷屬、親友（慈愛以攝之）</li>
+      <li>示現為僕人、部下（居卑以事之）</li>
+      <li>示現為知心好友（同類以益之）</li>
+      <li>示現為冤家、仇人（冤家以折之，折伏眾生的傲慢與執著）</li>
+      <li>或行四攝法（布施、愛語、利行、同事）</li>
+    </ul>
+    <p>這一切都是出於佛菩薩「無作大悲」的熏習之力（非有心而作，是自然任運的）。眾生無論是看見他們的身相，還是聽聞他們的教誨，都能增長善根、得到利益。</p>
+
+    <div class="blk-label study">學習重點 <span>（大悲化用，廣作差別緣）</span></div>
+    <p>此略示差別緣相。差別雖多，不出慈愛以攝之、居卑以事之、同類以益之、冤家以折之、四攝以攝之，五者而已。此顯諸佛菩薩成就眾生作外緣者，無非出於無作大悲熏習之力。</p>
+
+    <div class="kp l5 i3">
+      <div class="t">酉二、別開</div>
+      <span class="d">進一步分別開演差別緣，分為近緣、遠緣，以及增長行緣、受道緣。</span>
+    </div>
+
+    <div class="sutra-label">第14段經文（P151）</div>
+    <div class="sutra">此緣有二種，云何為二？一者近緣，速得度故。二者遠緣，久遠得度故。是近遠二緣，分別復有二種，云何為二？一者增長行緣，二者受道緣。</div>
+
+    <div class="blk-label">文義解說</div>
+    <p>進一步將這些外緣，按照「根機成熟的早晚」和「作用的性質」來分類：</p>
+    <ul>
+      <li><strong>依根機成熟度分為「近緣」與「遠緣」：</strong>根機已經成熟了，所以能「速得度」（近緣）；根機還沒成熟，需要「久遠得度」（遠緣）。</li>
+      <li>
+        <strong>依作用性質，近遠二緣又各自再分為兩種：</strong>
+        <ul>
+          <li><strong>增長行緣：</strong>能讓眾生發起布施、持戒、忍辱等種種「方便行」（前方便），累積福德資糧。</li>
+          <li><strong>受道緣：</strong>在具備了方便行的基礎後，能夠「正觀相應」，真正契入真如理體，屬於勝進（見道、修道）的階段。</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="blk-label study">學習重點 <span>（根熟有早晚，近遠緣不同）</span></div>
+    <p>此就根熟不熟，開近遠二緣可知。就二緣中復開為二：增長行者，能起施戒等方便行也；受道者，依前方便，正觀相應，即勝進也。</p>
+
+    <div class="kp l5 i2">
+      <div class="t">申二、平等緣</div>
+      <span class="d">佛菩薩以同體悲智，平等度脫一切眾生，恆常不捨，眾生依三昧力，能平等見諸佛。</span>
+    </div>
+
+    <div class="sutra-label">第15段經文（P151–P152）</div>
+    <div class="sutra">平等緣者，一切諸佛菩薩，皆願度脫一切眾生，自然熏習，恆常不捨。以同體智力故，隨應見聞而現作業。所謂眾生依於三昧，乃得平等見諸佛故。</div>
+
+    <div class="blk-label">文義解說</div>
+    <p>什麼是平等緣？佛菩薩度眾生是<strong>沒有分別的</strong>。一切諸佛菩薩的本願，就是要度脫一切眾生，這種熏習是「自然」的、「恆常不捨」的。</p>
+    <ul>
+      <li><strong>同體悲智：</strong>因為佛菩薩證得了「心、佛、眾生三無差別」，眾生是諸佛心內的眾生，所以佛菩薩對眾生的熏習，沒有一念暫捨。</li>
+      <li><strong>依三昧見佛：</strong>眾生只要能夠入「三昧」（正定），就能隨著自己的夙習見聞，在定中見到諸佛現身說法。如普賢菩薩現身、觀音菩薩隨應，都是平等緣。</li>
+    </ul>
+
+    <div class="blk-label study">學習重點 <span>（同體悲智，恆作平等緣）</span></div>
+    <p>此明平等緣也。謂諸佛菩薩，皆本願度脫一切眾生，故以同體悲智，恆熏不捨。以眾生乃諸佛心內之眾生，故念念熏習，未曾一念暫捨。</p>
+    <p>唐・法藏大師《大乘起信論疏・卷三》云：</p>
+    <div class="quote">「謂十住已去，依三昧力，悉見諸佛身量平等，無有彼此分齊之相。」</div>
+
+    <!-- 辰三 -->
+    <hr class="thin">
+    <div class="kp l3">
+      <div class="t">辰三、合明</div>
+      <span class="d">綜合說明體用熏習的相應情況。分為未相應和已相應兩種。</span>
+    </div>
+
+    <div class="kp l4">
+      <div class="t">巳一、體用熏習</div>
+      <span class="d">眾生雖同受真如體用熏習，但有「相應」與「未相應」的差別。</span>
+    </div>
+
+    <div class="kp l5 i1">
+      <div class="t">午一、未相應</div>
+      <span class="d">凡夫、二乘、初發意菩薩，依信力修行，未能得無分別心，與體用未相應。</span>
+    </div>
+
+    <div class="sutra-label">第16段經文（P152）</div>
+    <div class="sutra">此體用熏習，分別復有二種，云何為二？一者未相應，謂凡夫、二乘、初發意菩薩等，以意、意識熏習，依信力故，而能修行。未得無分別心，與體相應故；未得自在業修行，與用相應故。</div>
+
+    <div class="blk-label">文義解說</div>
+    <p>眾生雖然都受真如體用的熏習，但「相應」的程度有別：</p>
+    <ul>
+      <li><strong>未相應（凡夫、二乘、初發意菩薩）：</strong>他們依賴「意」與「意識」熏習，依靠的是<strong>「信力」</strong>而修行。他們還沒有證得「無分別心」，所以無法與真如的「體」相應；也沒有得到「自在業」，所以無法與真如的「用」相應。這差別在於「根機」還不夠深，發心較淺。</li>
+    </ul>
+
+    <div class="blk-label study">學習重點 <span>（依信力修行，體用未相應）</span></div>
+    <p>此合明能熏真如體用平等，而所熏之機有差別也。以凡夫、二乘、初發心菩薩，但依意識熏習，發心者淺，唯依信力修行，未能深入真如三昧，未得無分別心與體相應，未得自在智業與用相應，此差別在機。</p>
+
+    <div class="kp l5 i1">
+      <div class="t">午二、已相應</div>
+      <span class="d">法身菩薩，依真如法力自然修行，得無分別心，與諸佛智用相應。</span>
+    </div>
+
+    <div class="sutra-label">第17段經文（P153）</div>
+    <div class="sutra">二者已相應，謂法身菩薩，得無分別心，與諸佛智用相應。唯依法力，自然修行，熏習真如，滅無明故。</div>
+
+    <div class="blk-label">文義解說</div>
+    <ul>
+      <li><strong>已相應（法身菩薩／地上菩薩）：</strong>他們已證得平等法身之理，得到了「無分別心」（如理智），能與真如的「體」相應；也得了「如量智」，能與諸佛的智用相應。</li>
+      <li>他們不再是依靠「信力」，而是依靠<strong>「法力」</strong>（真如理體的力量）自然修行。八地以上的菩薩，更是「無功用行」，任運熏真，任運滅妄，這叫「自然修行」，能徹底滅除無明。</li>
+    </ul>
+
+    <div class="blk-label study">學習重點 <span>（依法力修行，體用已相應）</span></div>
+    <p>此明已相應位。謂地上菩薩，已證平等法身之理，得無分別心，即如理智，能與真如體相應。與諸佛智用相應者，乃得如量智，與佛智相之身，大用相應也。唯依法力句，明其行勝。非如前位但依信力，此稱真如理而修，曰法力。八地以去，真無功用行，任運熏真，任運滅妄，曰自然修行。</p>
+  </section>
+
+  <!-- ================= 第三大段 ================= -->
+  <section class="part" id="p3">
+    <div class="kp l1">
+      <div class="t">第三大段　結顯：染淨盡不盡義</div>
+      <span class="d">對應科判：癸四、明染淨盡不盡義<br>對應頁數：P153–P154<br>包含經文：第18段</span>
+    </div>
+
+    <div class="kp l2">
+      <div class="t">癸四、明染淨盡不盡義</div>
+      <span class="d">總結染法與淨法的盡與不盡。染法無始有終，淨法無始無終，以大悲大用無窮無盡。</span>
+    </div>
+
+    <div class="sutra-label">第18段經文（P153）</div>
+    <div class="sutra">復次，染法從無始已來，熏習不斷，乃至得佛，後則有斷。淨法熏習則無有斷，盡於未來。此義云何？以真如法常熏習故，妄心則滅，法身顯現，起用熏習，故無有斷。</div>
+
+    <div class="blk-label">文義解說</div>
+    <p>最後做一個總結，比較「染法」與「淨法」的終極走向：</p>
+    <ul>
+      <li><strong>染法（無始有終）：</strong>無明染法從無始劫以來一直熏習不斷，但是到了成佛的時候，它就會<strong>斷滅</strong>。</li>
+      <li><strong>淨法（無始無終）：</strong>真如淨法的熏習，則是<strong>沒有斷絕</strong>的，會一直延續到盡未來際。</li>
+      <li><strong>為什麼？</strong>因為真如法常恆熏習，妄心就會消滅；妄心消滅，法身就顯現。法身顯現後，生起大用繼續熏習眾生，所以淨法是無窮無盡的。</li>
+    </ul>
+
+    <div class="blk-label study">學習重點 <span>（染法有終，淨法無盡）</span></div>
+    <p>此總結論染淨熏習斷不斷義也。</p>
+    <ul>
+      <li>謂染法無始有終，真如淨法則無始無終。</li>
+      <li>以無明染因依真而起，此則真如乃無始之無始也。</li>
+      <li>及以真如熏習，無明斷盡成佛，此則無明滅盡時，法身顯現，而有不可思議大用，無窮無盡。</li>
+      <li>故染法有盡，而淨法無盡也。</li>
+    </ul>
+
+    <div class="blk-label study">祖師補充 <span>（明・憨山大師《起信論直解・卷下》）</span></div>
+    <div class="quote">「依真而起，此則真如乃無始之無始也。及以真如熏習，無明斷盡成佛，此則無明滅盡時，法身顯現，而有不可思議大用，無窮無盡。故染法有盡，而淨法無盡也。」</div>
+
+    <hr class="thin">
+
+    <div class="kp l2">
+      <div class="t">二、主要名相（P154）</div>
+      <span class="d">此為講義最後的統整，列出本篇「淨熏」的核心名相，方便複習與掌握重點。</span>
+    </div>
+    <ul>
+      <li>淨熏：真如熏習、妄心熏習</li>
+      <li>分別事識熏習、意熏習</li>
+      <li>自體相熏習、用熏習</li>
+      <li>差別緣、平等緣</li>
+      <li>體用熏習：未相應、已相應</li>
+      <li>染淨盡不盡義</li>
+    </ul>
+
+    <div class="kp l2">
+      <div class="t">三、教學成果　思惟問題（P154）</div>
+      <span class="d">此為講義最後設計的思惟問題，旨在引導修行者將義理落實於自身。</span>
+    </div>
+    <ol>
+      <li>同是妄心受熏，受無明熏則起染法、受真如熏則起淨法，請說明淨熏返流還淨的因果次第。</li>
+      <li>同樣發心修行，為何依分別事識而修者，漸趣菩提；依五意而修者，速趣菩提？這對我們的修行有何啟發？</li>
+      <li>內因、外緣，為何缺一則不能斷惑入涅槃？請反省自身，二者何者較弱，當如何補足？</li>
+      <li>為何染法「無始有終」，淨法卻「無始無終」？明白淨法熏習無有斷盡，對我們持續熏修有何啟發？</li>
+    </ol>
+  </section>
+
+  <!-- ================= 總回顧 ================= -->
+  <section class="part" id="p4">
+    <div class="kp l1">
+      <div class="t">全篇三段總回顧</div>
+      <span class="d">架構脈絡</span>
+    </div>
+    <ul class="recap">
+      <li><strong>第一段（寅一、略釋）【P141–P143】：</strong>總標淨熏之總綱。提出「云何熏習起淨法不斷？」，確立「本熏」與「新熏」的框架，並簡述從因至果的修行次第（自信己性 → 知心妄動 → 修遠離法 → 無明滅 → 成自然業）。</li>
+      <li><strong>第二段（寅二、廣釋）【P144–P153】：</strong>廣釋能熏之心與所熏之緣。拆解「妄心熏習」（事識漸修、意速成）與「真如熏習」（自體相內因、用熏外緣、差別緣、平等緣），並以「鑽木取火」喻因緣具足，最後說明「未相應」與「已相應」的修行層次。</li>
+      <li><strong>第三段（癸四、總結）【P153–P154】：</strong>結顯染淨盡不盡義。總結「染法無始有終，淨法無始無終」，並附上主要名相與思惟問題，作為整篇講義的圓滿收束。</li>
+    </ul>
+  </section>
+
+  <footer>大乘起信論講義（十八）、（十九）｜完整筆記</footer>
+</div>
+</body>
+</html>

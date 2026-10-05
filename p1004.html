@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>講義18-19｜核心摘要</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F5F3EF;
+    --paper:#FFFFFF;
+    --ink:#2C2C2C;
+    --ink-soft:#6B665F;
+    --line:#E0DACE;
+    --moss:#7D8272;
+    --moss-light:#E9EAE3;
+    --charcoal:#4A4643;
+    --gold-text:#704B19;
+    --gold-light:#F8F0E3;
+    --shu:#B5432F;
+    --radius:4px;
+  }
+
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+
+  body{
+    margin:0;
+    background-color:var(--bg);
+    background-image:
+      radial-gradient(rgba(0,0,0,.012) 1px, transparent 1px),
+      radial-gradient(rgba(0,0,0,.012) 1px, transparent 1px);
+    background-size:3px 3px;
+    background-position:0 0, 1.5px 1.5px;
+    font-family:"Noto Sans TC", sans-serif;
+    font-weight:400;
+    font-size:18px;
+    line-height:1.95;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{ max-width:600px; margin:0 auto; padding:0 24px 80px; }
+
+  /* ===== 開頭 ===== */
+  .head{ padding:56px 0 30px; border-bottom:1px solid var(--line); }
+  .head .eyebrow{
+    font-family:"Noto Serif TC", serif;
+    font-weight:500;
+    font-size:14px;
+    letter-spacing:.2em;
+    color:var(--ink-soft);
+  }
+  .head .eyebrow::before{
+    content:"";
+    display:inline-block;
+    width:6px; height:6px; border-radius:50%;
+    background:var(--shu);
+    margin-right:10px;
+    vertical-align:middle;
+    position:relative; top:-1px;
+  }
+  .head h1{
+    font-family:"Noto Serif TC", serif;
+    font-weight:500;
+    font-size:28px;
+    letter-spacing:.06em;
+    line-height:1.55;
+    margin:18px 0 6px;
+  }
+  .head .sub{ font-size:18px; color:var(--ink-soft); margin:0; }
+
+  .lead{
+    padding:26px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .lead p{ margin:0 0 10px; }
+  .lead .q{
+    font-family:"Noto Serif TC", serif;
+    font-weight:500;
+    letter-spacing:.04em;
+    border-left:2px solid var(--moss);
+    padding-left:14px;
+    margin-top:12px;
+  }
+
+  /* ===== 章節 ===== */
+  section{ padding:34px 0 8px; border-bottom:1px solid var(--line); }
+  section:last-of-type{ border-bottom:none; }
+
+  h2{
+    font-family:"Noto Serif TC", serif;
+    font-weight:500;
+    font-size:21px;
+    letter-spacing:.05em;
+    line-height:1.6;
+    margin:0 0 4px;
+  }
+  h2 small{
+    display:block;
+    font-family:"Noto Sans TC", sans-serif;
+    font-weight:400;
+    font-size:18px;
+    letter-spacing:0;
+    color:var(--ink-soft);
+    margin-top:2px;
+  }
+
+  .core{
+    margin:14px 0 18px;
+    padding:10px 14px;
+    background:var(--moss-light);
+    border-radius:var(--radius);
+    font-size:18px;
+    line-height:1.9;
+  }
+  .core b{ font-family:"Noto Serif TC", serif; font-weight:500; letter-spacing:.05em; }
+
+  h3{
+    font-family:"Noto Serif TC", serif;
+    font-weight:500;
+    font-size:18px;
+    letter-spacing:.05em;
+    margin:24px 0 8px;
+    padding-left:12px;
+    border-left:2px solid var(--moss);
+  }
+
+  strong{ font-weight:500; color:var(--gold-text); }
+
+  ul{ list-style:none; padding:0; margin:0 0 14px; }
+  ul > li{
+    position:relative;
+    padding-left:1.2em;
+    margin-bottom:10px;
+  }
+  ul > li::before{ content:"—"; position:absolute; left:0; top:0; color:var(--moss); }
+  ul ul{ margin:8px 0 4px; }
+
+  ol{ list-style:none; padding:0; margin:0 0 14px; counter-reset:n; }
+  ol > li{
+    counter-increment:n;
+    position:relative;
+    padding-left:2em;
+    margin-bottom:14px;
+  }
+  ol > li::before{
+    content:counter(n);
+    position:absolute; left:0; top:0;
+    font-family:"Noto Serif TC", serif;
+    font-weight:500;
+    color:var(--moss);
+    border-bottom:1px solid var(--moss);
+    line-height:1.5;
+    width:1.2em;
+    text-align:center;
+  }
+
+  footer{
+    text-align:center;
+    font-size:14px;
+    letter-spacing:.06em;
+    color:var(--ink-soft);
+    padding:34px 0 0;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <div class="eyebrow">大乘起信論</div>
+    <h1>講義18-19<br>染淨互熏——淨熏</h1>
+    <p class="sub">核心摘要（P141–P154）</p>
+  </div>
+
+  <div class="lead">
+    <p>這份講義探討一個關鍵問題：</p>
+    <p class="q">眾生本具的清淨佛性，是如何透過「熏習」的作用，從被無明覆蓋的狀態，一步步轉化、相續，最終成就佛果？</p>
+    <p style="margin-top:14px;">整份講義以嚴謹的科判，分為三大段（總標、廣釋、總結），共18段經文。</p>
+  </div>
+
+  <!-- 一、總標 -->
+  <section>
+    <h2>一、總標：淨熏之總綱<small>寅一、略釋</small></h2>
+    <div class="core"><b>核心要義：</b>確立「本熏」與「新熏」的雙向運作機制，並勾勒從因地到果地的修行藍圖。</div>
+
+    <h3>雙重熏習</h3>
+    <ul>
+      <li><strong>本熏（真如熏無明）：</strong>眾生本具的真如（佛性）從內部發揮作用，讓眾生開始厭離生死、欣求涅槃，進而發心修行。</li>
+      <li><strong>新熏（妄心熏真如）：</strong>發心修行後，這顆厭求的「妄心」與清淨的行為，反過來熏習真如，增強其勢力。</li>
+    </ul>
+
+    <h3>修行次第（從因至果）</h3>
+    <ul>
+      <li>十信位：相信自己有佛性</li>
+      <li>十解位：知心妄動</li>
+      <li>行向位：修遠離法</li>
+      <li>歷經三大阿僧祇劫，無明滅盡，心相皆盡，證得「涅槃」，並生起不可思議的「自然業」（無作妙用，度化眾生）</li>
+    </ul>
+  </section>
+
+  <!-- 二、廣釋 -->
+  <section>
+    <h2>二、廣釋：能熏之心與所熏之緣<small>寅二、廣釋</small></h2>
+    <div class="core"><b>核心要義：</b>詳細拆解「誰在熏」與「怎麼熏」，並解答眾生修行快慢差異的根本原因。</div>
+
+    <h3>卯一、妄心熏習</h3>
+    <ul>
+      <li><strong>分別事識熏習（漸修）：</strong>凡夫、二乘依「意識」修行，因執著心外有境界，不達唯心，故進步緩慢。</li>
+      <li><strong>意熏習（速成）：</strong>菩薩依「意」修行，了達萬法唯識，直觀真如，故能快速趣向涅槃。</li>
+    </ul>
+
+    <h3>卯二、真如熏習</h3>
+    <ul>
+      <li>
+        <strong>巳一、自體相熏習（內因）：</strong>眾生本具無漏法，能冥熏眾生，令其發心。
+        <ul>
+          <li>解答了「為何眾生皆有真如，卻有信解差別？」——因為「無明厚薄不同」，這非真如之差別，而是煩惱障與所知障的粗細導致。</li>
+        </ul>
+      </li>
+      <li>
+        <strong>巳二、用熏習（外緣）：</strong>佛菩薩從法身起用，作為眾生修行的助緣。分為：
+        <ul>
+          <li><strong>差別緣：</strong>隨類化身，如父母、冤家、四攝等。</li>
+          <li><strong>平等緣：</strong>同體悲智，恆常不捨，眾生依三昧得見諸佛。</li>
+        </ul>
+      </li>
+      <li>
+        <strong>關鍵結論（因緣具足）：</strong>修行如「鑽木取火」，只有木中火性（內因）而無鑽取（外緣），火不能發。必須「內因（真如）與外緣（善知識）缺一不可」。
+      </li>
+    </ul>
+
+    <h3>辰三、合明（體用相應）</h3>
+    <ul>
+      <li><strong>未相應：</strong>凡夫、二乘、初發意菩薩，依「信力」修行，未得無分別心，尚未與真如體用完全相應。</li>
+      <li><strong>已相應：</strong>法身菩薩（地上菩薩），依「法力」自然修行，得無分別心，與諸佛智用相應，能任運滅除無明。</li>
+    </ul>
+  </section>
+
+  <!-- 三、總結 -->
+  <section>
+    <h2>三、總結：染淨盡不盡義<small>癸四、總結</small></h2>
+    <div class="core"><b>核心要義：</b>總結染法與淨法的終極歸宿，點出大乘「無住涅槃」的精神。</div>
+
+    <ul>
+      <li><strong>染法（無始有終）：</strong>無明染法從無始以來熏習不斷，但到了成佛之後，則會斷滅。</li>
+      <li><strong>淨法（無始無終）：</strong>真如淨法的熏習沒有斷絕，盡於未來。因為真如常熏習，妄心則滅，法身顯現，生起不可思議的大用，無窮無盡地度化眾生。</li>
+    </ul>
+  </section>
+
+  <!-- 修行啟示 -->
+  <section>
+    <h2>修行啟示<small>教學成果</small></h2>
+    <ol>
+      <li><strong>重視薰修：</strong>聽經聞法不能只聽一遍，需「從聞思修入三摩地」，以始覺之智照本覺之理，長期薰習，信心自然增長。</li>
+      <li><strong>破除執著：</strong>修行若只在「事識」上打轉（執著外在形式），則進展緩慢；若能通達「唯心所現」，直觀真如理體，則能快速成就。</li>
+      <li><strong>內外兼備：</strong>修行不能只靠自力（內因），也不能只靠他力（外緣），必須「因緣具足」，感應道交。</li>
+      <li><strong>終極願景：</strong>明白「染法有盡，淨法無盡」，成佛並非進入死寂的涅槃，而是生起廣大無邊的「自然業」，盡未來際度化眾生。</li>
+    </ol>
+  </section>
+
+  <footer>大乘起信論講義（十八）、（十九）｜核心摘要</footer>
+</div>
+</body>
+</html>
