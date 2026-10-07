@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>國土危脆，禪心何住：動盪下的慈悲與智慧</title>
+<style>
+:root{--paper:#F2F4F0;--paper2:#E6EAE4;--ink:#17191C;--mute:#4A5159;--red:#B02A1E;--redtx:#9A2318;--blue:#2A5E7C;--gold:#B8922A;--goldtx:#7B5F12;--rule:rgba(23,25,28,.2);--rulered:rgba(176,42,30,.38);
+--disp:"Cactus Classical Serif","Noto Serif TC","Songti TC","PMingLiU",serif;--body:"Noto Serif TC","Songti TC","PMingLiU",serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:16px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:2.05;-webkit-font-smoothing:antialiased}
+p{margin:0 0 1em}a{color:inherit}strong{font-weight:700}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--red);z-index:70}
+.hero{position:relative;min-height:90vh;overflow:hidden}
+.hero::before,.wrap::before{content:"";position:absolute;left:0;top:0;bottom:0;width:26px;background:linear-gradient(var(--red),var(--red)) 11px 0/3px 100% no-repeat,linear-gradient(var(--red),var(--red)) 19px 0/1px 100% no-repeat}
+.hi{max-width:640px;margin:0 auto;min-height:90vh;padding:15vh 22px 80px 44px;display:flex;flex-direction:row-reverse;gap:22px;align-items:flex-start;position:relative}
+.hi::before{content:"";position:absolute;left:11px;top:0;bottom:0;width:3px;background:var(--red);animation:draw 1.5s ease-out both;transform-origin:top}
+@keyframes draw{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.col{display:flex;flex-direction:column;align-items:center;font-family:var(--disp)}
+.col span{display:block}
+.t1{font-size:66px;line-height:1.22;letter-spacing:.02em}
+.t2{font-size:26px;line-height:1.5;color:var(--blue);margin-top:10px}
+.by{margin:0;display:flex;flex-direction:row-reverse;gap:10px;font-family:var(--disp);font-size:18px;line-height:1.55;color:var(--mute)}
+.by span{display:block;writing-mode:vertical-rl;font-size:20px;letter-spacing:.2em;margin-top:8px}
+.en{position:absolute;left:44px;right:22px;bottom:34px;margin:0;font-size:18px;line-height:1.7;color:var(--mute)}
+.stamp{position:absolute;right:26px;bottom:100px;width:60px;height:60px;background:var(--red);color:#fff;font-family:var(--disp);font-size:22px;line-height:1.15;display:flex;align-items:center;justify-content:center;text-align:center;transform:rotate(-4deg)}
+.stamp span{display:block;width:1.2em}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px 90px 44px;position:relative}
+.wrap::before{left:0}
+.gist,.chap{position:relative;margin-top:64px}
+.gist{margin-top:52px}
+.gist-tag{font-family:var(--disp);font-weight:400;font-size:28px;line-height:1.5;margin:0 0 .5em}
+.gist>p{font-size:20px}
+.gist .sub{color:var(--mute);font-size:18px}
+.chap.book{margin-top:40px;padding-top:0;border-top:0}
+details.layer{margin:0 0 14px;border-top:1px solid var(--rule)}
+details.layer>summary{list-style:none;cursor:pointer;padding:12px 0;display:flex;justify-content:space-between;gap:14px;font-family:var(--disp);font-size:20px;line-height:1.6}
+details.layer>summary::-webkit-details-marker{display:none}
+details.layer>summary::after{content:"＋";color:var(--redtx);font-family:var(--body)}
+details.layer[open]>summary::after{content:"－"}
+details.layer>.in{padding:0 0 8px}
+details.proof{border:1px dashed var(--red);padding:0 16px}
+details.proof>summary,details.proof>summary::after{color:var(--redtx)}
+details.sec{border-top:2px solid var(--ink);margin:22px 0 0}
+details.sec>summary{font-size:23px;padding:12px 0 10px;justify-content:flex-start;align-items:flex-start}
+details.sec>summary::before{content:"";display:inline-block;width:10px;height:10px;background:var(--red);transform:rotate(45deg);margin:.62em 10px 0 0;flex:none}
+details.sec>summary::after{margin-left:auto}
+details.sec>.in{padding:6px 0 14px}
+.stt{display:block;line-height:1.5}
+.cseal{display:inline-flex;vertical-align:middle;width:40px;height:40px;margin:0 10px 0 0;background:var(--red);color:#fff;font-family:var(--disp);font-size:22px;align-items:center;justify-content:center;transform:rotate(-3deg)}
+.cdesc{margin:6px 0 20px;color:var(--mute)}
+.v{display:grid;grid-template-columns:48px 1fr;column-gap:12px;padding:18px 0;border-bottom:1px solid var(--rule)}
+.vn{grid-row:1/span 2;align-self:start;min-width:44px;height:44px;padding:0 4px;background:var(--red);color:#fff;font-family:var(--disp);font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center;transform:rotate(-3deg)}
+.v p{margin:0}
+.vt{font-family:var(--disp);font-size:21px;line-height:1.6;color:var(--redtx);padding-bottom:4px;border-bottom:1px solid var(--rulered);margin-bottom:8px!important}
+.vb{font-size:18px;line-height:2.05;color:var(--ink)}
+ul.tree,ul.tree ul{list-style:none;margin:0;padding:0 0 0 22px;border-left:1px solid var(--rulered)}
+ul.tree{margin:6px 0 22px;border-left:0;padding-left:0}
+ul.tree li{position:relative;padding:3px 0;line-height:1.75}
+ul.tree ul li::before{content:"";position:absolute;left:-22px;top:1.15em;width:15px;border-top:1px solid var(--rulered)}
+ul.tree>li>a{font-family:var(--disp);font-size:21px;color:var(--redtx);display:block;margin-bottom:2px;text-decoration:none}
+ul.pf{list-style:none;margin:0 0 1em;padding:0}
+ul.pf li{position:relative;padding-left:22px;margin-bottom:.7em}
+ul.pf li::before{content:"";position:absolute;left:2px;top:.95em;width:7px;height:7px;background:var(--red);transform:rotate(45deg)}
+ul.pf a{color:var(--redtx)}
+footer{text-align:center;color:var(--mute);padding:34px 0 0;font-size:18px;line-height:1.9}
+#sdb,#bkb,#sbb{position:fixed;z-index:60;background:var(--ink);color:#EDE6D2;border:1px solid var(--gold);border-radius:24px;font-family:var(--disp);font-size:18px;padding:7px 16px;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+#sdb{left:12px;top:calc(10px + env(safe-area-inset-top,0px))}
+#sbb{right:12px;top:calc(10px + env(safe-area-inset-top,0px))}
+#bkb{right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));padding:9px 18px}
+#sdb,#sbb{transition:transform .25s,opacity .25s}
+#sdb.hide,#sbb.hide{transform:translateY(-70px);opacity:0}
+#sdm,#bkm{position:fixed;inset:0;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .2s}
+#sdm{z-index:85}#bkm{z-index:70}
+#sdm.on,#bkm.on{opacity:1;pointer-events:auto}
+#sd{position:fixed;top:0;bottom:0;left:0;width:min(86vw,340px);z-index:90;background:var(--paper);color:var(--ink);transform:translateX(-104%);transition:transform .25s;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);box-shadow:2px 0 12px rgba(0,0,0,.25)}
+#sd.on{transform:none}
+#sd .hd,#bkp .hd{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:2px solid var(--red);font-family:var(--disp);font-size:18px}
+#sd .hd button,#bkp .hd button{background:none;border:0;color:var(--ink);font:500 18px var(--disp);cursor:pointer;padding:2px 6px}
+#sd nav{flex:1;overflow-y:auto;padding:6px 12px calc(20px + env(safe-area-inset-bottom,0px))}
+#sd a{display:block;position:relative;color:var(--ink);text-decoration:none;font-size:18px;line-height:1.6;padding:8px 8px 8px 30px}
+#sd a::before{content:"";position:absolute;left:11px;top:1.05em;width:8px;height:8px;background:var(--red);transform:rotate(45deg)}
+#sd a.cur{color:var(--redtx);background:rgba(176,42,30,.08);box-shadow:inset 3px 0 0 var(--red)}
+#bkp{position:fixed;left:0;right:0;bottom:0;z-index:80;max-width:600px;margin:0 auto;background:var(--paper);color:var(--ink);border-top:2px solid var(--red);max-height:72vh;display:flex;flex-direction:column;transform:translateY(105%);transition:transform .25s;padding-bottom:env(safe-area-inset-bottom,0px)}
+#bkp.on{transform:none}
+#bkadd{margin:12px 18px 4px;padding:10px;background:none;border:1px solid var(--red);color:var(--ink);font:500 18px var(--disp);cursor:pointer}
+#bklist{overflow-y:auto;padding:0 18px 14px}
+.bki{display:flex;align-items:center;border-bottom:1px solid var(--rule)}
+.bki a{flex:1;color:var(--ink);text-decoration:none;font-size:18px;line-height:1.7;padding:10px 0}
+.bki small{display:block;color:var(--redtx);font-family:var(--disp);font-size:18px}
+.bki button{background:none;border:0;color:var(--ink);opacity:.6;font-size:22px;padding:6px 10px;cursor:pointer}
+.bkempty{font-size:18px;color:var(--mute);line-height:1.9;padding:14px 0}
+#bkt{position:fixed;left:50%;bottom:calc(70px + env(safe-area-inset-bottom,0px));transform:translate(-50%,16px);background:var(--ink);color:#EDE6D2;font-size:18px;padding:8px 18px;border-radius:20px;opacity:0;pointer-events:none;transition:all .25s;z-index:90;white-space:nowrap}
+#bkt.on{opacity:1;transform:translate(-50%,0)}
+#sp{position:fixed;inset:0;background:var(--paper);color:var(--ink);z-index:95;display:none;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+#sp.on{display:flex}
+#sp .sh{display:flex;gap:8px;padding:10px 12px;border-bottom:2px solid var(--red)}
+#sq{flex:1;min-width:0;font:18px var(--body);padding:9px 12px;border:1px solid var(--rule);border-radius:2px;background:#fff;color:var(--ink)}
+#sx{background:none;border:0;color:var(--ink);font:500 18px var(--disp);cursor:pointer;padding:2px 8px}
+#sr{flex:1;overflow-y:auto;padding:0 16px calc(24px + env(safe-area-inset-bottom,0px))}
+#sr .cnt,#sr .empty{font-size:18px;color:var(--mute);line-height:1.9;padding:16px 0}
+#sr a.hit{display:block;color:var(--ink);text-decoration:none;font-size:18px;line-height:1.8;padding:11px 0;border-bottom:1px solid var(--rule)}
+#sr a.hit small{display:block;color:var(--redtx);font-size:18px;font-family:var(--disp)}
+#sr mark{background:rgba(184,146,42,.4);color:inherit;padding:0 1px}
+.flash{animation:fl 2.2s}@keyframes fl{0%,60%{background:rgba(184,146,42,.38)}100%{background:transparent}}
+@media (min-width:1200px){body{padding-left:290px}#sdb,#sdm,#sd .hd button{display:none}#sd{transform:none;box-shadow:none;border-right:1px solid var(--rulered);width:290px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hi::before{animation:none}}
+@media (max-width:420px){.t1{font-size:58px}.hi{gap:20px}}
+
+.c0{--hc:rgba(240,200,60,.45);--sc:#f0c83c}
+.c1{--hc:rgba(120,190,120,.45);--sc:#7cc17c}
+.c2{--hc:rgba(230,130,150,.42);--sc:#e78ca0}
+.c3{--hc:rgba(110,170,220,.42);--sc:#6fb0e0}
+.hl{background:var(--hc);cursor:pointer;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.sw{width:32px;height:32px;border-radius:50%;background:var(--sc);border:2px solid rgba(255,255,255,.6);padding:0;cursor:pointer;flex:none}
+#hlbar{position:fixed;z-index:75;display:none;align-items:center;gap:12px;background:var(--ink);color:#EDE6D2;padding:8px 14px;border-radius:26px;box-shadow:0 3px 12px rgba(0,0,0,.35);-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+#hlbar.on{display:flex}
+#hlbar .cs{display:flex;gap:10px}
+#hlbar .nb{display:none;background:none;border:0;border-left:1px solid rgba(255,255,255,.4);color:#EDE6D2;font:500 18px var(--disp);padding:2px 2px 2px 12px;cursor:pointer}
+#hlbar.edit .nb{display:block}
+#hlbar.edit .cs{display:none}
+.bkh{font-family:var(--disp);color:var(--goldtx);margin:12px 0 0;border-bottom:1px solid var(--rulered)}
+.bki .dot{width:14px;height:14px;background:var(--sc);flex:none;margin-right:10px}
+@media print{#hlbar{display:none}.hl{background:none}}
+@media print{#bar,#sdb,#sbb,#bkb,#sd,#sdm,#bkm,#bkp,#bkt,#sp{display:none}details.layer>.in{display:block}body{padding-left:0}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<button id="sdb" type="button">目錄</button>
+<button id="sbb" type="button">搜尋</button>
+<div id="sdm"></div>
+<aside id="sd" aria-label="目錄"><div class="hd"><span>目錄</span><button id="sdc" type="button">關閉</button></div><nav><a class="s1" href="#top" data-t="top">封面</a><a class="s1" href="#gist" data-t="gist">導讀</a><a class="s1" href="#mapx" data-t="mapx">對談脈絡</a><a class="s1" href="#c0" data-t="c0">序　開場與主題引言</a><a class="s1" href="#c1" data-t="c1">一　吉博禪師：佛法與時代，信心與慈悲</a><a class="s1" href="#c2" data-t="c2">二　繼程法師：敦煌、弘法與國土危脆</a><a class="s1" href="#c3" data-t="c3">三　吉博禪師補充：壁畫密碼與一切唯心</a><a class="s1" href="#c4" data-t="c4">四　繼程法師：信心與「若是佛，會如何處理」</a><a class="s1" href="#c5" data-t="c5">五　吉博禪師：六波羅蜜</a><a class="s1" href="#c6" data-t="c6">六　致辭與圓滿</a><a class="s1" href="#proof" data-t="proof">校註與核對清單</a></nav></aside>
+<div id="sp" role="dialog" aria-label="搜尋"><div class="sh"><input id="sq" type="search" placeholder="搜尋逐字稿" autocomplete="off"><button id="sx" type="button">關閉</button></div><div id="sr"></div></div>
+<button id="bkb" type="button">書籤</button>
+<div id="bkm"></div>
+<div id="bkp" role="dialog" aria-label="書籤"><div class="hd"><span>書籤與螢光筆記</span><button id="bkc" type="button">關閉</button></div><button id="bkadd" type="button">加入目前位置</button><div id="bklist"></div></div>
+<div id="hlbar" role="toolbar" aria-label="螢光筆"><div class="cs"><button class="sw c0" data-c="0" aria-label="黃"></button><button class="sw c1" data-c="1" aria-label="綠"></button><button class="sw c2" data-c="2" aria-label="粉"></button><button class="sw c3" data-c="3" aria-label="藍"></button></div><button class="nb" type="button">刪除螢光</button></div>
+<div id="bkt"></div>
+
+<header class="hero" id="top">
+<div class="hi">
+<div class="col t1"><span>國</span><span>土</span><span>危</span><span>脆</span></div>
+<div class="col t1"><span>禪</span><span>心</span><span>何</span><span>住</span></div>
+<div class="col t2"><span>動</span><span>盪</span><span>下</span><span>的</span><span>慈</span><span>悲</span><span>與</span><span>智</span><span>慧</span></div>
+<p class="by"><span>吉博禪師</span><span>繼程法師</span></p>
+<div class="stamp" aria-hidden="true"><span>對</span><span>談</span></div>
+<p class="en">Chan in the Storm: Compassion &amp; Wisdom for a World in Turmoil</p>
+</div>
+</header>
+
+<main class="wrap" id="wrap">
+<section class="gist" id="gist">
+<h2 class="gist-tag">導讀</h2>
+<p>這篇對談探討了佛教教義在動盪的二十一世紀中如何保持契機與相關性。兩位禪師強調，面對外在世界的無常與危機，修行者應回歸內心的信與清淨，明白一切眾生皆具佛性。透過對敦煌壁畫等歷史傳承的審視，他們指出信仰與智慧是理解佛教核心精神的關鍵。此外，對話中也分享了具體的生活修行方法，例如在面對衝突時反思「若是佛會如何處理」，並實踐六波羅蜜。最終，講者鼓勵大眾建立堅定的自信，透過正念與慈悲安住身心，進而引領他人走向覺悟。</p>
+<p class="sub">竹山阿南佛學會與法鼓山馬來西亞道場聯辦對談會。主題取自《八大人覺經》：「世間無常，國土危脆。」下方依對談次序分為七段，逐則收錄逐字稿，可點選章名展開。</p>
+</section>
+
+<section class="chap" id="mapx">
+<details class="layer sec" open><summary>對談脈絡</summary><div class="in">
+<ul class="tree"><li><span style="font-family:var(--disp);font-size:21px;color:var(--redtx)">國土危脆，禪心何住</span><ul><li><a href="#c0" data-t="c0">序　開場與主題引言</a><ul><li>第 1–11 則</li></ul></li><li><a href="#c1" data-t="c1">一　吉博禪師：佛法與時代，信心與慈悲</a><ul><li>第 12–23 則</li></ul></li><li><a href="#c2" data-t="c2">二　繼程法師：敦煌、弘法與國土危脆</a><ul><li>第 24–42 則</li></ul></li><li><a href="#c3" data-t="c3">三　吉博禪師補充：壁畫密碼與一切唯心</a><ul><li>第 43–61 則</li></ul></li><li><a href="#c4" data-t="c4">四　繼程法師：信心與「若是佛，會如何處理」</a><ul><li>第 62–72 則</li></ul></li><li><a href="#c5" data-t="c5">五　吉博禪師：六波羅蜜</a><ul><li>第 73–83 則</li></ul></li><li><a href="#c6" data-t="c6">六　致辭與圓滿</a><ul><li>第 84–87 則</li></ul></li></ul></li></ul>
+</div></details>
+</section>
+
+<section class="chap book" id="c0s"><details class="layer sec" id="c0"><summary><span class="stt"><span class="cseal">序</span>開場與主題引言</span></summary><div class="in"><p class="cdesc">入場、問候、恭請、嘉賓與翻譯介紹，並以《八大人覺經》「世間無常，國土危脆」引出主題。（第 1–11 則）</p><div class="v" id="p1"><div class="vn">1</div><p class="vt">入場提醒</p><p class="vb">請大家進入大廳就座，準備聆聽講座。還有五分鐘，請把手機調成靜音或飛航模式。</p></div><div class="v" id="p2"><div class="vn">2</div><p class="vt">開場問候</p><p class="vb">各位法師、各位佛友，大家晚上好。歡迎出席今晚由竹山阿南佛學會與法鼓山馬來西亞道場聯辦的對談會。我是主持人佩生。</p></div><div class="v" id="p3"><div class="vn">3</div><p class="vt">恭請嘉賓</p><p class="vb">現在恭請繼程法師和吉博禪師展開今晚的對談。大眾請起立、合掌，恭請繼程法師、吉博禪師、陳維武居士及陳俊賢居士到佛前。</p></div><div class="v" id="p4"><div class="vn">4</div><p class="vt">禮佛問訊</p><p class="vb">大眾請向上行三問訊禮，向佛三半拜：一問訊、再問訊、三問訊。大眾向法師、老師們行一問訊。大眾請就座。</p></div><div class="v" id="p5"><div class="vn">5</div><p class="vt">回顧去年</p><p class="vb">還記得去年在普照寺的對談嗎？兩位禪師首次同臺，敘述當年從聖嚴法師接受法脈的情景，也討論頓悟與漸修的不同。在笑聲與靜默之間，展現了以心應心的精神。如果錯過了去年的對談，記得上 YouTube 觀看。</p></div><div class="v" id="p6"><div class="vn">6</div><p class="vt">介紹對談</p><p class="vb">今晚兩位禪師再度同臺，繼續探討禪法和生命課題。我先介紹兩位對談嘉賓。</p></div><div class="v" id="p7"><div class="vn">7</div><p class="vt">介紹繼程法師</p><p class="vb">繼程法師，1978年於馬來西亞三慧講堂竺摩上人座下出家。1985年親受聖嚴法師傳授禪宗法脈，正式成為聖嚴法師的第一位法子。之後積極推廣禪法教學，並創辦不同類型的密集課程。</p></div><div class="v" id="p8"><div class="vn">8</div><p class="vt">介紹吉博禪師</p><p class="vb">第二位對談嘉賓是來自美國加州的吉博·古蒂亞茲禪師。吉博禪師自1970年投入武術、氣功與禪修領域，至今已有超過50年經驗。2002年正式獲得聖嚴法師法脈傳承，成為目前唯一居住在美國的西方裔禪宗法脈繼承人。多年來，他走遍全世界教授佛法、指導禪修。</p></div><div class="v" id="p9"><div class="vn">9</div><p class="vt">介紹翻譯陳俊賢</p><p class="vb">今晚我們也非常榮幸邀請到兩位來自馬來西亞的翻譯嘉賓。負責繼程法師部分的是陳俊賢居士。他是人工智能技術研究院的全職全棧開發員，從事佛教文本數位化工作，曾任馬來亞大學佛學會主席，並積極參與許多佛教項目。</p></div><div class="v" id="p10"><div class="vn">10</div><p class="vt">介紹翻譯陳維武</p><p class="vb">負責翻譯吉博禪師部分的是陳維武居士。陳維武居士多年來參與佛法口譯及筆譯工作，曾擔任許多大德法師的弘法口譯員。年輕時在美國學習、工作，返馬後曾任獨中校長。現居墨爾本，任職於維多利亞州政府，從事家庭暴力防治工作。</p></div><div class="v" id="p11"><div class="vn">11</div><p class="vt">主題引言</p><p class="vb">今晚的主題來自一部很短的經典《八大人覺經》。經中第一覺就說：「世間無常，國土危脆。」這八個字放在今天格外親切。戰爭還未停止，貧富差距嚴重，地緣政治不穩定，人工智能迅速影響社會各層面。外在一切似乎沒有一樣是穩定的。所以我想先請兩位禪師談談：當外在一切都在動搖，我們內心升起的反應可以是禪心，也可以是凡心。請問我們如何讓禪心安住？</p></div></div></details></section><section class="chap book" id="c1s"><details class="layer sec" id="c1"><summary><span class="stt"><span class="cseal">一</span>吉博禪師：佛法與時代，信心與慈悲</span></summary><div class="in"><p class="cdesc">佛法在二十一世紀是否契機；核心價值是智慧與慈悲，禪宗核心是信心；原諒敵人、祝福領袖。（第 12–23 則）</p><div class="v" id="p12"><div class="vn">12</div><p class="vt">吉博致謝</p><p class="vb">吉博禪師：首先感謝我的師兄繼程法師邀請我來到這裡，與他進行第二次對談，也感謝所有贊助者，使這件事得以成辦。自從去年第一次對談之後，今年還有機會再和繼程法師對談，也要感謝所有護持這場活動的善信，讓我們有今晚殊勝的聚會。特別感謝活動在 Zoom 上線上直播，讓世界其他地方的人也能聆聽我們的交流。</p></div><div class="v" id="p13"><div class="vn">13</div><p class="vt">敬重師兄</p><p class="vb">我年紀比繼程法師大，但他仍是我的師兄，所以我對他表達至誠敬意。</p></div><div class="v" id="p14"><div class="vn">14</div><p class="vt">佛法與時代</p><p class="vb">今天主題說白了就是：佛法在面對21世紀現況時，還有用嗎？還契機嗎？世界上主要宗教至少有兩千年以上歷史，有時會變得僵化、靜態。但自從佛陀把法留布世間以來，佛教不斷順應不同時代需要而演變、發展。早期有上座部，後來開展出大乘佛教，大乘裡有禪宗、藏傳佛教，也有淨土等。這些流派展現出極大韌性，不只是恆常不變，還能順應社會需要不斷演變，讓人們用以在這個世界中引導自己。</p></div><div class="v" id="p15"><div class="vn">15</div><p class="vt">核心價值</p><p class="vb">在21世紀，佛法更迫切需要這種演變，讓它更適合現代人，能在生活、環境中用得上。無論從何地開始，佛教的核心價值必須保留，即智慧與慈悲。若談到禪宗，最需要保留的核心價值是「信心」——對心的信心、對佛的信。說到佛，佛不是離開我們身外的一個形象，而是在我們心中。</p></div><div class="v" id="p16"><div class="vn">16</div><p class="vt">信心可貴</p><p class="vb">在任何一個宗教，尤其佛教中，要對一個不可捉摸的東西產生信心，是很困難的事，甚至可說不可思議。但若閱讀佛法典籍，品味佛教祖師生平事跡，就會知道這個信心真實不虛。作為修行人，我們最大的挑戰，是如何讓信的力量在生活、生命中展現出來。</p></div><div class="v" id="p17"><div class="vn">17</div><p class="vt">信心與道德</p><p class="vb">如果信心不見了，倫理與道德也就不見了，慈悲與智慧也會因此不見。沒有這些，世界強調的就會是「我們擁有什麼」。生命萎縮成欲望，只想要東西，而不是前面所說的價值。放眼世界，欲望不斷增長、執著，這就是我們面對的現實。說起來，這就像一個人口渴時拿起一罐鹽水來喝，是不可能解渴的。</p></div><div class="v" id="p18"><div class="vn">18</div><p class="vt">正見轉化</p><p class="vb">若善用佛法正見，我們就會領悟：世界可以改變，但必須改變我們看待世界的方式。與其不斷想從別人身上得到什麼，不如想自己有什麼可以跟他人分享。</p></div><div class="v" id="p19"><div class="vn">19</div><p class="vt">原諒敵人</p><p class="vb">所有修行人最難處理、最難做到的一件事，就是如何原諒你的敵人，原諒那些徹底愚癡、對世界造成巨大傷害的人。每天在個人修行中，我都把自己對世界的祝福從心裡散播出去，特別是對世界政治家、世界領袖。有人聽我這麼說會問：這個政客這麼糟糕，你為什麼還把祝福給他？因為他們最需要。</p></div><div class="v" id="p20"><div class="vn">20</div><p class="vt">屠夫禪修</p><p class="vb">我記得聖嚴法師在一次禪修時問我們：如果來了一個屠夫，我們是否應該讓他跟我們一起禪修？有人回答：師父，不能讓他進來，他整天屠殺，怎能讓他跟我們一起修行？師父看著我，問：「Gilbert，你認為呢？」我回答：像這樣的人，才是最需要修行的人。如果不讓他們進來，我們還讓誰進來？我們每天念「眾生無邊誓願度」，如果連這樣的人都不能接受，念這句話的意義又在哪裡？</p></div><div class="v" id="p21"><div class="vn">21</div><p class="vt">祝福領袖</p><p class="vb">所以我每天把祝福散播給世界所有領導人，因為他們最需要這些祝福。他們手中掌握權力，只要按下一個按鈕，就能對世界造成毀滅性破壞，剝奪許多人本應享有的生活資源。</p></div><div class="v" id="p22"><div class="vn">22</div><p class="vt">佛教光明</p><p class="vb">佛教能照亮這個世界，顯示一切生命——不只是人類，還有所有眾生——的價值，並保護環境。因此，佛法在這個時代的意義，就是佛法的光明可以照耀我們所處的世界。</p></div><div class="v" id="p23"><div class="vn">23</div><p class="vt">與時俱進</p><p class="vb">任何宗教都必須與時代融合、彎曲，才能保持相關。做出演變時，不應背離核心價值，而是把核心價值用另一種方式投射到當下社會。我們要保留的，是讓它為世界帶來希望。我們布施慷慨的心、慈悲，對需要被關懷的世界非常重要。阿彌陀佛。</p></div></div></details></section><section class="chap book" id="c2s"><details class="layer sec" id="c2"><summary><span class="stt"><span class="cseal">二</span>繼程法師：敦煌、弘法與國土危脆</span></summary><div class="in"><p class="cdesc">敦煌缺少佛法信仰、捨身餵虎、在西方與波蘭弘法、不與外道辯論而多弘正法。（第 24–42 則）</p><div class="v" id="p24"><div class="vn">24</div><p class="vt">敦煌參訪</p><p class="vb">繼程法師：上個月我去了一趟敦煌，跟一個香港團隊去，他們與敦煌研究院有聯繫，所以我們也見到前院長。我們在敦煌的參觀比多數人更深入、更廣泛，幾乎方方面面都參觀了。非常讚歎敦煌所做的工作，尤其保護中國洞窟方面，已做到非常高水平，用科學方式保養。</p></div><div class="v" id="p25"><div class="vn">25</div><p class="vt">缺少信仰</p><p class="vb">但在參觀過程中，我覺得他們好像少了一點東西，少了一塊。後來我也把這個信息帶到香港，告訴敦煌前院長之一。我說：敦煌現在所做的一切都非常好，但少了這一塊，補上去就完美了。這一塊是什麼？就是佛法的信仰。</p></div><div class="v" id="p26"><div class="vn">26</div><p class="vt">敦煌因佛教而有</p><p class="vb">他們做了很多學術、歷史、文化、藝術方面的考據和保護，但在講解或宣傳中，基本上沒有佛法的信仰。我跟院長說：敦煌是因為佛教才有的，沒有佛教就沒有敦煌。舉例說，裡面很多壁畫，比如經變畫，離開經典以後，壁畫就沒有內容了。還有九色鹿的故事，讀佛陀本生故事都會讀到。其中王子捨身餵虎：他是第三個王子，出遊時看見一隻母虎餓得快死，還有幾隻小虎。母虎若死，小虎也會死。太子就說，讓老虎吃掉他。因為老虎吃他，老虎就犯殺生？所以他先自殺，才讓老虎把他吃掉，老虎吃了就有力氣，救了小虎。</p></div><div class="v" id="p27"><div class="vn">27</div><p class="vt">捨身餵虎</p><p class="vb">我說，這個故事若當作神話故事、普通故事，就彰顯不出佛法的內容。它必須有佛法的信仰，因為這是佛陀行持菩薩道時所做的一件事。一般人不用佛法信仰，只把它當故事、傳說甚至神話來看。但我們必須把它當作真實發生的事情。為什麼能做到？因為慈悲與智慧。太子已有智慧，從緣起角度知道一切無常、無我，生命有它的走向，所以用這種方式度化老虎。</p></div><div class="v" id="p28"><div class="vn">28</div><p class="vt">信仰不可缺</p><p class="vb">這樣的故事若拿掉佛教信仰，只當故事講，聽的人就只當一件事而已。所以我提醒他們，佛教信仰一定要放回敦煌，這樣敦煌會更完美。我不知道這個信息能不能傳達到他們內部，但通過幾個渠道稍微提了，包括現在這個渠道。</p></div><div class="v" id="p29"><div class="vn">29</div><p class="vt">無畏布施</p><p class="vb">從這裡也可看出，佛陀本身故事裡所做的布施，除了身體布施，還有無畏布施。這種布施必須有一種內在智慧，然後對外釋放慈悲。如果不了解這一點，當然很難理解。這些故事在佛教洞窟、壁畫裡很多。若不把佛教信仰放進去，只當學術、藝術、文化研究，研究洞窟何時做、畫得多好，那麼核心部分就沒有了。因為沒有佛法、沒有佛教信仰，就不會有敦煌的出現。還好附近有個雷音寺，現在提倡佛法信仰，聽說每年佛誕時很多人還會去禮拜，只是學術上必須加上這一塊。</p></div><div class="v" id="p30"><div class="vn">30</div><p class="vt">敦煌延續</p><p class="vb">這給我們一個重要啟發。敦煌延續了一千多年，到明代才被停止，因為敦煌是絲綢之路很重要的點。明代時把敦煌往內收，收到嘉峪關或什麼關，所以敦煌慢慢沒落，後來才發生清代的事。佛教在中國發展，敦煌是非常重要核心。從西方傳來——這裡的西方不是歐洲、美國，因為美國不存在，歐洲當時還是希臘、羅馬文化，巴比倫、中亞、波斯、印度傳到敦煌，中原也受影響，漢傳佛教也影響他們。所以它很核心。</p></div><div class="v" id="p31"><div class="vn">31</div><p class="vt">弘揚需要人</p><p class="vb">我們要重視它，因為從過程裡看到：佛教需要有人弘揚。中斷的那段時間，佛教就衰微了。現在去借鑑時，因為路線關係，比如中國對宗教的中立性關注少，所以比較偏重學術。但從過程要了解，佛教發展需要與時俱進。</p></div><div class="v" id="p32"><div class="vn">32</div><p class="vt">中國佛教發展</p><p class="vb">前陣子我在中國旅遊，90年代就發現中國佛教還有很大空間，因為硬體建設都還在。我觀察，改革開放後不久，中國佛教就發展起來。但現在發展過程中仍受到一些局限。佛教在中國以外的發展，比如南傳佛教、藏傳佛教傳到西方，漢傳佛教也傳到西方，但漢傳在西方仍受局限。</p></div><div class="v" id="p33"><div class="vn">33</div><p class="vt">西方弘法局限</p><p class="vb">像我們的老師吉博禪師，在美國弘揚佛法，其實也不是很多人。他非常辛苦，到處弘法，甚至跑到我們這邊，又要回去，又要到臺灣，行程非常緊密。像他這麼積極弘揚禪法與佛法的人也不多。同時我發現，在西方弘法，一方面必須遷就他們的文化。我早先在美國弘法時，多數在華人社區，用我們的方式弘揚，沒什麼問題。後來到了歐洲，華人很少，華人佛教徒很少，就要了解或相應他們的文化。</p></div><div class="v" id="p34"><div class="vn">34</div><p class="vt">波蘭弘法</p><p class="vb">現在在波蘭比較長期，每年去帶禪修。今年30天，明年也是30天，打30天禪修。講法要讓他們聽得懂、能接受，因為有很多文化差異。若沒有做這些理解，或沒有相應他們的需要，有時他們聽不明白，或不太能接受。所以弘法過程中也要講一些中國文化。比如講愛情時，講中國人的愛情觀；七月十五講地鬼開門的故事給他們聽，讓他們覺得有趣，覺得原來中國人是這麼想的。這也是一種方便。</p></div><div class="v" id="p35"><div class="vn">35</div><p class="vt">佛教徒減少</p><p class="vb">更重要的是，佛法能不能進入他們的心。我們發現，現在佛法在弘揚方面的確有很多不便或障礙。馬來西亞有一些佛教社會運動者，專門搞佛教社會運動，他們整天說佛教徒越來越少，尤其東方佛教徒少了。比如泰國，基督教入侵，改變信仰，聽說還要把部長改成基督徒，讓佛教徒每天擔心這個問題，說佛教徒人數少了。</p></div><div class="v" id="p36"><div class="vn">36</div><p class="vt">做能做的事</p><p class="vb">我沒有那麼大的願力做那麼大的事情。我想：我做我能夠做的事情。現在能做的，就是帶禪修，講一些佛法，類似這樣的對話，把佛法的信息傳出去，讓聽得明白、能接受的人接受。</p></div><div class="v" id="p37"><div class="vn">37</div><p class="vt">附法外道</p><p class="vb">他們同時面對一個問題：所謂附法外道、復佛外道，然後整天去批判他們、跟他們鬥爭、辯論。我覺得很浪費時間。因為你整天跟他們辯論，要花很多時間找出他們的不對，找出佛法的正見去跟他們對話。可是你講完以後，信他的還是信他，不信你的還是不信你，那講白講。我們應該做的是多弘揚正法。</p></div><div class="v" id="p38"><div class="vn">38</div><p class="vt">弘揚正法</p><p class="vb">我們把正法傳出去，給社會人士選擇空間。他覺得佛法好，就來；他覺得「我還是喜歡有求必應那些」，那就去。至少他有選擇。如果我們一味跟人家對抗、辯論，一定要把佛教信徒拉得多高，我們費了很多力氣，其實效果不大。所以弘揚正法是我們最重要的工作。有機會就把一些信息傳達給更廣的佛教空間。</p></div><div class="v" id="p39"><div class="vn">39</div><p class="vt">選擇空間</p><p class="vb">希望我們這樣做，能讓社會關注。比如不斷講正法，他們明白正見是什麼、緣起正見是什麼。明白以後，覺得佛法很好，就來。來了以後不一定信佛，可能覺得佛法智慧很好，佛法講的慈悲也很好，但像太子捨身餵虎，我做不到。做不到沒關係，我們沒有叫你們全部做，只讓你們知道：這是一個事實，是行菩薩道的人可以做到的。如果有一天你發現你也可以做到，很好。以後成佛時，你也可以把這個故事講給你的信徒聽。</p></div><div class="v" id="p40"><div class="vn">40</div><p class="vt">與時俱進</p><p class="vb">這些很重要的信息，我們要傳導。我們的老師也講了很多歷史發展，這很重要，因為佛教要與時俱進。看這個時代，佛法最需要做的是什麼？最需要做，而且做了對佛法有好處，也不知道對抗那些不好的領袖，為他們祈禱了。更何況我們弘揚佛法時，也盡量為世界祈求和平。這種行力其實有功能、有作用。</p></div><div class="v" id="p41"><div class="vn">41</div><p class="vt">祈禱和平</p><p class="vb">現在社會還能保持一定穩定，是因為有很多宗教人士不斷每天祈禱世界和平。不只是佛教，包括其他宗教，每天禮拜時都做這種心靈迴向。這會在我們地球上形成一種氣場，讓更多人保持慈悲心，對很多事情比較準確地看待。這一點我們要學習。你們盡量在自己的範圍、空間裡，把正信佛教弘揚出來，讓身邊的人明白了解。要來，就讓他們來。</p></div><div class="v" id="p42"><div class="vn">42</div><p class="vt">國土危脆</p><p class="vb">至於「國土危脆」，不要想太多，因為世間本來就是成壞空。你擔心太多，現在都不用修了，馬上就要地震、一大堆事情。所以不要太在意這些問題，只在我們能力範圍以內，把我們應該做的事情做好。</p></div></div></details></section><section class="chap book" id="c3s"><details class="layer sec" id="c3"><summary><span class="stt"><span class="cseal">三</span>吉博禪師補充：壁畫密碼與一切唯心</span></summary><div class="in"><p class="cdesc">敦煌藝術展、《圓覺經》偈、無事忙、十二因緣、無我相、臨濟禪師，「我們都是佛」。（第 43–61 則）</p><div class="v" id="p43"><div class="vn">43</div><p class="vt">敦煌藝術展</p><p class="vb">吉博禪師補充：新加坡現在有一個敦煌藝術展。他們除了把敦煌原來的雕像帶到新加坡展覽，也複製了洞窟壁畫在展覽中展示。我在看那些複製壁畫時，體驗和剛才法師分享的類似。這些壁畫不只是藝術，也不只是宗教教育、宣傳。壁畫裡含有佛教密碼。其中一個複製石窟，天花板上畫了成千上萬尊佛像，布滿整個石窟。當我站在複製的石窟前觀賞時，可以感受到很多佛教密碼的信息朝我湧現過來。從一千年前，這信息穿越千年，直接達到我的心裡。它在呼喚我，讓我把接收到的信息跟更多人分享。</p></div><div class="v" id="p44"><div class="vn">44</div><p class="vt">壁畫密碼</p><p class="vb">它不只是我們視覺所能看到的藝術，而是這些視覺藝術裡隱含的佛教核心思想與核心信息。它跨越千年，不斷向我們展示。布滿整個天花板的千尊佛像，都在向我傳達一個信息：讓我把佛法的精神向世界上所有人分享、傳達。我們保存敦煌古文物，意義在於不斷讓它在世人眼前展現，不斷傳達佛法的核心精神。</p></div><div class="v" id="p45"><div class="vn">45</div><p class="vt">精神傳承</p><p class="vb">但更重要的是，不是那些卷軸裡面的文字，而是卷軸文字所蘊含的精神。在我們心裡的那個精神，才是需要不斷跟世人分享的。這就是我認為法師看到真正洞窟時所感受到的。過去願古菩薩在洞窟裡所呈現的，其實就是在傳達一個信息：希望我們把他們流傳下來的佛法不斷跟世人分享。真是一個大寶藏。</p></div><div class="v" id="p46"><div class="vn">46</div><p class="vt">金剛經功德</p><p class="vb">《金剛經》裡，佛陀問須菩提：如果有人以三千大千世界恆河沙數的珍寶布施給所有人，功德大嗎？須菩提說：世尊，非常大。佛說：這樣的布施功德，還不如以四句偈對一個眾生做法供養的功德。敦煌壁畫向我們展現的，其實不可思議。它展現的是讓所有人從紅塵世間的夢裡度化出來的信息。我們要保留的，就是這樣的信息，為未來世代眾生保留這個核心精神。</p></div><div class="v" id="p47"><div class="vn">47</div><p class="vt">傳法時刻</p><p class="vb">當我接受聖嚴師父傳法時，我並沒有狂喜，只是深深吸了一口氣。我知道我的生命從此改變了，因為他把佛法的寶藏放在我的肩上。從那一刻起，我不斷尋找可以把佛的寶藏也傳下去的人。我們就是以這樣一代一代傳承的方式，把佛給我們的寶藏不斷傳下去，讓世界……總結起來，就是六度、六波羅蜜的修行。</p></div><div class="v" id="p48"><div class="vn">48</div><p class="vt">六度修行</p><p class="vb">我們修行六度，其實不是為了證悟什麼東西。我們的目的並不是證悟之後跟所有人說拜拜，這不是我們修行的目的。所謂證悟，是一個人證悟時，他所悟的是：我們所得的這個人身、人生，在於我們所處的世間，還有很多事情可以做。證悟時轉變的不是色身，不是這個色身轉變成佛的佛身。所謂轉變，在證悟轉變時，其實是領悟我們所具有的人生，也有能力讓那些還在沉睡中的眾生醒來。這是我們具足的人生可以做到的。</p></div><div class="v" id="p49"><div class="vn">49</div><p class="vt">圓覺經偈</p><p class="vb">《圓覺經》裡有一首偈子，明確表達這樣的精神：菩薩以方便示現於世間。意思是菩薩以方便示現來到我們的世間。所謂方便示現，就是他們來到我們的世界，有一定的目的和意義。他們的示現，其實是在實現自己所許下的願，以願力示現於世間。所謂轉變與對世間的超越，就是要領悟我們的人生對這個世間其實是有用的。</p></div><div class="v" id="p50"><div class="vn">50</div><p class="vt">無事忙</p><p class="vb">無論一個人是帶著這個目標來到世間，還是修行之後才覺悟到這個角色，一切都會隨著我們下一口氣做什麼而改變。我們仍然帶著這個色身。聖嚴師父在末後記裡寫「夢裡有哭笑」，也寫「無事忙中」。無事忙這三個字非常重要，我們必須深深去體會。比如我和繼程法師對談，你們聆聽時，其實就是在無事忙。當我們明白，就知道對於自己的色身，在這一世裡要怎麼好好善用。</p></div><div class="v" id="p51"><div class="vn">51</div><p class="vt">一切唯心</p><p class="vb">這是對於佛法的甚深體驗、體證所帶來的信心與信仰。也就是他所體悟的是「一切唯心造」。沒有任何東西不是由心所生。菩薩們知道這個原則，他們的任務就是讓被困在夢境裡的所有眾生都醒來。</p></div><div class="v" id="p52"><div class="vn">52</div><p class="vt">菩薩示現</p><p class="vb">我剛才跟大家分享的《圓覺經》偈子，前半說菩薩方便示現於世間；下一句則說，菩薩雖然方便示現於世間，但他們不屬於這個世間。這個偈子要了解其甚深內涵並不容易。大家讀偈子時，從文字上會有一些體會，但要真正了解它的深意並不容易。是心進入我們這個世界，來覺悟這些如幻的眾生。它不屬於這個世間，因為這個世間是心所造作出來的。</p></div><div class="v" id="p53"><div class="vn">53</div><p class="vt">心轉環境</p><p class="vb">如果我們對我們的心具足信心，我們就有改變這個世界的力量。聖嚴法師也跟我們說：我們不應該被環境所轉，而應該由我們的心來轉環境。聖嚴法師所說的，其實跟《圓覺經》那個偈子所講的是同樣的精神、同樣的道理。這跟敦煌壁畫裡所蘊含的佛教信息、佛教密碼，其實也是一模一樣的。</p></div><div class="v" id="p54"><div class="vn">54</div><p class="vt">大解脫</p><p class="vb">如果我們用這樣的視角來看世界，我們就會知道：我們對這個世界有一定的責任，有一定的任務要去完成。所謂大解脫，其實就是必須知道對於我們的色身，到底要怎麼好好善用、好好應用。當你真正了解要對色身怎麼應用、怎麼處理時，你其實就是這個世界最富有的善男子、善女人。</p></div><div class="v" id="p55"><div class="vn">55</div><p class="vt">火警公案</p><p class="vb">我再舉兩個例子。一個是我最近一次開示時問學生：如果你在靜坐時，旁邊起了大火，那時候你要怎麼做？突然火警警報大響，煙霧瀰漫，你在靜坐中，你會怎麼做？多數人都說逃。我就回答：那前面坐的那個老婆婆怎麼辦？如果她坐在後面，你可能就把她踐踏在腳下，往外狂奔出去了。其實我們應該做的是，必須確保所有人都能安全逃離火場，無論誰都不能被遺留下來。這就是我們所謂的願力。</p></div><div class="v" id="p56"><div class="vn">56</div><p class="vt">捨身精神</p><p class="vb">這種願力精神，其實跟法師分享的太子捨身餵虎那個菩薩故事的精神是一樣的。大家做得到嗎？能夠也捨身餵虎嗎？聖嚴法師跟大家說：不需要畏懼、害怕死亡，死亡也沒有這麼壞。死亡就好像去汽車經銷商那裡，把你的舊車換成新車，就這麼簡單。我們必須與正見相應。我們不求死，也不怕死。</p></div><div class="v" id="p57"><div class="vn">57</div><p class="vt">十二因緣</p><p class="vb">當我們說到因緣法，我們說的是十二因緣。從無明、行、識這樣算過來，所謂的自我，其實是數到第十一個因緣時才出現。這種認知，就是我們所謂的正見。十二因緣的起點是無明，不是你的無明。因為剛才說「生」是在第十一才出現，所以第一個無明不是你這個「我」的無明，你還沒出現，要在第十一個環節才出現。所謂無明，其實是心的無明，讓這一切能夠產生動力。</p></div><div class="v" id="p58"><div class="vn">58</div><p class="vt">無我相</p><p class="vb">所以《華嚴經》偈子說：「若人欲了知，三世一切佛，應觀法界性，一切唯心造。」這就是把我剛才所說的「我的存在」這個執念去掉。《金剛經》也跟我們說：無人相、無我相、無眾生相、無壽者相。有時候我在開示裡講到無我相這種佛法時，聽的人覺得很震驚：「你說什麼跟什麼？沒有什麼？」然後他又問：「到底是什麼？」六祖慧能大師想告訴我們的核心精神就是：沒有什麼，什麼也是沒有的，對「什麼」本身也是無的。當我們問「什麼」的時候，你已經假定有一個在問「什麼」的我、那個人。其實沒有所謂的「什麼」，沒有你，沒有所謂的自我。如果沒有這樣一個我在，到底是誰在問呢？</p></div><div class="v" id="p59"><div class="vn">59</div><p class="vt">臨濟禪師</p><p class="vb">不要怕。雖然我現在跟你說，好像我把你的「我」抽掉了，但我會給你更好的東西來代替這個我。臨濟禪師有一次開示，問下面大眾：你們真的想看到佛和祖師嗎？現在就可以給你們看。誰要看佛和祖師？請舉手。沒有太多人想看。算了，不給你們看了。我再問一次，誰想看到佛和祖師？其實就是諸位本身。因為除了你所具足的本心之外，沒有任何其他可以看到的所謂佛。有一部經典叫《道行般若經》，裡面說佛與眾生的心是一模一樣的。</p></div><div class="v" id="p60"><div class="vn">60</div><p class="vt">佛心眾生心</p><p class="vb">我不能讓你的肉身覺悟。臨濟禪師曾在開示時說：讓你的肝教你的胃，什麼是佛法。祖師們把我們這個在座的位置都叫做「心」。但我們需要具足有信心的是：正在聆聽的諸位的那顆心，就是佛心。這是我們必須具足信心的。這是最重要的，也是我們在跟人家分享佛法時必須分享出去的。</p></div><div class="v" id="p61"><div class="vn">61</div><p class="vt">分享信心</p><p class="vb">當一個人真正、真誠地體認到，這一生沒有其他目的，就會體驗到：我們來到這個人世間的唯一目的、唯一意義，就是幫其他的人也醒悟起來。這就是我們必須跟其他人分享的信心。所以今晚你回家，如果跟家人說：今天 Gilbert 禪師教了什麼？他告訴我們：我們都是佛。家人肯定說：你是什麼佛？可能長得個子比較大，像一尊彌勒佛。希望大家能夠具足信心。這就是我們千年以來的傳承所帶來的信息。謝謝大家。</p></div></div></details></section><section class="chap book" id="c4s"><details class="layer sec" id="c4"><summary><span class="stt"><span class="cseal">四</span>繼程法師：信心與「若是佛，會如何處理」</span></summary><div class="in"><p class="cdesc">禪宗直指佛性清淨、超佛越祖，以及日常提醒自己「假如是佛」的修行方法。（第 62–72 則）</p><div class="v" id="p62"><div class="vn">62</div><p class="vt">總結信心</p><p class="vb">主持人：謝謝兩位禪師這麼精彩的交流。請師父也總結一下，因為剛才吉博禪師已經提到很重要的核心思想，就是信心：我們對自己自性清淨的那種信心，到底有沒有建立起來。所以再請師父開示。我們現在邀請繼程法師繼續這個主題——信心與信仰，如何發展我們真正具有佛性、具有佛心的信心。</p></div><div class="v" id="p63"><div class="vn">63</div><p class="vt">禪修次第</p><p class="vb">繼程法師：我們在禪修時會有不同的次第。一般上說，先修止，然後再修觀，觀無常、無我。這些都是傳統的觀無常、無我，能夠覺悟，是一個次第的過程。但佛法傳到中國，尤其禪宗出現時，就突破了所有局限，直接告訴你：從佛法經典裡說，一切眾生都有佛性。這個佛性本來就是清淨的。從教理上可以明白，因為一切法都是空的，空就不會被污染，不被污染就是清淨。所以我們的自性、佛性是清淨的。這是大乘佛教裡一個非常重要的理念。</p></div><div class="v" id="p64"><div class="vn">64</div><p class="vt">即心是佛</p><p class="vb">這個觀念要通過不同程度的學習。一下子告訴一個人「你就是佛」，大概會出現兩種情況。一種是他不敢承擔：怎麼可能？你看我這樣子，一點都不像佛，因為拿佛的相片來看，不一樣。另一種可能產生一種心理：哇，我是佛了，那我什麼事情都可以做了，因為佛是完美的，不會犯錯。假如我是佛，不就可以什麼都做了嗎？這是一種我慢，會出現。但這種情況比較少。多數人拿佛相一對，不敢承認。這種情況在我們的教學過程中很普遍。</p></div><div class="v" id="p65"><div class="vn">65</div><p class="vt">超佛越祖</p><p class="vb">禪宗為什麼直接告訴你這個佛？因為你具足佛性，那你當下就是佛。甚至禪宗在傳承過程中，不只是覺得佛是完美的、祖師都是開悟的，他們還要「超佛越祖」。意思就是：每一個人都可以有無限的能量，完成類似成佛的過程。一旦你開悟以後，體驗到自性清淨，然後你可以執心把清淨的自性流露出來。那時候就會發現，其實你可以完成很多很多的事情。也就是說，你心裡的能量非常充實，可以做很多事情。這是禪宗給我們一個很重要的信息。</p></div><div class="v" id="p66"><div class="vn">66</div><p class="vt">禪宗突破</p><p class="vb">中國禪宗出現時，經歷了一段時間傳承，但都沒有發展，因為都是單傳。到六祖慧能大師時，當時整個中國佛教的天台宗和華嚴宗已經完成它們的體系。華嚴宗裡講五十二個階位；天台宗不只是五十二個階位，還把佛的次第分成藏、通、別、圓。藏教有藏教的佛，通教有通教的佛，圓教的佛才是圓滿的。也就是說，所有教派都把佛的次第講得比較有系統，甚至告訴我們必須修多少三大阿僧祇劫才能完成。禪宗走的一條路線，就是把這些都放下。你只要修行，有了開悟的體驗，所有這一切可以在一心中就現出來。你要具備這樣的信心，認為自己能開悟，能通過禪的修行開悟。</p></div><div class="v" id="p67"><div class="vn">67</div><p class="vt">建立信心</p><p class="vb">要建立這個信心不容易。當時在中國，普遍有一群修行人明白這個道理、接受，因為當時佛教在中國非常普遍，弘揚程度非常高，所以很多利根的人出現。他們接受佛法修行教導時，很快就領悟了。所以當時他們提出這個重要觀念，很多禪宗祖師都投入修行，用禪的方法。禪的方法也有次第、教學或運作，一部分流傳下來，一部分需要從公案整理、流傳下來。比如我們現在有話頭方法、默照方法，聖嚴師父都在教學裡講。</p></div><div class="v" id="p68"><div class="vn">68</div><p class="vt">假如是佛</p><p class="vb">同樣，你所有禪宗修行中，第一個關鍵心念，就是你要先接受：你的自性是清淨的，就是佛性。這樣你在修行時才能夠契入。這是比較利根的方式。你們什麼時候讀了這麼多佛書，包括《成佛之道》，讀完了以後有種信心，覺得：對啊，我就是佛，只是現在還沒有開悟而已，現在我要找一個開悟的方法，讓自己成就。如果你有這樣一種信念，來禪修，那麼你的方向、目標就比較明確了。但如果你到現在還在猶豫：這個行不行？好像太高了一點。那就繼續放慢腳步，從佛法的修學裡一步一步提升。提升到一個程度時，你慢慢就會理解佛法所講的「一切眾生都有佛性」這個觀念。這對修行禪或修行佛法很重要。</p></div><div class="v" id="p69"><div class="vn">69</div><p class="vt">佛如何處理</p><p class="vb">也有一個朋友，一位學者，他告訴人家一個方法：遇到事情的時候，他說：「假如是佛，他會怎麼處理這個事情？」意思是：我如果是佛，我會怎麼處理這個事情？這種不斷提醒自己的方法也很好。因為你不斷提醒自己就是佛。比如人家罵你的時候，你說：假如是佛，他會怎麼處理？我們有看到佛跟人家吵架嗎？我們看到的佛，就是聽完那些人罵了以後，還給他一杯水：「辛苦了，口乾了。但是你剛才講的，我都沒有聽進去，那就是你白講了。」佛陀也完全不跟人家爭辯。那你就想：如果我遇到這種情況，我能不能夠像佛一樣處理？如果你不斷用這種方法，也是一個很好的修行。</p></div><div class="v" id="p70"><div class="vn">70</div><p class="vt">家中做佛</p><p class="vb">你們在家裡，剛才說你們回去就做佛。如果你家裡的人不相信，你想：如果佛遇到不相信佛的人，應該怎麼處理？佛也沒有跟他爭辯，只是用行為表現給他知道：佛是多麼善良、多麼慈悲、多麼有智慧。這樣他們慢慢會受感化，覺得：真的，你學佛回來以後不一樣了，你學佛回來以後真的像佛了。那你們的修行就有一定的基礎了。不斷用這個方法提醒自己，到有一天你發現：我就是佛了，所以我處理這個事情完全是佛的模式、佛的方式。那你就很厲害了。</p></div><div class="v" id="p71"><div class="vn">71</div><p class="vt">生活應用</p><p class="vb">所以佛法有很多不同的層次。我們在信念方面，看我們建設到什麼程度。如果你建設到「假如我是佛，我會怎麼處理」，你就會明白：當時那個王子為什麼他會跳下去？你就明白了，因為他是佛，所以佛做佛的事情。我們呢？「哎喲，不敢了。假如我是佛，我可能先跑掉了。」那就不是佛了，那就是凡夫。那你就明白他的分別。當然這是比較高的程度，但我們日常生活可以做到：假如我是佛，我怎麼處理這個事情？很多家裡的事情，可能因為你這樣的一個觀念，就解掉了，或者化無了。因為你們都知道，在家裡動不動什麼脾氣就來了，一大堆煩惱都來。那你想：假如我是佛，你就不會發脾氣，不會去做這些奇奇怪怪的行為了，因為你知道佛不會做。所以這也是一個修行的方法。</p></div><div class="v" id="p72"><div class="vn">72</div><p class="vt">禪修實證</p><p class="vb">但當你真正有一種很強的信念，知道一切眾生都有佛性，都能夠開悟、成佛，那你一定要禪修。因為通過禪修，它直接讓你得到這個受用、得到這個體驗。所以大家對於佛的信念要建設起來。等到你建設得很清楚，心裡面很清楚的時候，那麼在修行上，你就勇往直前了。好，謝謝。</p></div></div></details></section><section class="chap book" id="c5s"><details class="layer sec" id="c5"><summary><span class="stt"><span class="cseal">五</span>吉博禪師：六波羅蜜</span></summary><div class="in"><p class="cdesc">布施、持戒、安忍、精進、禪定、般若，智慧為諸佛之母。（第 73–83 則）</p><div class="v" id="p73"><div class="vn">73</div><p class="vt">問題提醒</p><p class="vb">主持人：當對談結束後，大家還記得要問什麼問題嗎？當我們遇到困境的時候，師父提醒我們：我們可以問自己：如果我是佛，會怎麼做？記得，大家回去要練習一下。由於時間關係，因為已經很遲了，我們請吉博禪師也提供我們一個非常實際的方法，讓我們也可以回去實踐。</p></div><div class="v" id="p74"><div class="vn">74</div><p class="vt">六度非修</p><p class="vb">吉博禪師：剛才我聽了法師這一番開示，心裡有很深的觸動，很感動，因為這是一種心相應的表達，真的不可思議。我們修學佛法，很重要的一個佛陀教給我們的教法，就是六波羅蜜的修行、六度。其實我們不是去修六度。如果抱著「我要修六度，讓自己變得完美」的態度去修，那就像傳統西方人所說的，有一種自己修建一個通向天堂的天梯的慢心。其實並沒有什麼地方、什麼目的地需要我們去。你說「沒有什麼？」我說「沒有什麼。」沒有二元。一切只是體性。</p></div><div class="v" id="p75"><div class="vn">75</div><p class="vt">布施時間</p><p class="vb">如果以三十二相來見佛，你是見不到佛的。只有通過自己的菩提心，才能真正見到。所謂六度、六波羅蜜，是我們在這個世間嘗試去體現的東西。它是一種我們對身邊的人展現出的行為和心行的示現。因為時間關係，我們沒有辦法很詳細地跟大家講述六度。只能簡短說。第一個是布施。布施就是盡自己的所能，把自己所有的跟其他人分享。最重要的能夠跟其他人分享的，是我們的時間。去關懷他人，去聆聽他人。當我們布施時，如果沒有「布施的人」和「接受布施的人」這種對立的觀念，我們才是真正在行布施。龍樹菩薩說有兩種布施：一種是有條件的布施，一種是無條件的布施。有條件的布施，比如身邊有其他人，你想讓他們對你有好印象，認為你是好人，所以你去布施；或者你可能是為了扣稅。最近美國有一位超級富豪，他表示願意捐出兩千萬來解決世界飢餓。聽起來兩千萬好像很多，但有人去算他十五分鐘裡能賺多少錢，就覺得這兩千萬根本不足掛齒。你想，他至少應該捐一個小時吧？</p></div><div class="v" id="p76"><div class="vn">76</div><p class="vt">無條件布施</p><p class="vb">無條件的布施，就是我們沒有施者和受者的觀念，純粹就是把自己所有的東西分享。當我們分享、布施時，當然必須具足智慧。</p></div><div class="v" id="p77"><div class="vn">77</div><p class="vt">安忍</p><p class="vb">我們需要安忍的心。你越深入觀想、思考安忍的意義到底是什麼，越了解它，你跟佛就越近。我在生活中也會碰到一些跟我意見不合的人，或者有些好像想要成為我敵人的人。對這樣的人，我也必須要有耐心、要有安忍。我的時間是佛的時間，我有全世界所有的時間。如果我這一世度不了他，我來世還有很多事可以嘗試去度他。最低程度，我不會把事情變得更糟。我不會像跟他鬥嘴：「你才是笨蛋。」「沒有，你才是笨蛋。」用這種方式對待這些人，又有什麼意義呢？</p></div><div class="v" id="p78"><div class="vn">78</div><p class="vt">修行次第</p><p class="vb">所以修行的時候，必須要有安忍的心。法師也跟大家指出，修行是有次第的，是一個漸進的過程。在這個過程當中，必須很有耐心，要有安忍的心，讓這個修行的過程自然而然地開展出來、展現出來。</p></div><div class="v" id="p79"><div class="vn">79</div><p class="vt">持戒真義</p><p class="vb">當然我們也必須要有所謂的持戒或道德。所謂的道德或持戒，並不是好像有一個裸體的人，你把一塊遮布放在他身上遮蓋起來，不是這個意思。其實所謂持戒，更深刻的意義是：不要傷害自己，也不要傷害他人。更深一層，是在自己的生命當中，不會有「我」這樣的觀念，說「我必須好好保護自己」。特別當你在嘗試保護自己的時候，它的反面就是去傷害他人，這樣更要不得。</p></div><div class="v" id="p80"><div class="vn">80</div><p class="vt">正精進</p><p class="vb">還要對修行有正精進。有位法師曾經問他的師父：修行要能夠證悟，還要有多少時間？師父說：五年。如果我用雙倍的努力呢？師父說：十年。所以我們的正精進，就好像輕柔地抓住這個東西，讓它順其自然，因緣具足、時間到了的時候，你的修行就會有它的成果。佛也對弟子說：我們的行為和心行必須是一貫的，不能夠今天呈現這個樣子，隔天又呈現截然不同的另一個樣子。我們的修行必須是可持續的、很平穩的。</p></div><div class="v" id="p81"><div class="vn">81</div><p class="vt">登山比喻</p><p class="vb">聖嚴法師曾用過這樣的比喻：修行就像一座被濃霧包圍的山，你根本看不到山頂。但你知道，只要你繼續一步接一步，一直往上爬，你遲早會到達。我們心裡必須知道：只要我們一步一步往前走，而且是往上走，終有一天你會到達山的頂峰。這就是所謂的正精進。</p></div><div class="v" id="p82"><div class="vn">82</div><p class="vt">禪波羅蜜</p><p class="vb">第五度是禪波羅蜜。很有意思，龍樹菩薩曾說：所有六度中的其他五度，都被包含在「禪」這一度裡。所有佛流傳給我們的佛法，包括四聖諦、八正道，然後所有這些覺知的教法，其實都被含融在禪波羅蜜這一度裡面。所以禪波羅蜜不只是單一的法，而是包含佛法全部的一個法。</p></div><div class="v" id="p83"><div class="vn">83</div><p class="vt">智慧為母</p><p class="vb">最後是般若波羅蜜、智慧。要真正有安忍的心，必須要有智慧；要真正恰如其分地布施，也要有智慧。所有東西到最後都回歸智慧的本源。我還有另外一位師兄，可能在場諸位知道，他每次開示都會問大家一個問題：你的媽媽是誰？你必須知道你的媽媽是誰。其實在《道行般若經》裡面，對這個問題有一個答案：智慧是一切佛之母。我們已經知道我們有佛性，那麼修行中必須依靠的，其實就是智慧。如果以這樣正確的態度來修行，離它也就不遠了。阿彌陀佛。</p></div></div></details></section><section class="chap book" id="c6s"><details class="layer sec" id="c6"><summary><span class="stt"><span class="cseal">六</span>致辭與圓滿</span></summary><div class="in"><p class="cdesc">主持人與竹山代表致辭、贈送紀念品、圓滿結束。（第 84–87 則）</p><div class="v" id="p84"><div class="vn">84</div><p class="vt">感謝與致辭</p><p class="vb">主持人：我們非常感謝兩位禪師精彩的交流、分享與砥礪良言。今晚的對談已經來到尾聲。我們非常感謝護持這次活動的義工。在結束前，我們恭請竹山代表楊嘉儀居士上臺來為我們致辭。</p></div><div class="v" id="p85"><div class="vn">85</div><p class="vt">感謝嘉賓</p><p class="vb">楊嘉儀：首先感謝兩位對談嘉賓的分享，也感謝翻譯員和主持人的協助，讓今晚的交流能夠圓滿完成。活動結束之前，我們想邀請繼程法師為今晚的對談嘉賓們以及翻譯的師兄們贈送紀念品。</p></div><div class="v" id="p86"><div class="vn">86</div><p class="vt">贈送紀念品</p><p class="vb">主持人：在結束前，我們邀請繼程法師贈送紀念品給對談嘉賓吉博禪師、翻譯陳師兄和陳師兄。還有一本吉博禪師助理帶來的新英文書。最後也謝謝我們的主持人佩生師姊。謝謝師父。</p></div><div class="v" id="p87"><div class="vn">87</div><p class="vt">圓滿結束</p><p class="vb">主持人：再次謝謝大家參加這次活動。願大家健康、平安。謝謝大家，祝大家圓滿成功。謝謝大家，祝大家。</p></div></div></details></section>
+
+<section class="chap" id="proof">
+<details class="layer proof"><summary>校註與核對清單</summary><div class="in">
+<p>逐字稿一律照錄，以下疑點僅列出待核，未更動正文。</p>
+<ul class="pf"><li><a href="#p40" data-t="p40">第 40 則</a>　「也不知道對抗那些不好的領袖，為他們祈禱了」一句語意不順，疑有漏字或語音辨識錯誤。</li><li><a href="#p45" data-t="p45">第 45 則</a>　「過去願古菩薩」疑為「過去古菩薩」或「過去古德菩薩」之誤。</li><li><a href="#p47" data-t="p47">第 47 則</a>　「讓世界……」句子中斷，原稿即如此。</li><li><a href="#p26" data-t="p26">第 26 則</a>　「因為老虎吃他，老虎就犯殺生？」語意待核；另「九色鹿的故事」與「王子捨身餵虎」兩則故事連述，疑為口語銜接。</li><li><a href="#p23" data-t="p23">第 23 則</a>　標題【與時俱進】與第 40 則標題重複，原稿如此。</li><li><a href="#p60" data-t="p60">第 60 則</a>　「讓你的肝教你的胃，什麼是佛法」語意待核。</li><li><a href="#p30" data-t="p30">第 30 則</a>　「收到嘉峪關或什麼關」「後來才發生清代的事」為口語，疑有省略。</li><li><a href="#p87" data-t="p87">第 87 則</a>　末句「謝謝大家，祝大家。」似未完結，原稿如此。</li><li><a href="#p86" data-t="p86">第 86 則</a>　「翻譯陳師兄和陳師兄」兩位同姓，原稿未區分。</li><li><a href="#p9" data-t="p9">第 9 則</a>　人名與職稱（陳俊賢、陳維武、「人工智能技術研究院」）為語音轉寫，建議對照官方資料。</li></ul>
+<p>另：封面與標題原提供為簡體字「国土危脆，禅心何住：动荡下的慈悲与智慧」，依「全部使用繁體中文」改為繁體；導讀中原有英文「relevance」亦改為「相關性」。</p>
+</div></details>
+</section>
+
+<footer>Chan in the Storm: Compassion &amp; Wisdom for a World in Turmoil<br>國土危脆，禪心何住</footer>
+</main>
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)};
+function openAnc(el){var p=el;while(p){if(p.tagName==='DETAILS')p.open=true;p=p.parentElement}}
+function go(id){var el=document.getElementById(id);if(!el)return;openAnc(el);el.scrollIntoView({block:'start'});el.classList.add('flash');setTimeout(function(){el.classList.remove('flash')},2300)}
+var sd=$('#sd'),sdm=$('#sdm');
+function sdOpen(o){sd.classList.toggle('on',o);sdm.classList.toggle('on',o)}
+$('#sdb').onclick=function(){sdOpen(true)};sdm.onclick=function(){sdOpen(false)};$('#sdc').onclick=function(){sdOpen(false)};
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a[data-t]');if(!a)return;
+  e.preventDefault();sdOpen(false);var id=a.getAttribute('data-t');
+  var sp=$('#sp');if(sp.classList.contains('on'))sp.classList.remove('on');
+  bkClose();go(id);try{history.replaceState(null,'','#'+id)}catch(x){}
+});
+var bar=$('#bar'),last=0,sdb=$('#sdb'),sbb=$('#sbb');
+function onScroll(){
+  var h=document.documentElement,y=window.scrollY||h.scrollTop,m=h.scrollHeight-h.clientHeight;
+  bar.style.width=(m>0?y/m*100:0)+'%';
+  var hide=y>last&&y>120;sdb.classList.toggle('hide',hide);sbb.classList.toggle('hide',hide);last=y;
+  var cur=null,links=document.querySelectorAll('#sd nav a');
+  var ids=[];links.forEach(function(a){ids.push(a.getAttribute('data-t'))});
+  for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.getBoundingClientRect().top<window.innerHeight*0.4)cur=ids[i]}
+  links.forEach(function(a){a.classList.toggle('cur',a.getAttribute('data-t')===cur)});
+}
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+/* 搜尋 */
+var sp=$('#sp'),sq=$('#sq'),sr=$('#sr');
+$('#sbb').onclick=function(){sp.classList.add('on');sq.focus()};
+$('#sx').onclick=function(){sp.classList.remove('on')};
+function esc(s){return s.replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+sq.addEventListener('input',function(){
+  var q=sq.value.trim();sr.innerHTML='';if(!q)return;
+  var items=document.querySelectorAll('.v'),n=0,out=[];
+  items.forEach(function(v){
+    var t=v.querySelector('.vb').textContent,l=v.querySelector('.vt').textContent,i=t.indexOf(q);
+    if(i<0&&l.indexOf(q)<0)return;n++;if(out.length>=60)return;
+    var s=Math.max(0,i-18),sn=i<0?t.slice(0,40):t.slice(s,i+q.length+40);
+    var h=esc(sn).split(esc(q)).join('<mark>'+esc(q)+'</mark>');
+    out.push('<a class="hit" href="#'+v.id+'" data-t="'+v.id+'"><small>第 '+v.id.slice(1)+' 則　'+esc(l)+'</small>'+h+'</a>');
+  });
+  sr.innerHTML=n?'<div class="cnt">共 '+n+' 則'+(n>60?'（顯示前 60 則）':'')+'</div>'+out.join(''):'<div class="empty">沒有找到「'+esc(q)+'」</div>';
+});
+/* 書籤 */
+var KEY='zsl-guotu-bk',bkp=$('#bkp'),bkm=$('#bkm'),bkt=$('#bkt');
+function load(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}}
+function save(a){try{localStorage.setItem(KEY,JSON.stringify(a))}catch(e){toast('此瀏覽器無法儲存書籤')}}
+function toast(m){bkt.textContent=m;bkt.classList.add('on');setTimeout(function(){bkt.classList.remove('on')},1800)}
+function render(){var a=load(),L=$('#bklist'),h=hlLoad(),o='';
+  o+='<div class="bkh">書籤</div>';
+  o+=a.length?a.map(function(b,i){return '<div class="bki"><a href="#'+b.id+'" data-t="'+b.id+'"><small>第 '+b.id.slice(1)+' 則</small>'+esc(b.t)+'</a><button data-i="'+i+'" aria-label="刪除書籤">×</button></div>'}).join(''):'<div class="bkempty">尚無書籤。閱讀到喜歡的段落時，按「加入目前位置」。</div>';
+  o+='<div class="bkh">螢光筆記</div>';
+  o+=h.length?h.map(function(x,i){var raw=document.querySelector('#'+x.id+' .vb').dataset.raw||'';return '<div class="bki"><span class="dot c'+x.c+'"></span><a href="#'+x.id+'" data-t="'+x.id+'"><small>第 '+x.id.slice(1)+' 則</small>'+esc(raw.slice(x.s,x.e))+'</a><button data-h="'+i+'" aria-label="刪除螢光">×</button></div>'}).join(''):'<div class="bkempty">尚無螢光。在文字上長按或拖選，再選顏色。清除網站資料後書籤與螢光會消失。</div>';
+  L.innerHTML=o}
+function bkOpen(){render();bkp.classList.add('on');bkm.classList.add('on')}
+function bkClose(){bkp.classList.remove('on');bkm.classList.remove('on')}
+$('#bkb').onclick=bkOpen;bkm.onclick=bkClose;$('#bkc').onclick=bkClose;
+$('#bkadd').onclick=function(){
+  var items=document.querySelectorAll('.v'),pick=null;
+  for(var i=0;i<items.length;i++){var v=items[i];if(v.offsetParent===null)continue;var r=v.getBoundingClientRect();if(r.bottom>60){pick=v;break}}
+  if(!pick){toast('請先展開章節');return}
+  var a=load();if(a.some(function(b){return b.id===pick.id})){toast('已在書籤中');return}
+  a.push({id:pick.id,t:pick.querySelector('.vt').textContent});save(a);render();toast('已加入書籤')};
+$('#bklist').addEventListener('click',function(e){var b=e.target.closest('button[data-i]');if(b){var a=load();a.splice(+b.getAttribute('data-i'),1);save(a);render();return}var d=e.target.closest('button[data-h]');if(d){var h=hlLoad();var x=h.splice(+d.getAttribute('data-h'),1)[0];hlSave(h);hlRender(x.id);render()}});
+
+/* 螢光筆 */
+var HK='zsl-guotu-hl',bar2=$('#hlbar'),curEdit=null;
+function hlLoad(){try{return JSON.parse(localStorage.getItem(HK)||'[]')}catch(e){return[]}}
+function hlSave(a){try{localStorage.setItem(HK,JSON.stringify(a))}catch(e){toast('此瀏覽器無法儲存螢光')}}
+document.querySelectorAll('.vb').forEach(function(v){v.dataset.raw=v.textContent});
+function wrap(vb,s,e,c,k){
+  var w=document.createTreeWalker(vb,NodeFilter.SHOW_TEXT),pos=0,nodes=[],n;
+  while(n=w.nextNode()){var l=n.nodeValue.length;if(pos+l>s&&pos<e)nodes.push([n,pos]);pos+=l}
+  nodes.forEach(function(p){var n=p[0],st=Math.max(s-p[1],0),en=Math.min(e-p[1],n.nodeValue.length);
+    var r=document.createRange();r.setStart(n,st);r.setEnd(n,en);
+    var sp=document.createElement('span');sp.className='hl c'+c;sp.dataset.k=k;r.surroundContents(sp)})}
+function hlRender(id){
+  var vb=document.querySelector('#'+id+' .vb');if(!vb)return;vb.textContent=vb.dataset.raw;
+  hlLoad().forEach(function(x,i){if(x.id===id)wrap(vb,x.s,x.e,x.c,i)})}
+var seen={};hlLoad().forEach(function(x){if(!seen[x.id]){seen[x.id]=1;hlRender(x.id)}});
+function hideBar(){bar2.classList.remove('on','edit');curEdit=null}
+function place(rect){
+  bar2.classList.add('on');var w=bar2.offsetWidth,l=Math.min(Math.max(rect.left+rect.width/2-w/2,8),window.innerWidth-w-8);
+  var t=rect.top-bar2.offsetHeight-12;if(t<60)t=rect.bottom+12;bar2.style.left=l+'px';bar2.style.top=t+'px'}
+var tm;
+document.addEventListener('selectionchange',function(){
+  clearTimeout(tm);tm=setTimeout(function(){
+    var sel=window.getSelection();
+    if(!sel||sel.isCollapsed||!sel.rangeCount){if(!curEdit)hideBar();return}
+    var r=sel.getRangeAt(0),a=r.startContainer.parentElement,b=r.endContainer.parentElement;
+    var va=a&&a.closest('.vb'),vbb=b&&b.closest('.vb');
+    if(!va||va!==vbb){hideBar();return}
+    curEdit=null;bar2.classList.remove('edit');place(r.getBoundingClientRect())},250)});
+bar2.addEventListener('mousedown',function(e){e.preventDefault()});
+bar2.addEventListener('touchstart',function(e){e.preventDefault()},{passive:false});
+bar2.addEventListener('click',function(e){
+  var sw=e.target.closest('.sw');
+  if(sw){var sel=window.getSelection();if(!sel.rangeCount)return;var r=sel.getRangeAt(0),vb=r.startContainer.parentElement.closest('.vb');
+    var pre=document.createRange();pre.selectNodeContents(vb);pre.setEnd(r.startContainer,r.startOffset);var s0=pre.toString().length,e0=s0+r.toString().length;
+    var id=vb.parentElement.id,h=hlLoad().filter(function(x){return !(x.id===id&&x.s<e0&&x.e>s0)});
+    h.push({id:id,s:s0,e:e0,c:+sw.getAttribute('data-c')});hlSave(h);sel.removeAllRanges();hlRender(id);hideBar();return}
+  if(e.target.closest('.nb')&&curEdit!==null){var h2=hlLoad(),x=h2.splice(curEdit,1)[0];hlSave(h2);hlRender(x.id);hideBar()}});
+document.addEventListener('click',function(e){
+  var el=e.target.closest('.hl');
+  if(el){curEdit=+el.dataset.k;bar2.classList.add('edit');place(el.getBoundingClientRect());return}
+  if(!e.target.closest('#hlbar')&&curEdit!==null)hideBar()});
+window.addEventListener('scroll',function(){if(curEdit!==null)hideBar()},{passive:true});
+if(location.hash.length>1){setTimeout(function(){go(location.hash.slice(1))},50)}
+})();
+</script>
+</body>
+</html>
