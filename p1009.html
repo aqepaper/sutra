@@ -706,7 +706,7 @@ button.hot { background: var(--gold); }
   var N = BUILD.length;
 
   /* every scene: picture one, then at TM[i] a second, richer picture replaces it. The last scene is the four closing lines. */
-  var MUSIC_URL = 'https://aqepaper.github.io/m1009/m1009.mp3';
+  var MUSIC_URL = 'm1009.mp3';
   var LEAD = 2.276;
   var TM = [7.592, 7.198, 7.5, 7.059, 7.291, 7.686, 7.5, 7.523];
   var CUTS = [0.0, 15.0, 29.512, 44.303, 58.421, 73.235, 88.421, 103.421, 118.63];
@@ -787,8 +787,15 @@ button.hot { background: var(--gold); }
   try {
     aud = new Audio();
     aud.preload = 'auto';
-    aud.src = MUSIC_URL;
-    aud.addEventListener('error', function () { audFail = true; });
+    var urls = [MUSIC_URL], ui = 0;
+    aud.src = urls[0];
+    aud.addEventListener('error', function () {
+      ui++;
+      if (ui < urls.length) {
+        aud.src = urls[ui];
+        try { aud.load(); if (started && !paused && !ended) audGo(); } catch (e) {}
+      } else { audFail = true; }
+    });
   } catch (e) { aud = null; audFail = true; }
   function audGo(t) {
     if (!aud || audFail) return;
