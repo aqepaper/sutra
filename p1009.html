@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>窮子喻動畫</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -153,6 +158,8 @@ button {
 button:focus-visible { outline: 3px solid #6aa0ff; outline-offset: 3px; }
 button.hot { background: var(--gold); }
 </style>
+</head>
+<body>
 
 <div class="stage pre" id="stage">
   <svg id="svg" viewBox="0 64 360 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="窮子喻手繪動畫">
@@ -707,10 +714,10 @@ button.hot { background: var(--gold); }
 
   /* every scene: picture one, then at TM[i] a second, richer picture replaces it. The last scene is the four closing lines. */
   var MUSIC_URL = 'm1009.mp3';
-  var LEAD = 2.276;
-  var TM = [7.592, 7.198, 7.5, 7.059, 7.291, 7.686, 7.5, 7.523];
-  var CUTS = [0.0, 15.0, 29.512, 44.303, 58.421, 73.235, 88.421, 103.421, 118.63];
-  var END = 137.88, DURS = [], i;
+  var LEAD = 14.629;
+  var TM = [6.594, 6.664, 6.641, 6.409, 6.85, 6.85, 6.873, 6.85];
+  var CUTS = [-0.0, 13.072, 26.586, 39.659, 52.709, 66.432, 80.132, 93.855, 107.578];
+  var END = 126.873, DURS = [], i;
   for (i = 0; i < N; i++) DURS[i] = (i < N - 1 ? CUTS[i + 1] : END) - CUTS[i];
   var CAP = [
     ['從前，有一位長者，家中非常富有，', '擁有無數的珍寶財產。'],
@@ -784,23 +791,44 @@ button.hot { background: var(--gold); }
   var capPart = -1, hideTimer = 0, aud = null, audLive = false, audFail = false, waitStart = 0, cur = -1, T = 0, paused = false, started = false, ended = false, last = 0, perfN = 0, perfSum = 0, perfDone = false, capDone = false;
 
   try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) {}
+  var msgEl = document.createElement('div');
+  msgEl.style.cssText = 'position:absolute;left:4%;right:4%;top:15%;z-index:6;text-align:center;font:700 3.4cqw/1.4 var(--font);color:#fff;background:rgba(179,38,30,.92);padding:2cqw 3cqw;border-radius:2cqw;display:none;pointer-events:none;white-space:pre-line';
+  stage.appendChild(msgEl);
+  function say2(t) { msgEl.textContent = t || ''; msgEl.style.display = t ? 'block' : 'none'; }
+  var triedBlob = false;
+  function audGo(t) {
+    if (!aud || audFail) return;
+    try {
+      if (t !== undefined && aud.readyState > 0) aud.currentTime = t;
+      var pr = aud.play();
+      if (pr && pr.catch) pr.catch(function (e) { if (e && e.name === 'NotAllowedError') say2('🔇 手機擋住了自動播放，請再點一下畫面'); });
+    } catch (e) {}
+  }
+  function audFailNow(why) {
+    audFail = true;
+    say2('🔇 音樂載入失敗（' + why + '）\n請確認 m1009.mp3 與本頁在同一資料夾');
+  }
+  function audError() {
+    if (!triedBlob && window.fetch) {
+      triedBlob = true;
+      fetch(MUSIC_URL).then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.blob();
+      }).then(function (bl) {
+        aud.src = URL.createObjectURL(new Blob([bl], { type: 'audio/mpeg' }));
+        aud.load();
+        if (started && !ended) audGo();
+      }).catch(function (e) { audFailNow(e && e.message ? e.message : '找不到檔案'); });
+    } else { audFailNow('無法播放'); }
+  }
   try {
     aud = new Audio();
     aud.preload = 'auto';
-    var urls = [MUSIC_URL], ui = 0;
-    aud.src = urls[0];
-    aud.addEventListener('error', function () {
-      ui++;
-      if (ui < urls.length) {
-        aud.src = urls[ui];
-        try { aud.load(); if (started && !paused && !ended) audGo(); } catch (e) {}
-      } else { audFail = true; }
-    });
+    aud.setAttribute('playsinline', '');
+    aud.src = MUSIC_URL;
+    aud.addEventListener('error', audError);
+    aud.addEventListener('playing', function () { say2(''); });
   } catch (e) { aud = null; audFail = true; }
-  function audGo(t) {
-    if (!aud || audFail) return;
-    try { if (t !== undefined) aud.currentTime = t; var pr = aud.play(); if (pr && pr.catch) pr.catch(function () { audFail = true; }); } catch (e) { audFail = true; }
-  }
   function setPaused(p) {
     paused = p;
     stage.classList.toggle('paused', p);
@@ -900,7 +928,8 @@ button.hot { background: var(--gold); }
     if (started && !paused && !ended) {
       if (aud && !audFail && !aud.paused && aud.currentTime > 0.05) { audLive = true; T = aud.currentTime - LEAD; }
       else if (audLive) { /* buffering: hold */ }
-      else if (audFail || Date.now() - waitStart > 6000) { T += dt; }
+      else if (audFail || Date.now() - waitStart > 6000) { if (T < 0) T = 0; T += dt; }
+      else if (Date.now() - waitStart > 2500 && !msgEl.textContent) say2('♪ 音樂載入中…');
       if (!perfDone) {
         perfN++;
         if (perfN > 20) perfSum += dt;
@@ -925,6 +954,7 @@ button.hot { background: var(--gold); }
 
   document.getElementById('bStart').addEventListener('click', function (e) { e.stopPropagation(); restart(); });
   stage.addEventListener('click', function () {
+    if (started && !paused && !ended && !audLive && !audFail) audGo();
     if (!started) return;
     if (ended) { restart(); return; }
   });
@@ -939,3 +969,6 @@ button.hot { background: var(--gold); }
   requestAnimationFrame(tick);
 })();
 </script>
+
+</body>
+</html>
