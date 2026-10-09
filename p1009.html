@@ -124,7 +124,11 @@ body {
 .intro .startbtns { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 10cqw; }
 .intro .startbtns button { font-size: 16px; padding: 14px 30px; }
 .intro .startbtns button.sub { background: transparent; color: var(--ink); text-decoration: underline; padding: 6px 10px; font-size: 14px; font-weight: 500; }
+.intro .ch { display: inline-block; }
 .intro.run { pointer-events: none; }
+.intro.run .ch { animation: chin 2.8s ease-out var(--cd, 0s) both; }
+.intro.run small.ch { animation-duration: 2s; }
+@keyframes chin { from { opacity: 0; transform: translateY(1.5cqw) scale(.96); filter: blur(1.2cqw); } to { opacity: 1; transform: none; filter: blur(0); } }
 .intro.run .startbtns { display: none; }
 .intro.out { opacity: 0; }
 .scene.enter { animation: sceneIn .6s ease both; }
@@ -182,8 +186,8 @@ button.hot { background: var(--gold); }
   <div class="cap" id="cap" aria-live="polite"></div>
   <div class="again" id="again">點一下重新播放</div>
   <div class="intro" id="intro">
-    <small>法華七喻之</small>
-    <b>窮子喻</b>
+    <small class="ch" style="--cd:.9s">法華七喻之</small>
+    <b><span class="ch" style="--cd:3s">窮</span><span class="ch" style="--cd:6.4s">子</span><span class="ch" style="--cd:9.8s">喻</span></b>
     <div class="startbtns">
       <button id="bStart" type="button" class="hot">▶ 開始播放</button>
     </div>
@@ -901,6 +905,8 @@ button.hot { background: var(--gold); }
     stage.classList.remove('nohead');
     audLive = false;
     waitStart = Date.now();
+    intro.className = 'intro';
+    void intro.offsetWidth;
     intro.className = 'intro run';
     audGo(0);
     capEl.innerHTML = '';
